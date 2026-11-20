@@ -50,8 +50,8 @@ const Reserve = () => {
       socialProof: 'cyclistes ont déjà réservé leur gilet IGLOW',
       benefits: [
         {
-          title: 'Accès Prioritaire',
-          description: 'Black Friday Duo (casque + gilet) pour seulement <span style="color:#E30613; font-weight:900;">CHF 99.-</span> au lieu de <span class="price-struck" style="color:#666;">CHF 199.-</span>, soit un énorme rabais de <span style="color:#28a745; font-weight:900;">CHF 100.-</span> !',
+          title: 'BLACK FRIDAY',
+          description: 'Votre Duo<br/>CASQUE + GILET IGLOW<br/>pour seulement <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>au lieu de CHF 199.-<br/>soit un énorme rabais de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% de réduction',
@@ -106,8 +106,8 @@ const Reserve = () => {
       socialProof: 'cyclists have already reserved their IGLOW vest',
       benefits: [
         {
-          title: 'Priority Access',
-          description: 'Black Friday Duo (helmet + vest) for only <span style="color:#E30613; font-weight:900;">CHF 99.-</span> instead of <span class="price-struck" style="color:#666;">CHF 199.-</span>, a huge discount of <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
+          title: 'BLACK FRIDAY',
+          description: 'Your Duo<br/>HELMET + VEST IGLOW<br/>for only <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>instead of CHF 199.-<br/>a huge discount of<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '+50% OFF',
@@ -161,8 +161,8 @@ const Reserve = () => {
       socialProof: 'Radfahrer haben bereits ihre IGLOW-Jacke reserviert',
       benefits: [
         {
-          title: 'Prioritätszugang',
-          description: 'Black Friday Duo (Helm + Weste) für nur <span style="color:#E30613; font-weight:900;">CHF 99.-</span> statt <span class="price-struck" style="color:#666;">CHF 199.-</span>, ein riesiger Rabatt von <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
+          title: 'BLACK FRIDAY',
+          description: 'Ihr Duo<br/>HELM + WESTE IGLOW<br/>für nur <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>statt CHF 199.-<br/>ein riesiger Rabatt von<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% Rabatt',
@@ -217,8 +217,8 @@ const Reserve = () => {
       socialProof: 'ciclistas ya han reservado su chaqueta IGLOW',
       benefits: [
         {
-          title: 'Acceso Prioritario',
-          description: 'Black Friday Duo (casco + chaleco) por solo <span style="color:#E30613; font-weight:900;">CHF 99.-</span> en lugar de <span class="price-struck" style="color:#666;">CHF 199.-</span>, ¡un enorme descuento de <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
+          title: 'BLACK FRIDAY',
+          description: 'Tu Duo<br/>CASCO + CHALECO IGLOW<br/>por solo <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>en lugar de CHF 199.-<br/>un enorme descuento de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% de descuento',
@@ -272,8 +272,8 @@ const Reserve = () => {
       socialProof: 'fietsers hebben al hun IGLOW-jas gereserveerd',
       benefits: [
         {
-          title: 'Prioriteitstoegang',
-          description: 'Black Friday Duo (helm + vest) voor slechts <span style="color:#E30613; font-weight:900;">CHF 99.-</span> in plaats van <span class="price-struck" style="color:#666;">CHF 199.-</span>, een enorme korting van <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
+          title: 'BLACK FRIDAY',
+          description: 'Uw Duo<br/>HELM + VEST IGLOW<br/>voor slechts <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>in plaats van CHF 199.-<br/>een enorme korting van<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% korting',
@@ -328,8 +328,8 @@ const Reserve = () => {
       socialProof: 'ciclistas já reservaram sua jaqueta IGLOW',
       benefits: [
         {
-          title: 'Acesso Prioritário',
-          description: 'Black Friday Duo (capacete + colete) por apenas <span style="color:#E30613; font-weight:900;">CHF 99.-</span> em vez de <span class="price-struck" style="color:#666;">CHF 199.-</span>, um enorme desconto de <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
+          title: 'BLACK FRIDAY',
+          description: 'Seu Duo<br/>CAPACETE + COLETE IGLOW<br/>por apenas <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>em vez de CHF 199.-<br/>um enorme desconto de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% de desconto',
@@ -384,8 +384,8 @@ const Reserve = () => {
       socialProof: 'साइकिल चालकों ने पहले ही अपनी IGLOW जैकेट आरक्षित कर ली है',
       benefits: [
         {
-          title: 'प्राथमिकता पहुंच',
-          description: 'ब्लैक फ्राइडे डुओ (हेलमेट + जैकेट) सिर्फ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> में, <span class="price-struck" style="color:#666;">CHF 199.-</span> के बजाय, यानी <span style="color:#28a745; font-weight:900;">CHF 100.-</span> की जबरदस्त छूट!',
+          title: 'BLACK FRIDAY',
+          description: 'आपका डुओ<br/>हेलमेट + जैकेट IGLOW<br/>सिर्फ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> में<br/>CHF 199.- के बजाय<br/>यानी<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span> की जबरदस्त छूट',
         },
         {
           title: '-50% छूट',
@@ -440,8 +440,8 @@ const Reserve = () => {
       socialProof: 'راكبي الدراجات قد حجزوا بالفعل سترة IGLOW الخاصة بهم',
       benefits: [
         {
-          title: 'وصول مفضل',
-          description: 'بلاك فرايدي ديو (خوذة + سترة) بـ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> فقط بدلاً من <span class="price-struck" style="color:#666;">CHF 199.-</span>، أي خصم ضخم قدره <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
+          title: 'BLACK FRIDAY',
+          description: 'ثنائيك<br/>خوذة + سترة IGLOW<br/>بـ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> فقط<br/>بدلاً من CHF 199.-<br/>أي خصم ضخم قدره<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% خصم',
@@ -495,8 +495,8 @@ const Reserve = () => {
       socialProof: 'велосипедистов уже забронировали свою куртку IGLOW',
       benefits: [
         {
-          title: 'Приоритетный доступ',
-          description: 'Black Friday Duo (шлем + жилет) всего за <span style="color:#E30613; font-weight:900;">CHF 99.-</span> вместо <span class="price-struck" style="color:#666;">CHF 199.-</span>, то есть огромная скидка <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
+          title: 'BLACK FRIDAY',
+          description: 'Ваш Дуо<br/>ШЛЕМ + ЖИЛЕТ IGLOW<br/>всего за <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>вместо CHF 199.-<br/>то есть огромная скидка<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% скидка',
@@ -787,7 +787,7 @@ const Reserve = () => {
                 </h3>
                 {index === 0 ? (
                   <p
-                    style={{ fontSize: '2.5rem', fontWeight: 'bold' }}
+                    style={{ fontSize: '1.6rem', color: '#0a0a0a' }}
                     dangerouslySetInnerHTML={{ __html: benefit.description }}
                   ></p>
                 ) : (
