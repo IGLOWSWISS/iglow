@@ -776,7 +776,12 @@ function HeroSection({ t }) {
             size='large'
             sx={{
               marginBottom: 10,
-              transition: 'transform 0.1s ease, box-shadow 0.1s ease',
+              transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+              '&:hover': {
+                transform: 'scale(1.08) translateY(-3px)',
+                boxShadow:
+                  '0 0 10px rgba(227,6,19,0.95), 0 0 25px rgba(227,6,19,0.85), 0 0 50px rgba(227,6,19,0.65), 0 0 90px rgba(227,6,19,0.45)',
+              },
               '&:active': {
                 transform: 'scale(0.96) translateY(3px)',
                 boxShadow: 'none',
@@ -1064,7 +1069,12 @@ function CountdownSection({ t }) {
           size='large'
           sx={{
             marginY: 3,
-            transition: 'transform 0.1s ease, box-shadow 0.1s ease',
+            transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+            '&:hover': {
+              transform: 'scale(1.08) translateY(-3px)',
+              boxShadow:
+                '0 0 10px rgba(227,6,19,0.95), 0 0 25px rgba(227,6,19,0.85), 0 0 50px rgba(227,6,19,0.65), 0 0 90px rgba(227,6,19,0.45)',
+            },
             '&:active': {
               transform: 'scale(0.96) translateY(3px)',
               boxShadow: 'none',
@@ -1122,11 +1132,8 @@ function CountdownSection({ t }) {
             FRIDAY
           </Typography>
 
-          <Typography sx={{ color: RED, fontWeight: 'bold' }}>
+          <Typography sx={{ color: RED, fontWeight: 'bold', mb: 2 }}>
             {t.duoSpecial}
-          </Typography>
-          <Typography variant='body1' sx={{ color: 'white', mb: 2 }}>
-            {t.duoSpecialDesc}
           </Typography>
 
           <Typography
@@ -1160,11 +1167,19 @@ function CountdownSection({ t }) {
           href='https://www.kickstarter.com/projects/iglowswiss/iglow-the-smart-bike-jacket-be-seen-be-safe'
           target='_blank'
           sx={{
-            '&:hover': {
-              backgroundColor: '#05CE78',
-            },
             backgroundColor: '#05CE78',
             marginBottom: 3,
+            transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+            '&:hover': {
+              backgroundColor: '#05CE78',
+              transform: 'scale(1.08) translateY(-3px)',
+              boxShadow:
+                '0 0 10px rgba(5,206,120,0.95), 0 0 25px rgba(5,206,120,0.85), 0 0 50px rgba(5,206,120,0.65), 0 0 90px rgba(5,206,120,0.45)',
+            },
+            '&:active': {
+              transform: 'scale(0.96) translateY(3px)',
+              boxShadow: 'none',
+            },
           }}
         >
           {t.kickstarterButton}
