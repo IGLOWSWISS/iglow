@@ -36,6 +36,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
+      insteadOfPrice: 'au lieu de CHF 199.-',
       launchDate: 'LE 27 NOVEMBRE 2026',
       launchTextPrefix: 'Ouverture des ventes',
       blackWord: 'Black',
@@ -86,6 +87,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
+      insteadOfPrice: 'instead of CHF 199.-',
       launchDate: 'NOVEMBER 27, 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -135,6 +137,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
+      insteadOfPrice: 'statt CHF 199.-',
       launchDate: '27. NOVEMBER 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -185,6 +188,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
+      insteadOfPrice: 'en lugar de CHF 199.-',
       launchDate: '27 DE NOVIEMBRE DE 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -234,6 +238,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
+      insteadOfPrice: 'in plaats van CHF 199.-',
       launchDate: '27 NOVEMBER 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -284,6 +289,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
+      insteadOfPrice: 'em vez de CHF 199.-',
       launchDate: '27 DE NOVEMBRO DE 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -334,6 +340,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
+      insteadOfPrice: 'CHF 199.- के बजाय',
       launchDate: '27 नवंबर 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -384,6 +391,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
+      insteadOfPrice: 'بدلاً من CHF 199.-',
       launchDate: '27 نوفمبر 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -433,6 +441,7 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
+      insteadOfPrice: 'вместо CHF 199.-',
       launchDate: '27 НОЯБРЯ 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -595,19 +604,13 @@ const Reserve = () => {
               margin: '40px 0',
             }}
           >
-            {currentContent.reserveButtons.map((button, index) => {
+            {(() => {
+              const button = currentContent.reserveButtons[0];
               const [priceWord, priceNumber] = button.price.split(' ');
               return (
                 <button
-                  key={index}
                   onClick={() => redirectToStripe(button.priceId)}
-                  className={`btn ${
-                    index === 0
-                      ? 'btn-primary'
-                      : index === 1
-                      ? 'btn-secondary'
-                      : 'btn-tertiary'
-                  }`}
+                  className='btn btn-primary'
                 >
                   <span className='flag-emoji' style={{ fontSize: '1.5em' }}>
                     {button.flag}
@@ -625,7 +628,17 @@ const Reserve = () => {
                   </span>
                 </button>
               );
-            })}
+            })()}
+            <span
+              style={{
+                color: '#fff',
+                textDecoration: 'line-through',
+                opacity: 0.6,
+                fontSize: '1.1em',
+              }}
+            >
+              {currentContent.insteadOfPrice}
+            </span>
           </div>
           <div className='swiss-badge'>
             <div className='swiss-flag'></div>
