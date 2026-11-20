@@ -48,7 +48,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'Accès Prioritaire',
-          description: 'Black Friday Duo (casque + gilet) à CHF 99.- au lieu de CHF 199.-',
+          description: 'Black Friday Duo (casque + gilet) pour seulement <span style="color:#E30613; font-weight:900;">CHF 99.-</span> au lieu de <span class="price-struck" style="color:#666;">CHF 199.-</span>, soit un énorme rabais de <span style="color:#28a745; font-weight:900;">CHF 100.-</span> !',
         },
         {
           title: '-50% de réduction',
@@ -101,7 +101,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'Priority Access',
-          description: 'Black Friday Duo (helmet + vest) at CHF 99.- instead of CHF 199.-',
+          description: 'Black Friday Duo (helmet + vest) for only <span style="color:#E30613; font-weight:900;">CHF 99.-</span> instead of <span class="price-struck" style="color:#666;">CHF 199.-</span>, a huge discount of <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
         },
         {
           title: '+50% OFF',
@@ -153,7 +153,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'Prioritätszugang',
-          description: 'Black Friday Duo (Helm + Weste) für CHF 99.- statt CHF 199.-',
+          description: 'Black Friday Duo (Helm + Weste) für nur <span style="color:#E30613; font-weight:900;">CHF 99.-</span> statt <span class="price-struck" style="color:#666;">CHF 199.-</span>, ein riesiger Rabatt von <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
         },
         {
           title: '-50% Rabatt',
@@ -206,7 +206,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'Acceso Prioritario',
-          description: 'Black Friday Duo (casco + chaleco) a CHF 99.- en lugar de CHF 199.-',
+          description: 'Black Friday Duo (casco + chaleco) por solo <span style="color:#E30613; font-weight:900;">CHF 99.-</span> en lugar de <span class="price-struck" style="color:#666;">CHF 199.-</span>, ¡un enorme descuento de <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
         },
         {
           title: '-50% de descuento',
@@ -258,7 +258,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'Prioriteitstoegang',
-          description: 'Black Friday Duo (helm + vest) voor CHF 99.- in plaats van CHF 199.-',
+          description: 'Black Friday Duo (helm + vest) voor slechts <span style="color:#E30613; font-weight:900;">CHF 99.-</span> in plaats van <span class="price-struck" style="color:#666;">CHF 199.-</span>, een enorme korting van <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
         },
         {
           title: '-50% korting',
@@ -311,7 +311,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'Acesso Prioritário',
-          description: 'Black Friday Duo (capacete + colete) por CHF 99.- em vez de CHF 199.-',
+          description: 'Black Friday Duo (capacete + colete) por apenas <span style="color:#E30613; font-weight:900;">CHF 99.-</span> em vez de <span class="price-struck" style="color:#666;">CHF 199.-</span>, um enorme desconto de <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
         },
         {
           title: '-50% de desconto',
@@ -364,7 +364,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'प्राथमिकता पहुंच',
-          description: 'ब्लैक फ्राइडे डुओ (हेलमेट + जैकेट) CHF 99.- में CHF 199.- के बजाय',
+          description: 'ब्लैक फ्राइडे डुओ (हेलमेट + जैकेट) सिर्फ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> में, <span class="price-struck" style="color:#666;">CHF 199.-</span> के बजाय, यानी <span style="color:#28a745; font-weight:900;">CHF 100.-</span> की जबरदस्त छूट!',
         },
         {
           title: '-50% छूट',
@@ -417,7 +417,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'وصول مفضل',
-          description: 'بلاك فرايدي ديو (خوذة + سترة) بـ CHF 99.- بدلاً من CHF 199.-',
+          description: 'بلاك فرايدي ديو (خوذة + سترة) بـ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> فقط بدلاً من <span class="price-struck" style="color:#666;">CHF 199.-</span>، أي خصم ضخم قدره <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
         },
         {
           title: '-50% خصم',
@@ -469,7 +469,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'Приоритетный доступ',
-          description: 'Black Friday Duo (шлем + жилет) за CHF 99.- вместо CHF 199.-',
+          description: 'Black Friday Duo (шлем + жилет) всего за <span style="color:#E30613; font-weight:900;">CHF 99.-</span> вместо <span class="price-struck" style="color:#666;">CHF 199.-</span>, то есть огромная скидка <span style="color:#28a745; font-weight:900;">CHF 100.-</span>!',
         },
         {
           title: '-50% скидка',
@@ -658,7 +658,7 @@ const Reserve = () => {
               style={{
                 color: '#28a745',
                 fontWeight: '900',
-                fontSize: '1.4em',
+                fontSize: '2em',
               }}
             >
               {currentContent.youSave}
@@ -742,7 +742,9 @@ const Reserve = () => {
             {currentContent.benefits.map((benefit, index) => (
               <div key={index} className='benefit'>
                 <div className='benefit-icon'>{renderIglowIcon()}</div>
-                <h3>{benefit.title}</h3>
+                <h3 style={index === 1 ? { color: '#E30613' } : undefined}>
+                  {benefit.title}
+                </h3>
                 {index === 0 ? (
                   <p
                     style={{ fontSize: '2.5rem', fontWeight: 'bold' }}
