@@ -357,6 +357,24 @@
   border-color: #e30613;
 }
 
+.price-struck {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  font-weight: 800;
+}
+
+.price-struck::after {
+  content: '';
+  position: absolute;
+  left: -6%;
+  right: -6%;
+  top: 48%;
+  height: 3px;
+  background: #e30613;
+  transform: rotate(-8deg);
+}
+
 .flag-emoji {
   font-size: 1.3em;
   display: inline-block;

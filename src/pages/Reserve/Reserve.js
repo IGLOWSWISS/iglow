@@ -36,7 +36,9 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrice: 'au lieu de CHF 199.-',
+      insteadOfPrefix: 'au lieu de',
+      insteadOfSuffix: '',
+      youSave: 'Vous économisez CHF 100.-',
       launchDate: 'LE 27 NOVEMBRE 2026',
       launchTextPrefix: 'Ouverture des ventes',
       blackWord: 'Black',
@@ -87,7 +89,9 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrice: 'instead of CHF 199.-',
+      insteadOfPrefix: 'instead of',
+      insteadOfSuffix: '',
+      youSave: 'You save CHF 100.-',
       launchDate: 'NOVEMBER 27, 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -137,7 +141,9 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrice: 'statt CHF 199.-',
+      insteadOfPrefix: 'statt',
+      insteadOfSuffix: '',
+      youSave: 'Sie sparen CHF 100.-',
       launchDate: '27. NOVEMBER 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -188,7 +194,9 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrice: 'en lugar de CHF 199.-',
+      insteadOfPrefix: 'en lugar de',
+      insteadOfSuffix: '',
+      youSave: 'Ahorras CHF 100.-',
       launchDate: '27 DE NOVIEMBRE DE 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -238,7 +246,9 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrice: 'in plaats van CHF 199.-',
+      insteadOfPrefix: 'in plaats van',
+      insteadOfSuffix: '',
+      youSave: 'U bespaart CHF 100.-',
       launchDate: '27 NOVEMBER 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -289,7 +299,9 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrice: 'em vez de CHF 199.-',
+      insteadOfPrefix: 'em vez de',
+      insteadOfSuffix: '',
+      youSave: 'Você economiza CHF 100.-',
       launchDate: '27 DE NOVEMBRO DE 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -340,7 +352,9 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrice: 'CHF 199.- के बजाय',
+      insteadOfPrefix: '',
+      insteadOfSuffix: 'के बजाय',
+      youSave: 'आप CHF 100.- बचाते हैं',
       launchDate: '27 नवंबर 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -391,7 +405,9 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrice: 'بدلاً من CHF 199.-',
+      insteadOfPrefix: 'بدلاً من',
+      insteadOfSuffix: '',
+      youSave: 'توفر CHF 100.-',
       launchDate: '27 نوفمبر 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -441,7 +457,9 @@ const Reserve = () => {
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrice: 'вместо CHF 199.-',
+      insteadOfPrefix: 'вместо',
+      insteadOfSuffix: '',
+      youSave: 'Вы экономите CHF 100.-',
       launchDate: '27 НОЯБРЯ 2026',
       launchTextPrefix: '',
       blackWord: 'Black',
@@ -629,15 +647,21 @@ const Reserve = () => {
                 </button>
               );
             })()}
+            <span style={{ color: '#fff', fontSize: '1.3em' }}>
+              {currentContent.insteadOfPrefix}{' '}
+              <span className='price-struck' style={{ fontSize: '1.2em' }}>
+                CHF 199.-
+              </span>{' '}
+              {currentContent.insteadOfSuffix}
+            </span>
             <span
               style={{
-                color: '#fff',
-                textDecoration: 'line-through',
-                opacity: 0.6,
-                fontSize: '1.1em',
+                color: '#28a745',
+                fontWeight: '900',
+                fontSize: '1.4em',
               }}
             >
-              {currentContent.insteadOfPrice}
+              {currentContent.youSave}
             </span>
           </div>
           <div className='swiss-badge'>
