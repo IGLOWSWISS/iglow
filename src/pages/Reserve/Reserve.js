@@ -476,11 +476,11 @@ const Reserve = () => {
     // Map price IDs to Stripe Buy Button checkout URLs
     const stripeCheckoutUrls = {
       price_1SGkg7ClH97ISv2ltpMYi4DE:
-        'https://buy.stripe.com/6oUdR86eC78F04M3QlgQE02', // CHF
+        'https://buy.stripe.com/5kQ9AS7iG2SpeZGdqVgQE03', // CHF 99.-
       price_1SGkt9ClH97ISv2l2BPtn3ke:
-        'https://buy.stripe.com/8x29ASfPc64B2cUcmRgQE01', // EUR
+        'https://buy.stripe.com/dRm28qeL8boVaJqcmRgQE04', // EUR 99.-
       price_1SGkweClH97ISv2lbwx0YlrE:
-        'https://buy.stripe.com/fZu00igTg9gN04Mfz3gQE00', // USD
+        'https://buy.stripe.com/28E4gyeL8eB7aJq0E9gQE05', // USD 99.-
     };
 
     const checkoutUrl = stripeCheckoutUrls[priceId];
