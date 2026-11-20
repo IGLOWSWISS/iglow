@@ -13,6 +13,8 @@ const Reserve = () => {
       title: 'Duo Casque et Gilet',
       highlight: 'IGLOW',
       beSeen: 'pour être vu !',
+      payOnlyPrefix: 'en ne payant que',
+      payOnlySuffix: '',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -67,6 +69,8 @@ const Reserve = () => {
       title: 'Helmet and Vest Duo',
       highlight: 'IGLOW',
       beSeen: 'to be seen!',
+      payOnlyPrefix: 'paying only',
+      payOnlySuffix: '',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -120,6 +124,8 @@ const Reserve = () => {
       title: 'Helm- und Westen-Duo',
       highlight: 'IGLOW',
       beSeen: 'um gesehen zu werden!',
+      payOnlyPrefix: 'und nur',
+      payOnlySuffix: 'bezahlen',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -174,6 +180,8 @@ const Reserve = () => {
       title: 'Dúo Casco y Chaleco',
       highlight: 'IGLOW',
       beSeen: '¡para ser visto!',
+      payOnlyPrefix: 'pagando solo',
+      payOnlySuffix: '',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -227,6 +235,8 @@ const Reserve = () => {
       title: 'Helm- en Vestduo',
       highlight: 'IGLOW',
       beSeen: 'om gezien te worden!',
+      payOnlyPrefix: 'door slechts',
+      payOnlySuffix: 'te betalen',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -281,6 +291,8 @@ const Reserve = () => {
       title: 'Duo Capacete e Colete',
       highlight: 'IGLOW',
       beSeen: 'para ser visto!',
+      payOnlyPrefix: 'pagando apenas',
+      payOnlySuffix: '',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -335,6 +347,8 @@ const Reserve = () => {
       title: 'हेलमेट और जैकेट डुओ',
       highlight: 'IGLOW',
       beSeen: 'दिखने के लिए!',
+      payOnlyPrefix: 'सिर्फ',
+      payOnlySuffix: 'का भुगतान करके',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -389,6 +403,8 @@ const Reserve = () => {
       title: 'ثنائي الخوذة والسترة',
       highlight: 'IGLOW',
       beSeen: 'لتكون مرئياً!',
+      payOnlyPrefix: 'بدفع',
+      payOnlySuffix: 'فقط',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -442,6 +458,8 @@ const Reserve = () => {
       title: 'Дуо шлем и жилет',
       highlight: 'IGLOW',
       beSeen: 'чтобы быть заметным!',
+      payOnlyPrefix: 'заплатив всего',
+      payOnlySuffix: '',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -610,6 +628,18 @@ const Reserve = () => {
             <span className='highlight'>{currentContent.highlight}</span>{' '}
             {currentContent.beSeen}
           </h1>
+          <p
+            style={{
+              color: '#fff',
+              fontSize: '28px',
+              fontWeight: 'bold',
+              margin: '0 0 20px',
+            }}
+          >
+            {currentContent.payOnlyPrefix}{' '}
+            <span style={{ color: '#E30613' }}>CHF 99.-</span>{' '}
+            {currentContent.payOnlySuffix}
+          </p>
           <img
             src={duoHelmetVest}
             alt='iGlow Smart Helmet and Vest Duo'
