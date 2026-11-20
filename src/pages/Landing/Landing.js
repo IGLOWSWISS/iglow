@@ -774,7 +774,14 @@ function HeroSection({ t }) {
             color='primary'
             href='/reserve'
             size='large'
-            sx={{ marginBottom: 10 }}
+            sx={{
+              marginBottom: 10,
+              transition: 'transform 0.1s ease, box-shadow 0.1s ease',
+              '&:active': {
+                transform: 'scale(0.96) translateY(3px)',
+                boxShadow: 'none',
+              },
+            }}
           >
             {t.heroButton}
           </Button>
@@ -1057,6 +1064,11 @@ function CountdownSection({ t }) {
           size='large'
           sx={{
             marginY: 3,
+            transition: 'transform 0.1s ease, box-shadow 0.1s ease',
+            '&:active': {
+              transform: 'scale(0.96) translateY(3px)',
+              boxShadow: 'none',
+            },
           }}
         >
           {t.heroButton}
