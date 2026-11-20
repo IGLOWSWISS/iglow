@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Reserve.css';
+import duoHelmetVest from '../../assets/images/iglow-duo-helmet-vest.jpg';
 
 const Reserve = () => {
   const [currentLang, setCurrentLang] = useState('fr');
@@ -573,8 +574,8 @@ const Reserve = () => {
             <span className='highlight'>{currentContent.highlight}</span>
           </h1>
           <img
-            src='https://i.imgur.com/H7slDFY.gif'
-            alt='iGlow Smart Vest'
+            src={duoHelmetVest}
+            alt='iGlow Smart Helmet and Vest Duo'
             className='vest-image'
             style={{
               display: 'block',
