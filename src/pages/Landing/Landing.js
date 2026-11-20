@@ -57,7 +57,7 @@ const CONTENT = {
     duoSpecial: 'OFFRE DUO SPÉCIALE',
     duoSpecialDesc:
       "Offre spéciale Black Friday & lancement Kickstarter : le Duo Casque + Gilet IGLOW",
-    newPricePrefix: 'SEULEMENT',
+    newPricePrefix: 'PAYÉ SEULEMENT',
     discountLine: '-50% de réduction',
     clickToReserve: 'Cliquez pour réserver et faire partie du succès.',
     kickstarterButton: 'Rejoignez le financement participatif',
@@ -113,7 +113,7 @@ const CONTENT = {
     duoSpecial: 'DUO SPEZIAL',
     duoSpecialDesc:
       'Black Friday & Kickstarter-Launch-Spezial: das IGLOW Helm + Weste Duo',
-    newPricePrefix: 'NUR',
+    newPricePrefix: 'NUR BEZAHLT',
     discountLine: '-50% Rabatt',
     clickToReserve: 'Klicken Sie, um zu reservieren und Teil des Erfolgs zu sein.',
     kickstarterButton: 'Beim Crowdfunding mitmachen',
@@ -169,7 +169,7 @@ const CONTENT = {
     duoSpecial: 'OFFERTA DUO SPECIALE',
     duoSpecialDesc:
       'Offerta speciale Black Friday e lancio Kickstarter: il Duo Casco + Gilet IGLOW',
-    newPricePrefix: 'SOLO',
+    newPricePrefix: 'PAGATO SOLO',
     discountLine: '-50% di sconto',
     clickToReserve: 'Clicca per prenotare e far parte del successo.',
     kickstarterButton: 'Partecipa al crowdfunding',
@@ -225,7 +225,7 @@ const CONTENT = {
     duoSpecial: 'DUO SPECIAL',
     duoSpecialDesc:
       'Black Friday & Kickstarter launch special: the IGLOW Helmet + Vest Duo',
-    newPricePrefix: 'ONLY',
+    newPricePrefix: 'PAID ONLY',
     discountLine: '+50% OFF',
     clickToReserve: 'Click to reserve and be part of the success.',
     kickstarterButton: 'Join the crowdfunding',
@@ -281,7 +281,7 @@ const CONTENT = {
     duoSpecial: 'DUO ESPECIAL',
     duoSpecialDesc:
       'Especial de lanzamiento de Black Friday y Kickstarter: el Duo Casco + Chaleco IGLOW',
-    newPricePrefix: 'SOLO',
+    newPricePrefix: 'PAGADO SOLO',
     discountLine: '-50% de descuento',
     clickToReserve: 'Haz clic para reservar y ser parte del éxito.',
     kickstarterButton: 'Únete al crowdfunding',
@@ -337,7 +337,7 @@ const CONTENT = {
     duoSpecial: 'DUO SPECIAL',
     duoSpecialDesc:
       'Black Friday & Kickstarter-lancering special: de IGLOW Helm + Vest Duo',
-    newPricePrefix: 'SLECHTS',
+    newPricePrefix: 'SLECHTS BETAALD',
     discountLine: '-50% korting',
     clickToReserve: 'Klik om te reserveren en deel uit te maken van het succes.',
     kickstarterButton: 'Doe mee aan de crowdfunding',
@@ -393,7 +393,7 @@ const CONTENT = {
     duoSpecial: 'DUO ESPECIAL',
     duoSpecialDesc:
       'Especial de lançamento Black Friday & Kickstarter: o Duo Capacete + Colete IGLOW',
-    newPricePrefix: 'APENAS',
+    newPricePrefix: 'PAGO APENAS',
     discountLine: '-50% de desconto',
     clickToReserve: 'Clique para reservar e fazer parte do sucesso.',
     kickstarterButton: 'Participe do financiamento coletivo',
@@ -449,7 +449,7 @@ const CONTENT = {
     duoSpecial: 'डुओ स्पेशल',
     duoSpecialDesc:
       'ब्लैक फ्राइडे और किकस्टार्टर लॉन्च स्पेशल: IGLOW हेलमेट + जैकेट डुओ',
-    newPricePrefix: 'सिर्फ',
+    newPricePrefix: 'सिर्फ भुगतान',
     discountLine: '-50% छूट',
     clickToReserve: 'आरक्षित करने और सफलता का हिस्सा बनने के लिए क्लिक करें।',
     kickstarterButton: 'क्राउडफंडिंग में शामिल हों',
@@ -505,7 +505,7 @@ const CONTENT = {
     duoSpecial: 'عرض الثنائي الخاص',
     duoSpecialDesc:
       'عرض إطلاق بلاك فرايدي وكيك ستارتر الخاص: ثنائي الخوذة والسترة IGLOW',
-    newPricePrefix: 'فقط',
+    newPricePrefix: 'مدفوع فقط',
     discountLine: '-50% خصم',
     clickToReserve: 'انقر للحجز وكن جزءاً من النجاح.',
     kickstarterButton: 'انضم إلى التمويل الجماعي',
@@ -562,7 +562,7 @@ const CONTENT = {
     duoSpecial: 'СПЕЦИАЛЬНЫЙ ДУО',
     duoSpecialDesc:
       'Специальное предложение Black Friday и запуска Kickstarter: дуо-комплект шлем + жилет IGLOW',
-    newPricePrefix: 'ВСЕГО ЗА',
+    newPricePrefix: 'ОПЛАЧЕНО ВСЕГО',
     discountLine: '-50% скидка',
     clickToReserve: 'Нажмите, чтобы забронировать и стать частью успеха.',
     kickstarterButton: 'Присоединяйтесь к краудфандингу',
