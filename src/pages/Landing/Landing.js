@@ -58,7 +58,7 @@ const CONTENT = {
     duoSpecialDesc:
       "Offre spéciale Black Friday & lancement Kickstarter : le Duo Casque + Gilet IGLOW",
     newPricePrefix: 'PAYÉ SEULEMENT',
-    discountLine: '-50% de réduction',
+    discountLine: 'Gagné CHF 100.-',
     clickToReserve: 'Cliquez pour réserver et faire partie du succès.',
     kickstarterButton: 'Rejoignez le financement participatif',
     kickstarterCaption: 'Votre Duo Casque et Gilet IGLOW',
@@ -114,7 +114,7 @@ const CONTENT = {
     duoSpecialDesc:
       'Black Friday & Kickstarter-Launch-Spezial: das IGLOW Helm + Weste Duo',
     newPricePrefix: 'NUR BEZAHLT',
-    discountLine: '-50% Rabatt',
+    discountLine: 'GEWONNEN CHF 100.-',
     clickToReserve: 'Klicken Sie, um zu reservieren und Teil des Erfolgs zu sein.',
     kickstarterButton: 'Beim Crowdfunding mitmachen',
     kickstarterCaption: 'Ihr IGLOW Helm- und Westen-Duo',
@@ -170,7 +170,7 @@ const CONTENT = {
     duoSpecialDesc:
       'Offerta speciale Black Friday e lancio Kickstarter: il Duo Casco + Gilet IGLOW',
     newPricePrefix: 'PAGATO SOLO',
-    discountLine: '-50% di sconto',
+    discountLine: 'VINTO CHF 100.-',
     clickToReserve: 'Clicca per prenotare e far parte del successo.',
     kickstarterButton: 'Partecipa al crowdfunding',
     kickstarterCaption: 'Il tuo Duo Casco e Gilet IGLOW',
@@ -226,7 +226,7 @@ const CONTENT = {
     duoSpecialDesc:
       'Black Friday & Kickstarter launch special: the IGLOW Helmet + Vest Duo',
     newPricePrefix: 'PAID ONLY',
-    discountLine: '+50% OFF',
+    discountLine: 'WON CHF 100.-',
     clickToReserve: 'Click to reserve and be part of the success.',
     kickstarterButton: 'Join the crowdfunding',
     kickstarterCaption: 'Your IGLOW Helmet and Vest Duo',
@@ -282,7 +282,7 @@ const CONTENT = {
     duoSpecialDesc:
       'Especial de lanzamiento de Black Friday y Kickstarter: el Duo Casco + Chaleco IGLOW',
     newPricePrefix: 'PAGADO SOLO',
-    discountLine: '-50% de descuento',
+    discountLine: 'GANADO CHF 100.-',
     clickToReserve: 'Haz clic para reservar y ser parte del éxito.',
     kickstarterButton: 'Únete al crowdfunding',
     kickstarterCaption: 'Tu Duo Casco y Chaleco IGLOW',
@@ -338,7 +338,7 @@ const CONTENT = {
     duoSpecialDesc:
       'Black Friday & Kickstarter-lancering special: de IGLOW Helm + Vest Duo',
     newPricePrefix: 'SLECHTS BETAALD',
-    discountLine: '-50% korting',
+    discountLine: 'GEWONNEN CHF 100.-',
     clickToReserve: 'Klik om te reserveren en deel uit te maken van het succes.',
     kickstarterButton: 'Doe mee aan de crowdfunding',
     kickstarterCaption: 'Uw IGLOW Helm- en Vestduo',
@@ -394,7 +394,7 @@ const CONTENT = {
     duoSpecialDesc:
       'Especial de lançamento Black Friday & Kickstarter: o Duo Capacete + Colete IGLOW',
     newPricePrefix: 'PAGO APENAS',
-    discountLine: '-50% de desconto',
+    discountLine: 'GANHO CHF 100.-',
     clickToReserve: 'Clique para reservar e fazer parte do sucesso.',
     kickstarterButton: 'Participe do financiamento coletivo',
     kickstarterCaption: 'Seu Duo Capacete e Colete IGLOW',
@@ -450,7 +450,7 @@ const CONTENT = {
     duoSpecialDesc:
       'ब्लैक फ्राइडे और किकस्टार्टर लॉन्च स्पेशल: IGLOW हेलमेट + जैकेट डुओ',
     newPricePrefix: 'सिर्फ भुगतान',
-    discountLine: '-50% छूट',
+    discountLine: 'जीते CHF 100.-',
     clickToReserve: 'आरक्षित करने और सफलता का हिस्सा बनने के लिए क्लिक करें।',
     kickstarterButton: 'क्राउडफंडिंग में शामिल हों',
     kickstarterCaption: 'आपका IGLOW हेलमेट और जैकेट डुओ',
@@ -506,7 +506,7 @@ const CONTENT = {
     duoSpecialDesc:
       'عرض إطلاق بلاك فرايدي وكيك ستارتر الخاص: ثنائي الخوذة والسترة IGLOW',
     newPricePrefix: 'مدفوع فقط',
-    discountLine: '-50% خصم',
+    discountLine: 'ربحت CHF 100.-',
     clickToReserve: 'انقر للحجز وكن جزءاً من النجاح.',
     kickstarterButton: 'انضم إلى التمويل الجماعي',
     kickstarterCaption: 'ثنائي الخوذة والسترة IGLOW الخاص بك',
@@ -563,7 +563,7 @@ const CONTENT = {
     duoSpecialDesc:
       'Специальное предложение Black Friday и запуска Kickstarter: дуо-комплект шлем + жилет IGLOW',
     newPricePrefix: 'ОПЛАЧЕНО ВСЕГО',
-    discountLine: '-50% скидка',
+    discountLine: 'ВЫИГРАНО CHF 100.-',
     clickToReserve: 'Нажмите, чтобы забронировать и стать частью успеха.',
     kickstarterButton: 'Присоединяйтесь к краудфандингу',
     kickstarterCaption: 'Ваш дуо-комплект шлем и жилет IGLOW',
