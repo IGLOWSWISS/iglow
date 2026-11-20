@@ -13,6 +13,7 @@ import controller from '../../assets/images/controller.png';
 import appMockup from '../../assets/images/app-mockup.png';
 import mountain from '../../assets/images/mountain.png';
 import duoHelmetVest from '../../assets/images/iglow-duo-helmet-vest.jpg';
+import helmet3Views from '../../assets/images/iglow-helmet-3-views.jpg';
 
 import { Box, Container, Typography, Button } from '@mui/material';
 
@@ -833,12 +834,41 @@ function WhatIsSection({ t }) {
           />
         </Box>
         <EmptySpace under='h2' />
-        <IllustratedParagraph
-          overtitle={t.safetyOvertitle}
-          title={t.safetyTitle}
-          text={t.safetyText}
-          imgSrc={smartJacket}
-        />
+        <Box sx={{ position: 'relative' }}>
+          <IllustratedParagraph
+            overtitle={t.safetyOvertitle}
+            title={t.safetyTitle}
+            text={t.safetyText}
+            imgSrc={smartJacket}
+          />
+          <Box
+            sx={{
+              position: 'absolute',
+              bottom: { xs: '-20px', sm: '0px' },
+              right: { xs: '10%', sm: '8%' },
+              width: '110px',
+              height: '110px',
+              borderRadius: '50%',
+              overflow: 'hidden',
+              border: '4px solid #fff',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+              zIndex: 2,
+            }}
+          >
+            <Box
+              component='img'
+              src={duoHelmetVest}
+              sx={{
+                position: 'absolute',
+                width: '586px',
+                height: '437px',
+                maxWidth: 'none',
+                top: '-18px',
+                left: '-272px',
+              }}
+            />
+          </Box>
+        </Box>
         <EmptySpace />
         <IllustratedParagraph
           reverse
@@ -1213,6 +1243,32 @@ function CountdownSection({ t }) {
         >
           {t.kickstarterCaption}
         </Typography>
+
+        <Box
+          component='img'
+          src={helmet3Views}
+          alt='iGlow Smart Helmet - 3 views'
+          sx={{
+            display: 'block',
+            width: '100%',
+            maxWidth: '500px',
+            borderRadius: '15px',
+            mb: 4,
+          }}
+        />
+
+        <Box
+          component='img'
+          src='https://i.imgur.com/H7slDFY.gif'
+          alt='iGlow Smart Vest'
+          sx={{
+            display: 'block',
+            width: '100%',
+            maxWidth: '500px',
+            borderRadius: '15px',
+            mb: 4,
+          }}
+        />
 
         {/* GIF du gilet - Remonté ici */}
         <video
