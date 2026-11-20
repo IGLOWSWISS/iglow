@@ -165,7 +165,7 @@ function HeroSection() {
             size='large'
             sx={{ marginBottom: 10 }}
           >
-            Click here to reserve now
+            Click here now to pay and reserve your duo
           </Button>
         </Container>
         <img
@@ -599,7 +599,7 @@ function CountdownSection() {
             marginY: 3,
           }}
         >
-          Click here to reserve now
+          Click here now to pay and reserve your duo
         </Button>
         <Button
           variant='contained'
@@ -639,60 +639,58 @@ function CountdownSection() {
               your Smart Bike Vest iGLOW
             </Typography>
           </Typography>
-          <Typography variant='body1' sx={{ mb: 1 }}>
-            <Typography component='span' sx={{ color: 'white' }}>
-              for only{' '}
-            </Typography>
-            <Typography
-              component='span'
-              sx={{ color: RED, fontWeight: 'bold', fontSize: '1.2rem' }}
-            >
-              1 CHF
-            </Typography>
-            <Typography component='span' sx={{ color: 'white' }}>
-              {' / '}
-            </Typography>
-            <Typography
-              component='span'
-              sx={{ color: RED, fontWeight: 'bold', fontSize: '1.2rem' }}
-            >
-              1 EUR
-            </Typography>
-            <Typography component='span' sx={{ color: 'white' }}>
-              {' / '}
-            </Typography>
-            <Typography
-              component='span'
-              sx={{ color: RED, fontWeight: 'bold', fontSize: '1.2rem' }}
-            >
-              1 USD
-            </Typography>
+          <Typography
+            sx={{ color: RED, fontWeight: 'bold', fontSize: '1.1rem', mt: 2 }}
+          >
+            EXCLUSIVE
           </Typography>
-          <Typography variant='body1' sx={{ mb: 1 }}>
-            <Typography
-              component='span'
-              sx={{ color: RED, fontWeight: 'bold' }}
-            >
-              Super Early Bird
-            </Typography>{' '}
-            <Typography component='span' sx={{ color: 'white' }}>
-              at CHF
-            </Typography>{' '}
-            <Typography
-              component='span'
-              sx={{ color: RED, fontWeight: 'bold' }}
-            >
-              155.-
-            </Typography>
+          <Typography
+            sx={{
+              color: 'white',
+              fontWeight: 900,
+              fontSize: '3.5rem',
+              lineHeight: 1,
+            }}
+          >
+            BLACK
           </Typography>
-          <Typography variant='body2' sx={{ color: 'white' }}>
-            instead of CHF 259.- Save CHF{' '}
-            <Typography
-              component='span'
-              sx={{ color: RED, fontWeight: 'bold' }}
-            >
-              104.-
-            </Typography>
+          <Typography
+            sx={{
+              color: RED,
+              fontWeight: 900,
+              fontSize: '3.5rem',
+              lineHeight: 1,
+              mb: 2,
+            }}
+          >
+            FRIDAY
+          </Typography>
+
+          <Typography sx={{ color: RED, fontWeight: 'bold' }}>
+            DUO SPECIAL
+          </Typography>
+          <Typography variant='body1' sx={{ color: 'white', mb: 2 }}>
+            Black Friday & Kickstarter launch special: the IGLOW Helmet + Vest
+            Duo
+          </Typography>
+
+          <Typography
+            sx={{
+              color: 'white',
+              textDecoration: 'line-through',
+              opacity: 0.6,
+              fontSize: '1.3rem',
+            }}
+          >
+            CHF 199.-
+          </Typography>
+          <Typography
+            sx={{ color: RED, fontWeight: 900, fontSize: '2.4rem' }}
+          >
+            ONLY CHF 99.-
+          </Typography>
+          <Typography sx={{ color: '#00FF00', fontWeight: 'bold', mt: 1 }}>
+            + 50% OFF
           </Typography>
         </Box>
 

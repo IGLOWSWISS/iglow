@@ -14,37 +14,40 @@ const Reserve = () => {
       reserveButtons: [
         {
           currency: 'CHF',
-          price: '1',
+          price: 'SEULEMENT 99.-',
           flag: '🇨🇭',
           text: 'Réserver',
           priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
         },
         {
           currency: 'EUR',
-          price: '1',
+          price: 'SEULEMENT 99.-',
           flag: '🇪🇺',
           text: 'Réserver',
           priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
         },
         {
           currency: 'USD',
-          price: '1',
+          price: 'SEULEMENT 99.-',
           flag: '🌍',
           text: 'Réserver',
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: 'LE 26 MARS 2026',
-      launchText: 'Ouverture des ventes',
+      launchDate: 'LE 27 NOVEMBRE 2026',
+      launchTextPrefix: 'Ouverture des ventes',
+      blackWord: 'Black',
+      fridayWord: 'Friday',
+      launchTextSuffix: '',
       socialProof: 'cyclistes ont déjà réservé leur gilet IGLOW',
       benefits: [
         {
           title: 'Accès Prioritaire',
-          description: 'Super Early Bird à CHF 155.- au lieu de CHF 259.-',
+          description: 'Black Friday Duo (casque + gilet) à CHF 99.- au lieu de CHF 199.-',
         },
         {
-          title: 'Économisez CHF 104.-',
+          title: '-50% de réduction',
           description:
             'Prix le plus bas jamais proposé pour ce niveau de technologie',
         },
@@ -61,37 +64,40 @@ const Reserve = () => {
       reserveButtons: [
         {
           currency: 'CHF',
-          price: '1',
+          price: 'ONLY 99.-',
           flag: '🇨🇭',
           text: 'Reserve',
           priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
         },
         {
           currency: 'EUR',
-          price: '1',
+          price: 'ONLY 99.-',
           flag: '🇪🇺',
           text: 'Reserve',
           priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
         },
         {
           currency: 'USD',
-          price: '1',
+          price: 'ONLY 99.-',
           flag: '🌍',
           text: 'Reserve',
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: 'MARCH 26, 2026',
-      launchText: 'Sales Opening',
+      launchDate: 'NOVEMBER 27, 2026',
+      launchTextPrefix: '',
+      blackWord: 'Black',
+      fridayWord: 'Friday',
+      launchTextSuffix: 'Sales Opening',
       socialProof: 'cyclists have already reserved their IGLOW vest',
       benefits: [
         {
           title: 'Priority Access',
-          description: 'Super Early Bird at CHF 155.- instead of CHF 259.-',
+          description: 'Black Friday Duo (helmet + vest) at CHF 99.- instead of CHF 199.-',
         },
         {
-          title: 'Save CHF 104.-',
+          title: '+50% OFF',
           description: 'Lowest price ever offered for this level of technology',
         },
         {
@@ -107,37 +113,40 @@ const Reserve = () => {
       reserveButtons: [
         {
           currency: 'CHF',
-          price: '1',
+          price: 'NUR 99.-',
           flag: '🇨🇭',
           text: 'Reservieren',
           priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
         },
         {
           currency: 'EUR',
-          price: '1',
+          price: 'NUR 99.-',
           flag: '🇪🇺',
           text: 'Reservieren',
           priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
         },
         {
           currency: 'USD',
-          price: '1',
+          price: 'NUR 99.-',
           flag: '🌍',
           text: 'Reservieren',
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '26. MÄRZ 2026',
-      launchText: 'Verkaufsstart',
+      launchDate: '27. NOVEMBER 2026',
+      launchTextPrefix: '',
+      blackWord: 'Black',
+      fridayWord: 'Friday',
+      launchTextSuffix: 'Verkaufsstart',
       socialProof: 'Radfahrer haben bereits ihre IGLOW-Jacke reserviert',
       benefits: [
         {
           title: 'Prioritätszugang',
-          description: 'Super Early Bird für CHF 155.- statt CHF 259.-',
+          description: 'Black Friday Duo (Helm + Weste) für CHF 99.- statt CHF 199.-',
         },
         {
-          title: 'Sparen Sie CHF 104.-',
+          title: '-50% Rabatt',
           description: 'Niedrigster Preis für diese Technologiestufe',
         },
         {
@@ -154,37 +163,40 @@ const Reserve = () => {
       reserveButtons: [
         {
           currency: 'CHF',
-          price: '1',
+          price: 'SOLO 99.-',
           flag: '🇨🇭',
           text: 'Reservar',
           priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
         },
         {
           currency: 'EUR',
-          price: '1',
+          price: 'SOLO 99.-',
           flag: '🇪🇺',
           text: 'Reservar',
           priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
         },
         {
           currency: 'USD',
-          price: '1',
+          price: 'SOLO 99.-',
           flag: '🌍',
           text: 'Reservar',
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '26 DE MARZO DE 2026',
-      launchText: 'Apertura de ventas',
+      launchDate: '27 DE NOVIEMBRE DE 2026',
+      launchTextPrefix: '',
+      blackWord: 'Black',
+      fridayWord: 'Friday',
+      launchTextSuffix: 'Apertura de ventas',
       socialProof: 'ciclistas ya han reservado su chaqueta IGLOW',
       benefits: [
         {
           title: 'Acceso Prioritario',
-          description: 'Super Early Bird a CHF 155.- en lugar de CHF 259.-',
+          description: 'Black Friday Duo (casco + chaleco) a CHF 99.- en lugar de CHF 199.-',
         },
         {
-          title: 'Ahorre CHF 104.-',
+          title: '-50% de descuento',
           description: 'Precio más bajo ofrecido para este nivel de tecnología',
         },
         {
@@ -200,38 +212,40 @@ const Reserve = () => {
       reserveButtons: [
         {
           currency: 'CHF',
-          price: '1',
+          price: 'SLECHTS 99.-',
           flag: '🇨🇭',
           text: 'Reserveren',
           priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
         },
         {
           currency: 'EUR',
-          price: '1',
+          price: 'SLECHTS 99.-',
           flag: '🇪🇺',
           text: 'Reserveren',
           priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
         },
         {
           currency: 'USD',
-          price: '1',
+          price: 'SLECHTS 99.-',
           flag: '🌍',
           text: 'Reserveren',
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '26 MAART 2026',
-      launchText: 'Verkoop opening',
+      launchDate: '27 NOVEMBER 2026',
+      launchTextPrefix: '',
+      blackWord: 'Black',
+      fridayWord: 'Friday',
+      launchTextSuffix: 'Verkoop opening',
       socialProof: 'fietsers hebben al hun IGLOW-jas gereserveerd',
       benefits: [
         {
           title: 'Prioriteitstoegang',
-          description:
-            'Super Early Bird voor CHF 155.- in plaats van CHF 259.-',
+          description: 'Black Friday Duo (helm + vest) voor CHF 99.- in plaats van CHF 199.-',
         },
         {
-          title: 'Bespaar CHF 104.-',
+          title: '-50% korting',
           description:
             'Laagste prijs ooit aangeboden voor dit technologieniveau',
         },
@@ -248,37 +262,40 @@ const Reserve = () => {
       reserveButtons: [
         {
           currency: 'CHF',
-          price: '1',
+          price: 'APENAS 99.-',
           flag: '🇨🇭',
           text: 'Reservar',
           priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
         },
         {
           currency: 'EUR',
-          price: '1',
+          price: 'APENAS 99.-',
           flag: '🇪🇺',
           text: 'Reservar',
           priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
         },
         {
           currency: 'USD',
-          price: '1',
+          price: 'APENAS 99.-',
           flag: '🌍',
           text: 'Reservar',
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '26 DE MARÇO DE 2026',
-      launchText: 'Abertura de vendas',
+      launchDate: '27 DE NOVEMBRO DE 2026',
+      launchTextPrefix: '',
+      blackWord: 'Black',
+      fridayWord: 'Friday',
+      launchTextSuffix: 'Abertura de vendas',
       socialProof: 'ciclistas já reservaram sua jaqueta IGLOW',
       benefits: [
         {
           title: 'Acesso Prioritário',
-          description: 'Super Early Bird por CHF 155.- em vez de CHF 259.-',
+          description: 'Black Friday Duo (capacete + colete) por CHF 99.- em vez de CHF 199.-',
         },
         {
-          title: 'Economize CHF 104.-',
+          title: '-50% de desconto',
           description:
             'Preço mais baixo já oferecido para este nível de tecnologia',
         },
@@ -295,37 +312,40 @@ const Reserve = () => {
       reserveButtons: [
         {
           currency: 'CHF',
-          price: '1',
+          price: 'केवल 99.-',
           flag: '🇨🇭',
           text: 'रिजर्व करें',
           priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
         },
         {
           currency: 'EUR',
-          price: '1',
+          price: 'केवल 99.-',
           flag: '🇪🇺',
           text: 'रिजर्व करें',
           priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
         },
         {
           currency: 'USD',
-          price: '1',
+          price: 'केवल 99.-',
           flag: '🌍',
           text: 'रिजर्व करें',
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '26 मार्च 2026',
-      launchText: 'बिक्री शुरुआत',
+      launchDate: '27 नवंबर 2026',
+      launchTextPrefix: '',
+      blackWord: 'Black',
+      fridayWord: 'Friday',
+      launchTextSuffix: 'बिक्री शुरुआत',
       socialProof: 'साइकिल चालकों ने पहले ही अपनी IGLOW जैकेट आरक्षित कर ली है',
       benefits: [
         {
           title: 'प्राथमिकता पहुंच',
-          description: 'सुपर अर्ली बर्ड CHF 155.- में CHF 259.- के बजाय',
+          description: 'ब्लैक फ्राइडे डुओ (हेलमेट + जैकेट) CHF 99.- में CHF 199.- के बजाय',
         },
         {
-          title: 'CHF 104.- बचाएं',
+          title: '-50% छूट',
           description: 'इस प्रौद्योगिकी स्तर के लिए सबसे कम कीमत',
         },
         {
@@ -342,37 +362,40 @@ const Reserve = () => {
       reserveButtons: [
         {
           currency: 'CHF',
-          price: '1',
+          price: 'فقط 99.-',
           flag: '🇨🇭',
           text: 'احجز',
           priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
         },
         {
           currency: 'EUR',
-          price: '1',
+          price: 'فقط 99.-',
           flag: '🇪🇺',
           text: 'احجز',
           priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
         },
         {
           currency: 'USD',
-          price: '1',
+          price: 'فقط 99.-',
           flag: '🌍',
           text: 'احجز',
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '26 مارس 2026',
-      launchText: 'افتتاح المبيعات',
+      launchDate: '27 نوفمبر 2026',
+      launchTextPrefix: '',
+      blackWord: 'Black',
+      fridayWord: 'Friday',
+      launchTextSuffix: 'افتتاح المبيعات',
       socialProof: 'راكبي الدراجات قد حجزوا بالفعل سترة IGLOW الخاصة بهم',
       benefits: [
         {
           title: 'وصول مفضل',
-          description: 'سوبر إيرلي بيرد بـ CHF 155.- بدلاً من CHF 259.-',
+          description: 'بلاك فرايدي ديو (خوذة + سترة) بـ CHF 99.- بدلاً من CHF 199.-',
         },
         {
-          title: 'وفر CHF 104.-',
+          title: '-50% خصم',
           description: 'أقل سعر يتم تقديمه لهذا المستوى من التكنولوجيا',
         },
         {
@@ -388,37 +411,40 @@ const Reserve = () => {
       reserveButtons: [
         {
           currency: 'CHF',
-          price: '1',
+          price: 'ТОЛЬКО 99.-',
           flag: '🇨🇭',
           text: 'Забронировать',
           priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
         },
         {
           currency: 'EUR',
-          price: '1',
+          price: 'ТОЛЬКО 99.-',
           flag: '🇪🇺',
           text: 'Забронировать',
           priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
         },
         {
           currency: 'USD',
-          price: '1',
+          price: 'ТОЛЬКО 99.-',
           flag: '🌍',
           text: 'Забронировать',
           priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
         },
       ],
       swissBadge: 'SWISS MADE SMART VEST',
-      launchDate: '26 МАРТА 2026',
-      launchText: 'Начало продаж',
+      launchDate: '27 НОЯБРЯ 2026',
+      launchTextPrefix: '',
+      blackWord: 'Black',
+      fridayWord: 'Friday',
+      launchTextSuffix: 'Начало продаж',
       socialProof: 'велосипедистов уже забронировали свою куртку IGLOW',
       benefits: [
         {
           title: 'Приоритетный доступ',
-          description: 'Супер ранняя птица за CHF 155.- вместо CHF 259.-',
+          description: 'Black Friday Duo (шлем + жилет) за CHF 99.- вместо CHF 199.-',
         },
         {
-          title: 'Сэкономьте CHF 104.-',
+          title: '-50% скидка',
           description: 'Самая низкая цена для этого уровня технологии',
         },
         {
@@ -561,37 +587,44 @@ const Reserve = () => {
           <div
             className='reserve-buttons-container'
             style={{
-              textAlign: 'center',
-              margin: '40px 0',
               display: 'flex',
-              justifyContent: 'center',
-              flexWrap: 'nowrap',
-              gap: '5px',
-              overflowX: 'auto',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '15px',
+              margin: '40px 0',
             }}
           >
-            {currentContent.reserveButtons.map((button, index) => (
-              <button
-                key={index}
-                onClick={() => redirectToStripe(button.priceId)}
-                className={`btn ${
-                  index === 0
-                    ? 'btn-primary'
-                    : index === 1
-                    ? 'btn-secondary'
-                    : 'btn-tertiary'
-                }`}
-              >
-                <span className='flag-emoji' style={{ fontSize: '1.5em' }}>
-                  {button.flag}
-                </span>
-                {button.text}
-                <br />
-                <span style={{ fontWeight: '900', fontSize: '1.2em' }}>
-                  {button.price} {button.currency}
-                </span>
-              </button>
-            ))}
+            {currentContent.reserveButtons.map((button, index) => {
+              const [priceWord, priceNumber] = button.price.split(' ');
+              return (
+                <button
+                  key={index}
+                  onClick={() => redirectToStripe(button.priceId)}
+                  className={`btn ${
+                    index === 0
+                      ? 'btn-primary'
+                      : index === 1
+                      ? 'btn-secondary'
+                      : 'btn-tertiary'
+                  }`}
+                >
+                  <span className='flag-emoji' style={{ fontSize: '1.5em' }}>
+                    {button.flag}
+                  </span>
+                  <span style={{ fontWeight: '900', fontSize: '1.3em' }}>
+                    {button.text}
+                  </span>
+                  <br />
+                  <span style={{ fontWeight: '700' }}>{priceWord}</span>{' '}
+                  <span style={{ fontWeight: '900', fontSize: '1.8em' }}>
+                    {priceNumber}
+                  </span>{' '}
+                  <span style={{ fontWeight: '900', fontSize: '1.2em' }}>
+                    {button.currency}
+                  </span>
+                </button>
+              );
+            })}
           </div>
           <div className='swiss-badge'>
             <div className='swiss-flag'></div>
@@ -620,7 +653,24 @@ const Reserve = () => {
       <section className='countdown'>
         <div className='container'>
           <h2>
-            {currentContent.launchText}
+            {currentContent.launchTextPrefix && (
+              <>
+                {currentContent.launchTextPrefix}
+                <br />
+              </>
+            )}
+            <span style={{ color: '#000', fontSize: '1.7em' }}>
+              {currentContent.blackWord}
+            </span>{' '}
+            <span style={{ color: '#fff', fontSize: '1.7em' }}>
+              {currentContent.fridayWord}
+            </span>
+            {currentContent.launchTextSuffix && (
+              <>
+                <br />
+                {currentContent.launchTextSuffix}
+              </>
+            )}
             <br />
             <span className='date-frame'>{currentContent.launchDate}</span>
             <br />
@@ -655,9 +705,7 @@ const Reserve = () => {
               <div key={index} className='benefit'>
                 <div className='benefit-icon'>{renderIglowIcon()}</div>
                 <h3>{benefit.title}</h3>
-                {benefit.description.includes(
-                  'Super Early Bird at CHF 155.-'
-                ) ? (
+                {index === 0 ? (
                   <p
                     style={{ fontSize: '2.5rem', fontWeight: 'bold' }}
                     dangerouslySetInnerHTML={{ __html: benefit.description }}
