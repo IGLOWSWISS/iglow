@@ -617,6 +617,31 @@ function CountdownSection() {
         >
           Go on Kickstarter
         </Button>
+        <Typography
+          sx={{
+            color: 'white',
+            textAlign: 'center',
+            maxWidth: '500px',
+            mb: 3,
+          }}
+        >
+          Black Friday continues on{' '}
+          <Typography component='span' sx={{ color: '#05CE78', fontWeight: 'bold' }}>
+            Kickstarter.com
+          </Typography>
+          : the Duo for{' '}
+          <Typography component='span' sx={{ color: RED, fontWeight: 'bold' }}>
+            $99
+          </Typography>{' '}
+          instead of{' '}
+          <Typography
+            component='span'
+            sx={{ color: 'white', textDecoration: 'line-through', opacity: 0.6 }}
+          >
+            $237
+          </Typography>{' '}
+          (CHF 199.-)
+        </Typography>
         <Box
           sx={{
             textAlign: 'center',
