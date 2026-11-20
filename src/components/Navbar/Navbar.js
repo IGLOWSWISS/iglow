@@ -17,7 +17,7 @@ import SwissMade from '../../assets/logos/swiss-made.svg';
 import Indiegogo from '../../assets/logos/indiegogo-white.svg';
 import Kickstarter from '../../assets/logos/kickstarter-white.svg';
 
-function Navbar({ admin, coverPage }) {
+function Navbar({ admin, coverPage, topOffset = 0 }) {
   const { drawerOpened, toggleDrawer } = NavbarLogic(admin);
 
   const drawer = (
@@ -68,6 +68,7 @@ function Navbar({ admin, coverPage }) {
         sx={{
           background: 'transparent',
           position: 'absolute',
+          top: topOffset,
         }}
       >
         <Container

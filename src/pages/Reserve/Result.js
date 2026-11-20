@@ -325,7 +325,7 @@ const Result = () => {
             iGlow® - Swiss Made Smart Vest
           </p>
           <p style={{ fontSize: '24px', marginBottom: '20px' }}>
-            © 2025 iGlow Switzerland. Tous droits réservés.
+            © 2026 iGlow Switzerland. Tous droits réservés.
           </p>
           <p style={{ fontSize: '24px', marginBottom: '20px' }}>
             Contact :{' '}

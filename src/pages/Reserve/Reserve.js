@@ -804,7 +804,7 @@ const Reserve = () => {
       {/* Footer */}
       <footer>
         <div className='container'>
-          <p>&copy; 2025 iGlow. All rights reserved.</p>
+          <p>&copy; 2026 iGlow. All rights reserved.</p>
           <p>
             <a href='/legal-notices'>Legal Notices</a> |
             <a href='/privacy-policy'>Privacy Policy</a>
