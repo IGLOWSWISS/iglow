@@ -10,8 +10,9 @@ const Reserve = () => {
   const content = {
     fr: {
       tagline: "RÉSERVEZ DÈS AUJOURD'HUI VOTRE",
-      title: 'Smart Bike Vest',
+      title: 'Duo Casque et Gilet',
       highlight: 'IGLOW',
+      beSeen: 'pour être vu !',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -63,8 +64,9 @@ const Reserve = () => {
     },
     en: {
       tagline: 'RESERVE YOUR',
-      title: 'Smart Bike Vest',
+      title: 'Helmet and Vest Duo',
       highlight: 'IGLOW',
+      beSeen: 'to be seen!',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -115,8 +117,9 @@ const Reserve = () => {
     },
     de: {
       tagline: 'RESERVIEREN SIE JETZT IHRE',
-      title: 'Smart Bike Vest',
+      title: 'Helm- und Westen-Duo',
       highlight: 'IGLOW',
+      beSeen: 'um gesehen zu werden!',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -168,8 +171,9 @@ const Reserve = () => {
     },
     es: {
       tagline: 'RESERVE HOY SU',
-      title: 'Smart Bike Vest',
+      title: 'Dúo Casco y Chaleco',
       highlight: 'IGLOW',
+      beSeen: '¡para ser visto!',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -220,8 +224,9 @@ const Reserve = () => {
     },
     nl: {
       tagline: 'RESERVEER NU UW',
-      title: 'Smart Bike Vest',
+      title: 'Helm- en Vestduo',
       highlight: 'IGLOW',
+      beSeen: 'om gezien te worden!',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -273,8 +278,9 @@ const Reserve = () => {
     },
     pt: {
       tagline: 'RESERVE HOJE SUA',
-      title: 'Smart Bike Vest',
+      title: 'Duo Capacete e Colete',
       highlight: 'IGLOW',
+      beSeen: 'para ser visto!',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -326,8 +332,9 @@ const Reserve = () => {
     },
     hi: {
       tagline: 'आज ही अपना रिजर्व करें',
-      title: 'Smart Bike Vest',
+      title: 'हेलमेट और जैकेट डुओ',
       highlight: 'IGLOW',
+      beSeen: 'दिखने के लिए!',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -379,8 +386,9 @@ const Reserve = () => {
     },
     ar: {
       tagline: 'احجز اليوم',
-      title: 'Smart Bike Vest',
+      title: 'ثنائي الخوذة والسترة',
       highlight: 'IGLOW',
+      beSeen: 'لتكون مرئياً!',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -431,8 +439,9 @@ const Reserve = () => {
     },
     ru: {
       tagline: 'ЗАБРОНИРУЙТЕ СЕГОДНЯ',
-      title: 'Smart Bike Vest',
+      title: 'Дуо шлем и жилет',
       highlight: 'IGLOW',
+      beSeen: 'чтобы быть заметным!',
       reserveButtons: [
         {
           currency: 'CHF',
@@ -598,7 +607,8 @@ const Reserve = () => {
           </p>
           <h1>
             {currentContent.title}{' '}
-            <span className='highlight'>{currentContent.highlight}</span>
+            <span className='highlight'>{currentContent.highlight}</span>{' '}
+            {currentContent.beSeen}
           </h1>
           <img
             src={duoHelmetVest}
