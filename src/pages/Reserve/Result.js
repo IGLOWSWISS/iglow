@@ -12,7 +12,9 @@ const Result = () => {
 
     if (
       urlLang &&
-      ['fr', 'en', 'de', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(urlLang)
+      ['fr', 'de', 'it', 'en', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(
+        urlLang
+      )
     ) {
       setCurrentLang(urlLang);
     } else {
@@ -20,7 +22,7 @@ const Result = () => {
       const langCode = browserLang.split('-')[0];
 
       if (
-        ['fr', 'en', 'de', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(
+        ['fr', 'de', 'it', 'en', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(
           langCode
         )
       ) {
@@ -65,28 +67,6 @@ const Result = () => {
       contactUs: 'Nous Contacter',
       showIcon: false,
     },
-    en: {
-      title: 'Congratulations!',
-      message:
-        'Your reservation for the <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> has been successfully confirmed! Welcome to the smart mobility adventure.',
-      confirmedTitle: 'RESERVATION CONFIRMED',
-      confirmationMessage:
-        'Thank you! Your purchase has been successfully recorded and your pre-order is confirmed. A confirmation email has been sent to you.',
-      confirmedItems: [
-        'BRAVO! You just saved<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
-      ],
-      nextStepsTitle: '👀 Next Steps',
-      nextStepsItems: [
-        'Monitor your inbox for updates',
-        'Exclusive access to Kickstarter launch',
-        'Priority delivery',
-        'Dedicated customer support',
-        'Refer your friends and family to discover the iGlow.swiss crowdfunding',
-      ],
-      backHome: 'Back to Home',
-      contactUs: 'Contact Us',
-      showIcon: true,
-    },
     de: {
       title: 'Herzlichen Glückwunsch!',
       message:
@@ -107,6 +87,50 @@ const Result = () => {
       ],
       backHome: 'Zurück zur Startseite',
       contactUs: 'Kontaktieren Sie uns',
+      showIcon: true,
+    },
+    it: {
+      title: 'Congratulazioni!',
+      message:
+        'La tua prenotazione per il <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> è stata confermata con successo! Benvenuto nell\'avventura della mobilità intelligente.',
+      confirmedTitle: 'PRENOTAZIONE CONFERMATA',
+      confirmationMessage:
+        'Grazie! Il tuo acquisto è stato registrato correttamente e il tuo preordine è confermato. Ti è stata inviata un\'email di conferma.',
+      confirmedItems: [
+        'BRAVO! Hai appena risparmiato<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
+      ],
+      nextStepsTitle: '👀 Prossimi Passi',
+      nextStepsItems: [
+        'Controlla la tua casella email per gli aggiornamenti',
+        'Accesso esclusivo al lancio su Kickstarter',
+        'Consegna prioritaria',
+        'Assistenza clienti dedicata',
+        'Invita amici e parenti a scoprire il crowdfunding di iGlow.swiss',
+      ],
+      backHome: 'Torna alla Home',
+      contactUs: 'Contattaci',
+      showIcon: true,
+    },
+    en: {
+      title: 'Congratulations!',
+      message:
+        'Your reservation for the <span style="color:#E30613; font-weight:bold;">Smart Bike Vest IGLOW</span> has been successfully confirmed! Welcome to the smart mobility adventure.',
+      confirmedTitle: 'RESERVATION CONFIRMED',
+      confirmationMessage:
+        'Thank you! Your purchase has been successfully recorded and your pre-order is confirmed. A confirmation email has been sent to you.',
+      confirmedItems: [
+        'BRAVO! You just saved<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
+      ],
+      nextStepsTitle: '👀 Next Steps',
+      nextStepsItems: [
+        'Monitor your inbox for updates',
+        'Exclusive access to Kickstarter launch',
+        'Priority delivery',
+        'Dedicated customer support',
+        'Refer your friends and family to discover the iGlow.swiss crowdfunding',
+      ],
+      backHome: 'Back to Home',
+      contactUs: 'Contact Us',
       showIcon: true,
     },
     es: {
@@ -307,10 +331,10 @@ const Result = () => {
           </div>
 
           <div className='result-actions'>
-            <Link to='/' className='btn btn-primary'>
+            <Link to='/' className='result-btn result-btn-primary'>
               {currentContent.backHome}
             </Link>
-            <a href='mailto:contact@iglow.swiss' className='btn btn-secondary'>
+            <a href='mailto:contact@iglow.swiss' className='result-btn result-btn-secondary'>
               {currentContent.contactUs}
             </a>
           </div>
