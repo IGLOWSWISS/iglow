@@ -51,7 +51,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'Votre Duo<br/>CASQUE + GILET IGLOW<br/>pour seulement <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>au lieu de CHF 199.-<br/>soit un énorme rabais de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
+          description: 'Votre Duo CASQUE + GILET IGLOW<br/>pour seulement <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>au lieu de CHF 199.-<br/>soit un énorme rabais de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% de réduction',
@@ -107,7 +107,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'Ihr Duo<br/>HELM + WESTE IGLOW<br/>für nur <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>statt CHF 199.-<br/>ein riesiger Rabatt von<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
+          description: 'Ihr Duo HELM + WESTE IGLOW<br/>für nur <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>statt CHF 199.-<br/>ein riesiger Rabatt von<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% Rabatt',
@@ -163,7 +163,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'Il tuo Duo<br/>CASCO + GILET IGLOW<br/>per soli <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>invece di CHF 199.-<br/>ovvero un enorme sconto di<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
+          description: 'Il tuo Duo CASCO + GILET IGLOW<br/>per soli <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>invece di CHF 199.-<br/>ovvero un enorme sconto di<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% di sconto',
@@ -219,7 +219,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'Your Duo<br/>HELMET + VEST IGLOW<br/>for only <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>instead of CHF 199.-<br/>a huge discount of<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
+          description: 'Your Duo HELMET + VEST IGLOW<br/>for only <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>instead of CHF 199.-<br/>a huge discount of<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '+50% OFF',
@@ -274,7 +274,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'Tu Duo<br/>CASCO + CHALECO IGLOW<br/>por solo <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>en lugar de CHF 199.-<br/>un enorme descuento de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
+          description: 'Tu Duo CASCO + CHALECO IGLOW<br/>por solo <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>en lugar de CHF 199.-<br/>un enorme descuento de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% de descuento',
@@ -329,7 +329,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'Uw Duo<br/>HELM + VEST IGLOW<br/>voor slechts <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>in plaats van CHF 199.-<br/>een enorme korting van<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
+          description: 'Uw Duo HELM + VEST IGLOW<br/>voor slechts <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>in plaats van CHF 199.-<br/>een enorme korting van<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% korting',
@@ -385,7 +385,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'Seu Duo<br/>CAPACETE + COLETE IGLOW<br/>por apenas <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>em vez de CHF 199.-<br/>um enorme desconto de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
+          description: 'Seu Duo CAPACETE + COLETE IGLOW<br/>por apenas <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>em vez de CHF 199.-<br/>um enorme desconto de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% de desconto',
@@ -441,7 +441,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'आपका डुओ<br/>हेलमेट + जैकेट IGLOW<br/>सिर्फ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> में<br/>CHF 199.- के बजाय<br/>यानी<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span> की जबरदस्त छूट',
+          description: 'आपका डुओ हेलमेट + जैकेट IGLOW<br/>सिर्फ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> में<br/>CHF 199.- के बजाय<br/>यानी<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span> की जबरदस्त छूट',
         },
         {
           title: '-50% छूट',
@@ -497,7 +497,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'ثنائيك<br/>خوذة + سترة IGLOW<br/>بـ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> فقط<br/>بدلاً من CHF 199.-<br/>أي خصم ضخم قدره<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
+          description: 'ثنائيك خوذة + سترة IGLOW<br/>بـ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> فقط<br/>بدلاً من CHF 199.-<br/>أي خصم ضخم قدره<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% خصم',
@@ -552,7 +552,7 @@ const Reserve = () => {
       benefits: [
         {
           title: 'BLACK FRIDAY',
-          description: 'Ваш Дуо<br/>ШЛЕМ + ЖИЛЕТ IGLOW<br/>всего за <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>вместо CHF 199.-<br/>то есть огромная скидка<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
+          description: 'Ваш Дуо ШЛЕМ + ЖИЛЕТ IGLOW<br/>всего за <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>вместо CHF 199.-<br/>то есть огромная скидка<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
         },
         {
           title: '-50% скидка',
