@@ -1139,17 +1139,25 @@ function CountdownSection({ t }) {
           <Typography
             sx={{
               color: 'white',
-              textDecoration: 'line-through',
-              opacity: 0.6,
-              fontSize: '1.3rem',
+              fontWeight: 900,
+              fontSize: '2rem',
             }}
           >
             CHF 199.-
           </Typography>
-          <Typography
-            sx={{ color: RED, fontWeight: 900, fontSize: '2.4rem' }}
-          >
-            {t.newPricePrefix} CHF 99.-
+          <Typography sx={{ fontSize: '2.4rem', fontWeight: 900 }}>
+            <Typography
+              component='span'
+              sx={{ color: 'white', fontWeight: 900, fontSize: 'inherit' }}
+            >
+              {t.newPricePrefix}
+            </Typography>{' '}
+            <Typography
+              component='span'
+              sx={{ color: RED, fontWeight: 900, fontSize: 'inherit' }}
+            >
+              CHF 99.-
+            </Typography>
           </Typography>
           <Typography sx={{ color: '#00FF00', fontWeight: 'bold', mt: 1 }}>
             {t.discountLine}
