@@ -1,7 +1,14 @@
 import { Box, Typography } from '@mui/material';
 import Palette from '../../theme/palette';
 
-function IllustratedParagraph({ reverse, imgSrc, title, overtitle, text }) {
+function IllustratedParagraph({
+  reverse,
+  imgSrc,
+  imgTopSrc,
+  title,
+  overtitle,
+  text,
+}) {
   const { NIGHT, STATE_GREY } = Palette();
   return (
     <Box
@@ -29,11 +36,30 @@ function IllustratedParagraph({ reverse, imgSrc, title, overtitle, text }) {
         </Typography>
         {text}
       </Box>
-      <Box
-        component='img'
-        src={imgSrc}
-        sx={{ width: { xs: '70vw', sm: '200%' }, maxWidth: '300px' }}
-      />
+      {imgTopSrc ? (
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            width: { xs: '70vw', sm: '200%' },
+            maxWidth: '300px',
+          }}
+        >
+          <Box
+            component='img'
+            src={imgTopSrc}
+            sx={{ width: '62%', mb: '-8%', zIndex: 1 }}
+          />
+          <Box component='img' src={imgSrc} sx={{ width: '100%' }} />
+        </Box>
+      ) : (
+        <Box
+          component='img'
+          src={imgSrc}
+          sx={{ width: { xs: '70vw', sm: '200%' }, maxWidth: '300px' }}
+        />
+      )}
     </Box>
   );
 }

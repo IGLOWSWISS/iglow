@@ -14,6 +14,7 @@ import appMockup from '../../assets/images/app-mockup.png';
 import mountain from '../../assets/images/mountain.png';
 import duoHelmetVest from '../../assets/images/iglow-duo-helmet-vest.jpg';
 import helmet3Views from '../../assets/images/iglow-helmet-3-views.jpg';
+import helmetCutout from '../../assets/images/iglow-helmet-cutout.png';
 
 import { Box, Container, Typography, Button } from '@mui/material';
 
@@ -70,9 +71,9 @@ const CONTENT = {
     whatIsHtml:
       'Le Smart Bike Vest IGLOW offre une <span style="color:#E30613">visibilité à 360°</span> avec des <span style="color:#E30613">clignotants</span> et des <span style="color:#E30613">feux de freinage</span> comme une voiture, contrôlés par une <span style="color:#E30613">télécommande Bluetooth intelligente</span>.',
     safetyOvertitle: 'sécurité',
-    safetyTitle: 'Gilet Connecté Haute Visibilité',
+    safetyTitle: 'Gilet et Casque Connectés Haute Visibilité',
     safetyText:
-      "Doté d'indicateurs LED de pointe, le gilet offre une meilleure visibilité, particulièrement dans des conditions de faible luminosité. Son design épuré et ergonomique garantit à la fois confort et facilité d'utilisation, même avec un sac à dos.",
+      "Doté d'indicateurs LED de pointe, le gilet offre une meilleure visibilité, particulièrement dans des conditions de faible luminosité. Son design épuré et ergonomique garantit à la fois confort et facilité d'utilisation, même avec un sac à dos. Le casque complète votre sécurité avec les mêmes fonctions de signalisation, en plus d'une lumière frontale très puissante.",
     flexOvertitle: 'Flexibilité',
     flexTitle: 'La Télécommande Intelligente',
     flexText:
@@ -128,9 +129,9 @@ const CONTENT = {
     whatIsHtml:
       'Die Smart Bike Vest IGLOW bietet <span style="color:#E30613">360°-Sichtbarkeit</span> mit <span style="color:#E30613">Blinkern</span> und <span style="color:#E30613">Bremslichtern</span> wie ein Auto, gesteuert durch eine <span style="color:#E30613">intelligente Bluetooth-Fernbedienung</span>.',
     safetyOvertitle: 'Sicherheit',
-    safetyTitle: 'Hochsichtbare Smart Weste',
+    safetyTitle: 'Hochsichtbare Smart Weste & Helm',
     safetyText:
-      'Mit modernsten LED-Anzeigen bietet die Weste eine verbesserte Sichtbarkeit, besonders bei schlechten Lichtverhältnissen. Ihr schlankes und ergonomisches Design garantiert sowohl Komfort als auch Benutzerfreundlichkeit, selbst wenn Sie einen Rucksack tragen.',
+      'Mit modernsten LED-Anzeigen bietet die Weste eine verbesserte Sichtbarkeit, besonders bei schlechten Lichtverhältnissen. Ihr schlankes und ergonomisches Design garantiert sowohl Komfort als auch Benutzerfreundlichkeit, selbst wenn Sie einen Rucksack tragen. Der Helm ergänzt Ihre Sicherheit mit denselben Signalfunktionen und zusätzlich einem sehr starken Frontlicht.',
     flexOvertitle: 'Flexibilität',
     flexTitle: 'Die intelligente Fernbedienung',
     flexText:
@@ -186,9 +187,9 @@ const CONTENT = {
     whatIsHtml:
       'Lo Smart Bike Vest IGLOW offre una <span style="color:#E30613">visibilità a 360°</span> con <span style="color:#E30613">frecce</span> e <span style="color:#E30613">luci di stop</span> come un\'auto, controllato da un <span style="color:#E30613">telecomando Bluetooth intelligente</span>.',
     safetyOvertitle: 'sicurezza',
-    safetyTitle: 'Gilet Smart ad Alta Visibilità',
+    safetyTitle: 'Gilet e Casco Smart ad Alta Visibilità',
     safetyText:
-      "Dotato di indicatori LED all'avanguardia, il gilet offre una visibilità migliorata, particolarmente in condizioni di scarsa luminosità. Il suo design snello ed ergonomico garantisce comfort e facilità d'uso, anche indossando uno zaino.",
+      "Dotato di indicatori LED all'avanguardia, il gilet offre una visibilità migliorata, particolarmente in condizioni di scarsa luminosità. Il suo design snello ed ergonomico garantisce comfort e facilità d'uso, anche indossando uno zaino. Il casco completa la tua sicurezza con le stesse funzioni di segnalazione, con in più una luce frontale molto potente.",
     flexOvertitle: 'Flessibilità',
     flexTitle: 'Il Telecomando Intelligente',
     flexText:
@@ -244,9 +245,9 @@ const CONTENT = {
     whatIsHtml:
       'The Smart Bike Vest IGLOW offers <span style="color:#E30613">360° visibility</span> with <span style="color:#E30613">turn signals</span> and <span style="color:#E30613">brake lights</span> like a car, controlled by an <span style="color:#E30613">intelligent Bluetooth remote</span>.',
     safetyOvertitle: 'safety',
-    safetyTitle: 'High Visibility Smart Vest',
+    safetyTitle: 'High Visibility Smart Vest & Helmet',
     safetyText:
-      'Featuring state-of-the-art LED indicators, the vest offers improved visibility, particularly in low-light conditions. Its streamlined and ergonomic design guarantees both comfort and user-friendliness, even when you carry a backpack.',
+      'Featuring state-of-the-art LED indicators, the vest offers improved visibility, particularly in low-light conditions. Its streamlined and ergonomic design guarantees both comfort and user-friendliness, even when you carry a backpack. The helmet completes your safety with the same signaling functions, plus a very powerful front light.',
     flexOvertitle: 'Flexibility',
     flexTitle: 'The Smart Remote',
     flexText:
@@ -302,9 +303,9 @@ const CONTENT = {
     whatIsHtml:
       'El Smart Bike Vest IGLOW ofrece <span style="color:#E30613">visibilidad de 360°</span> con <span style="color:#E30613">intermitentes</span> y <span style="color:#E30613">luces de freno</span> como un coche, controlado por un <span style="color:#E30613">mando Bluetooth inteligente</span>.',
     safetyOvertitle: 'seguridad',
-    safetyTitle: 'Chaleco Inteligente de Alta Visibilidad',
+    safetyTitle: 'Chaleco y Casco Inteligentes de Alta Visibilidad',
     safetyText:
-      'Con indicadores LED de última generación, el chaleco ofrece una mejor visibilidad, especialmente en condiciones de poca luz. Su diseño aerodinámico y ergonómico garantiza comodidad y facilidad de uso, incluso llevando una mochila.',
+      'Con indicadores LED de última generación, el chaleco ofrece una mejor visibilidad, especialmente en condiciones de poca luz. Su diseño aerodinámico y ergonómico garantiza comodidad y facilidad de uso, incluso llevando una mochila. El casco completa tu seguridad con las mismas funciones de señalización, además de una luz frontal muy potente.',
     flexOvertitle: 'Flexibilidad',
     flexTitle: 'El Mando Inteligente',
     flexText:
@@ -360,9 +361,9 @@ const CONTENT = {
     whatIsHtml:
       'De Smart Bike Vest IGLOW biedt <span style="color:#E30613">360° zichtbaarheid</span> met <span style="color:#E30613">richtingaanwijzers</span> en <span style="color:#E30613">remlichten</span> zoals een auto, bestuurd door een <span style="color:#E30613">intelligente Bluetooth-afstandsbediening</span>.',
     safetyOvertitle: 'veiligheid',
-    safetyTitle: 'Smart Vest met Hoge Zichtbaarheid',
+    safetyTitle: 'Smart Vest & Helm met Hoge Zichtbaarheid',
     safetyText:
-      'Met geavanceerde LED-indicatoren biedt het vest verbeterde zichtbaarheid, vooral bij weinig licht. Het gestroomlijnde en ergonomische ontwerp garandeert zowel comfort als gebruiksgemak, zelfs met een rugzak.',
+      'Met geavanceerde LED-indicatoren biedt het vest verbeterde zichtbaarheid, vooral bij weinig licht. Het gestroomlijnde en ergonomische ontwerp garandeert zowel comfort als gebruiksgemak, zelfs met een rugzak. De helm vervolledigt uw veiligheid met dezelfde signaalfuncties, met daarbij een zeer krachtig voorlicht.',
     flexOvertitle: 'Flexibiliteit',
     flexTitle: 'De Slimme Afstandsbediening',
     flexText:
@@ -418,9 +419,9 @@ const CONTENT = {
     whatIsHtml:
       'O Smart Bike Vest IGLOW oferece <span style="color:#E30613">visibilidade de 360°</span> com <span style="color:#E30613">setas</span> e <span style="color:#E30613">luzes de freio</span> como um carro, controlado por um <span style="color:#E30613">controle Bluetooth inteligente</span>.',
     safetyOvertitle: 'segurança',
-    safetyTitle: 'Colete Inteligente de Alta Visibilidade',
+    safetyTitle: 'Colete e Capacete Inteligentes de Alta Visibilidade',
     safetyText:
-      'Com indicadores LED de última geração, o colete oferece visibilidade aprimorada, especialmente em condições de pouca luz. Seu design aerodinâmico e ergonômico garante conforto e facilidade de uso, mesmo com uma mochila.',
+      'Com indicadores LED de última geração, o colete oferece visibilidade aprimorada, especialmente em condições de pouca luz. Seu design aerodinâmico e ergonômico garante conforto e facilidade de uso, mesmo com uma mochila. O capacete completa a sua segurança com as mesmas funções de sinalização, além de uma luz frontal muito potente.',
     flexOvertitle: 'Flexibilidade',
     flexTitle: 'O Controle Inteligente',
     flexText:
@@ -476,9 +477,9 @@ const CONTENT = {
     whatIsHtml:
       'Smart Bike Vest IGLOW कार की तरह <span style="color:#E30613">टर्न सिग्नल</span> और <span style="color:#E30613">ब्रेक लाइट</span> के साथ <span style="color:#E30613">360° दृश्यता</span> प्रदान करता है, जिसे एक <span style="color:#E30613">स्मार्ट ब्लूटूथ रिमोट</span> द्वारा नियंत्रित किया जाता है।',
     safetyOvertitle: 'सुरक्षा',
-    safetyTitle: 'हाई विज़िबिलिटी स्मार्ट वेस्ट',
+    safetyTitle: 'हाई विज़िबिलिटी स्मार्ट वेस्ट और हेलमेट',
     safetyText:
-      'अत्याधुनिक LED संकेतकों के साथ, यह जैकेट बेहतर दृश्यता प्रदान करती है, विशेष रूप से कम रोशनी की स्थिति में। इसका सुव्यवस्थित और एर्गोनोमिक डिज़ाइन आराम और उपयोग में आसानी दोनों की गारंटी देता है, यहां तक कि बैकपैक के साथ भी।',
+      'अत्याधुनिक LED संकेतकों के साथ, यह जैकेट बेहतर दृश्यता प्रदान करती है, विशेष रूप से कम रोशनी की स्थिति में। इसका सुव्यवस्थित और एर्गोनोमिक डिज़ाइन आराम और उपयोग में आसानी दोनों की गारंटी देता है, यहां तक कि बैकपैक के साथ भी। हेलमेट समान सिग्नलिंग फ़ंक्शन के साथ आपकी सुरक्षा को पूरा करता है, साथ ही एक बहुत शक्तिशाली फ्रंट लाइट भी देता है।',
     flexOvertitle: 'फ्लेक्सिबिलिटी',
     flexTitle: 'स्मार्ट रिमोट',
     flexText:
@@ -534,9 +535,9 @@ const CONTENT = {
     whatIsHtml:
       'توفر Smart Bike Vest IGLOW <span style="color:#E30613">رؤية 360°</span> مع <span style="color:#E30613">إشارات انعطاف</span> و<span style="color:#E30613">مصابيح فرامل</span> مثل السيارة، ويتم التحكم فيها بواسطة <span style="color:#E30613">جهاز تحكم بلوتوث ذكي</span>.',
     safetyOvertitle: 'السلامة',
-    safetyTitle: 'سترة ذكية عالية الوضوح',
+    safetyTitle: 'سترة وخوذة ذكية عالية الوضوح',
     safetyText:
-      'بفضل مؤشرات LED المتطورة، توفر السترة رؤية محسّنة، خاصة في ظروف الإضاءة المنخفضة. يضمن تصميمها الانسيابي والمريح الراحة وسهولة الاستخدام، حتى عند ارتداء حقيبة ظهر.',
+      'بفضل مؤشرات LED المتطورة، توفر السترة رؤية محسّنة، خاصة في ظروف الإضاءة المنخفضة. يضمن تصميمها الانسيابي والمريح الراحة وسهولة الاستخدام، حتى عند ارتداء حقيبة ظهر. تُكمل الخوذة أمانك بنفس وظائف الإشارة، مع إضافة ضوء أمامي قوي جدًا.',
     flexOvertitle: 'المرونة',
     flexTitle: 'جهاز التحكم الذكي',
     flexText:
@@ -593,9 +594,9 @@ const CONTENT = {
     whatIsHtml:
       'Smart Bike Vest IGLOW обеспечивает <span style="color:#E30613">360° видимость</span> с <span style="color:#E30613">поворотниками</span> и <span style="color:#E30613">стоп-сигналами</span>, как у автомобиля, управляемыми <span style="color:#E30613">умным Bluetooth-пультом</span>.',
     safetyOvertitle: 'безопасность',
-    safetyTitle: 'Умный жилет повышенной видимости',
+    safetyTitle: 'Умный жилет и шлем повышенной видимости',
     safetyText:
-      'Благодаря современным светодиодным индикаторам жилет обеспечивает улучшенную видимость, особенно в условиях низкой освещённости. Его обтекаемый и эргономичный дизайн гарантирует комфорт и удобство использования, даже с рюкзаком.',
+      'Благодаря современным светодиодным индикаторам жилет обеспечивает улучшенную видимость, особенно в условиях низкой освещённости. Его обтекаемый и эргономичный дизайн гарантирует комфорт и удобство использования, даже с рюкзаком. Шлем дополняет вашу безопасность теми же функциями сигнализации, а также очень мощной передней фарой.',
     flexOvertitle: 'Гибкость',
     flexTitle: 'Умный пульт',
     flexText:
@@ -860,34 +861,8 @@ function WhatIsSection({ t }) {
             title={t.safetyTitle}
             text={t.safetyText}
             imgSrc={smartJacket}
+            imgTopSrc={helmetCutout}
           />
-          <Box
-            sx={{
-              position: 'absolute',
-              bottom: { xs: '-20px', sm: '0px' },
-              right: { xs: '10%', sm: '8%' },
-              width: '110px',
-              height: '110px',
-              borderRadius: '50%',
-              overflow: 'hidden',
-              border: '4px solid #fff',
-              boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
-              zIndex: 2,
-            }}
-          >
-            <Box
-              component='img'
-              src={duoHelmetVest}
-              sx={{
-                position: 'absolute',
-                width: '586px',
-                height: '437px',
-                maxWidth: 'none',
-                top: '-18px',
-                left: '-272px',
-              }}
-            />
-          </Box>
         </Box>
         <EmptySpace />
         <IllustratedParagraph
