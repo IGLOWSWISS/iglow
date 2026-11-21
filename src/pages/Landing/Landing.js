@@ -64,8 +64,10 @@ const CONTENT = {
     newPricePrefix: 'PAYÉ SEULEMENT',
     discountLinePrefix: 'Économie immédiate de',
     clickToReserve: 'Cliquez pour réserver et faire partie du succès.',
-    kickstarterButton: 'Rejoignez le financement participatif',
-    kickstarterCaption: 'Votre Duo Casque et Gilet IGLOW',
+    kickstarterButton:
+      'Rejoignez iGlow sur Kickstarter, le financement participatif',
+    kickstarterCaption: 'Votre Duo IGLOW',
+    kickstarterCaptionSub: 'Casque + Gilet',
     secureSpot: 'Réservez votre place',
     secureSpotSub: "dès aujourd'hui !",
     whatIsOvertitle: "QU'EST-CE QUE IGLOW ?",
@@ -123,8 +125,10 @@ const CONTENT = {
     newPricePrefix: 'NUR BEZAHLT',
     discountLinePrefix: 'Sofortige Ersparnis von',
     clickToReserve: 'Klicken Sie, um zu reservieren und Teil des Erfolgs zu sein.',
-    kickstarterButton: 'Beim Crowdfunding mitmachen',
-    kickstarterCaption: 'Ihr IGLOW Helm- und Westen-Duo',
+    kickstarterButton:
+      'Unterstützen Sie iGlow auf Kickstarter, dem Crowdfunding',
+    kickstarterCaption: 'Ihr IGLOW Duo',
+    kickstarterCaptionSub: 'Helm + Weste',
     secureSpot: 'Sichern Sie sich Ihren Platz',
     secureSpotSub: 'noch heute!',
     whatIsOvertitle: 'WAS IST IGLOW ?',
@@ -182,8 +186,9 @@ const CONTENT = {
     newPricePrefix: 'PAGATO SOLO',
     discountLinePrefix: 'Risparmio immediato di',
     clickToReserve: 'Clicca per prenotare e far parte del successo.',
-    kickstarterButton: 'Partecipa al crowdfunding',
-    kickstarterCaption: 'Il tuo Duo Casco e Gilet IGLOW',
+    kickstarterButton: 'Unisciti a iGlow su Kickstarter, il crowdfunding',
+    kickstarterCaption: 'Il tuo Duo IGLOW',
+    kickstarterCaptionSub: 'Casco + Gilet',
     secureSpot: 'Assicurati il tuo posto',
     secureSpotSub: 'subito!',
     whatIsOvertitle: "COS'È IGLOW ?",
@@ -241,8 +246,9 @@ const CONTENT = {
     newPricePrefix: 'PAID ONLY',
     discountLinePrefix: 'Instant savings of',
     clickToReserve: 'Click to reserve and be part of the success.',
-    kickstarterButton: 'Join the crowdfunding',
-    kickstarterCaption: 'Your IGLOW Helmet and Vest Duo',
+    kickstarterButton: 'Join iGlow on Kickstarter, the crowdfunding platform',
+    kickstarterCaption: 'Your IGLOW Duo',
+    kickstarterCaptionSub: 'Helmet + Vest',
     secureSpot: 'Secure your spot',
     secureSpotSub: 'today!',
     whatIsOvertitle: 'WHAT IS IGLOW ?',
@@ -300,8 +306,9 @@ const CONTENT = {
     newPricePrefix: 'PAGADO SOLO',
     discountLinePrefix: 'Ahorro inmediato de',
     clickToReserve: 'Haz clic para reservar y ser parte del éxito.',
-    kickstarterButton: 'Únete al crowdfunding',
-    kickstarterCaption: 'Tu Duo Casco y Chaleco IGLOW',
+    kickstarterButton: 'Únete a iGlow en Kickstarter, el crowdfunding',
+    kickstarterCaption: 'Tu Duo IGLOW',
+    kickstarterCaptionSub: 'Casco + Chaleco',
     secureSpot: '¡Asegura tu lugar',
     secureSpotSub: 'hoy!',
     whatIsOvertitle: '¿QUÉ ES IGLOW ?',
@@ -359,8 +366,9 @@ const CONTENT = {
     newPricePrefix: 'SLECHTS BETAALD',
     discountLinePrefix: 'Directe besparing van',
     clickToReserve: 'Klik om te reserveren en deel uit te maken van het succes.',
-    kickstarterButton: 'Doe mee aan de crowdfunding',
-    kickstarterCaption: 'Uw IGLOW Helm- en Vestduo',
+    kickstarterButton: 'Doe mee met iGlow op Kickstarter, de crowdfunding',
+    kickstarterCaption: 'Uw IGLOW Duo',
+    kickstarterCaptionSub: 'Helm + Vest',
     secureSpot: 'Verzeker u van uw plek',
     secureSpotSub: 'vandaag nog!',
     whatIsOvertitle: 'WAT IS IGLOW ?',
@@ -418,8 +426,10 @@ const CONTENT = {
     newPricePrefix: 'PAGO APENAS',
     discountLinePrefix: 'Economia imediata de',
     clickToReserve: 'Clique para reservar e fazer parte do sucesso.',
-    kickstarterButton: 'Participe do financiamento coletivo',
-    kickstarterCaption: 'Seu Duo Capacete e Colete IGLOW',
+    kickstarterButton:
+      'Participe da iGlow no Kickstarter, o financiamento coletivo',
+    kickstarterCaption: 'Seu Duo IGLOW',
+    kickstarterCaptionSub: 'Capacete + Colete',
     secureSpot: 'Garanta o seu lugar',
     secureSpotSub: 'já!',
     whatIsOvertitle: 'O QUE É O IGLOW ?',
@@ -477,8 +487,9 @@ const CONTENT = {
     newPricePrefix: 'सिर्फ भुगतान',
     discountLinePrefix: 'तत्काल बचत',
     clickToReserve: 'आरक्षित करने और सफलता का हिस्सा बनने के लिए क्लिक करें।',
-    kickstarterButton: 'क्राउडफंडिंग में शामिल हों',
-    kickstarterCaption: 'आपका IGLOW हेलमेट और जैकेट डुओ',
+    kickstarterButton: 'Kickstarter पर iGlow से जुड़ें, क्राउडफंडिंग प्लेटफ़ॉर्म',
+    kickstarterCaption: 'आपका IGLOW डुओ',
+    kickstarterCaptionSub: 'हेलमेट + वेस्ट',
     secureSpot: 'अपनी जगह सुरक्षित करें',
     secureSpotSub: 'आज ही!',
     whatIsOvertitle: 'IGLOW क्या है ?',
@@ -536,8 +547,9 @@ const CONTENT = {
     newPricePrefix: 'مدفوع فقط',
     discountLinePrefix: 'توفير فوري قدره',
     clickToReserve: 'انقر للحجز وكن جزءاً من النجاح.',
-    kickstarterButton: 'انضم إلى التمويل الجماعي',
-    kickstarterCaption: 'ثنائي الخوذة والسترة IGLOW الخاص بك',
+    kickstarterButton: 'انضم إلى iGlow على Kickstarter، منصة التمويل الجماعي',
+    kickstarterCaption: 'ثنائي IGLOW الخاص بك',
+    kickstarterCaptionSub: 'خوذة + سترة',
     secureSpot: 'احجز مكانك',
     secureSpotSub: 'اليوم!',
     whatIsOvertitle: 'ما هو IGLOW ؟',
@@ -596,8 +608,10 @@ const CONTENT = {
     newPricePrefix: 'ОПЛАЧЕНО ВСЕГО',
     discountLinePrefix: 'Мгновенная экономия',
     clickToReserve: 'Нажмите, чтобы забронировать и стать частью успеха.',
-    kickstarterButton: 'Присоединяйтесь к краудфандингу',
-    kickstarterCaption: 'Ваш дуо-комплект шлем и жилет IGLOW',
+    kickstarterButton:
+      'Присоединяйтесь к iGlow на Kickstarter, краудфандинговой платформе',
+    kickstarterCaption: 'Ваш дуо-комплект IGLOW',
+    kickstarterCaptionSub: 'Шлем + Жилет',
     secureSpot: 'Забронируйте своё место',
     secureSpotSub: 'уже сегодня!',
     whatIsOvertitle: 'ЧТО ТАКОЕ IGLOW ?',
@@ -683,7 +697,7 @@ function Landing() {
   return (
     <Box overflow='hidden' dir={currentLang === 'ar' ? 'rtl' : 'ltr'}>
       <LanguageSwitcher currentLang={currentLang} onChange={setCurrentLang} />
-      <Navbar topOffset='40px' />
+      <Navbar topOffset='64px' />
       <HeroSection t={t} />
       <WhatIsSection t={t} />
       <SocialSection t={t} />
@@ -1230,6 +1244,7 @@ function CountdownSection({ t }) {
           sx={{
             backgroundColor: '#05CE78',
             marginBottom: 3,
+            textAlign: 'center',
             transition: 'transform 0.15s ease, box-shadow 0.15s ease',
             '&:hover': {
               backgroundColor: '#05CE78',
@@ -1260,9 +1275,11 @@ function CountdownSection({ t }) {
         />
         <Typography
           variant='body1'
-          sx={{ color: 'white', fontWeight: 'bold', mt: 2, mb: 4 }}
+          sx={{ color: 'white', fontWeight: 'bold', mt: 2, mb: 4, textAlign: 'center' }}
         >
           {t.kickstarterCaption}
+          <br />
+          {t.kickstarterCaptionSub}
         </Typography>
 
         <Box
