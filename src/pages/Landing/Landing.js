@@ -818,11 +818,13 @@ function HeroSection({ t }) {
             size='large'
             sx={{
               marginBottom: 10,
+              backgroundColor: '#FF2200',
               transition: 'transform 0.15s ease, box-shadow 0.15s ease',
               '&:hover': {
+                backgroundColor: '#FF2200',
                 transform: 'scale(1.08) translateY(-3px)',
                 boxShadow:
-                  '0 0 10px rgba(255,30,30,1), 0 0 25px rgba(255,10,10,0.95), 0 0 50px rgba(255,0,50,0.8), 0 0 90px rgba(255,0,50,0.6)',
+                  '0 0 6px rgba(255,255,255,0.9), 0 0 16px rgba(255,80,0,1), 0 0 34px rgba(255,20,0,0.95), 0 0 65px rgba(255,0,0,0.8), 0 0 105px rgba(255,20,0,0.55)',
               },
               '&:active': {
                 transform: 'scale(0.96) translateY(3px)',
@@ -1117,11 +1119,13 @@ function CountdownSection({ t }) {
           size='large'
           sx={{
             marginY: 3,
+            backgroundColor: '#FF2200',
             transition: 'transform 0.15s ease, box-shadow 0.15s ease',
             '&:hover': {
+              backgroundColor: '#FF2200',
               transform: 'scale(1.08) translateY(-3px)',
               boxShadow:
-                '0 0 10px rgba(255,30,30,1), 0 0 25px rgba(255,10,10,0.95), 0 0 50px rgba(255,0,50,0.8), 0 0 90px rgba(255,0,50,0.6)',
+                '0 0 6px rgba(255,255,255,0.9), 0 0 16px rgba(255,80,0,1), 0 0 34px rgba(255,20,0,0.95), 0 0 65px rgba(255,0,0,0.8), 0 0 105px rgba(255,20,0,0.55)',
             },
             '&:active': {
               transform: 'scale(0.96) translateY(3px)',
