@@ -64,8 +64,7 @@ const CONTENT = {
     newPricePrefix: 'PAYÉ SEULEMENT',
     discountLinePrefix: 'Économie immédiate de',
     clickToReserve: 'Cliquez pour réserver et faire partie du succès.',
-    kickstarterButton:
-      'Rejoignez iGlow sur Kickstarter, le financement participatif',
+    kickstarterButton: 'IGLOW sur Kickstarter',
     kickstarterCaption: 'Votre Duo IGLOW',
     kickstarterCaptionSub: 'Casque + Gilet',
     secureSpot: 'Réservez votre place',
@@ -125,8 +124,7 @@ const CONTENT = {
     newPricePrefix: 'NUR BEZAHLT',
     discountLinePrefix: 'Sofortige Ersparnis von',
     clickToReserve: 'Klicken Sie, um zu reservieren und Teil des Erfolgs zu sein.',
-    kickstarterButton:
-      'Unterstützen Sie iGlow auf Kickstarter, dem Crowdfunding',
+    kickstarterButton: 'IGLOW auf Kickstarter',
     kickstarterCaption: 'Ihr IGLOW Duo',
     kickstarterCaptionSub: 'Helm + Weste',
     secureSpot: 'Sichern Sie sich Ihren Platz',
@@ -186,7 +184,7 @@ const CONTENT = {
     newPricePrefix: 'PAGATO SOLO',
     discountLinePrefix: 'Risparmio immediato di',
     clickToReserve: 'Clicca per prenotare e far parte del successo.',
-    kickstarterButton: 'Unisciti a iGlow su Kickstarter, il crowdfunding',
+    kickstarterButton: 'IGLOW su Kickstarter',
     kickstarterCaption: 'Il tuo Duo IGLOW',
     kickstarterCaptionSub: 'Casco + Gilet',
     secureSpot: 'Assicurati il tuo posto',
@@ -246,7 +244,7 @@ const CONTENT = {
     newPricePrefix: 'PAID ONLY',
     discountLinePrefix: 'Instant savings of',
     clickToReserve: 'Click to reserve and be part of the success.',
-    kickstarterButton: 'Join iGlow on Kickstarter, the crowdfunding platform',
+    kickstarterButton: 'IGLOW on Kickstarter',
     kickstarterCaption: 'Your IGLOW Duo',
     kickstarterCaptionSub: 'Helmet + Vest',
     secureSpot: 'Secure your spot',
@@ -306,7 +304,7 @@ const CONTENT = {
     newPricePrefix: 'PAGADO SOLO',
     discountLinePrefix: 'Ahorro inmediato de',
     clickToReserve: 'Haz clic para reservar y ser parte del éxito.',
-    kickstarterButton: 'Únete a iGlow en Kickstarter, el crowdfunding',
+    kickstarterButton: 'IGLOW en Kickstarter',
     kickstarterCaption: 'Tu Duo IGLOW',
     kickstarterCaptionSub: 'Casco + Chaleco',
     secureSpot: '¡Asegura tu lugar',
@@ -366,7 +364,7 @@ const CONTENT = {
     newPricePrefix: 'SLECHTS BETAALD',
     discountLinePrefix: 'Directe besparing van',
     clickToReserve: 'Klik om te reserveren en deel uit te maken van het succes.',
-    kickstarterButton: 'Doe mee met iGlow op Kickstarter, de crowdfunding',
+    kickstarterButton: 'IGLOW op Kickstarter',
     kickstarterCaption: 'Uw IGLOW Duo',
     kickstarterCaptionSub: 'Helm + Vest',
     secureSpot: 'Verzeker u van uw plek',
@@ -426,8 +424,7 @@ const CONTENT = {
     newPricePrefix: 'PAGO APENAS',
     discountLinePrefix: 'Economia imediata de',
     clickToReserve: 'Clique para reservar e fazer parte do sucesso.',
-    kickstarterButton:
-      'Participe da iGlow no Kickstarter, o financiamento coletivo',
+    kickstarterButton: 'IGLOW no Kickstarter',
     kickstarterCaption: 'Seu Duo IGLOW',
     kickstarterCaptionSub: 'Capacete + Colete',
     secureSpot: 'Garanta o seu lugar',
@@ -487,7 +484,7 @@ const CONTENT = {
     newPricePrefix: 'सिर्फ भुगतान',
     discountLinePrefix: 'तत्काल बचत',
     clickToReserve: 'आरक्षित करने और सफलता का हिस्सा बनने के लिए क्लिक करें।',
-    kickstarterButton: 'Kickstarter पर iGlow से जुड़ें, क्राउडफंडिंग प्लेटफ़ॉर्म',
+    kickstarterButton: 'Kickstarter पर IGLOW',
     kickstarterCaption: 'आपका IGLOW डुओ',
     kickstarterCaptionSub: 'हेलमेट + वेस्ट',
     secureSpot: 'अपनी जगह सुरक्षित करें',
@@ -547,7 +544,7 @@ const CONTENT = {
     newPricePrefix: 'مدفوع فقط',
     discountLinePrefix: 'توفير فوري قدره',
     clickToReserve: 'انقر للحجز وكن جزءاً من النجاح.',
-    kickstarterButton: 'انضم إلى iGlow على Kickstarter، منصة التمويل الجماعي',
+    kickstarterButton: 'IGLOW على Kickstarter',
     kickstarterCaption: 'ثنائي IGLOW الخاص بك',
     kickstarterCaptionSub: 'خوذة + سترة',
     secureSpot: 'احجز مكانك',
@@ -608,8 +605,7 @@ const CONTENT = {
     newPricePrefix: 'ОПЛАЧЕНО ВСЕГО',
     discountLinePrefix: 'Мгновенная экономия',
     clickToReserve: 'Нажмите, чтобы забронировать и стать частью успеха.',
-    kickstarterButton:
-      'Присоединяйтесь к iGlow на Kickstarter, краудфандинговой платформе',
+    kickstarterButton: 'IGLOW на Kickstarter',
     kickstarterCaption: 'Ваш дуо-комплект IGLOW',
     kickstarterCaptionSub: 'Шлем + Жилет',
     secureSpot: 'Забронируйте своё место',
@@ -1229,7 +1225,11 @@ function CountdownSection({ t }) {
           </Typography>
         </Box>
 
-        <Typography variant='body1' fontWeight='bold' sx={{ mb: 3 }}>
+        <Typography
+          variant='body1'
+          fontWeight='bold'
+          sx={{ mb: 3, textAlign: 'center' }}
+        >
           {t.secureSpot}
           <br />
           {t.secureSpotSub}
