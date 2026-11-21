@@ -15,7 +15,6 @@ import mountain from '../../assets/images/mountain.png';
 import duoHelmetVest from '../../assets/images/iglow-duo-helmet-vest.jpg';
 import helmet3Views from '../../assets/images/iglow-helmet-3-views.jpg';
 import helmetCutout from '../../assets/images/iglow-helmet-cutout.png';
-import vestCutout from '../../assets/images/iglow-vest-cutout.png';
 
 import { Box, Container, Typography, Button } from '@mui/material';
 
@@ -872,7 +871,6 @@ function WhatIsSection({ t }) {
           title={t.flexTitle}
           text={t.flexText}
           imgSrc={controller}
-          imgTopSrc={vestCutout}
         />
         <EmptySpace />
         <IllustratedParagraph
