@@ -819,6 +819,7 @@ function HeroSection({ t }) {
             sx={{
               marginBottom: 10,
               backgroundColor: '#FF2200',
+              textAlign: 'center',
               transition: 'transform 0.15s ease, box-shadow 0.15s ease',
               '&:hover': {
                 backgroundColor: '#FF2200',
@@ -1120,6 +1121,7 @@ function CountdownSection({ t }) {
           sx={{
             marginY: 3,
             backgroundColor: '#FF2200',
+            textAlign: 'center',
             transition: 'transform 0.15s ease, box-shadow 0.15s ease',
             '&:hover': {
               backgroundColor: '#FF2200',
