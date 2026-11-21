@@ -86,6 +86,7 @@ const Reserve = () => {
     firstName: '',
     lastName: '',
     email: '',
+    emailConfirm: '',
     phone: '',
     address: '',
     postalCode: '',
@@ -132,6 +133,10 @@ const Reserve = () => {
     setAuthError('');
 
     if (authMode === 'register') {
+      if (authForm.email !== authForm.emailConfirm) {
+        setAuthError(t.errorEmailMismatch);
+        return;
+      }
       if (authForm.password.length < 8) {
         setAuthError(t.errorPasswordTooShort);
         return;
@@ -766,6 +771,7 @@ const Reserve = () => {
       firstName: 'Prénom',
       lastName: 'Nom',
       email: 'Email',
+      emailConfirm: "Confirmer l'email",
       phone: 'Téléphone',
       address: 'Adresse',
       postalCode: 'Code postal',
@@ -781,6 +787,7 @@ const Reserve = () => {
       errorInvalidCredentials: 'Email ou mot de passe incorrect.',
       errorAccountLocked:
         'Trop de tentatives, réessayez dans quelques minutes.',
+      errorEmailMismatch: 'Les adresses email ne correspondent pas.',
       errorPasswordMismatch: 'Les mots de passe ne correspondent pas.',
       errorPasswordTooShort:
         'Le mot de passe doit contenir au moins 8 caractères.',
@@ -797,6 +804,7 @@ const Reserve = () => {
       firstName: 'Vorname',
       lastName: 'Nachname',
       email: 'E-Mail',
+      emailConfirm: 'E-Mail bestätigen',
       phone: 'Telefon',
       address: 'Adresse',
       postalCode: 'Postleitzahl',
@@ -812,6 +820,7 @@ const Reserve = () => {
       errorInvalidCredentials: 'E-Mail oder Passwort falsch.',
       errorAccountLocked:
         'Zu viele Versuche, bitte in ein paar Minuten erneut versuchen.',
+      errorEmailMismatch: 'Die E-Mail-Adressen stimmen nicht überein.',
       errorPasswordMismatch: 'Die Passwörter stimmen nicht überein.',
       errorPasswordTooShort:
         'Das Passwort muss mindestens 8 Zeichen lang sein.',
@@ -827,6 +836,7 @@ const Reserve = () => {
       firstName: 'Nome',
       lastName: 'Cognome',
       email: 'Email',
+      emailConfirm: 'Conferma email',
       phone: 'Telefono',
       address: 'Indirizzo',
       postalCode: 'Codice postale',
@@ -841,6 +851,7 @@ const Reserve = () => {
       errorEmailTaken: 'Esiste già un account con questa email.',
       errorInvalidCredentials: 'Email o password errati.',
       errorAccountLocked: 'Troppi tentativi, riprova tra qualche minuto.',
+      errorEmailMismatch: 'Le email non corrispondono.',
       errorPasswordMismatch: 'Le password non corrispondono.',
       errorPasswordTooShort: 'La password deve contenere almeno 8 caratteri.',
       errorConsentRequired: "Si prega di accettare l'informativa sulla privacy.",
@@ -855,6 +866,7 @@ const Reserve = () => {
       firstName: 'First name',
       lastName: 'Last name',
       email: 'Email',
+      emailConfirm: 'Confirm email',
       phone: 'Phone',
       address: 'Address',
       postalCode: 'Postal code',
@@ -869,6 +881,7 @@ const Reserve = () => {
       errorEmailTaken: 'An account already exists with this email.',
       errorInvalidCredentials: 'Incorrect email or password.',
       errorAccountLocked: 'Too many attempts, please try again in a few minutes.',
+      errorEmailMismatch: 'Email addresses do not match.',
       errorPasswordMismatch: 'Passwords do not match.',
       errorPasswordTooShort: 'Password must be at least 8 characters.',
       errorConsentRequired: 'Please accept the privacy policy.',
@@ -883,6 +896,7 @@ const Reserve = () => {
       firstName: 'Nombre',
       lastName: 'Apellido',
       email: 'Email',
+      emailConfirm: 'Confirmar email',
       phone: 'Teléfono',
       address: 'Dirección',
       postalCode: 'Código postal',
@@ -897,6 +911,7 @@ const Reserve = () => {
       errorEmailTaken: 'Ya existe una cuenta con este email.',
       errorInvalidCredentials: 'Email o contraseña incorrectos.',
       errorAccountLocked: 'Demasiados intentos, inténtalo de nuevo en unos minutos.',
+      errorEmailMismatch: 'Los emails no coinciden.',
       errorPasswordMismatch: 'Las contraseñas no coinciden.',
       errorPasswordTooShort: 'La contraseña debe tener al menos 8 caracteres.',
       errorConsentRequired: 'Por favor acepta la política de privacidad.',
@@ -911,6 +926,7 @@ const Reserve = () => {
       firstName: 'Voornaam',
       lastName: 'Achternaam',
       email: 'E-mail',
+      emailConfirm: 'Bevestig e-mail',
       phone: 'Telefoon',
       address: 'Adres',
       postalCode: 'Postcode',
@@ -926,6 +942,7 @@ const Reserve = () => {
       errorInvalidCredentials: 'Onjuiste e-mail of wachtwoord.',
       errorAccountLocked:
         'Te veel pogingen, probeer het over een paar minuten opnieuw.',
+      errorEmailMismatch: 'E-mailadressen komen niet overeen.',
       errorPasswordMismatch: 'Wachtwoorden komen niet overeen.',
       errorPasswordTooShort: 'Wachtwoord moet minstens 8 tekens bevatten.',
       errorConsentRequired: 'Accepteer het privacybeleid.',
@@ -940,6 +957,7 @@ const Reserve = () => {
       firstName: 'Nome',
       lastName: 'Sobrenome',
       email: 'Email',
+      emailConfirm: 'Confirmar email',
       phone: 'Telefone',
       address: 'Endereço',
       postalCode: 'Código postal',
@@ -954,6 +972,7 @@ const Reserve = () => {
       errorEmailTaken: 'Já existe uma conta com este email.',
       errorInvalidCredentials: 'Email ou senha incorretos.',
       errorAccountLocked: 'Muitas tentativas, tente novamente em alguns minutos.',
+      errorEmailMismatch: 'Os emails não coincidem.',
       errorPasswordMismatch: 'As senhas não coincidem.',
       errorPasswordTooShort: 'A senha deve ter pelo menos 8 caracteres.',
       errorConsentRequired: 'Por favor aceite a política de privacidade.',
@@ -968,6 +987,7 @@ const Reserve = () => {
       firstName: 'पहला नाम',
       lastName: 'उपनाम',
       email: 'ईमेल',
+      emailConfirm: 'ईमेल की पुष्टि करें',
       phone: 'फ़ोन',
       address: 'पता',
       postalCode: 'पिन कोड',
@@ -983,6 +1003,7 @@ const Reserve = () => {
       errorInvalidCredentials: 'ईमेल या पासवर्ड गलत है।',
       errorAccountLocked:
         'बहुत अधिक प्रयास, कृपया कुछ मिनटों बाद पुनः प्रयास करें।',
+      errorEmailMismatch: 'ईमेल मेल नहीं खाते।',
       errorPasswordMismatch: 'पासवर्ड मेल नहीं खाते।',
       errorPasswordTooShort: 'पासवर्ड कम से कम 8 अक्षरों का होना चाहिए।',
       errorConsentRequired: 'कृपया गोपनीयता नीति स्वीकार करें।',
@@ -997,6 +1018,7 @@ const Reserve = () => {
       firstName: 'الاسم الأول',
       lastName: 'اسم العائلة',
       email: 'البريد الإلكتروني',
+      emailConfirm: 'تأكيد البريد الإلكتروني',
       phone: 'الهاتف',
       address: 'العنوان',
       postalCode: 'الرمز البريدي',
@@ -1012,6 +1034,7 @@ const Reserve = () => {
       errorInvalidCredentials: 'البريد الإلكتروني أو كلمة المرور غير صحيحة.',
       errorAccountLocked:
         'عدد كبير جدًا من المحاولات، يرجى المحاولة مرة أخرى بعد بضع دقائق.',
+      errorEmailMismatch: 'عناوين البريد الإلكتروني غير متطابقة.',
       errorPasswordMismatch: 'كلمتا المرور غير متطابقتين.',
       errorPasswordTooShort: 'يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.',
       errorConsentRequired: 'يرجى قبول سياسة الخصوصية.',
@@ -1026,6 +1049,7 @@ const Reserve = () => {
       firstName: 'Имя',
       lastName: 'Фамилия',
       email: 'Email',
+      emailConfirm: 'Подтвердите email',
       phone: 'Телефон',
       address: 'Адрес',
       postalCode: 'Почтовый индекс',
@@ -1041,6 +1065,7 @@ const Reserve = () => {
       errorInvalidCredentials: 'Неверный email или пароль.',
       errorAccountLocked:
         'Слишком много попыток, попробуйте снова через несколько минут.',
+      errorEmailMismatch: 'Email не совпадают.',
       errorPasswordMismatch: 'Пароли не совпадают.',
       errorPasswordTooShort: 'Пароль должен содержать не менее 8 символов.',
       errorConsentRequired: 'Пожалуйста, примите политику конфиденциальности.',
@@ -1364,6 +1389,7 @@ const Reserve = () => {
                       <div className='account-form-row'>
                         <input
                           type='text'
+                          autoComplete='given-name'
                           placeholder={t.firstName}
                           value={authForm.firstName}
                           onChange={handleAuthFieldChange('firstName')}
@@ -1371,6 +1397,7 @@ const Reserve = () => {
                         />
                         <input
                           type='text'
+                          autoComplete='family-name'
                           placeholder={t.lastName}
                           value={authForm.lastName}
                           onChange={handleAuthFieldChange('lastName')}
@@ -1379,6 +1406,7 @@ const Reserve = () => {
                       </div>
                       <input
                         type='tel'
+                        autoComplete='tel'
                         placeholder={t.phone}
                         value={authForm.phone}
                         onChange={handleAuthFieldChange('phone')}
@@ -1386,6 +1414,7 @@ const Reserve = () => {
                       />
                       <input
                         type='text'
+                        autoComplete='street-address'
                         placeholder={t.address}
                         value={authForm.address}
                         onChange={handleAuthFieldChange('address')}
@@ -1394,6 +1423,7 @@ const Reserve = () => {
                       <div className='account-form-row'>
                         <input
                           type='text'
+                          autoComplete='postal-code'
                           placeholder={t.postalCode}
                           value={authForm.postalCode}
                           onChange={handleAuthFieldChange('postalCode')}
@@ -1401,6 +1431,7 @@ const Reserve = () => {
                         />
                         <input
                           type='text'
+                          autoComplete='country-name'
                           placeholder={t.country}
                           value={authForm.country}
                           onChange={handleAuthFieldChange('country')}
@@ -1411,13 +1442,27 @@ const Reserve = () => {
                   )}
                   <input
                     type='email'
+                    autoComplete='email'
                     placeholder={t.email}
                     value={authForm.email}
                     onChange={handleAuthFieldChange('email')}
                     required
                   />
+                  {authMode === 'register' && (
+                    <input
+                      type='email'
+                      autoComplete='email'
+                      placeholder={t.emailConfirm}
+                      value={authForm.emailConfirm}
+                      onChange={handleAuthFieldChange('emailConfirm')}
+                      required
+                    />
+                  )}
                   <input
                     type='password'
+                    autoComplete={
+                      authMode === 'register' ? 'new-password' : 'current-password'
+                    }
                     placeholder={t.password}
                     value={authForm.password}
                     onChange={handleAuthFieldChange('password')}
@@ -1427,6 +1472,7 @@ const Reserve = () => {
                     <>
                       <input
                         type='password'
+                        autoComplete='new-password'
                         placeholder={t.passwordConfirm}
                         value={authForm.passwordConfirm}
                         onChange={handleAuthFieldChange('passwordConfirm')}
