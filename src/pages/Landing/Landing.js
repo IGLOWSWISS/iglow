@@ -8,7 +8,7 @@ import topspot1x1 from '../../assets/videos/topspot/1x1.mp4';
 import topspot16x9 from '../../assets/videos/topspot/16x9.mp4';
 import trailerThumbnail from '../../assets/images/trailer-thumbnail.png';
 import subtractShape from '../../assets/images/subtract.png';
-import smartJacket from '../../assets/images/smart-jacket.png';
+import vestNoCircle from '../../assets/images/iglow-vest-nocircle.png';
 import controller from '../../assets/images/controller.png';
 import appMockup from '../../assets/images/app-mockup.png';
 import mountain from '../../assets/images/mountain.png';
@@ -69,7 +69,7 @@ const CONTENT = {
     secureSpot: "Réservez votre place dès aujourd'hui !",
     whatIsOvertitle: "QU'EST-CE QUE IGLOW ?",
     whatIsHtml:
-      'Le Smart Bike Vest IGLOW offre une <span style="color:#E30613">visibilité à 360°</span> avec des <span style="color:#E30613">clignotants</span> et des <span style="color:#E30613">feux de freinage</span> comme une voiture, contrôlés par une <span style="color:#E30613">télécommande Bluetooth intelligente</span>.',
+      'Le Duo Casque et Gilet <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Une visibilité à 360°</span><br/>Grâce à des <span style="color:#E30613">clignotants</span> et <span style="color:#E30613">feux de freinage</span><br/>Comme une voiture, contrôlés par une <span style="color:#E30613">télécommande Bluetooth intelligente</span>.',
     safetyOvertitle: 'sécurité',
     safetyTitle: 'Gilet et Casque Connectés Haute Visibilité',
     safetyText:
@@ -127,7 +127,7 @@ const CONTENT = {
     secureSpot: 'Sichern Sie sich noch heute Ihren Platz!',
     whatIsOvertitle: 'WAS IST IGLOW ?',
     whatIsHtml:
-      'Die Smart Bike Vest IGLOW bietet <span style="color:#E30613">360°-Sichtbarkeit</span> mit <span style="color:#E30613">Blinkern</span> und <span style="color:#E30613">Bremslichtern</span> wie ein Auto, gesteuert durch eine <span style="color:#E30613">intelligente Bluetooth-Fernbedienung</span>.',
+      'Das Duo Helm & Weste <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360°-Sichtbarkeit</span><br/>Mit <span style="color:#E30613">Blinkern</span> und <span style="color:#E30613">Bremslichtern</span><br/>Wie ein Auto, gesteuert durch eine <span style="color:#E30613">intelligente Bluetooth-Fernbedienung</span>.',
     safetyOvertitle: 'Sicherheit',
     safetyTitle: 'Hochsichtbare Smart Weste & Helm',
     safetyText:
@@ -185,7 +185,7 @@ const CONTENT = {
     secureSpot: 'Assicurati subito il tuo posto!',
     whatIsOvertitle: "COS'È IGLOW ?",
     whatIsHtml:
-      'Lo Smart Bike Vest IGLOW offre una <span style="color:#E30613">visibilità a 360°</span> con <span style="color:#E30613">frecce</span> e <span style="color:#E30613">luci di stop</span> come un\'auto, controllato da un <span style="color:#E30613">telecomando Bluetooth intelligente</span>.',
+      'Il Duo Casco e Gilet <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Una visibilità a 360°</span><br/>Grazie a <span style="color:#E30613">frecce</span> e <span style="color:#E30613">luci di stop</span><br/>Come un\'auto, controllato da un <span style="color:#E30613">telecomando Bluetooth intelligente</span>.',
     safetyOvertitle: 'sicurezza',
     safetyTitle: 'Gilet e Casco Smart ad Alta Visibilità',
     safetyText:
@@ -243,7 +243,7 @@ const CONTENT = {
     secureSpot: 'Secure your spot today!',
     whatIsOvertitle: 'WHAT IS IGLOW ?',
     whatIsHtml:
-      'The Smart Bike Vest IGLOW offers <span style="color:#E30613">360° visibility</span> with <span style="color:#E30613">turn signals</span> and <span style="color:#E30613">brake lights</span> like a car, controlled by an <span style="color:#E30613">intelligent Bluetooth remote</span>.',
+      'The Duo Helmet & Vest <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° visibility</span><br/>Thanks to <span style="color:#E30613">turn signals</span> and <span style="color:#E30613">brake lights</span><br/>Like a car, controlled by an <span style="color:#E30613">intelligent Bluetooth remote</span>.',
     safetyOvertitle: 'safety',
     safetyTitle: 'High Visibility Smart Vest & Helmet',
     safetyText:
@@ -301,7 +301,7 @@ const CONTENT = {
     secureSpot: '¡Asegura tu lugar hoy!',
     whatIsOvertitle: '¿QUÉ ES IGLOW ?',
     whatIsHtml:
-      'El Smart Bike Vest IGLOW ofrece <span style="color:#E30613">visibilidad de 360°</span> con <span style="color:#E30613">intermitentes</span> y <span style="color:#E30613">luces de freno</span> como un coche, controlado por un <span style="color:#E30613">mando Bluetooth inteligente</span>.',
+      'El Duo Casco y Chaleco <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Visibilidad de 360°</span><br/>Gracias a <span style="color:#E30613">intermitentes</span> y <span style="color:#E30613">luces de freno</span><br/>Como un coche, controlado por un <span style="color:#E30613">mando Bluetooth inteligente</span>.',
     safetyOvertitle: 'seguridad',
     safetyTitle: 'Chaleco y Casco Inteligentes de Alta Visibilidad',
     safetyText:
@@ -359,7 +359,7 @@ const CONTENT = {
     secureSpot: 'Verzeker u vandaag nog van uw plek!',
     whatIsOvertitle: 'WAT IS IGLOW ?',
     whatIsHtml:
-      'De Smart Bike Vest IGLOW biedt <span style="color:#E30613">360° zichtbaarheid</span> met <span style="color:#E30613">richtingaanwijzers</span> en <span style="color:#E30613">remlichten</span> zoals een auto, bestuurd door een <span style="color:#E30613">intelligente Bluetooth-afstandsbediening</span>.',
+      'De Duo Helm & Vest <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° zichtbaarheid</span><br/>Dankzij <span style="color:#E30613">richtingaanwijzers</span> en <span style="color:#E30613">remlichten</span><br/>Zoals een auto, bestuurd door een <span style="color:#E30613">intelligente Bluetooth-afstandsbediening</span>.',
     safetyOvertitle: 'veiligheid',
     safetyTitle: 'Smart Vest & Helm met Hoge Zichtbaarheid',
     safetyText:
@@ -417,7 +417,7 @@ const CONTENT = {
     secureSpot: 'Garanta já o seu lugar!',
     whatIsOvertitle: 'O QUE É O IGLOW ?',
     whatIsHtml:
-      'O Smart Bike Vest IGLOW oferece <span style="color:#E30613">visibilidade de 360°</span> com <span style="color:#E30613">setas</span> e <span style="color:#E30613">luzes de freio</span> como um carro, controlado por um <span style="color:#E30613">controle Bluetooth inteligente</span>.',
+      'O Duo Capacete e Colete <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Visibilidade de 360°</span><br/>Graças a <span style="color:#E30613">setas</span> e <span style="color:#E30613">luzes de freio</span><br/>Como um carro, controlado por um <span style="color:#E30613">controle Bluetooth inteligente</span>.',
     safetyOvertitle: 'segurança',
     safetyTitle: 'Colete e Capacete Inteligentes de Alta Visibilidade',
     safetyText:
@@ -475,7 +475,7 @@ const CONTENT = {
     secureSpot: 'आज ही अपनी जगह सुरक्षित करें!',
     whatIsOvertitle: 'IGLOW क्या है ?',
     whatIsHtml:
-      'Smart Bike Vest IGLOW कार की तरह <span style="color:#E30613">टर्न सिग्नल</span> और <span style="color:#E30613">ब्रेक लाइट</span> के साथ <span style="color:#E30613">360° दृश्यता</span> प्रदान करता है, जिसे एक <span style="color:#E30613">स्मार्ट ब्लूटूथ रिमोट</span> द्वारा नियंत्रित किया जाता है।',
+      'डुओ हेलमेट और वेस्ट <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° दृश्यता</span><br/><span style="color:#E30613">टर्न सिग्नल</span> और <span style="color:#E30613">ब्रेक लाइट</span> की बदौलत<br/>कार की तरह, एक <span style="color:#E30613">स्मार्ट ब्लूटूथ रिमोट</span> द्वारा नियंत्रित।',
     safetyOvertitle: 'सुरक्षा',
     safetyTitle: 'हाई विज़िबिलिटी स्मार्ट वेस्ट और हेलमेट',
     safetyText:
@@ -533,7 +533,7 @@ const CONTENT = {
     secureSpot: 'احجز مكانك اليوم!',
     whatIsOvertitle: 'ما هو IGLOW ؟',
     whatIsHtml:
-      'توفر Smart Bike Vest IGLOW <span style="color:#E30613">رؤية 360°</span> مع <span style="color:#E30613">إشارات انعطاف</span> و<span style="color:#E30613">مصابيح فرامل</span> مثل السيارة، ويتم التحكم فيها بواسطة <span style="color:#E30613">جهاز تحكم بلوتوث ذكي</span>.',
+      'دو خوذة وسترة <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">رؤية 360°</span><br/>بفضل <span style="color:#E30613">إشارات الانعطاف</span> و<span style="color:#E30613">مصابيح الفرامل</span><br/>مثل السيارة، يتم التحكم فيها بواسطة <span style="color:#E30613">جهاز تحكم بلوتوث ذكي</span>.',
     safetyOvertitle: 'السلامة',
     safetyTitle: 'سترة وخوذة ذكية عالية الوضوح',
     safetyText:
@@ -592,7 +592,7 @@ const CONTENT = {
     secureSpot: 'Забронируйте своё место уже сегодня!',
     whatIsOvertitle: 'ЧТО ТАКОЕ IGLOW ?',
     whatIsHtml:
-      'Smart Bike Vest IGLOW обеспечивает <span style="color:#E30613">360° видимость</span> с <span style="color:#E30613">поворотниками</span> и <span style="color:#E30613">стоп-сигналами</span>, как у автомобиля, управляемыми <span style="color:#E30613">умным Bluetooth-пультом</span>.',
+      'Дуо Шлем и Жилет <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° видимость</span><br/>Благодаря <span style="color:#E30613">поворотникам</span> и <span style="color:#E30613">стоп-сигналам</span><br/>Как у автомобиля, управляемыми <span style="color:#E30613">умным Bluetooth-пультом</span>.',
     safetyOvertitle: 'безопасность',
     safetyTitle: 'Умный жилет и шлем повышенной видимости',
     safetyText:
@@ -839,7 +839,7 @@ function HeroSection({ t }) {
 }
 
 function WhatIsSection({ t }) {
-  const { NIGHT, STATE_GREY } = Palette();
+  const { NIGHT, STATE_GREY, RED } = Palette();
   return (
     <Box backgroundColor='white' color={NIGHT} overflow='hidden'>
       <Container sx={{ width: '100%', pt: 4 }}>
@@ -860,8 +860,11 @@ function WhatIsSection({ t }) {
             overtitle={t.safetyOvertitle}
             title={t.safetyTitle}
             text={t.safetyText}
-            imgSrc={smartJacket}
+            imgSrc={vestNoCircle}
             imgTopSrc={helmetCutout}
+            circleColor={RED}
+            imgMaxWidth='380px'
+            textMaxWidth='346px'
           />
         </Box>
         <EmptySpace />
