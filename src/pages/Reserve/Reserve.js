@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './Reserve.css';
 import duoHelmetVest from '../../assets/images/iglow-duo-helmet-vest.jpg';
 
@@ -32,30 +32,156 @@ const PRICE_ID_USD = 'price_1SGkweClH97ISv2lbwx0YlrE';
 const Reserve = () => {
   const [currentLang, setCurrentLang] = useState('fr');
   const [reservationCounter] = useState(167);
-  const [geoPriceId, setGeoPriceId] = useState(PRICE_ID_CHF);
+
+  // Resolved lazily and cached: avoids redirecting to the CHF default
+  // if the button is clicked before the geolocation lookup has finished.
+  const geoPriceIdRef = useRef(null);
+  const geoPromiseRef = useRef(null);
+
+  const detectPriceId = () => {
+    if (geoPriceIdRef.current) {
+      return Promise.resolve(geoPriceIdRef.current);
+    }
+    if (!geoPromiseRef.current) {
+      const lookup = fetch('https://get.geojs.io/v1/ip/country.json')
+        .then((res) => res.json())
+        .then((data) => {
+          const countryCode = data && data.country;
+          if (countryCode === 'CH' || countryCode === 'LI') {
+            return PRICE_ID_CHF;
+          } else if (EUROZONE_COUNTRIES.includes(countryCode)) {
+            return PRICE_ID_EUR;
+          } else if (countryCode) {
+            return PRICE_ID_USD;
+          }
+          return PRICE_ID_CHF;
+        })
+        .catch(() => PRICE_ID_CHF);
+
+      const timeout = new Promise((resolve) =>
+        setTimeout(() => resolve(PRICE_ID_CHF), 2500)
+      );
+
+      geoPromiseRef.current = Promise.race([lookup, timeout]).then(
+        (priceId) => {
+          geoPriceIdRef.current = priceId;
+          return priceId;
+        }
+      );
+    }
+    return geoPromiseRef.current;
+  };
+
+  // Warm the lookup as soon as the page loads so it's already resolved
+  // by the time the visitor reaches the reserve button.
+  useEffect(() => {
+    detectPriceId();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const [account, setAccount] = useState(null);
+  const [showAccountModal, setShowAccountModal] = useState(false);
+  const [authMode, setAuthMode] = useState('register');
+  const [authForm, setAuthForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    address: '',
+    postalCode: '',
+    country: '',
+    password: '',
+    passwordConfirm: '',
+    consent: false,
+  });
+  const [authError, setAuthError] = useState('');
+  const [authLoading, setAuthLoading] = useState(false);
 
   useEffect(() => {
-    let cancelled = false;
-    fetch('https://get.geojs.io/v1/ip/country.json')
+    fetch('/api/me.php')
       .then((res) => res.json())
       .then((data) => {
-        if (cancelled) return;
-        const countryCode = data && data.country;
-        if (countryCode === 'CH' || countryCode === 'LI') {
-          setGeoPriceId(PRICE_ID_CHF);
-        } else if (EUROZONE_COUNTRIES.includes(countryCode)) {
-          setGeoPriceId(PRICE_ID_EUR);
-        } else if (countryCode) {
-          setGeoPriceId(PRICE_ID_USD);
+        if (data && data.authenticated) {
+          setAccount(data.customer);
         }
       })
-      .catch(() => {
-        // Geolocation failed, keep the CHF default
-      });
-    return () => {
-      cancelled = true;
-    };
+      .catch(() => {});
   }, []);
+
+  const handleAuthFieldChange = (field) => (e) => {
+    const value = field === 'consent' ? e.target.checked : e.target.value;
+    setAuthForm((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const proceedToCheckout = () => {
+    detectPriceId().then((priceId) => redirectToStripe(priceId));
+  };
+
+  const handleReserveClick = () => {
+    if (account) {
+      proceedToCheckout();
+    } else {
+      setAuthError('');
+      setShowAccountModal(true);
+    }
+  };
+
+  const handleAuthSubmit = async (e) => {
+    e.preventDefault();
+    const t = authContent[currentLang] || authContent.fr;
+    setAuthError('');
+
+    if (authMode === 'register') {
+      if (authForm.password.length < 8) {
+        setAuthError(t.errorPasswordTooShort);
+        return;
+      }
+      if (authForm.password !== authForm.passwordConfirm) {
+        setAuthError(t.errorPasswordMismatch);
+        return;
+      }
+      if (!authForm.consent) {
+        setAuthError(t.errorConsentRequired);
+        return;
+      }
+    }
+
+    setAuthLoading(true);
+    try {
+      const endpoint =
+        authMode === 'register' ? '/api/register.php' : '/api/login.php';
+      const payload =
+        authMode === 'register'
+          ? authForm
+          : { email: authForm.email, password: authForm.password };
+
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+
+      if (!res.ok) {
+        const errorMap = {
+          email_taken: t.errorEmailTaken,
+          invalid_credentials: t.errorInvalidCredentials,
+          account_locked: t.errorAccountLocked,
+        };
+        setAuthError(errorMap[data.error] || t.errorGeneric);
+        setAuthLoading(false);
+        return;
+      }
+
+      setAccount(data.customer);
+      setShowAccountModal(false);
+      setAuthLoading(false);
+      proceedToCheckout();
+    } catch (err) {
+      setAuthError((authContent[currentLang] || authContent.fr).errorGeneric);
+      setAuthLoading(false);
+    }
+  };
 
   // Language content object
   const content = {
@@ -630,6 +756,298 @@ const Reserve = () => {
     { code: 'ru', name: 'RU', flagClass: 'flag-ru' },
   ];
 
+  const authContent = {
+    fr: {
+      createAccount: 'Créez votre compte IGLOW',
+      orLogin: 'Vous avez déjà un compte ?',
+      loginLink: 'Connectez-vous',
+      createLink: 'Créer un compte',
+      loginTitle: 'Connexion',
+      firstName: 'Prénom',
+      lastName: 'Nom',
+      email: 'Email',
+      phone: 'Téléphone',
+      address: 'Adresse',
+      postalCode: 'Code postal',
+      country: 'Pays',
+      password: 'Mot de passe',
+      passwordConfirm: 'Confirmer le mot de passe',
+      consent: "J'accepte la",
+      consentLink: 'politique de confidentialité',
+      submitRegister: 'Créer mon compte et continuer',
+      submitLogin: 'Se connecter et continuer',
+      close: 'Fermer',
+      errorEmailTaken: 'Un compte existe déjà avec cet email.',
+      errorInvalidCredentials: 'Email ou mot de passe incorrect.',
+      errorAccountLocked:
+        'Trop de tentatives, réessayez dans quelques minutes.',
+      errorPasswordMismatch: 'Les mots de passe ne correspondent pas.',
+      errorPasswordTooShort:
+        'Le mot de passe doit contenir au moins 8 caractères.',
+      errorConsentRequired:
+        "Merci d'accepter la politique de confidentialité.",
+      errorGeneric: 'Une erreur est survenue, merci de réessayer.',
+    },
+    de: {
+      createAccount: 'Erstellen Sie Ihr IGLOW-Konto',
+      orLogin: 'Sie haben bereits ein Konto?',
+      loginLink: 'Anmelden',
+      createLink: 'Konto erstellen',
+      loginTitle: 'Anmeldung',
+      firstName: 'Vorname',
+      lastName: 'Nachname',
+      email: 'E-Mail',
+      phone: 'Telefon',
+      address: 'Adresse',
+      postalCode: 'Postleitzahl',
+      country: 'Land',
+      password: 'Passwort',
+      passwordConfirm: 'Passwort bestätigen',
+      consent: 'Ich akzeptiere die',
+      consentLink: 'Datenschutzrichtlinie',
+      submitRegister: 'Konto erstellen und fortfahren',
+      submitLogin: 'Anmelden und fortfahren',
+      close: 'Schliessen',
+      errorEmailTaken: 'Für diese E-Mail existiert bereits ein Konto.',
+      errorInvalidCredentials: 'E-Mail oder Passwort falsch.',
+      errorAccountLocked:
+        'Zu viele Versuche, bitte in ein paar Minuten erneut versuchen.',
+      errorPasswordMismatch: 'Die Passwörter stimmen nicht überein.',
+      errorPasswordTooShort:
+        'Das Passwort muss mindestens 8 Zeichen lang sein.',
+      errorConsentRequired: 'Bitte akzeptieren Sie die Datenschutzrichtlinie.',
+      errorGeneric: 'Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut.',
+    },
+    it: {
+      createAccount: 'Crea il tuo account IGLOW',
+      orLogin: 'Hai già un account?',
+      loginLink: 'Accedi',
+      createLink: 'Crea un account',
+      loginTitle: 'Accesso',
+      firstName: 'Nome',
+      lastName: 'Cognome',
+      email: 'Email',
+      phone: 'Telefono',
+      address: 'Indirizzo',
+      postalCode: 'Codice postale',
+      country: 'Paese',
+      password: 'Password',
+      passwordConfirm: 'Conferma password',
+      consent: 'Accetto la',
+      consentLink: 'informativa sulla privacy',
+      submitRegister: 'Crea il mio account e continua',
+      submitLogin: 'Accedi e continua',
+      close: 'Chiudi',
+      errorEmailTaken: 'Esiste già un account con questa email.',
+      errorInvalidCredentials: 'Email o password errati.',
+      errorAccountLocked: 'Troppi tentativi, riprova tra qualche minuto.',
+      errorPasswordMismatch: 'Le password non corrispondono.',
+      errorPasswordTooShort: 'La password deve contenere almeno 8 caratteri.',
+      errorConsentRequired: "Si prega di accettare l'informativa sulla privacy.",
+      errorGeneric: 'Si è verificato un errore, riprova.',
+    },
+    en: {
+      createAccount: 'Create your IGLOW account',
+      orLogin: 'Already have an account?',
+      loginLink: 'Log in',
+      createLink: 'Create an account',
+      loginTitle: 'Log in',
+      firstName: 'First name',
+      lastName: 'Last name',
+      email: 'Email',
+      phone: 'Phone',
+      address: 'Address',
+      postalCode: 'Postal code',
+      country: 'Country',
+      password: 'Password',
+      passwordConfirm: 'Confirm password',
+      consent: 'I accept the',
+      consentLink: 'privacy policy',
+      submitRegister: 'Create my account and continue',
+      submitLogin: 'Log in and continue',
+      close: 'Close',
+      errorEmailTaken: 'An account already exists with this email.',
+      errorInvalidCredentials: 'Incorrect email or password.',
+      errorAccountLocked: 'Too many attempts, please try again in a few minutes.',
+      errorPasswordMismatch: 'Passwords do not match.',
+      errorPasswordTooShort: 'Password must be at least 8 characters.',
+      errorConsentRequired: 'Please accept the privacy policy.',
+      errorGeneric: 'Something went wrong, please try again.',
+    },
+    es: {
+      createAccount: 'Crea tu cuenta IGLOW',
+      orLogin: '¿Ya tienes una cuenta?',
+      loginLink: 'Inicia sesión',
+      createLink: 'Crear una cuenta',
+      loginTitle: 'Iniciar sesión',
+      firstName: 'Nombre',
+      lastName: 'Apellido',
+      email: 'Email',
+      phone: 'Teléfono',
+      address: 'Dirección',
+      postalCode: 'Código postal',
+      country: 'País',
+      password: 'Contraseña',
+      passwordConfirm: 'Confirmar contraseña',
+      consent: 'Acepto la',
+      consentLink: 'política de privacidad',
+      submitRegister: 'Crear mi cuenta y continuar',
+      submitLogin: 'Iniciar sesión y continuar',
+      close: 'Cerrar',
+      errorEmailTaken: 'Ya existe una cuenta con este email.',
+      errorInvalidCredentials: 'Email o contraseña incorrectos.',
+      errorAccountLocked: 'Demasiados intentos, inténtalo de nuevo en unos minutos.',
+      errorPasswordMismatch: 'Las contraseñas no coinciden.',
+      errorPasswordTooShort: 'La contraseña debe tener al menos 8 caracteres.',
+      errorConsentRequired: 'Por favor acepta la política de privacidad.',
+      errorGeneric: 'Ocurrió un error, inténtalo de nuevo.',
+    },
+    nl: {
+      createAccount: 'Maak uw IGLOW-account aan',
+      orLogin: 'Heeft u al een account?',
+      loginLink: 'Inloggen',
+      createLink: 'Account aanmaken',
+      loginTitle: 'Inloggen',
+      firstName: 'Voornaam',
+      lastName: 'Achternaam',
+      email: 'E-mail',
+      phone: 'Telefoon',
+      address: 'Adres',
+      postalCode: 'Postcode',
+      country: 'Land',
+      password: 'Wachtwoord',
+      passwordConfirm: 'Bevestig wachtwoord',
+      consent: 'Ik accepteer het',
+      consentLink: 'privacybeleid',
+      submitRegister: 'Account aanmaken en doorgaan',
+      submitLogin: 'Inloggen en doorgaan',
+      close: 'Sluiten',
+      errorEmailTaken: 'Er bestaat al een account met dit e-mailadres.',
+      errorInvalidCredentials: 'Onjuiste e-mail of wachtwoord.',
+      errorAccountLocked:
+        'Te veel pogingen, probeer het over een paar minuten opnieuw.',
+      errorPasswordMismatch: 'Wachtwoorden komen niet overeen.',
+      errorPasswordTooShort: 'Wachtwoord moet minstens 8 tekens bevatten.',
+      errorConsentRequired: 'Accepteer het privacybeleid.',
+      errorGeneric: 'Er is iets misgegaan, probeer het opnieuw.',
+    },
+    pt: {
+      createAccount: 'Crie sua conta IGLOW',
+      orLogin: 'Já tem uma conta?',
+      loginLink: 'Entrar',
+      createLink: 'Criar uma conta',
+      loginTitle: 'Entrar',
+      firstName: 'Nome',
+      lastName: 'Sobrenome',
+      email: 'Email',
+      phone: 'Telefone',
+      address: 'Endereço',
+      postalCode: 'Código postal',
+      country: 'País',
+      password: 'Senha',
+      passwordConfirm: 'Confirmar senha',
+      consent: 'Aceito a',
+      consentLink: 'política de privacidade',
+      submitRegister: 'Criar minha conta e continuar',
+      submitLogin: 'Entrar e continuar',
+      close: 'Fechar',
+      errorEmailTaken: 'Já existe uma conta com este email.',
+      errorInvalidCredentials: 'Email ou senha incorretos.',
+      errorAccountLocked: 'Muitas tentativas, tente novamente em alguns minutos.',
+      errorPasswordMismatch: 'As senhas não coincidem.',
+      errorPasswordTooShort: 'A senha deve ter pelo menos 8 caracteres.',
+      errorConsentRequired: 'Por favor aceite a política de privacidade.',
+      errorGeneric: 'Ocorreu um erro, tente novamente.',
+    },
+    hi: {
+      createAccount: 'अपना IGLOW खाता बनाएं',
+      orLogin: 'क्या आपका पहले से खाता है?',
+      loginLink: 'लॉग इन करें',
+      createLink: 'खाता बनाएं',
+      loginTitle: 'लॉग इन',
+      firstName: 'पहला नाम',
+      lastName: 'उपनाम',
+      email: 'ईमेल',
+      phone: 'फ़ोन',
+      address: 'पता',
+      postalCode: 'पिन कोड',
+      country: 'देश',
+      password: 'पासवर्ड',
+      passwordConfirm: 'पासवर्ड की पुष्टि करें',
+      consent: 'मैं स्वीकार करता/करती हूं',
+      consentLink: 'गोपनीयता नीति',
+      submitRegister: 'खाता बनाएं और जारी रखें',
+      submitLogin: 'लॉग इन करें और जारी रखें',
+      close: 'बंद करें',
+      errorEmailTaken: 'इस ईमेल से पहले से एक खाता मौजूद है।',
+      errorInvalidCredentials: 'ईमेल या पासवर्ड गलत है।',
+      errorAccountLocked:
+        'बहुत अधिक प्रयास, कृपया कुछ मिनटों बाद पुनः प्रयास करें।',
+      errorPasswordMismatch: 'पासवर्ड मेल नहीं खाते।',
+      errorPasswordTooShort: 'पासवर्ड कम से कम 8 अक्षरों का होना चाहिए।',
+      errorConsentRequired: 'कृपया गोपनीयता नीति स्वीकार करें।',
+      errorGeneric: 'कुछ गलत हो गया, कृपया पुनः प्रयास करें।',
+    },
+    ar: {
+      createAccount: 'أنشئ حساب IGLOW الخاص بك',
+      orLogin: 'هل لديك حساب بالفعل؟',
+      loginLink: 'تسجيل الدخول',
+      createLink: 'إنشاء حساب',
+      loginTitle: 'تسجيل الدخول',
+      firstName: 'الاسم الأول',
+      lastName: 'اسم العائلة',
+      email: 'البريد الإلكتروني',
+      phone: 'الهاتف',
+      address: 'العنوان',
+      postalCode: 'الرمز البريدي',
+      country: 'البلد',
+      password: 'كلمة المرور',
+      passwordConfirm: 'تأكيد كلمة المرور',
+      consent: 'أوافق على',
+      consentLink: 'سياسة الخصوصية',
+      submitRegister: 'إنشاء حسابي والمتابعة',
+      submitLogin: 'تسجيل الدخول والمتابعة',
+      close: 'إغلاق',
+      errorEmailTaken: 'يوجد حساب بالفعل بهذا البريد الإلكتروني.',
+      errorInvalidCredentials: 'البريد الإلكتروني أو كلمة المرور غير صحيحة.',
+      errorAccountLocked:
+        'عدد كبير جدًا من المحاولات، يرجى المحاولة مرة أخرى بعد بضع دقائق.',
+      errorPasswordMismatch: 'كلمتا المرور غير متطابقتين.',
+      errorPasswordTooShort: 'يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.',
+      errorConsentRequired: 'يرجى قبول سياسة الخصوصية.',
+      errorGeneric: 'حدث خطأ ما، يرجى المحاولة مرة أخرى.',
+    },
+    ru: {
+      createAccount: 'Создайте аккаунт IGLOW',
+      orLogin: 'Уже есть аккаунт?',
+      loginLink: 'Войти',
+      createLink: 'Создать аккаунт',
+      loginTitle: 'Вход',
+      firstName: 'Имя',
+      lastName: 'Фамилия',
+      email: 'Email',
+      phone: 'Телефон',
+      address: 'Адрес',
+      postalCode: 'Почтовый индекс',
+      country: 'Страна',
+      password: 'Пароль',
+      passwordConfirm: 'Подтвердите пароль',
+      consent: 'Я принимаю',
+      consentLink: 'политику конфиденциальности',
+      submitRegister: 'Создать аккаунт и продолжить',
+      submitLogin: 'Войти и продолжить',
+      close: 'Закрыть',
+      errorEmailTaken: 'Аккаунт с таким email уже существует.',
+      errorInvalidCredentials: 'Неверный email или пароль.',
+      errorAccountLocked:
+        'Слишком много попыток, попробуйте снова через несколько минут.',
+      errorPasswordMismatch: 'Пароли не совпадают.',
+      errorPasswordTooShort: 'Пароль должен содержать не менее 8 символов.',
+      errorConsentRequired: 'Пожалуйста, примите политику конфиденциальности.',
+      errorGeneric: 'Произошла ошибка, попробуйте снова.',
+    },
+  };
+
   const redirectToStripe = (priceId) => {
     // Build success and cancel URLs with language parameter
     const baseUrl = window.location.origin;
@@ -775,7 +1193,7 @@ const Reserve = () => {
               const [priceWord, priceNumber] = button.price.split(' ');
               return (
                 <button
-                  onClick={() => redirectToStripe(geoPriceId)}
+                  onClick={handleReserveClick}
                   className='btn btn-primary'
                 >
                   <span className='flag-emoji' style={{ fontSize: '1.5em' }}>
@@ -919,6 +1337,159 @@ const Reserve = () => {
           </p>
         </div>
       </footer>
+
+      {showAccountModal &&
+        (() => {
+          const t = authContent[currentLang] || authContent.fr;
+          return (
+            <div
+              className='account-modal-overlay'
+              onClick={() => setShowAccountModal(false)}
+            >
+              <div
+                className='account-modal'
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  className='account-modal-close'
+                  onClick={() => setShowAccountModal(false)}
+                  aria-label={t.close}
+                >
+                  &times;
+                </button>
+                <h2>{authMode === 'register' ? t.createAccount : t.loginTitle}</h2>
+                <form onSubmit={handleAuthSubmit} className='account-form'>
+                  {authMode === 'register' && (
+                    <>
+                      <div className='account-form-row'>
+                        <input
+                          type='text'
+                          placeholder={t.firstName}
+                          value={authForm.firstName}
+                          onChange={handleAuthFieldChange('firstName')}
+                          required
+                        />
+                        <input
+                          type='text'
+                          placeholder={t.lastName}
+                          value={authForm.lastName}
+                          onChange={handleAuthFieldChange('lastName')}
+                          required
+                        />
+                      </div>
+                      <input
+                        type='tel'
+                        placeholder={t.phone}
+                        value={authForm.phone}
+                        onChange={handleAuthFieldChange('phone')}
+                        required
+                      />
+                      <input
+                        type='text'
+                        placeholder={t.address}
+                        value={authForm.address}
+                        onChange={handleAuthFieldChange('address')}
+                        required
+                      />
+                      <div className='account-form-row'>
+                        <input
+                          type='text'
+                          placeholder={t.postalCode}
+                          value={authForm.postalCode}
+                          onChange={handleAuthFieldChange('postalCode')}
+                          required
+                        />
+                        <input
+                          type='text'
+                          placeholder={t.country}
+                          value={authForm.country}
+                          onChange={handleAuthFieldChange('country')}
+                          required
+                        />
+                      </div>
+                    </>
+                  )}
+                  <input
+                    type='email'
+                    placeholder={t.email}
+                    value={authForm.email}
+                    onChange={handleAuthFieldChange('email')}
+                    required
+                  />
+                  <input
+                    type='password'
+                    placeholder={t.password}
+                    value={authForm.password}
+                    onChange={handleAuthFieldChange('password')}
+                    required
+                  />
+                  {authMode === 'register' && (
+                    <>
+                      <input
+                        type='password'
+                        placeholder={t.passwordConfirm}
+                        value={authForm.passwordConfirm}
+                        onChange={handleAuthFieldChange('passwordConfirm')}
+                        required
+                      />
+                      <label className='account-consent'>
+                        <input
+                          type='checkbox'
+                          checked={authForm.consent}
+                          onChange={handleAuthFieldChange('consent')}
+                        />
+                        <span>
+                          {t.consent}{' '}
+                          <a href='/privacy-policy' target='_blank' rel='noopener noreferrer'>
+                            {t.consentLink}
+                          </a>
+                        </span>
+                      </label>
+                    </>
+                  )}
+
+                  {authError && (
+                    <p className='account-form-error'>{authError}</p>
+                  )}
+
+                  <button
+                    type='submit'
+                    className='account-submit-btn'
+                    disabled={authLoading}
+                  >
+                    {authMode === 'register' ? t.submitRegister : t.submitLogin}
+                  </button>
+                </form>
+                <p className='account-switch'>
+                  {authMode === 'register' ? (
+                    <>
+                      {t.orLogin}{' '}
+                      <button
+                        type='button'
+                        onClick={() => {
+                          setAuthMode('login');
+                          setAuthError('');
+                        }}
+                      >
+                        {t.loginLink}
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      type='button'
+                      onClick={() => {
+                        setAuthMode('register');
+                        setAuthError('');
+                      }}
+                    >
+                      {t.createLink}
+                    </button>
+                  )}
+                </p>
+              </div>
+            </div>
+          );
+        })()}
     </div>
   );
 };
