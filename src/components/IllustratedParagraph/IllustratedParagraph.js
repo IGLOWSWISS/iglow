@@ -75,7 +75,7 @@ function IllustratedParagraph({
           <Box
             component='img'
             src={imgSrc}
-            sx={{ width: '80%', mt: 2, zIndex: 1, position: 'relative' }}
+            sx={{ width: '80%', mt: '-6%', zIndex: 1, position: 'relative' }}
           />
         </Box>
       ) : (
