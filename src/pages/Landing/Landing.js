@@ -83,7 +83,8 @@ const CONTENT = {
     appOvertitle: 'APPLICATION',
     appTitle: 'GlowSafe : Votre Compagnon de Sécurité Routière',
     appText:
-      "GlowSafe est votre application mobile incontournable pour chercher des itinéraires et synchroniser les indicateurs du Smart Vest. Trouvez facilement votre chemin et contrôlez les clignotants du gilet pour une visibilité renforcée.",
+      "GlowSafe, l'application du Duo Casque et Gilet IGLOW, permet la synchronisation des lumières. Une fois activée, elle permet également de calculer vos déplacements et votre vitesse moyenne, d'activer les signaux de freinage, et ainsi d'informer les automobilistes.",
+    appAvailability: 'Disponible dès février 2027',
     specsOvertitle: 'Pour les passionnés',
     specsTitlePrefix: 'Découvrez les',
     specsHighlight: 'caractéristiques',
@@ -143,7 +144,8 @@ const CONTENT = {
     appOvertitle: 'ANWENDUNG',
     appTitle: 'GlowSafe: Ihr Begleiter für Verkehrssicherheit',
     appText:
-      'GlowSafe ist Ihre mobile App für die Routensuche und die Synchronisierung der Smart-Weste-Anzeigen. Finden Sie mühelos Ihren Weg und steuern Sie die Blinker der Weste für mehr Sichtbarkeit.',
+      'GlowSafe, die App Ihres IGLOW Helm- und Westen-Duos, ermöglicht die Synchronisierung der Lichter. Einmal aktiviert, berechnet sie auch Ihre Fahrten und Ihre Durchschnittsgeschwindigkeit, aktiviert die Bremslichter und informiert so die Autofahrer.',
+    appAvailability: 'Verfügbar ab Februar 2027',
     specsOvertitle: 'Für die Technikfans',
     specsTitlePrefix: 'Entdecken Sie die',
     specsHighlight: 'technischen Daten',
@@ -203,7 +205,8 @@ const CONTENT = {
     appOvertitle: 'APPLICAZIONE',
     appTitle: 'GlowSafe: Il Tuo Compagno di Sicurezza Stradale',
     appText:
-      'GlowSafe è la tua app mobile di riferimento per cercare percorsi e sincronizzare gli indicatori dello Smart Vest. Trova facilmente la tua strada e controlla le frecce del gilet per una maggiore visibilità.',
+      "GlowSafe, l'app del tuo Duo Casco e Gilet IGLOW, permette la sincronizzazione delle luci. Una volta attivata, permette anche di calcolare i tuoi spostamenti e la tua velocità media, di attivare i segnali di frenata e così informare gli automobilisti.",
+    appAvailability: 'Disponibile da febbraio 2027',
     specsOvertitle: 'Per gli appassionati',
     specsTitlePrefix: 'Scopri le',
     specsHighlight: 'caratteristiche tecniche',
@@ -263,7 +266,8 @@ const CONTENT = {
     appOvertitle: 'APPLICATION',
     appTitle: 'GlowSafe: Your Road Safety Companion',
     appText:
-      "GlowSafe is your go-to mobile app for searching routes and synchronizing Smart Vest's indicators. Effortlessly find your way and seamlessly control the vest's blinkers for enhanced visibility.",
+      'GlowSafe, the app for your IGLOW Helmet and Vest Duo, enables light synchronization. Once activated, it also calculates your trips and average speed, activates the brake signals, and informs drivers accordingly.',
+    appAvailability: 'Available from February 2027',
     specsOvertitle: 'For the nerds',
     specsTitlePrefix: 'Exploring the',
     specsHighlight: 'specs',
@@ -323,7 +327,8 @@ const CONTENT = {
     appOvertitle: 'APLICACIÓN',
     appTitle: 'GlowSafe: Tu Compañero de Seguridad Vial',
     appText:
-      'GlowSafe es tu aplicación móvil de referencia para buscar rutas y sincronizar los indicadores del Smart Vest. Encuentra fácilmente tu camino y controla los intermitentes del chaleco para una mayor visibilidad.',
+      'GlowSafe, la aplicación de tu Duo Casco y Chaleco IGLOW, permite la sincronización de las luces. Una vez activada, también permite calcular tus desplazamientos y tu velocidad media, activar las señales de frenado e informar así a los automovilistas.',
+    appAvailability: 'Disponible a partir de febrero de 2027',
     specsOvertitle: 'Para los curiosos',
     specsTitlePrefix: 'Descubre las',
     specsHighlight: 'especificaciones',
@@ -383,7 +388,8 @@ const CONTENT = {
     appOvertitle: 'APPLICATIE',
     appTitle: 'GlowSafe: Uw Verkeersveiligheidsmetgezel',
     appText:
-      'GlowSafe is uw go-to mobiele app voor het zoeken van routes en het synchroniseren van de indicatoren van het Smart Vest. Vind moeiteloos uw weg en bedien de richtingaanwijzers van het vest voor verbeterde zichtbaarheid.',
+      'GlowSafe, de app van uw IGLOW Helm- en Vestduo, maakt lichtsynchronisatie mogelijk. Eenmaal geactiveerd, berekent ze ook uw ritten en gemiddelde snelheid, activeert ze de remlichten en informeert zo automobilisten.',
+    appAvailability: 'Beschikbaar vanaf februari 2027',
     specsOvertitle: 'Voor de techneuten',
     specsTitlePrefix: 'Ontdek de',
     specsHighlight: 'specificaties',
@@ -443,7 +449,8 @@ const CONTENT = {
     appOvertitle: 'APLICATIVO',
     appTitle: 'GlowSafe: Seu Companheiro de Segurança Viária',
     appText:
-      'GlowSafe é seu aplicativo móvel para buscar rotas e sincronizar os indicadores do Smart Vest. Encontre facilmente o seu caminho e controle as setas do colete para maior visibilidade.',
+      'GlowSafe, o aplicativo do seu Duo Capacete e Colete IGLOW, permite a sincronização das luzes. Uma vez ativada, ela também permite calcular seus deslocamentos e sua velocidade média, ativar os sinais de freio e assim informar os motoristas.',
+    appAvailability: 'Disponível a partir de fevereiro de 2027',
     specsOvertitle: 'Para os curiosos',
     specsTitlePrefix: 'Explore as',
     specsHighlight: 'especificações',
@@ -503,7 +510,8 @@ const CONTENT = {
     appOvertitle: 'एप्लिकेशन',
     appTitle: 'GlowSafe: आपका रोड सेफ्टी साथी',
     appText:
-      'GlowSafe मार्ग खोजने और Smart Vest के संकेतकों को सिंक्रनाइज़ करने के लिए आपका पसंदीदा मोबाइल ऐप है। आसानी से अपना रास्ता खोजें और बेहतर दृश्यता के लिए जैकेट के टर्न सिग्नल को नियंत्रित करें।',
+      'GlowSafe, आपके IGLOW हेलमेट और वेस्ट डुओ का ऐप, लाइट सिंक्रोनाइज़ेशन की सुविधा देता है। सक्रिय होने पर, यह आपकी यात्राओं और औसत गति की गणना भी करता है, ब्रेक सिग्नल सक्रिय करता है, और इस तरह ड्राइवरों को सूचित करता है।',
+    appAvailability: 'फरवरी 2027 से उपलब्ध',
     specsOvertitle: 'टेक प्रेमियों के लिए',
     specsTitlePrefix: 'जानें',
     specsHighlight: 'स्पेसिफिकेशन',
@@ -563,7 +571,8 @@ const CONTENT = {
     appOvertitle: 'التطبيق',
     appTitle: 'GlowSafe: رفيقك لسلامة الطريق',
     appText:
-      'GlowSafe هو تطبيقك المفضل للبحث عن المسارات ومزامنة مؤشرات Smart Vest. اعثر على طريقك بسهولة وتحكم في إشارات انعطاف السترة لرؤية أفضل.',
+      'GlowSafe، تطبيق ثنائي الخوذة والسترة IGLOW الخاص بك، يتيح مزامنة الأضواء. وعند تفعيله، يتيح أيضًا حساب تنقلاتك وسرعتك المتوسطة، وتفعيل إشارات الفرملة، وبالتالي إعلام السائقين.',
+    appAvailability: 'متاح اعتبارًا من فبراير 2027',
     specsOvertitle: 'لعشاق التقنية',
     specsTitlePrefix: 'اكتشف',
     specsHighlight: 'المواصفات',
@@ -624,7 +633,8 @@ const CONTENT = {
     appOvertitle: 'ПРИЛОЖЕНИЕ',
     appTitle: 'GlowSafe: Ваш спутник безопасности на дороге',
     appText:
-      'GlowSafe — это ваше мобильное приложение для поиска маршрутов и синхронизации индикаторов Smart Vest. Легко находите свой путь и управляйте поворотниками жилета для повышенной видимости.',
+      'GlowSafe, приложение вашего дуо-комплекта IGLOW (шлем и жилет), обеспечивает синхронизацию огней. После активации оно также рассчитывает ваши поездки и среднюю скорость, активирует сигналы торможения и тем самым информирует водителей.',
+    appAvailability: 'Доступно с февраля 2027 года',
     specsOvertitle: 'Для любителей техники',
     specsTitlePrefix: 'Изучите',
     specsHighlight: 'характеристики',
@@ -861,6 +871,48 @@ function HeroSection({ t }) {
   );
 }
 
+function AppleIcon(props) {
+  return (
+    <svg viewBox='0 0 384 512' width='22' height='22' {...props}>
+      <path
+        fill='currentColor'
+        d='M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z'
+      />
+    </svg>
+  );
+}
+
+function AndroidIcon(props) {
+  return (
+    <svg viewBox='0 0 24 24' width='22' height='22' {...props}>
+      <path
+        fill='currentColor'
+        d='M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-1.48-.68-3.14-1.06-4.88-1.06s-3.4.38-4.88 1.06L4.73 5.67c-.18-.28-.54-.37-.83-.22-.3.16-.42.54-.26.85L5.48 9.48C2.93 11.04 1.2 13.76.94 17h22.12c-.26-3.24-1.99-5.96-4.54-7.52zM7 15.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm10 0c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z'
+      />
+    </svg>
+  );
+}
+
+function AppAvailability({ t }) {
+  return (
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px',
+        mt: 2,
+        color: 'inherit',
+      }}
+    >
+      <AppleIcon />
+      <AndroidIcon />
+      <Typography sx={{ fontWeight: 'bold', fontSize: '0.95rem' }}>
+        {t.appAvailability}
+      </Typography>
+    </Box>
+  );
+}
+
 function WhatIsSection({ t }) {
   const { NIGHT, STATE_GREY, RED } = Palette();
   return (
@@ -902,7 +954,12 @@ function WhatIsSection({ t }) {
         <IllustratedParagraph
           overtitle={t.appOvertitle}
           title={t.appTitle}
-          text={t.appText}
+          text={
+            <>
+              {t.appText}
+              <AppAvailability t={t} />
+            </>
+          }
           imgSrc={appMockup}
         />
       </Container>
