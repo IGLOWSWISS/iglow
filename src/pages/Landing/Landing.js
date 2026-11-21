@@ -66,7 +66,8 @@ const CONTENT = {
     clickToReserve: 'Cliquez pour réserver et faire partie du succès.',
     kickstarterButton: 'Rejoignez le financement participatif',
     kickstarterCaption: 'Votre Duo Casque et Gilet IGLOW',
-    secureSpot: "Réservez votre place dès aujourd'hui !",
+    secureSpot: 'Réservez votre place',
+    secureSpotSub: "dès aujourd'hui !",
     whatIsOvertitle: "QU'EST-CE QUE IGLOW ?",
     whatIsHtml:
       'Le Duo Casque et Gilet <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Une visibilité à 360°</span><br/>Grâce à des <span style="color:#E30613">clignotants</span> et <span style="color:#E30613">feux de freinage</span><br/>Comme une voiture, contrôlés par une <span style="color:#E30613">télécommande sur le guidon</span>.',
@@ -124,7 +125,8 @@ const CONTENT = {
     clickToReserve: 'Klicken Sie, um zu reservieren und Teil des Erfolgs zu sein.',
     kickstarterButton: 'Beim Crowdfunding mitmachen',
     kickstarterCaption: 'Ihr IGLOW Helm- und Westen-Duo',
-    secureSpot: 'Sichern Sie sich noch heute Ihren Platz!',
+    secureSpot: 'Sichern Sie sich Ihren Platz',
+    secureSpotSub: 'noch heute!',
     whatIsOvertitle: 'WAS IST IGLOW ?',
     whatIsHtml:
       'Das Duo Helm & Weste <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360°-Sichtbarkeit</span><br/>Mit <span style="color:#E30613">Blinkern</span> und <span style="color:#E30613">Bremslichtern</span><br/>Wie ein Auto, gesteuert durch eine <span style="color:#E30613">Fernbedienung am Lenker</span>.',
@@ -182,7 +184,8 @@ const CONTENT = {
     clickToReserve: 'Clicca per prenotare e far parte del successo.',
     kickstarterButton: 'Partecipa al crowdfunding',
     kickstarterCaption: 'Il tuo Duo Casco e Gilet IGLOW',
-    secureSpot: 'Assicurati subito il tuo posto!',
+    secureSpot: 'Assicurati il tuo posto',
+    secureSpotSub: 'subito!',
     whatIsOvertitle: "COS'È IGLOW ?",
     whatIsHtml:
       'Il Duo Casco e Gilet <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Una visibilità a 360°</span><br/>Grazie a <span style="color:#E30613">frecce</span> e <span style="color:#E30613">luci di stop</span><br/>Come un\'auto, controllato da un <span style="color:#E30613">telecomando sul manubrio</span>.',
@@ -240,7 +243,8 @@ const CONTENT = {
     clickToReserve: 'Click to reserve and be part of the success.',
     kickstarterButton: 'Join the crowdfunding',
     kickstarterCaption: 'Your IGLOW Helmet and Vest Duo',
-    secureSpot: 'Secure your spot today!',
+    secureSpot: 'Secure your spot',
+    secureSpotSub: 'today!',
     whatIsOvertitle: 'WHAT IS IGLOW ?',
     whatIsHtml:
       'The Duo Helmet & Vest <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° visibility</span><br/>Thanks to <span style="color:#E30613">turn signals</span> and <span style="color:#E30613">brake lights</span><br/>Like a car, controlled by a <span style="color:#E30613">handlebar remote</span>.',
@@ -298,7 +302,8 @@ const CONTENT = {
     clickToReserve: 'Haz clic para reservar y ser parte del éxito.',
     kickstarterButton: 'Únete al crowdfunding',
     kickstarterCaption: 'Tu Duo Casco y Chaleco IGLOW',
-    secureSpot: '¡Asegura tu lugar hoy!',
+    secureSpot: '¡Asegura tu lugar',
+    secureSpotSub: 'hoy!',
     whatIsOvertitle: '¿QUÉ ES IGLOW ?',
     whatIsHtml:
       'El Duo Casco y Chaleco <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Visibilidad de 360°</span><br/>Gracias a <span style="color:#E30613">intermitentes</span> y <span style="color:#E30613">luces de freno</span><br/>Como un coche, controlado por un <span style="color:#E30613">mando en el manillar</span>.',
@@ -356,7 +361,8 @@ const CONTENT = {
     clickToReserve: 'Klik om te reserveren en deel uit te maken van het succes.',
     kickstarterButton: 'Doe mee aan de crowdfunding',
     kickstarterCaption: 'Uw IGLOW Helm- en Vestduo',
-    secureSpot: 'Verzeker u vandaag nog van uw plek!',
+    secureSpot: 'Verzeker u van uw plek',
+    secureSpotSub: 'vandaag nog!',
     whatIsOvertitle: 'WAT IS IGLOW ?',
     whatIsHtml:
       'De Duo Helm & Vest <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° zichtbaarheid</span><br/>Dankzij <span style="color:#E30613">richtingaanwijzers</span> en <span style="color:#E30613">remlichten</span><br/>Zoals een auto, bestuurd door een <span style="color:#E30613">afstandsbediening aan het stuur</span>.',
@@ -414,7 +420,8 @@ const CONTENT = {
     clickToReserve: 'Clique para reservar e fazer parte do sucesso.',
     kickstarterButton: 'Participe do financiamento coletivo',
     kickstarterCaption: 'Seu Duo Capacete e Colete IGLOW',
-    secureSpot: 'Garanta já o seu lugar!',
+    secureSpot: 'Garanta o seu lugar',
+    secureSpotSub: 'já!',
     whatIsOvertitle: 'O QUE É O IGLOW ?',
     whatIsHtml:
       'O Duo Capacete e Colete <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Visibilidade de 360°</span><br/>Graças a <span style="color:#E30613">setas</span> e <span style="color:#E30613">luzes de freio</span><br/>Como um carro, controlado por um <span style="color:#E30613">controle no guidão</span>.',
@@ -472,7 +479,8 @@ const CONTENT = {
     clickToReserve: 'आरक्षित करने और सफलता का हिस्सा बनने के लिए क्लिक करें।',
     kickstarterButton: 'क्राउडफंडिंग में शामिल हों',
     kickstarterCaption: 'आपका IGLOW हेलमेट और जैकेट डुओ',
-    secureSpot: 'आज ही अपनी जगह सुरक्षित करें!',
+    secureSpot: 'अपनी जगह सुरक्षित करें',
+    secureSpotSub: 'आज ही!',
     whatIsOvertitle: 'IGLOW क्या है ?',
     whatIsHtml:
       'डुओ हेलमेट और वेस्ट <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° दृश्यता</span><br/><span style="color:#E30613">टर्न सिग्नल</span> और <span style="color:#E30613">ब्रेक लाइट</span> की बदौलत<br/>कार की तरह, एक <span style="color:#E30613">हैंडलबार रिमोट</span> द्वारा नियंत्रित।',
@@ -530,7 +538,8 @@ const CONTENT = {
     clickToReserve: 'انقر للحجز وكن جزءاً من النجاح.',
     kickstarterButton: 'انضم إلى التمويل الجماعي',
     kickstarterCaption: 'ثنائي الخوذة والسترة IGLOW الخاص بك',
-    secureSpot: 'احجز مكانك اليوم!',
+    secureSpot: 'احجز مكانك',
+    secureSpotSub: 'اليوم!',
     whatIsOvertitle: 'ما هو IGLOW ؟',
     whatIsHtml:
       'دو خوذة وسترة <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">رؤية 360°</span><br/>بفضل <span style="color:#E30613">إشارات الانعطاف</span> و<span style="color:#E30613">مصابيح الفرامل</span><br/>مثل السيارة، يتم التحكم فيها بواسطة <span style="color:#E30613">جهاز تحكم على المقود</span>.',
@@ -589,7 +598,8 @@ const CONTENT = {
     clickToReserve: 'Нажмите, чтобы забронировать и стать частью успеха.',
     kickstarterButton: 'Присоединяйтесь к краудфандингу',
     kickstarterCaption: 'Ваш дуо-комплект шлем и жилет IGLOW',
-    secureSpot: 'Забронируйте своё место уже сегодня!',
+    secureSpot: 'Забронируйте своё место',
+    secureSpotSub: 'уже сегодня!',
     whatIsOvertitle: 'ЧТО ТАКОЕ IGLOW ?',
     whatIsHtml:
       'Дуо Шлем и Жилет <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° видимость</span><br/>Благодаря <span style="color:#E30613">поворотникам</span> и <span style="color:#E30613">стоп-сигналам</span><br/>Как у автомобиля, управляемыми <span style="color:#E30613">пультом на руле</span>.',
@@ -1190,12 +1200,14 @@ function CountdownSection({ t }) {
               fontWeight: 900,
               fontSize: '3.5rem',
               lineHeight: 1,
+              mt: 1,
+              mb: 3,
             }}
           >
             CHF 99.-
           </Typography>
           <Typography
-            sx={{ color: '#00FF00', fontWeight: 900, fontSize: '1.6rem', mt: 1 }}
+            sx={{ color: '#00FF00', fontWeight: 900, fontSize: '1.6rem' }}
           >
             {t.discountLinePrefix}
             <br />
@@ -1205,6 +1217,8 @@ function CountdownSection({ t }) {
 
         <Typography variant='body1' fontWeight='bold' sx={{ mb: 3 }}>
           {t.secureSpot}
+          <br />
+          {t.secureSpotSub}
         </Typography>
 
         <Button
