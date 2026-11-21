@@ -1264,20 +1264,6 @@ function CountdownSection({ t }) {
           }}
         />
 
-        <Box
-          component='img'
-          src='https://i.imgur.com/H7slDFY.gif'
-          alt='iGlow Smart Vest'
-          sx={{
-            display: 'block',
-            width: '100%',
-            maxWidth: '500px',
-            borderRadius: '15px',
-            mb: 4,
-          }}
-        />
-
-        {/* GIF du gilet - Remonté ici */}
         <video
           src={jacketHero}
           style={{
