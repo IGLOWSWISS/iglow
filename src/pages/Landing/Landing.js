@@ -52,8 +52,9 @@ const CONTENT = {
     watchNowMain: 'REGARDEZ MAINTENANT',
     watchNowSub: 'Pour être visible comme une voiture',
     watchSub: 'Le gilet connecté avec clignotants et feux de freinage',
-    reserveNowPrefix: 'RÉSERVEZ MAINTENANT',
-    reserveNowSuffix: 'votre Smart Bike Vest iGLOW',
+    reserveAction: 'RÉSERVEZ',
+    reserveNowWord: 'MAINTENANT',
+    reserveDuoText: 'Votre Duo Casque + Gilet',
     exclusive: 'EXCLUSIF',
     duoSpecial: 'OFFRE DUO SPÉCIALE',
     duoSpecialDesc:
@@ -108,8 +109,9 @@ const CONTENT = {
     watchNowMain: 'JETZT ANSEHEN',
     watchNowSub: 'Um sichtbar zu sein wie ein Auto',
     watchSub: 'Die Smart Weste mit Blinkern + Bremslichtern',
-    reserveNowPrefix: 'JETZT RESERVIEREN',
-    reserveNowSuffix: 'Ihre Smart Bike Vest iGLOW',
+    reserveAction: 'RESERVIEREN',
+    reserveNowWord: 'JETZT',
+    reserveDuoText: 'Ihr Duo Helm + Weste',
     exclusive: 'EXKLUSIV',
     duoSpecial: 'DUO SPEZIAL',
     duoSpecialDesc:
@@ -164,8 +166,9 @@ const CONTENT = {
     watchNowMain: 'GUARDA ORA',
     watchNowSub: "Per essere visibile come un'auto",
     watchSub: 'Il gilet smart con frecce + luci di stop',
-    reserveNowPrefix: 'PRENOTA ORA',
-    reserveNowSuffix: 'il tuo Smart Bike Vest iGLOW',
+    reserveAction: 'PRENOTA',
+    reserveNowWord: 'ORA',
+    reserveDuoText: 'Il tuo Duo Casco + Gilet',
     exclusive: 'ESCLUSIVO',
     duoSpecial: 'OFFERTA DUO SPECIALE',
     duoSpecialDesc:
@@ -220,8 +223,9 @@ const CONTENT = {
     watchNowMain: 'Watch NOW',
     watchNowSub: 'To be visible like a car',
     watchSub: 'The Smart Vest with Turn signals + Brake lights',
-    reserveNowPrefix: 'Reserve NOW',
-    reserveNowSuffix: 'your Smart Bike Vest iGLOW',
+    reserveAction: 'RESERVE',
+    reserveNowWord: 'NOW',
+    reserveDuoText: 'Your Duo Helmet + Vest',
     exclusive: 'EXCLUSIVE',
     duoSpecial: 'DUO SPECIAL',
     duoSpecialDesc:
@@ -276,8 +280,9 @@ const CONTENT = {
     watchNowMain: 'MIRA AHORA',
     watchNowSub: 'Para ser visible como un coche',
     watchSub: 'El chaleco inteligente con intermitentes + luces de freno',
-    reserveNowPrefix: 'RESERVA AHORA',
-    reserveNowSuffix: 'tu Smart Bike Vest iGLOW',
+    reserveAction: 'RESERVA',
+    reserveNowWord: 'AHORA',
+    reserveDuoText: 'Tu Duo Casco + Chaleco',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
     duoSpecialDesc:
@@ -332,8 +337,9 @@ const CONTENT = {
     watchNowMain: 'KIJK NU',
     watchNowSub: 'Om zichtbaar te zijn als een auto',
     watchSub: 'Het Smart Vest met richtingaanwijzers + remlichten',
-    reserveNowPrefix: 'RESERVEER NU',
-    reserveNowSuffix: 'uw Smart Bike Vest iGLOW',
+    reserveAction: 'RESERVEER',
+    reserveNowWord: 'NU',
+    reserveDuoText: 'Uw Duo Helm + Vest',
     exclusive: 'EXCLUSIEF',
     duoSpecial: 'DUO SPECIAL',
     duoSpecialDesc:
@@ -388,8 +394,9 @@ const CONTENT = {
     watchNowMain: 'ASSISTA AGORA',
     watchNowSub: 'Para ser visível como um carro',
     watchSub: 'O Colete Inteligente com Setas + Luzes de Freio',
-    reserveNowPrefix: 'RESERVE AGORA',
-    reserveNowSuffix: 'o seu Smart Bike Vest iGLOW',
+    reserveAction: 'RESERVE',
+    reserveNowWord: 'AGORA',
+    reserveDuoText: 'Seu Duo Capacete + Colete',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
     duoSpecialDesc:
@@ -444,8 +451,9 @@ const CONTENT = {
     watchNowMain: 'अभी देखें',
     watchNowSub: 'कार की तरह दिखाई देने के लिए',
     watchSub: 'टर्न सिग्नल + ब्रेक लाइट के साथ स्मार्ट वेस्ट',
-    reserveNowPrefix: 'अभी आरक्षित करें',
-    reserveNowSuffix: 'अपना Smart Bike Vest iGLOW',
+    reserveAction: 'आरक्षित करें',
+    reserveNowWord: 'अभी',
+    reserveDuoText: 'आपका डुओ हेलमेट + जैकेट',
     exclusive: 'एक्सक्लूसिव',
     duoSpecial: 'डुओ स्पेशल',
     duoSpecialDesc:
@@ -500,8 +508,9 @@ const CONTENT = {
     watchNowMain: 'شاهد الآن',
     watchNowSub: 'لتكون مرئياً مثل السيارة',
     watchSub: 'السترة الذكية مع إشارات الانعطاف ومصابيح الفرامل',
-    reserveNowPrefix: 'احجز الآن',
-    reserveNowSuffix: 'سترتك الذكية iGLOW',
+    reserveAction: 'احجز',
+    reserveNowWord: 'الآن',
+    reserveDuoText: 'ثنائيك خوذة + سترة',
     exclusive: 'حصري',
     duoSpecial: 'عرض الثنائي الخاص',
     duoSpecialDesc:
@@ -557,8 +566,9 @@ const CONTENT = {
     watchNowMain: 'СМОТРЕТЬ СЕЙЧАС',
     watchNowSub: 'Быть заметным, как автомобиль',
     watchSub: 'Умный жилет с поворотниками и стоп-сигналами',
-    reserveNowPrefix: 'ЗАБРОНИРУЙТЕ СЕЙЧАС',
-    reserveNowSuffix: 'свой Smart Bike Vest iGLOW',
+    reserveAction: 'ЗАБРОНИРУЙТЕ',
+    reserveNowWord: 'СЕЙЧАС',
+    reserveDuoText: 'Ваш Дуо шлем + жилет',
     exclusive: 'ЭКСКЛЮЗИВ',
     duoSpecial: 'СПЕЦИАЛЬНЫЙ ДУО',
     duoSpecialDesc:
@@ -1124,15 +1134,21 @@ function CountdownSection({ t }) {
             overflow: 'visible',
           }}
         >
+          <Typography variant='body1' sx={{ color: 'white', fontWeight: 'bold' }}>
+            {t.reserveAction}
+          </Typography>
+          <Typography variant='body1' sx={{ color: RED, fontWeight: 'bold' }}>
+            {t.reserveNowWord}
+          </Typography>
           <Typography variant='body1' sx={{ mb: 1 }}>
+            <Typography component='span' sx={{ color: 'white' }}>
+              {t.reserveDuoText}
+            </Typography>{' '}
             <Typography
               component='span'
               sx={{ color: RED, fontWeight: 'bold' }}
             >
-              {t.reserveNowPrefix}
-            </Typography>{' '}
-            <Typography component='span' sx={{ color: 'white' }}>
-              {t.reserveNowSuffix}
+              IGLOW
             </Typography>
           </Typography>
           <Typography
