@@ -31,7 +31,7 @@ function FormContact() {
         register={register}
         id='email'
         options={{
-          required: 'Email adress is required',
+          required: 'Email address is required',
           pattern: {
             message: 'Invalid email address',
             value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,10}$/,

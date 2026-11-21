@@ -20,7 +20,7 @@ function Footer() {
       <Container
         sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
       >
-        <SectionTitle title='Get an alert when' highlight='we lauch' />
+        <SectionTitle title='Get an alert when' highlight='we launch' />
         <EmptySpace under='h2' />
         <NewsletterSub />
         <Divider sx={{ width: '100%', mt: 5 }} />

@@ -81,7 +81,7 @@ const CONTENT = {
     flexText:
       "Gardez les yeux sur la route tout en contrôlant votre sécurité avec la télécommande iGlow, une visibilité sans effort, au bout des doigts.",
     appOvertitle: 'APPLICATION',
-    appTitle: 'GlowSafe : Votre Compagnon de Sécurité Routière',
+    appTitle: "GlowSafe : L'Application",
     appText:
       "GlowSafe, l'application du Duo Casque et Gilet IGLOW, permet la synchronisation des lumières. Une fois activée, elle permet également de calculer vos déplacements et votre vitesse moyenne, d'activer les signaux de freinage, et ainsi d'informer les automobilistes.",
     appAvailability: 'Disponible dès février 2027',
@@ -142,7 +142,7 @@ const CONTENT = {
     flexText:
       'Behalten Sie den Blick auf die Straße, während Sie Ihre Sicherheit mit der iGlow-Fernbedienung kontrollieren – mühelose Sichtbarkeit auf Knopfdruck.',
     appOvertitle: 'ANWENDUNG',
-    appTitle: 'GlowSafe: Ihr Begleiter für Verkehrssicherheit',
+    appTitle: 'GlowSafe: Die Anwendung',
     appText:
       'GlowSafe, die App Ihres IGLOW Helm- und Westen-Duos, ermöglicht die Synchronisierung der Lichter. Einmal aktiviert, berechnet sie auch Ihre Fahrten und Ihre Durchschnittsgeschwindigkeit, aktiviert die Bremslichter und informiert so die Autofahrer.',
     appAvailability: 'Verfügbar ab Februar 2027',
@@ -203,7 +203,7 @@ const CONTENT = {
     flexText:
       'Tieni gli occhi sulla strada mentre controlli la tua sicurezza con il telecomando iGlow – visibilità senza sforzo, a portata di mano.',
     appOvertitle: 'APPLICAZIONE',
-    appTitle: 'GlowSafe: Il Tuo Compagno di Sicurezza Stradale',
+    appTitle: "GlowSafe: L'Applicazione",
     appText:
       "GlowSafe, l'app del tuo Duo Casco e Gilet IGLOW, permette la sincronizzazione delle luci. Una volta attivata, permette anche di calcolare i tuoi spostamenti e la tua velocità media, di attivare i segnali di frenata e così informare gli automobilisti.",
     appAvailability: 'Disponibile da febbraio 2027',
@@ -264,7 +264,7 @@ const CONTENT = {
     flexText:
       'Keep your eyes on the road while controlling your safety with the iGlow remote – effortless visibility at your fingertips.',
     appOvertitle: 'APPLICATION',
-    appTitle: 'GlowSafe: Your Road Safety Companion',
+    appTitle: 'GlowSafe: The Application',
     appText:
       'GlowSafe, the app for your IGLOW Helmet and Vest Duo, enables light synchronization. Once activated, it also calculates your trips and average speed, activates the brake signals, and informs drivers accordingly.',
     appAvailability: 'Available from February 2027',
@@ -325,7 +325,7 @@ const CONTENT = {
     flexText:
       'Mantén los ojos en la carretera mientras controlas tu seguridad con el mando iGlow: visibilidad sin esfuerzo al alcance de tu mano.',
     appOvertitle: 'APLICACIÓN',
-    appTitle: 'GlowSafe: Tu Compañero de Seguridad Vial',
+    appTitle: 'GlowSafe: La Aplicación',
     appText:
       'GlowSafe, la aplicación de tu Duo Casco y Chaleco IGLOW, permite la sincronización de las luces. Una vez activada, también permite calcular tus desplazamientos y tu velocidad media, activar las señales de frenado e informar así a los automovilistas.',
     appAvailability: 'Disponible a partir de febrero de 2027',
@@ -386,7 +386,7 @@ const CONTENT = {
     flexText:
       'Houd uw ogen op de weg terwijl u uw veiligheid beheert met de iGlow-afstandsbediening – moeiteloze zichtbaarheid binnen handbereik.',
     appOvertitle: 'APPLICATIE',
-    appTitle: 'GlowSafe: Uw Verkeersveiligheidsmetgezel',
+    appTitle: 'GlowSafe: De Applicatie',
     appText:
       'GlowSafe, de app van uw IGLOW Helm- en Vestduo, maakt lichtsynchronisatie mogelijk. Eenmaal geactiveerd, berekent ze ook uw ritten en gemiddelde snelheid, activeert ze de remlichten en informeert zo automobilisten.',
     appAvailability: 'Beschikbaar vanaf februari 2027',
@@ -447,7 +447,7 @@ const CONTENT = {
     flexText:
       'Mantenha os olhos na estrada enquanto controla sua segurança com o controle iGlow – visibilidade sem esforço na palma da mão.',
     appOvertitle: 'APLICATIVO',
-    appTitle: 'GlowSafe: Seu Companheiro de Segurança Viária',
+    appTitle: 'GlowSafe: O Aplicativo',
     appText:
       'GlowSafe, o aplicativo do seu Duo Capacete e Colete IGLOW, permite a sincronização das luzes. Uma vez ativada, ela também permite calcular seus deslocamentos e sua velocidade média, ativar os sinais de freio e assim informar os motoristas.',
     appAvailability: 'Disponível a partir de fevereiro de 2027',
@@ -508,7 +508,7 @@ const CONTENT = {
     flexText:
       'iGlow रिमोट के साथ अपनी सुरक्षा को नियंत्रित करते हुए अपनी नज़रें सड़क पर रखें – बिना किसी मेहनत के दृश्यता, आपकी उंगलियों पर।',
     appOvertitle: 'एप्लिकेशन',
-    appTitle: 'GlowSafe: आपका रोड सेफ्टी साथी',
+    appTitle: 'GlowSafe: ऐप',
     appText:
       'GlowSafe, आपके IGLOW हेलमेट और वेस्ट डुओ का ऐप, लाइट सिंक्रोनाइज़ेशन की सुविधा देता है। सक्रिय होने पर, यह आपकी यात्राओं और औसत गति की गणना भी करता है, ब्रेक सिग्नल सक्रिय करता है, और इस तरह ड्राइवरों को सूचित करता है।',
     appAvailability: 'फरवरी 2027 से उपलब्ध',
@@ -569,7 +569,7 @@ const CONTENT = {
     flexText:
       'حافظ على عينيك على الطريق أثناء التحكم في سلامتك باستخدام جهاز تحكم iGlow - رؤية سهلة في متناول يدك.',
     appOvertitle: 'التطبيق',
-    appTitle: 'GlowSafe: رفيقك لسلامة الطريق',
+    appTitle: 'GlowSafe: التطبيق',
     appText:
       'GlowSafe، تطبيق ثنائي الخوذة والسترة IGLOW الخاص بك، يتيح مزامنة الأضواء. وعند تفعيله، يتيح أيضًا حساب تنقلاتك وسرعتك المتوسطة، وتفعيل إشارات الفرملة، وبالتالي إعلام السائقين.',
     appAvailability: 'متاح اعتبارًا من فبراير 2027',
@@ -631,7 +631,7 @@ const CONTENT = {
     flexText:
       'Держите взгляд на дороге, контролируя свою безопасность с помощью пульта iGlow – видимость без усилий, на кончиках пальцев.',
     appOvertitle: 'ПРИЛОЖЕНИЕ',
-    appTitle: 'GlowSafe: Ваш спутник безопасности на дороге',
+    appTitle: 'GlowSafe: Приложение',
     appText:
       'GlowSafe, приложение вашего дуо-комплекта IGLOW (шлем и жилет), обеспечивает синхронизацию огней. После активации оно также рассчитывает ваши поездки и среднюю скорость, активирует сигналы торможения и тем самым информирует водителей.',
     appAvailability: 'Доступно с февраля 2027 года',
