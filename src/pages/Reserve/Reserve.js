@@ -1,10 +1,61 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Reserve.css';
 import duoHelmetVest from '../../assets/images/iglow-duo-helmet-vest.jpg';
+
+const EUROZONE_COUNTRIES = [
+  'AT',
+  'BE',
+  'CY',
+  'EE',
+  'FI',
+  'FR',
+  'DE',
+  'GR',
+  'IE',
+  'IT',
+  'LV',
+  'LT',
+  'LU',
+  'MT',
+  'NL',
+  'PT',
+  'SK',
+  'SI',
+  'ES',
+  'HR',
+];
+
+const PRICE_ID_CHF = 'price_1SGkg7ClH97ISv2ltpMYi4DE';
+const PRICE_ID_EUR = 'price_1SGkt9ClH97ISv2l2BPtn3ke';
+const PRICE_ID_USD = 'price_1SGkweClH97ISv2lbwx0YlrE';
 
 const Reserve = () => {
   const [currentLang, setCurrentLang] = useState('fr');
   const [reservationCounter] = useState(167);
+  const [geoPriceId, setGeoPriceId] = useState(PRICE_ID_CHF);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch('https://get.geojs.io/v1/ip/country.json')
+      .then((res) => res.json())
+      .then((data) => {
+        if (cancelled) return;
+        const countryCode = data && data.country;
+        if (countryCode === 'CH' || countryCode === 'LI') {
+          setGeoPriceId(PRICE_ID_CHF);
+        } else if (EUROZONE_COUNTRIES.includes(countryCode)) {
+          setGeoPriceId(PRICE_ID_EUR);
+        } else if (countryCode) {
+          setGeoPriceId(PRICE_ID_USD);
+        }
+      })
+      .catch(() => {
+        // Geolocation failed, keep the CHF default
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // Language content object
   const content = {
@@ -724,7 +775,7 @@ const Reserve = () => {
               const [priceWord, priceNumber] = button.price.split(' ');
               return (
                 <button
-                  onClick={() => redirectToStripe(button.priceId)}
+                  onClick={() => redirectToStripe(geoPriceId)}
                   className='btn btn-primary'
                 >
                   <span className='flag-emoji' style={{ fontSize: '1.5em' }}>
