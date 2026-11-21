@@ -822,7 +822,7 @@ function HeroSection({ t }) {
               '&:hover': {
                 transform: 'scale(1.08) translateY(-3px)',
                 boxShadow:
-                  '0 0 10px rgba(227,6,19,0.95), 0 0 25px rgba(227,6,19,0.85), 0 0 50px rgba(227,6,19,0.65), 0 0 90px rgba(227,6,19,0.45)',
+                  '0 0 10px rgba(255,30,30,1), 0 0 25px rgba(255,10,10,0.95), 0 0 50px rgba(255,0,50,0.8), 0 0 90px rgba(255,0,50,0.6)',
               },
               '&:active': {
                 transform: 'scale(0.96) translateY(3px)',
@@ -1121,7 +1121,7 @@ function CountdownSection({ t }) {
             '&:hover': {
               transform: 'scale(1.08) translateY(-3px)',
               boxShadow:
-                '0 0 10px rgba(227,6,19,0.95), 0 0 25px rgba(227,6,19,0.85), 0 0 50px rgba(227,6,19,0.65), 0 0 90px rgba(227,6,19,0.45)',
+                '0 0 10px rgba(255,30,30,1), 0 0 25px rgba(255,10,10,0.95), 0 0 50px rgba(255,0,50,0.8), 0 0 90px rgba(255,0,50,0.6)',
             },
             '&:active': {
               transform: 'scale(0.96) translateY(3px)',
