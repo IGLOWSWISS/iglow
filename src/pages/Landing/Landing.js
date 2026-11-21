@@ -57,6 +57,7 @@ const CONTENT = {
     reserveDuoText: 'Votre Duo Casque + Gilet',
     exclusive: 'EXCLUSIF',
     duoSpecial: 'OFFRE DUO SPÉCIALE',
+    insteadOfLabel: 'au lieu de',
     duoSpecialDesc:
       "Offre spéciale Black Friday & lancement Kickstarter : le Duo Casque + Gilet IGLOW",
     newPricePrefix: 'PAYÉ SEULEMENT',
@@ -114,6 +115,7 @@ const CONTENT = {
     reserveDuoText: 'Ihr Duo Helm + Weste',
     exclusive: 'EXKLUSIV',
     duoSpecial: 'DUO SPEZIAL',
+    insteadOfLabel: 'statt',
     duoSpecialDesc:
       'Black Friday & Kickstarter-Launch-Spezial: das IGLOW Helm + Weste Duo',
     newPricePrefix: 'NUR BEZAHLT',
@@ -171,6 +173,7 @@ const CONTENT = {
     reserveDuoText: 'Il tuo Duo Casco + Gilet',
     exclusive: 'ESCLUSIVO',
     duoSpecial: 'OFFERTA DUO SPECIALE',
+    insteadOfLabel: 'invece di',
     duoSpecialDesc:
       'Offerta speciale Black Friday e lancio Kickstarter: il Duo Casco + Gilet IGLOW',
     newPricePrefix: 'PAGATO SOLO',
@@ -228,6 +231,7 @@ const CONTENT = {
     reserveDuoText: 'Your Duo Helmet + Vest',
     exclusive: 'EXCLUSIVE',
     duoSpecial: 'DUO SPECIAL',
+    insteadOfLabel: 'instead of',
     duoSpecialDesc:
       'Black Friday & Kickstarter launch special: the IGLOW Helmet + Vest Duo',
     newPricePrefix: 'PAID ONLY',
@@ -285,6 +289,7 @@ const CONTENT = {
     reserveDuoText: 'Tu Duo Casco + Chaleco',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
+    insteadOfLabel: 'en lugar de',
     duoSpecialDesc:
       'Especial de lanzamiento de Black Friday y Kickstarter: el Duo Casco + Chaleco IGLOW',
     newPricePrefix: 'PAGADO SOLO',
@@ -342,6 +347,7 @@ const CONTENT = {
     reserveDuoText: 'Uw Duo Helm + Vest',
     exclusive: 'EXCLUSIEF',
     duoSpecial: 'DUO SPECIAL',
+    insteadOfLabel: 'in plaats van',
     duoSpecialDesc:
       'Black Friday & Kickstarter-lancering special: de IGLOW Helm + Vest Duo',
     newPricePrefix: 'SLECHTS BETAALD',
@@ -399,6 +405,7 @@ const CONTENT = {
     reserveDuoText: 'Seu Duo Capacete + Colete',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
+    insteadOfLabel: 'em vez de',
     duoSpecialDesc:
       'Especial de lançamento Black Friday & Kickstarter: o Duo Capacete + Colete IGLOW',
     newPricePrefix: 'PAGO APENAS',
@@ -456,6 +463,7 @@ const CONTENT = {
     reserveDuoText: 'आपका डुओ हेलमेट + जैकेट',
     exclusive: 'एक्सक्लूसिव',
     duoSpecial: 'डुओ स्पेशल',
+    insteadOfLabel: 'के बजाय',
     duoSpecialDesc:
       'ब्लैक फ्राइडे और किकस्टार्टर लॉन्च स्पेशल: IGLOW हेलमेट + जैकेट डुओ',
     newPricePrefix: 'सिर्फ भुगतान',
@@ -513,6 +521,7 @@ const CONTENT = {
     reserveDuoText: 'ثنائيك خوذة + سترة',
     exclusive: 'حصري',
     duoSpecial: 'عرض الثنائي الخاص',
+    insteadOfLabel: 'بدلاً من',
     duoSpecialDesc:
       'عرض إطلاق بلاك فرايدي وكيك ستارتر الخاص: ثنائي الخوذة والسترة IGLOW',
     newPricePrefix: 'مدفوع فقط',
@@ -571,6 +580,7 @@ const CONTENT = {
     reserveDuoText: 'Ваш Дуо шлем + жилет',
     exclusive: 'ЭКСКЛЮЗИВ',
     duoSpecial: 'СПЕЦИАЛЬНЫЙ ДУО',
+    insteadOfLabel: 'вместо',
     duoSpecialDesc:
       'Специальное предложение Black Friday и запуска Kickstarter: дуо-комплект шлем + жилет IGLOW',
     newPricePrefix: 'ОПЛАЧЕНО ВСЕГО',
@@ -1189,21 +1199,22 @@ function CountdownSection({ t }) {
               fontSize: '2rem',
             }}
           >
-            CHF 199.-
+            {t.insteadOfLabel} CHF 199.-
           </Typography>
-          <Typography sx={{ fontSize: '2.4rem', fontWeight: 900 }}>
-            <Typography
-              component='span'
-              sx={{ color: 'white', fontWeight: 900, fontSize: 'inherit' }}
-            >
-              {t.newPricePrefix}
-            </Typography>{' '}
-            <Typography
-              component='span'
-              sx={{ color: RED, fontWeight: 900, fontSize: 'inherit' }}
-            >
-              CHF 99.-
-            </Typography>
+          <Typography
+            sx={{ color: 'white', fontWeight: 900, fontSize: '2rem' }}
+          >
+            {t.newPricePrefix}
+          </Typography>
+          <Typography
+            sx={{
+              color: RED,
+              fontWeight: 900,
+              fontSize: '3.5rem',
+              lineHeight: 1,
+            }}
+          >
+            CHF 99.-
           </Typography>
           <Typography
             sx={{ color: '#00FF00', fontWeight: 900, fontSize: '1.6rem', mt: 1 }}
