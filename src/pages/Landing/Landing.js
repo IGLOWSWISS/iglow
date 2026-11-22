@@ -47,6 +47,7 @@ const LANGUAGES = [
 
 const CONTENT = {
   fr: {
+    joinUs: 'Rejoignez-nous',
     heroPrefix: 'Offrez ou offrez-vous',
     heroHighlight: 'le Duo Parfait',
     heroSuffix: 'casque + gilet IGLOW',
@@ -110,6 +111,7 @@ const CONTENT = {
     switzerlandWord: 'Suisse',
   },
   de: {
+    joinUs: 'Mitmachen',
     heroPrefix: 'Verschenken Sie oder gönnen Sie sich',
     heroHighlight: 'das perfekte Duo',
     heroSuffix: 'Helm + Weste IGLOW',
@@ -173,6 +175,7 @@ const CONTENT = {
     switzerlandWord: 'Schweiz',
   },
   it: {
+    joinUs: 'Unisciti a noi',
     heroPrefix: 'Regala o regalati',
     heroHighlight: 'il Duo Perfetto',
     heroSuffix: 'casco + gilet IGLOW',
@@ -236,6 +239,7 @@ const CONTENT = {
     switzerlandWord: 'Svizzera',
   },
   en: {
+    joinUs: 'Join Us',
     heroPrefix: 'Gift it or treat yourself to',
     heroHighlight: 'the Perfect Duo',
     heroSuffix: 'helmet + vest IGLOW',
@@ -299,6 +303,7 @@ const CONTENT = {
     switzerlandWord: 'Switzerland',
   },
   es: {
+    joinUs: 'Únete a nosotros',
     heroPrefix: 'Regala o regálate',
     heroHighlight: 'el Duo Perfecto',
     heroSuffix: 'casco + chaleco IGLOW',
@@ -362,6 +367,7 @@ const CONTENT = {
     switzerlandWord: 'Suiza',
   },
   nl: {
+    joinUs: 'Doe mee',
     heroPrefix: 'Geef cadeau of trakteer uzelf op',
     heroHighlight: 'de Perfecte Duo',
     heroSuffix: 'helm + vest IGLOW',
@@ -425,6 +431,7 @@ const CONTENT = {
     switzerlandWord: 'Zwitserland',
   },
   pt: {
+    joinUs: 'Junte-se a nós',
     heroPrefix: 'Presenteie ou presenteie-se com',
     heroHighlight: 'o Duo Perfeito',
     heroSuffix: 'capacete + colete IGLOW',
@@ -488,6 +495,7 @@ const CONTENT = {
     switzerlandWord: 'Suíça',
   },
   hi: {
+    joinUs: 'हमसे जुड़ें',
     heroPrefix: 'उपहार दें या खुद को दें',
     heroHighlight: 'परफेक्ट डुओ',
     heroSuffix: 'हेलमेट + वेस्ट IGLOW',
@@ -551,6 +559,7 @@ const CONTENT = {
     switzerlandWord: 'स्विट्ज़रलैंड',
   },
   ar: {
+    joinUs: 'انضم إلينا',
     heroPrefix: 'أهدِ أو أهدِ نفسك',
     heroHighlight: 'الثنائي المثالي',
     heroSuffix: 'خوذة + سترة IGLOW',
@@ -614,6 +623,7 @@ const CONTENT = {
     switzerlandWord: 'سويسرا',
   },
   ru: {
+    joinUs: 'Присоединяйтесь',
     heroPrefix: 'Подарите или побалуйте себя',
     heroHighlight: 'идеальным дуо',
     heroSuffix: 'шлем + жилет IGLOW',
@@ -723,7 +733,7 @@ function Landing() {
   return (
     <Box overflow='hidden' dir={currentLang === 'ar' ? 'rtl' : 'ltr'}>
       <LanguageSwitcher currentLang={currentLang} onChange={setCurrentLang} />
-      <Navbar topOffset='64px' />
+      <Navbar topOffset='64px' joinUsLabel={t.joinUs} />
       <HeroSection t={t} />
       <WhatIsSection t={t} />
       <SocialSection t={t} />

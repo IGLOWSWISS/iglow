@@ -13,7 +13,7 @@ function LegalNotices() {
 
       <Container>
         <SectionTitle
-          overtitle='Last Updated: 21.09.2024'
+          overtitle='Last Updated: 22.11.2026'
           title='Legal Notices'
           highlight='for iGlow.bike and iGlow.swiss'
         />
@@ -44,7 +44,7 @@ mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
 none;mso-ansi-language:EN-US;mso-fareast-language:FR'>: iGlow Swiss <br>
 <b>Mailing Address</b>: BP 590, 1001 Lausanne, Vaud, Switzerland<br>
 <b>Publication Director</b>: FGAF<br>
-<b>Contact</b>: contact@iglow.bike<o:p></o:p></span></p>
+<b>Contact</b>: hello@iglow.swiss<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 line-height:normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
@@ -68,7 +68,7 @@ mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
 none;mso-ansi-language:EN-US;mso-fareast-language:FR'>The websites <b>iGlow.bike</b>
 and <b>iGlow.swiss</b> are hosted by Infomaniak Network SA. For confidentiality
 reasons, the full contact details of the host are not published here. For any
-inquiries regarding hosting, please contact us directly at contact@iglow.bike.<o:p></o:p></span></p>
+inquiries regarding hosting, please contact us directly at hello@iglow.swiss.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 line-height:normal;mso-outline-level:3'><b><span lang=EN-US style='font-size:
@@ -147,7 +147,7 @@ processed in accordance with our (URL to Privacy Policy). In compliance with
 applicable data protection laws, you have the right to access, rectify, delete,
 and port your personal data, as well as the right to object to and restrict the
 processing of your data. To exercise these rights, please contact us at
-contact@iglow.bike.<o:p></o:p></span></p>
+hello@iglow.swiss.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 line-height:normal;mso-outline-level:3'><b><span lang=EN-US style='font-size:

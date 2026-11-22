@@ -344,7 +344,7 @@ const Result = () => {
             <Link to='/' className='result-btn result-btn-primary'>
               {currentContent.backHome}
             </Link>
-            <a href='mailto:contact@iglow.swiss' className='result-btn result-btn-secondary'>
+            <a href='mailto:hello@iglow.swiss' className='result-btn result-btn-secondary'>
               {currentContent.contactUs}
             </a>
           </div>
@@ -363,7 +363,7 @@ const Result = () => {
           </p>
           <p style={{ fontSize: '24px', marginBottom: '20px' }}>
             Contact :{' '}
-            <a href='mailto:contact@iglow.swiss'>contact@iglow.swiss</a>
+            <a href='mailto:hello@iglow.swiss'>hello@iglow.swiss</a>
           </p>
         </div>
       </footer>

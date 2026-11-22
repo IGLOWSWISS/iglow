@@ -13,14 +13,14 @@ function PrivacyPolicy() {
 
       <Container>
         <SectionTitle
-          overtitle='Last Updated: 21.09.2024'
+          overtitle='Last Updated: 22.11.2026'
           title='Privacy Policy'
           highlight='for iGlow.bike and iGlow.swiss'
         />
         <div
           dangerouslySetInnerHTML={{
             __html: `<p style="margin-top:0pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:22pt;"></p>
-<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><strong><span style="font-family:Aptos;">Last Updated: 21.09.2024</span></strong></p>
+<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><strong><span style="font-family:Aptos;">Last Updated: 22.11.2026</span></strong></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">iGlow is committed to protecting the privacy of its users. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our websites (iGlow.bike and iGlow.swiss) and when you interact with us in any way.</span></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">By using our websites, you consent to the practices described in this policy.</span></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><strong><span style="font-family:Aptos;">1. Information We Collect</span></strong></p>
@@ -59,7 +59,7 @@ function PrivacyPolicy() {
     <li style="margin-left:9.6pt; text-align:justify; line-height:normal; padding-left:8.4pt; font-family:serif; font-size:10pt;"><strong><span style="font-family:Aptos;">Objection</span></strong><span style="font-family:Aptos;">: Object to the processing of your personal data under specific circumstances.</span></li>
     <li style="margin-left:9.6pt; margin-bottom:14pt; text-align:justify; line-height:normal; padding-left:8.4pt; font-family:serif; font-size:10pt;"><strong><span style="font-family:Aptos;">Data Portability</span></strong><span style="font-family:Aptos;">: Request to receive your personal data in a structured, commonly used format.</span></li>
 </ul>
-<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">To exercise any of these rights, please contact us at [insert email address].</span></p>
+<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">To exercise any of these rights, please contact us at hello@iglow.swiss.</span></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><strong><span style="font-family:Aptos;">6. Data Security</span></strong></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">We implement security measures such as encryption and secure access protocols to protect your data. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</span></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><strong><span style="font-family:Aptos;">7. International Data Transfers</span></strong></p>
@@ -69,7 +69,7 @@ function PrivacyPolicy() {
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">We use cookies and similar tracking technologies to improve your experience on our websites. Cookies help us understand how you use our sites, personalize your experience, and remember your preferences.</span></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">You can control cookies through your browser settings, but please note that disabling cookies may affect the functionality of our websites.</span></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><strong><span style="font-family:Aptos;">9. Email Communications and Marketing</span></strong></p>
-<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">When you provide your email address, whether for subscribing to our newsletter, to receive updates on product launches, or for event information, you give us explicit consent to use your email for sending you promotional, marketing, or informational content. You can unsubscribe from these emails at any time by following the instructions provided in each email or contacting us at [insert email address].</span></p>
+<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">When you provide your email address, whether for subscribing to our newsletter, to receive updates on product launches, or for event information, you give us explicit consent to use your email for sending you promotional, marketing, or informational content. You can unsubscribe from these emails at any time by following the instructions provided in each email or contacting us at hello@iglow.swiss.</span></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">We respect your privacy and will never sell or share your email address with third parties for their own marketing purposes.</span></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><strong><span style="font-family:Aptos;">10. Changes to This Policy</span></strong></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">We reserve the right to modify this Privacy Policy at any time. Any changes will be posted on this page, and we will notify users where required by applicable law. Please review this page regularly for updates.</span></p>
