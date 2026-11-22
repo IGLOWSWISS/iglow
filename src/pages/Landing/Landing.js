@@ -1149,6 +1149,7 @@ const PRICE_BY_CURRENCY = {
   CHF: { old: 'CHF 199.-', new: 'CHF 99.-', save: 'CHF 100.-' },
   EUR: { old: '€199.00', new: '€99.00', save: '€100.00' },
   USD: { old: '$199.00', new: '$99.00', save: '$100.00' },
+  GBP: { old: '£199.00', new: '£99.00', save: '£100.00' },
 };
 
 function CountdownSection({ t }) {

@@ -6,11 +6,13 @@ import { detectCurrency } from '../../utils/geoCurrency';
 const PRICE_ID_CHF = 'price_1SGkg7ClH97ISv2ltpMYi4DE';
 const PRICE_ID_EUR = 'price_1SGkt9ClH97ISv2l2BPtn3ke';
 const PRICE_ID_USD = 'price_1SGkweClH97ISv2lbwx0YlrE';
+const PRICE_ID_GBP = 'price_1Ueb6AClH97ISv2lLYYhHXZz';
 
 const PRICE_ID_BY_CURRENCY = {
   CHF: PRICE_ID_CHF,
   EUR: PRICE_ID_EUR,
   USD: PRICE_ID_USD,
+  GBP: PRICE_ID_GBP,
 };
 
 const Reserve = () => {
@@ -1063,6 +1065,8 @@ const Reserve = () => {
         'https://buy.stripe.com/dRm28qeL8boVaJqcmRgQE04', // EUR 99.-
       price_1SGkweClH97ISv2lbwx0YlrE:
         'https://buy.stripe.com/28E4gyeL8eB7aJq0E9gQE05', // USD 99.-
+      price_1Ueb6AClH97ISv2lLYYhHXZz:
+        'https://buy.stripe.com/14A6oGfPcgJf5p60E9gQE06', // GBP 99.-
     };
 
     const checkoutUrl = stripeCheckoutUrls[priceId];

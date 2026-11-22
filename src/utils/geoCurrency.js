@@ -24,9 +24,10 @@ const EUROZONE_COUNTRIES = [
 let cachedCurrency = null;
 let pendingLookup = null;
 
-// Resolves to 'CHF' | 'EUR' | 'USD' based on the visitor's IP location, so
-// the price shown always matches what Stripe will actually charge. Cached
-// per page load since it's looked up more than once (hero price, CTA, ...).
+// Resolves to 'CHF' | 'EUR' | 'GBP' | 'USD' based on the visitor's IP
+// location, so the price shown always matches what Stripe will actually
+// charge. Cached per page load since it's looked up more than once (hero
+// price, CTA, ...).
 export function detectCurrency() {
   if (cachedCurrency) {
     return Promise.resolve(cachedCurrency);
@@ -38,6 +39,8 @@ export function detectCurrency() {
         const countryCode = data && data.country;
         if (countryCode === 'CH' || countryCode === 'LI') {
           return 'CHF';
+        } else if (countryCode === 'GB') {
+          return 'GBP';
         } else if (EUROZONE_COUNTRIES.includes(countryCode)) {
           return 'EUR';
         } else if (countryCode) {
