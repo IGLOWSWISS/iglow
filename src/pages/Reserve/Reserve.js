@@ -1,76 +1,24 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Reserve.css';
 import duoHelmetVest from '../../assets/images/iglow-duo-helmet-vest.jpg';
-
-const EUROZONE_COUNTRIES = [
-  'AT',
-  'BE',
-  'CY',
-  'EE',
-  'FI',
-  'FR',
-  'DE',
-  'GR',
-  'IE',
-  'IT',
-  'LV',
-  'LT',
-  'LU',
-  'MT',
-  'NL',
-  'PT',
-  'SK',
-  'SI',
-  'ES',
-  'HR',
-];
+import { detectCurrency } from '../../utils/geoCurrency';
 
 const PRICE_ID_CHF = 'price_1SGkg7ClH97ISv2ltpMYi4DE';
 const PRICE_ID_EUR = 'price_1SGkt9ClH97ISv2l2BPtn3ke';
 const PRICE_ID_USD = 'price_1SGkweClH97ISv2lbwx0YlrE';
 
+const PRICE_ID_BY_CURRENCY = {
+  CHF: PRICE_ID_CHF,
+  EUR: PRICE_ID_EUR,
+  USD: PRICE_ID_USD,
+};
+
 const Reserve = () => {
   const [currentLang, setCurrentLang] = useState('fr');
   const [reservationCounter] = useState(167);
 
-  // Resolved lazily and cached: avoids redirecting to the CHF default
-  // if the button is clicked before the geolocation lookup has finished.
-  const geoPriceIdRef = useRef(null);
-  const geoPromiseRef = useRef(null);
-
-  const detectPriceId = () => {
-    if (geoPriceIdRef.current) {
-      return Promise.resolve(geoPriceIdRef.current);
-    }
-    if (!geoPromiseRef.current) {
-      const lookup = fetch('https://get.geojs.io/v1/ip/country.json')
-        .then((res) => res.json())
-        .then((data) => {
-          const countryCode = data && data.country;
-          if (countryCode === 'CH' || countryCode === 'LI') {
-            return PRICE_ID_CHF;
-          } else if (EUROZONE_COUNTRIES.includes(countryCode)) {
-            return PRICE_ID_EUR;
-          } else if (countryCode) {
-            return PRICE_ID_USD;
-          }
-          return PRICE_ID_CHF;
-        })
-        .catch(() => PRICE_ID_CHF);
-
-      const timeout = new Promise((resolve) =>
-        setTimeout(() => resolve(PRICE_ID_CHF), 2500)
-      );
-
-      geoPromiseRef.current = Promise.race([lookup, timeout]).then(
-        (priceId) => {
-          geoPriceIdRef.current = priceId;
-          return priceId;
-        }
-      );
-    }
-    return geoPromiseRef.current;
-  };
+  const detectPriceId = () =>
+    detectCurrency().then((currency) => PRICE_ID_BY_CURRENCY[currency] || PRICE_ID_CHF);
 
   // Warm the lookup as soon as the page loads so it's already resolved
   // by the time the visitor reaches the reserve button.

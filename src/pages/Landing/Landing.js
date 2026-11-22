@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Palette from '../../theme/palette';
+import { detectCurrency } from '../../utils/geoCurrency';
 
 import { CONTACT_EMAIL } from '../../config/AppConfig';
 import jacketHero from '../../assets/videos/ilgow-loop.mp4';
@@ -1144,8 +1145,21 @@ function ContactSection({ t }) {
   );
 }
 
+const PRICE_BY_CURRENCY = {
+  CHF: { old: 'CHF 199.-', new: 'CHF 99.-', save: 'CHF 100.-' },
+  EUR: { old: '€199.00', new: '€99.00', save: '€100.00' },
+  USD: { old: '$199.00', new: '$99.00', save: '$100.00' },
+};
+
 function CountdownSection({ t }) {
   const { RED } = Palette();
+  const [currency, setCurrency] = useState('CHF');
+
+  useEffect(() => {
+    detectCurrency().then(setCurrency);
+  }, []);
+
+  const price = PRICE_BY_CURRENCY[currency] || PRICE_BY_CURRENCY.CHF;
 
   return (
     <NoisyContainer>
@@ -1289,7 +1303,7 @@ function CountdownSection({ t }) {
               fontSize: '2rem',
             }}
           >
-            {t.insteadOfLabel} CHF 199.-
+            {t.insteadOfLabel} {price.old}
           </Typography>
           <Typography
             sx={{ color: 'white', fontWeight: 900, fontSize: '2rem' }}
@@ -1306,14 +1320,14 @@ function CountdownSection({ t }) {
               mb: 3,
             }}
           >
-            CHF 99.-
+            {price.new}
           </Typography>
           <Typography
             sx={{ color: '#00FF00', fontWeight: 900, fontSize: '1.6rem' }}
           >
             {t.discountLinePrefix}
             <br />
-            CHF 100.-
+            {price.save}
           </Typography>
 
           <Typography
