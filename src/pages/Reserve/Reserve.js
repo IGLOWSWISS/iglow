@@ -1397,7 +1397,9 @@ const Reserve = () => {
           return (
             <div
               className='account-modal-overlay'
-              onClick={() => setShowAccountModal(false)}
+              onClick={() => {
+                window.location.href = '/';
+              }}
             >
               <div
                 className='account-modal'
@@ -1405,7 +1407,9 @@ const Reserve = () => {
               >
                 <button
                   className='account-modal-close'
-                  onClick={() => setShowAccountModal(false)}
+                  onClick={() => {
+                    window.location.href = '/';
+                  }}
                   aria-label={t.close}
                 >
                   &times;
