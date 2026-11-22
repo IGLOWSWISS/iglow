@@ -1397,30 +1397,20 @@ const Reserve = () => {
                 <form onSubmit={handleAuthSubmit} className='account-form'>
                   {authMode === 'register' && (
                     <>
-                      <div className='account-form-row'>
-                        <input
-                          type='text'
-                          autoComplete='given-name'
-                          placeholder={t.firstName}
-                          value={authForm.firstName}
-                          onChange={handleAuthFieldChange('firstName')}
-                          required
-                        />
-                        <input
-                          type='text'
-                          autoComplete='family-name'
-                          placeholder={t.lastName}
-                          value={authForm.lastName}
-                          onChange={handleAuthFieldChange('lastName')}
-                          required
-                        />
-                      </div>
                       <input
-                        type='tel'
-                        autoComplete='tel'
-                        placeholder={t.phone}
-                        value={authForm.phone}
-                        onChange={handleAuthFieldChange('phone')}
+                        type='text'
+                        autoComplete='given-name'
+                        placeholder={t.firstName}
+                        value={authForm.firstName}
+                        onChange={handleAuthFieldChange('firstName')}
+                        required
+                      />
+                      <input
+                        type='text'
+                        autoComplete='family-name'
+                        placeholder={t.lastName}
+                        value={authForm.lastName}
+                        onChange={handleAuthFieldChange('lastName')}
                         required
                       />
                       <input
@@ -1431,14 +1421,14 @@ const Reserve = () => {
                         onChange={handleAuthFieldChange('address')}
                         required
                       />
-                      <input
-                        type='text'
-                        autoComplete='address-line2'
-                        placeholder={t.addressLine2}
-                        value={authForm.addressLine2}
-                        onChange={handleAuthFieldChange('addressLine2')}
-                      />
                       <div className='account-form-row'>
+                        <input
+                          type='text'
+                          autoComplete='address-line2'
+                          placeholder={t.addressLine2}
+                          value={authForm.addressLine2}
+                          onChange={handleAuthFieldChange('addressLine2')}
+                        />
                         <input
                           type='text'
                           autoComplete='postal-code'
@@ -1447,15 +1437,23 @@ const Reserve = () => {
                           onChange={handleAuthFieldChange('postalCode')}
                           required
                         />
-                        <input
-                          type='text'
-                          autoComplete='country-name'
-                          placeholder={t.country}
-                          value={authForm.country}
-                          onChange={handleAuthFieldChange('country')}
-                          required
-                        />
                       </div>
+                      <input
+                        type='text'
+                        autoComplete='country-name'
+                        placeholder={t.country}
+                        value={authForm.country}
+                        onChange={handleAuthFieldChange('country')}
+                        required
+                      />
+                      <input
+                        type='tel'
+                        autoComplete='tel'
+                        placeholder={t.phone}
+                        value={authForm.phone}
+                        onChange={handleAuthFieldChange('phone')}
+                        required
+                      />
                     </>
                   )}
                   <input
