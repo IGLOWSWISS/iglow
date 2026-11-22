@@ -75,7 +75,7 @@ function iglow_current_customer(): ?array
 
     $pdo = iglow_db();
     $stmt = $pdo->prepare(
-        'SELECT c.id, c.email, c.first_name, c.last_name, c.phone, c.address, c.postal_code, c.country
+        'SELECT c.id, c.email, c.first_name, c.last_name, c.phone, c.address, c.address_line2, c.postal_code, c.country
          FROM sessions s
          JOIN customers c ON c.id = s.customer_id
          WHERE s.token = :token AND s.expires_at > NOW()'
@@ -94,6 +94,7 @@ function iglow_public_customer(array $customer): array
         'email' => $customer['email'],
         'phone' => $customer['phone'],
         'address' => $customer['address'],
+        'addressLine2' => $customer['address_line2'],
         'postalCode' => $customer['postal_code'],
         'country' => $customer['country'],
     ];

@@ -89,6 +89,7 @@ const Reserve = () => {
     emailConfirm: '',
     phone: '',
     address: '',
+    addressLine2: '',
     postalCode: '',
     country: '',
     password: '',
@@ -774,6 +775,7 @@ const Reserve = () => {
       emailConfirm: "Confirmer l'email",
       phone: 'Téléphone',
       address: 'Adresse',
+      addressLine2: "Complément d'adresse (optionnel)",
       postalCode: 'Code postal',
       country: 'Pays',
       password: 'Mot de passe',
@@ -807,6 +809,7 @@ const Reserve = () => {
       emailConfirm: 'E-Mail bestätigen',
       phone: 'Telefon',
       address: 'Adresse',
+      addressLine2: 'Adresszusatz (optional)',
       postalCode: 'Postleitzahl',
       country: 'Land',
       password: 'Passwort',
@@ -839,6 +842,7 @@ const Reserve = () => {
       emailConfirm: 'Conferma email',
       phone: 'Telefono',
       address: 'Indirizzo',
+      addressLine2: 'Indirizzo riga 2 (opzionale)',
       postalCode: 'Codice postale',
       country: 'Paese',
       password: 'Password',
@@ -869,6 +873,7 @@ const Reserve = () => {
       emailConfirm: 'Confirm email',
       phone: 'Phone',
       address: 'Address',
+      addressLine2: 'Address line 2 (optional)',
       postalCode: 'Postal code',
       country: 'Country',
       password: 'Password',
@@ -899,6 +904,7 @@ const Reserve = () => {
       emailConfirm: 'Confirmar email',
       phone: 'Teléfono',
       address: 'Dirección',
+      addressLine2: 'Dirección línea 2 (opcional)',
       postalCode: 'Código postal',
       country: 'País',
       password: 'Contraseña',
@@ -929,6 +935,7 @@ const Reserve = () => {
       emailConfirm: 'Bevestig e-mail',
       phone: 'Telefoon',
       address: 'Adres',
+      addressLine2: 'Adresregel 2 (optioneel)',
       postalCode: 'Postcode',
       country: 'Land',
       password: 'Wachtwoord',
@@ -960,6 +967,7 @@ const Reserve = () => {
       emailConfirm: 'Confirmar email',
       phone: 'Telefone',
       address: 'Endereço',
+      addressLine2: 'Complemento de endereço (opcional)',
       postalCode: 'Código postal',
       country: 'País',
       password: 'Senha',
@@ -990,6 +998,7 @@ const Reserve = () => {
       emailConfirm: 'ईमेल की पुष्टि करें',
       phone: 'फ़ोन',
       address: 'पता',
+      addressLine2: 'पता पंक्ति 2 (वैकल्पिक)',
       postalCode: 'पिन कोड',
       country: 'देश',
       password: 'पासवर्ड',
@@ -1021,6 +1030,7 @@ const Reserve = () => {
       emailConfirm: 'تأكيد البريد الإلكتروني',
       phone: 'الهاتف',
       address: 'العنوان',
+      addressLine2: 'العنوان سطر 2 (اختياري)',
       postalCode: 'الرمز البريدي',
       country: 'البلد',
       password: 'كلمة المرور',
@@ -1052,6 +1062,7 @@ const Reserve = () => {
       emailConfirm: 'Подтвердите email',
       phone: 'Телефон',
       address: 'Адрес',
+      addressLine2: 'Адрес, строка 2 (необязательно)',
       postalCode: 'Почтовый индекс',
       country: 'Страна',
       password: 'Пароль',
@@ -1414,11 +1425,18 @@ const Reserve = () => {
                       />
                       <input
                         type='text'
-                        autoComplete='street-address'
+                        autoComplete='address-line1'
                         placeholder={t.address}
                         value={authForm.address}
                         onChange={handleAuthFieldChange('address')}
                         required
+                      />
+                      <input
+                        type='text'
+                        autoComplete='address-line2'
+                        placeholder={t.addressLine2}
+                        value={authForm.addressLine2}
+                        onChange={handleAuthFieldChange('addressLine2')}
                       />
                       <div className='account-form-row'>
                         <input

@@ -11,6 +11,7 @@ $lastName = trim((string)($body['lastName'] ?? ''));
 $email = trim((string)($body['email'] ?? ''));
 $phone = trim((string)($body['phone'] ?? ''));
 $address = trim((string)($body['address'] ?? ''));
+$addressLine2 = trim((string)($body['addressLine2'] ?? ''));
 $postalCode = trim((string)($body['postalCode'] ?? ''));
 $country = trim((string)($body['country'] ?? ''));
 $password = (string)($body['password'] ?? '');
@@ -42,8 +43,8 @@ if ($existing->fetch()) {
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 $insert = $pdo->prepare(
-    'INSERT INTO customers (email, password_hash, first_name, last_name, address, postal_code, country, phone)
-     VALUES (:email, :password_hash, :first_name, :last_name, :address, :postal_code, :country, :phone)'
+    'INSERT INTO customers (email, password_hash, first_name, last_name, address, address_line2, postal_code, country, phone)
+     VALUES (:email, :password_hash, :first_name, :last_name, :address, :address_line2, :postal_code, :country, :phone)'
 );
 try {
     $insert->execute([
@@ -52,6 +53,7 @@ try {
         'first_name' => $firstName,
         'last_name' => $lastName,
         'address' => $address,
+        'address_line2' => $addressLine2 !== '' ? $addressLine2 : null,
         'postal_code' => $postalCode,
         'country' => $country,
         'phone' => $phone,
@@ -72,6 +74,7 @@ iglow_respond(201, [
         'email' => $email,
         'phone' => $phone,
         'address' => $address,
+        'addressLine2' => $addressLine2,
         'postalCode' => $postalCode,
         'country' => $country,
     ],
