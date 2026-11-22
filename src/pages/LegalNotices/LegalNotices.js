@@ -89,7 +89,7 @@ line-height:normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Times 
 mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
 none;mso-ansi-language:EN-US;mso-fareast-language:FR'>Any reproduction,
 distribution, modification, adaptation, or exploitation of this content without
-prior written permission from iGlow Swiss SA is strictly prohibited and
+prior written permission from iGlow Swiss is strictly prohibited and
 constitutes infringement, punishable by civil and criminal penalties.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
@@ -101,9 +101,9 @@ FR'>Liability<o:p></o:p></span></b></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 line-height:normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
-none;mso-ansi-language:EN-US;mso-fareast-language:FR'>iGlow Swiss SA strives to
+none;mso-ansi-language:EN-US;mso-fareast-language:FR'>iGlow Swiss strives to
 ensure the accuracy and timeliness of the information published on the websites
-<b>iGlow.bike</b> and <b>iGlow.swiss</b>. However, iGlow Swiss SA cannot
+<b>iGlow.bike</b> and <b>iGlow.swiss</b>. However, iGlow Swiss cannot
 guarantee the accuracy, completeness, or currency of the information provided.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
@@ -117,7 +117,7 @@ information available on the website.<o:p></o:p></span></p>
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
 line-height:normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
-none;mso-ansi-language:EN-US;mso-fareast-language:FR'>iGlow Swiss SA cannot be
+none;mso-ansi-language:EN-US;mso-fareast-language:FR'>iGlow Swiss cannot be
 held liable for any direct or indirect damages resulting from access to or use
 of the websites <b>iGlow.bike</b> and <b>iGlow.swiss</b>, including any
 technical malfunctions, viruses, or other issues.<o:p></o:p></span></p>
@@ -160,7 +160,7 @@ line-height:normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Times 
 mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
 none;mso-ansi-language:EN-US;mso-fareast-language:FR'>The websites <b>iGlow.bike</b>
 and <b>iGlow.swiss</b> may contain hyperlinks to third-party websites. iGlow
-Swiss SA assumes no responsibility for the content or practices of these
+Swiss assumes no responsibility for the content or practices of these
 third-party websites. Access to these sites is at the sole discretion and
 responsibility of the user.<o:p></o:p></span></p>
 
@@ -176,7 +176,7 @@ mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
 none;mso-ansi-language:EN-US;mso-fareast-language:FR'>These legal notices are
 governed by Swiss law. Any disputes relating to the interpretation or execution
 of these notices will be subject to the exclusive jurisdiction of the courts
-located at the headquarters of iGlow Swiss SA, unless otherwise required by law
+located at the headquarters of iGlow Swiss, unless otherwise required by law
 or regulation.<o:p></o:p></span></p>
 
 <p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
