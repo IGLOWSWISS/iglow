@@ -91,6 +91,7 @@ const Reserve = () => {
     address: '',
     addressLine2: '',
     postalCode: '',
+    city: '',
     country: '',
     password: '',
     passwordConfirm: '',
@@ -770,7 +771,7 @@ const Reserve = () => {
 
   const authContent = {
     fr: {
-      createAccount: 'Créez votre compte IGLOW',
+      createAccount: 'Informations de livraison',
       orLogin: 'Vous avez déjà un compte ?',
       loginLink: 'Connectez-vous',
       createLink: 'Créer un compte',
@@ -783,6 +784,7 @@ const Reserve = () => {
       address: 'Adresse',
       addressLine2: "Complément d'adresse (optionnel)",
       postalCode: 'Code postal',
+      city: 'Ville',
       country: 'Pays',
       password: 'Mot de passe',
       passwordConfirm: 'Confirmer le mot de passe',
@@ -804,7 +806,7 @@ const Reserve = () => {
       errorGeneric: 'Une erreur est survenue, merci de réessayer.',
     },
     de: {
-      createAccount: 'Erstellen Sie Ihr IGLOW-Konto',
+      createAccount: 'Lieferinformationen',
       orLogin: 'Sie haben bereits ein Konto?',
       loginLink: 'Anmelden',
       createLink: 'Konto erstellen',
@@ -817,6 +819,7 @@ const Reserve = () => {
       address: 'Adresse',
       addressLine2: 'Adresszusatz (optional)',
       postalCode: 'Postleitzahl',
+      city: 'Stadt',
       country: 'Land',
       password: 'Passwort',
       passwordConfirm: 'Passwort bestätigen',
@@ -837,7 +840,7 @@ const Reserve = () => {
       errorGeneric: 'Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut.',
     },
     it: {
-      createAccount: 'Crea il tuo account IGLOW',
+      createAccount: 'Informazioni di consegna',
       orLogin: 'Hai già un account?',
       loginLink: 'Accedi',
       createLink: 'Crea un account',
@@ -850,6 +853,7 @@ const Reserve = () => {
       address: 'Indirizzo',
       addressLine2: 'Indirizzo riga 2 (opzionale)',
       postalCode: 'Codice postale',
+      city: 'Città',
       country: 'Paese',
       password: 'Password',
       passwordConfirm: 'Conferma password',
@@ -868,7 +872,7 @@ const Reserve = () => {
       errorGeneric: 'Si è verificato un errore, riprova.',
     },
     en: {
-      createAccount: 'Create your IGLOW account',
+      createAccount: 'Shipping information',
       orLogin: 'Already have an account?',
       loginLink: 'Log in',
       createLink: 'Create an account',
@@ -881,6 +885,7 @@ const Reserve = () => {
       address: 'Address',
       addressLine2: 'Address line 2 (optional)',
       postalCode: 'Postal code',
+      city: 'City',
       country: 'Country',
       password: 'Password',
       passwordConfirm: 'Confirm password',
@@ -899,7 +904,7 @@ const Reserve = () => {
       errorGeneric: 'Something went wrong, please try again.',
     },
     es: {
-      createAccount: 'Crea tu cuenta IGLOW',
+      createAccount: 'Información de envío',
       orLogin: '¿Ya tienes una cuenta?',
       loginLink: 'Inicia sesión',
       createLink: 'Crear una cuenta',
@@ -912,6 +917,7 @@ const Reserve = () => {
       address: 'Dirección',
       addressLine2: 'Dirección línea 2 (opcional)',
       postalCode: 'Código postal',
+      city: 'Ciudad',
       country: 'País',
       password: 'Contraseña',
       passwordConfirm: 'Confirmar contraseña',
@@ -930,7 +936,7 @@ const Reserve = () => {
       errorGeneric: 'Ocurrió un error, inténtalo de nuevo.',
     },
     nl: {
-      createAccount: 'Maak uw IGLOW-account aan',
+      createAccount: 'Verzendgegevens',
       orLogin: 'Heeft u al een account?',
       loginLink: 'Inloggen',
       createLink: 'Account aanmaken',
@@ -943,6 +949,7 @@ const Reserve = () => {
       address: 'Adres',
       addressLine2: 'Adresregel 2 (optioneel)',
       postalCode: 'Postcode',
+      city: 'Stad',
       country: 'Land',
       password: 'Wachtwoord',
       passwordConfirm: 'Bevestig wachtwoord',
@@ -962,7 +969,7 @@ const Reserve = () => {
       errorGeneric: 'Er is iets misgegaan, probeer het opnieuw.',
     },
     pt: {
-      createAccount: 'Crie sua conta IGLOW',
+      createAccount: 'Informações de entrega',
       orLogin: 'Já tem uma conta?',
       loginLink: 'Entrar',
       createLink: 'Criar uma conta',
@@ -975,6 +982,7 @@ const Reserve = () => {
       address: 'Endereço',
       addressLine2: 'Complemento de endereço (opcional)',
       postalCode: 'Código postal',
+      city: 'Cidade',
       country: 'País',
       password: 'Senha',
       passwordConfirm: 'Confirmar senha',
@@ -993,7 +1001,7 @@ const Reserve = () => {
       errorGeneric: 'Ocorreu um erro, tente novamente.',
     },
     hi: {
-      createAccount: 'अपना IGLOW खाता बनाएं',
+      createAccount: 'शिपिंग जानकारी',
       orLogin: 'क्या आपका पहले से खाता है?',
       loginLink: 'लॉग इन करें',
       createLink: 'खाता बनाएं',
@@ -1006,6 +1014,7 @@ const Reserve = () => {
       address: 'पता',
       addressLine2: 'पता पंक्ति 2 (वैकल्पिक)',
       postalCode: 'पिन कोड',
+      city: 'शहर',
       country: 'देश',
       password: 'पासवर्ड',
       passwordConfirm: 'पासवर्ड की पुष्टि करें',
@@ -1025,7 +1034,7 @@ const Reserve = () => {
       errorGeneric: 'कुछ गलत हो गया, कृपया पुनः प्रयास करें।',
     },
     ar: {
-      createAccount: 'أنشئ حساب IGLOW الخاص بك',
+      createAccount: 'معلومات الشحن',
       orLogin: 'هل لديك حساب بالفعل؟',
       loginLink: 'تسجيل الدخول',
       createLink: 'إنشاء حساب',
@@ -1038,6 +1047,7 @@ const Reserve = () => {
       address: 'العنوان',
       addressLine2: 'العنوان سطر 2 (اختياري)',
       postalCode: 'الرمز البريدي',
+      city: 'المدينة',
       country: 'البلد',
       password: 'كلمة المرور',
       passwordConfirm: 'تأكيد كلمة المرور',
@@ -1057,7 +1067,7 @@ const Reserve = () => {
       errorGeneric: 'حدث خطأ ما، يرجى المحاولة مرة أخرى.',
     },
     ru: {
-      createAccount: 'Создайте аккаунт IGLOW',
+      createAccount: 'Информация о доставке',
       orLogin: 'Уже есть аккаунт?',
       loginLink: 'Войти',
       createLink: 'Создать аккаунт',
@@ -1070,6 +1080,7 @@ const Reserve = () => {
       address: 'Адрес',
       addressLine2: 'Адрес, строка 2 (необязательно)',
       postalCode: 'Почтовый индекс',
+      city: 'Город',
       country: 'Страна',
       password: 'Пароль',
       passwordConfirm: 'Подтвердите пароль',
@@ -1444,6 +1455,14 @@ const Reserve = () => {
                           required
                         />
                       </div>
+                      <input
+                        type='text'
+                        autoComplete='address-level2'
+                        placeholder={t.city}
+                        value={authForm.city}
+                        onChange={handleAuthFieldChange('city')}
+                        required
+                      />
                       <input
                         type='text'
                         autoComplete='country-name'

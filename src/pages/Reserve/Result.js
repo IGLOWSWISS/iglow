@@ -6,29 +6,26 @@ const Result = () => {
   const [currentLang, setCurrentLang] = useState('fr');
 
   useEffect(() => {
+    const supportedLangs = [
+      'fr', 'de', 'it', 'en', 'es', 'nl', 'pt', 'hi', 'ar', 'ru',
+    ];
+
     // Get language from URL or browser
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
+    const type = urlParams.get('type');
 
-    if (
-      urlLang &&
-      ['fr', 'de', 'it', 'en', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(
-        urlLang
-      )
-    ) {
-      setCurrentLang(urlLang);
+    let resolvedLang = 'fr';
+    if (urlLang && supportedLangs.includes(urlLang)) {
+      resolvedLang = urlLang;
     } else {
       const browserLang = navigator.language || navigator.userLanguage;
       const langCode = browserLang.split('-')[0];
-
-      if (
-        ['fr', 'de', 'it', 'en', 'es', 'nl', 'pt', 'hi', 'ar', 'ru'].includes(
-          langCode
-        )
-      ) {
-        setCurrentLang(langCode);
+      if (supportedLangs.includes(langCode)) {
+        resolvedLang = langCode;
       }
     }
+    setCurrentLang(resolvedLang);
 
     // Increment reservation counter
     try {
@@ -38,6 +35,19 @@ const Result = () => {
       console.log(`🎯 Paiement réussi ! Compteur: ${count} réservations`);
     } catch (error) {
       console.error('❌ Erreur compteur:', error);
+    }
+
+    // Send the purchase confirmation email once per successful checkout
+    if (type === 'success' && !sessionStorage.getItem('iglow-confirmation-sent')) {
+      fetch('/api/send-confirmation.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ lang: resolvedLang }),
+      })
+        .then(() => {
+          sessionStorage.setItem('iglow-confirmation-sent', '1');
+        })
+        .catch(() => {});
     }
 
     // Update page title

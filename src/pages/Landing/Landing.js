@@ -63,7 +63,7 @@ const CONTENT = {
       "Offre spéciale Black Friday & lancement Kickstarter : le Duo Casque + Gilet IGLOW",
     newPricePrefix: 'PAYÉ SEULEMENT',
     discountLinePrefix: 'Économie immédiate de',
-    lowestPriceBadge: '🏆 Le prix le plus bas jamais proposé pour cette technologie',
+    lowestPriceBadge: 'Le prix le plus bas jamais proposé pour cette technologie',
     priorityShippingBadge: 'Livraison prioritaire pour les premiers inscrits',
     clickToReserve: 'Cliquez pour réserver et faire partie du succès.',
     kickstarterButton: 'IGLOW sur Kickstarter',
@@ -126,7 +126,7 @@ const CONTENT = {
       'Black Friday & Kickstarter-Launch-Spezial: das IGLOW Helm + Weste Duo',
     newPricePrefix: 'NUR BEZAHLT',
     discountLinePrefix: 'Sofortige Ersparnis von',
-    lowestPriceBadge: '🏆 Der niedrigste Preis, der je für diese Technologie angeboten wurde',
+    lowestPriceBadge: 'Der niedrigste Preis, der je für diese Technologie angeboten wurde',
     priorityShippingBadge: 'Bevorzugter Versand für die ersten Anmeldungen',
     clickToReserve: 'Klicken Sie, um zu reservieren und Teil des Erfolgs zu sein.',
     kickstarterButton: 'IGLOW auf Kickstarter',
@@ -189,7 +189,7 @@ const CONTENT = {
       'Offerta speciale Black Friday e lancio Kickstarter: il Duo Casco + Gilet IGLOW',
     newPricePrefix: 'PAGATO SOLO',
     discountLinePrefix: 'Risparmio immediato di',
-    lowestPriceBadge: '🏆 Il prezzo più basso mai proposto per questa tecnologia',
+    lowestPriceBadge: 'Il prezzo più basso mai proposto per questa tecnologia',
     priorityShippingBadge: 'Spedizione prioritaria per i primi iscritti',
     clickToReserve: 'Clicca per prenotare e far parte del successo.',
     kickstarterButton: 'IGLOW su Kickstarter',
@@ -252,7 +252,7 @@ const CONTENT = {
       'Black Friday & Kickstarter launch special: the IGLOW Helmet + Vest Duo',
     newPricePrefix: 'PAID ONLY',
     discountLinePrefix: 'Instant savings of',
-    lowestPriceBadge: '🏆 The lowest price ever offered for this technology',
+    lowestPriceBadge: 'The lowest price ever offered for this technology',
     priorityShippingBadge: 'Priority shipping for the first to sign up',
     clickToReserve: 'Click to reserve and be part of the success.',
     kickstarterButton: 'IGLOW on Kickstarter',
@@ -315,7 +315,7 @@ const CONTENT = {
       'Especial de lanzamiento de Black Friday y Kickstarter: el Duo Casco + Chaleco IGLOW',
     newPricePrefix: 'PAGADO SOLO',
     discountLinePrefix: 'Ahorro inmediato de',
-    lowestPriceBadge: '🏆 El precio más bajo jamás ofrecido para esta tecnología',
+    lowestPriceBadge: 'El precio más bajo jamás ofrecido para esta tecnología',
     priorityShippingBadge: 'Envío prioritario para los primeros inscritos',
     clickToReserve: 'Haz clic para reservar y ser parte del éxito.',
     kickstarterButton: 'IGLOW en Kickstarter',
@@ -378,7 +378,7 @@ const CONTENT = {
       'Black Friday & Kickstarter-lancering special: de IGLOW Helm + Vest Duo',
     newPricePrefix: 'SLECHTS BETAALD',
     discountLinePrefix: 'Directe besparing van',
-    lowestPriceBadge: '🏆 De laagste prijs ooit voor deze technologie',
+    lowestPriceBadge: 'De laagste prijs ooit voor deze technologie',
     priorityShippingBadge: 'Voorrang bij verzending voor de eerste aanmeldingen',
     clickToReserve: 'Klik om te reserveren en deel uit te maken van het succes.',
     kickstarterButton: 'IGLOW op Kickstarter',
@@ -441,7 +441,7 @@ const CONTENT = {
       'Especial de lançamento Black Friday & Kickstarter: o Duo Capacete + Colete IGLOW',
     newPricePrefix: 'PAGO APENAS',
     discountLinePrefix: 'Economia imediata de',
-    lowestPriceBadge: '🏆 O preço mais baixo já oferecido para esta tecnologia',
+    lowestPriceBadge: 'O preço mais baixo já oferecido para esta tecnologia',
     priorityShippingBadge: 'Envio prioritário para os primeiros inscritos',
     clickToReserve: 'Clique para reservar e fazer parte do sucesso.',
     kickstarterButton: 'IGLOW no Kickstarter',
@@ -504,7 +504,7 @@ const CONTENT = {
       'ब्लैक फ्राइडे और किकस्टार्टर लॉन्च स्पेशल: IGLOW हेलमेट + जैकेट डुओ',
     newPricePrefix: 'सिर्फ भुगतान',
     discountLinePrefix: 'तत्काल बचत',
-    lowestPriceBadge: '🏆 इस तकनीक के लिए अब तक की सबसे कम कीमत',
+    lowestPriceBadge: 'इस तकनीक के लिए अब तक की सबसे कम कीमत',
     priorityShippingBadge: 'पहले पंजीकरण करने वालों के लिए प्राथमिकता शिपिंग',
     clickToReserve: 'आरक्षित करने और सफलता का हिस्सा बनने के लिए क्लिक करें।',
     kickstarterButton: 'Kickstarter पर IGLOW',
@@ -567,7 +567,7 @@ const CONTENT = {
       'عرض إطلاق بلاك فرايدي وكيك ستارتر الخاص: ثنائي الخوذة والسترة IGLOW',
     newPricePrefix: 'مدفوع فقط',
     discountLinePrefix: 'توفير فوري قدره',
-    lowestPriceBadge: '🏆 أدنى سعر تم تقديمه لهذه التقنية على الإطلاق',
+    lowestPriceBadge: 'أدنى سعر تم تقديمه لهذه التقنية على الإطلاق',
     priorityShippingBadge: 'شحن ذو أولوية لأول المسجلين',
     clickToReserve: 'انقر للحجز وكن جزءاً من النجاح.',
     kickstarterButton: 'IGLOW على Kickstarter',
@@ -630,7 +630,7 @@ const CONTENT = {
       'Специальное предложение Black Friday и запуска Kickstarter: дуо-комплект шлем + жилет IGLOW',
     newPricePrefix: 'ОПЛАЧЕНО ВСЕГО',
     discountLinePrefix: 'Мгновенная экономия',
-    lowestPriceBadge: '🏆 Самая низкая цена, когда-либо предложенная за эту технологию',
+    lowestPriceBadge: 'Самая низкая цена, когда-либо предложенная за эту технологию',
     priorityShippingBadge: 'Приоритетная доставка для первых зарегистрированных',
     clickToReserve: 'Нажмите, чтобы забронировать и стать частью успеха.',
     kickstarterButton: 'IGLOW на Kickstarter',
@@ -1320,6 +1320,12 @@ function CountdownSection({ t }) {
             variant='body2'
             sx={{ color: 'white', opacity: 0.85, mt: 3 }}
           >
+            <Typography
+              component='span'
+              sx={{ color: '#00FF00', fontWeight: 900 }}
+            >
+              ✓
+            </Typography>{' '}
             {t.lowestPriceBadge}
           </Typography>
           <Typography

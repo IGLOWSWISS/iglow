@@ -14,7 +14,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL) || $password === '') {
 
 $pdo = iglow_db();
 $stmt = $pdo->prepare(
-    'SELECT id, password_hash, first_name, last_name, phone, address, address_line2, postal_code, country,
+    'SELECT id, password_hash, first_name, last_name, phone, address, address_line2, postal_code, city, country,
             failed_login_attempts, locked_until
      FROM customers WHERE email = :email'
 );
@@ -66,6 +66,7 @@ iglow_respond(200, [
         'address' => $customer['address'],
         'addressLine2' => $customer['address_line2'],
         'postalCode' => $customer['postal_code'],
+        'city' => $customer['city'],
         'country' => $customer['country'],
     ],
 ]);

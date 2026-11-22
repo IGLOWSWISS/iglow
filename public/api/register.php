@@ -13,6 +13,7 @@ $phone = trim((string)($body['phone'] ?? ''));
 $address = trim((string)($body['address'] ?? ''));
 $addressLine2 = trim((string)($body['addressLine2'] ?? ''));
 $postalCode = trim((string)($body['postalCode'] ?? ''));
+$city = trim((string)($body['city'] ?? ''));
 $country = trim((string)($body['country'] ?? ''));
 $password = (string)($body['password'] ?? '');
 $consent = (bool)($body['consent'] ?? false);
@@ -24,6 +25,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors['email'] = 'invalid';
 if ($phone === '') $errors['phone'] = 'required';
 if ($address === '') $errors['address'] = 'required';
 if ($postalCode === '') $errors['postalCode'] = 'required';
+if ($city === '') $errors['city'] = 'required';
 if ($country === '') $errors['country'] = 'required';
 if (strlen($password) < 8) $errors['password'] = 'too_short';
 if (!$consent) $errors['consent'] = 'required';
@@ -43,8 +45,8 @@ if ($existing->fetch()) {
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 $insert = $pdo->prepare(
-    'INSERT INTO customers (email, password_hash, first_name, last_name, address, address_line2, postal_code, country, phone)
-     VALUES (:email, :password_hash, :first_name, :last_name, :address, :address_line2, :postal_code, :country, :phone)'
+    'INSERT INTO customers (email, password_hash, first_name, last_name, address, address_line2, postal_code, city, country, phone)
+     VALUES (:email, :password_hash, :first_name, :last_name, :address, :address_line2, :postal_code, :city, :country, :phone)'
 );
 try {
     $insert->execute([
@@ -55,6 +57,7 @@ try {
         'address' => $address,
         'address_line2' => $addressLine2 !== '' ? $addressLine2 : null,
         'postal_code' => $postalCode,
+        'city' => $city,
         'country' => $country,
         'phone' => $phone,
     ]);
@@ -76,6 +79,7 @@ iglow_respond(201, [
         'address' => $address,
         'addressLine2' => $addressLine2,
         'postalCode' => $postalCode,
+        'city' => $city,
         'country' => $country,
     ],
 ]);
