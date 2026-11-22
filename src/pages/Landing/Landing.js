@@ -56,7 +56,6 @@ const CONTENT = {
     reserveAction: 'Découvrez le premier duo',
     reserveNowWord: 'avec éclairage synchronisé :',
     reserveDuoText: 'Casque + Gilet',
-    launchDateCaption: 'Ouverture des ventes le 27 novembre 2026 sur iglow.swiss & Kickstarter',
     exclusive: 'EXCLUSIF',
     duoSpecial: 'OFFRE DUO SPÉCIALE',
     insteadOfLabel: 'au lieu de',
@@ -120,7 +119,6 @@ const CONTENT = {
     reserveAction: 'Entdecken Sie das erste Duo',
     reserveNowWord: 'mit synchronisierter Beleuchtung:',
     reserveDuoText: 'Helm + Weste',
-    launchDateCaption: 'Verkaufsstart am 27. November 2026 auf iglow.swiss & Kickstarter',
     exclusive: 'EXKLUSIV',
     duoSpecial: 'DUO SPEZIAL',
     insteadOfLabel: 'statt',
@@ -184,7 +182,6 @@ const CONTENT = {
     reserveAction: 'Scopri il primo duo',
     reserveNowWord: 'con illuminazione sincronizzata:',
     reserveDuoText: 'Casco + Gilet',
-    launchDateCaption: 'Apertura delle vendite il 27 novembre 2026 su iglow.swiss & Kickstarter',
     exclusive: 'ESCLUSIVO',
     duoSpecial: 'OFFERTA DUO SPECIALE',
     insteadOfLabel: 'invece di',
@@ -248,7 +245,6 @@ const CONTENT = {
     reserveAction: 'Discover the first duo',
     reserveNowWord: 'with synchronized lighting:',
     reserveDuoText: 'Helmet + Vest',
-    launchDateCaption: 'Sales open November 27, 2026 on iglow.swiss & Kickstarter',
     exclusive: 'EXCLUSIVE',
     duoSpecial: 'DUO SPECIAL',
     insteadOfLabel: 'instead of',
@@ -312,7 +308,6 @@ const CONTENT = {
     reserveAction: 'Descubre el primer duo',
     reserveNowWord: 'con iluminación sincronizada:',
     reserveDuoText: 'Casco + Chaleco',
-    launchDateCaption: 'Apertura de ventas el 27 de noviembre de 2026 en iglow.swiss y Kickstarter',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
     insteadOfLabel: 'en lugar de',
@@ -376,7 +371,6 @@ const CONTENT = {
     reserveAction: 'Ontdek de eerste duo',
     reserveNowWord: 'met gesynchroniseerde verlichting:',
     reserveDuoText: 'Helm + Vest',
-    launchDateCaption: 'Verkoop start op 27 november 2026 op iglow.swiss & Kickstarter',
     exclusive: 'EXCLUSIEF',
     duoSpecial: 'DUO SPECIAL',
     insteadOfLabel: 'in plaats van',
@@ -440,7 +434,6 @@ const CONTENT = {
     reserveAction: 'Descubra o primeiro duo',
     reserveNowWord: 'com iluminação sincronizada:',
     reserveDuoText: 'Capacete + Colete',
-    launchDateCaption: 'Abertura das vendas em 27 de novembro de 2026 em iglow.swiss & Kickstarter',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
     insteadOfLabel: 'em vez de',
@@ -504,7 +497,6 @@ const CONTENT = {
     reserveAction: 'सबसे पहला डुओ खोजें',
     reserveNowWord: 'सिंक्रनाइज़्ड लाइटिंग के साथ:',
     reserveDuoText: 'हेलमेट + जैकेट',
-    launchDateCaption: 'बिक्री 27 नवंबर 2026 को iglow.swiss और Kickstarter पर शुरू होगी',
     exclusive: 'एक्सक्लूसिव',
     duoSpecial: 'डुओ स्पेशल',
     insteadOfLabel: 'के बजाय',
@@ -568,7 +560,6 @@ const CONTENT = {
     reserveAction: 'اكتشف أول ثنائي',
     reserveNowWord: 'بإضاءة متزامنة:',
     reserveDuoText: 'خوذة + سترة',
-    launchDateCaption: 'افتتاح المبيعات في 27 نوفمبر 2026 على iglow.swiss وKickstarter',
     exclusive: 'حصري',
     duoSpecial: 'عرض الثنائي الخاص',
     insteadOfLabel: 'بدلاً من',
@@ -632,7 +623,6 @@ const CONTENT = {
     reserveAction: 'Откройте для себя первый дуо',
     reserveNowWord: 'с синхронизированной подсветкой:',
     reserveDuoText: 'Шлем + жилет',
-    launchDateCaption: 'Старт продаж 27 ноября 2026 года на iglow.swiss и Kickstarter',
     exclusive: 'ЭКСКЛЮЗИВ',
     duoSpecial: 'СПЕЦИАЛЬНЫЙ ДУО',
     insteadOfLabel: 'вместо',
@@ -1232,13 +1222,6 @@ function CountdownSection({ t }) {
         </Box>
 
         <Countdown />
-
-        <Typography
-          variant='body2'
-          sx={{ color: 'white', opacity: 0.8, mb: 3, textAlign: 'center' }}
-        >
-          {t.launchDateCaption}
-        </Typography>
 
         <Box
           sx={{
