@@ -54,7 +54,7 @@ const CONTENT = {
     watchNowSub: 'Regardez maintenant',
     watchSub: 'Le gilet connecté avec clignotants et feux de freinage',
     reserveAction: 'DÉCOUVREZ LE PREMIER DUO',
-    reserveNowWord: 'avec éclairage synchronisé :',
+    reserveNowWord: 'avec éclairage synchronisé',
     reserveDuoText: 'Casque + Gilet',
     exclusive: 'EXCLUSIF',
     duoSpecial: 'OFFRE DUO SPÉCIALE',
@@ -64,7 +64,7 @@ const CONTENT = {
     newPricePrefix: 'PAYÉ SEULEMENT',
     discountLinePrefix: 'Économie immédiate de',
     lowestPriceBadge: '🏆 Le prix le plus bas jamais proposé pour cette technologie',
-    priorityShippingBadge: '🚀 Livraison prioritaire pour les premiers inscrits',
+    priorityShippingBadge: 'Livraison prioritaire pour les premiers inscrits',
     clickToReserve: 'Cliquez pour réserver et faire partie du succès.',
     kickstarterButton: 'IGLOW sur Kickstarter',
     kickstarterCaption: 'Votre Duo IGLOW',
@@ -117,7 +117,7 @@ const CONTENT = {
     watchNowSub: 'Jetzt ansehen',
     watchSub: 'Die Smart Weste mit Blinkern + Bremslichtern',
     reserveAction: 'ENTDECKEN SIE DAS ERSTE DUO',
-    reserveNowWord: 'mit synchronisierter Beleuchtung:',
+    reserveNowWord: 'mit synchronisierter Beleuchtung',
     reserveDuoText: 'Helm + Weste',
     exclusive: 'EXKLUSIV',
     duoSpecial: 'DUO SPEZIAL',
@@ -127,7 +127,7 @@ const CONTENT = {
     newPricePrefix: 'NUR BEZAHLT',
     discountLinePrefix: 'Sofortige Ersparnis von',
     lowestPriceBadge: '🏆 Der niedrigste Preis, der je für diese Technologie angeboten wurde',
-    priorityShippingBadge: '🚀 Bevorzugter Versand für die ersten Anmeldungen',
+    priorityShippingBadge: 'Bevorzugter Versand für die ersten Anmeldungen',
     clickToReserve: 'Klicken Sie, um zu reservieren und Teil des Erfolgs zu sein.',
     kickstarterButton: 'IGLOW auf Kickstarter',
     kickstarterCaption: 'Ihr IGLOW Duo',
@@ -180,7 +180,7 @@ const CONTENT = {
     watchNowSub: 'Guarda ora',
     watchSub: 'Il gilet smart con frecce + luci di stop',
     reserveAction: 'SCOPRI IL PRIMO DUO',
-    reserveNowWord: 'con illuminazione sincronizzata:',
+    reserveNowWord: 'con illuminazione sincronizzata',
     reserveDuoText: 'Casco + Gilet',
     exclusive: 'ESCLUSIVO',
     duoSpecial: 'OFFERTA DUO SPECIALE',
@@ -190,7 +190,7 @@ const CONTENT = {
     newPricePrefix: 'PAGATO SOLO',
     discountLinePrefix: 'Risparmio immediato di',
     lowestPriceBadge: '🏆 Il prezzo più basso mai proposto per questa tecnologia',
-    priorityShippingBadge: '🚀 Spedizione prioritaria per i primi iscritti',
+    priorityShippingBadge: 'Spedizione prioritaria per i primi iscritti',
     clickToReserve: 'Clicca per prenotare e far parte del successo.',
     kickstarterButton: 'IGLOW su Kickstarter',
     kickstarterCaption: 'Il tuo Duo IGLOW',
@@ -243,7 +243,7 @@ const CONTENT = {
     watchNowSub: 'Watch now',
     watchSub: 'The Smart Vest with Turn signals + Brake lights',
     reserveAction: 'DISCOVER THE FIRST DUO',
-    reserveNowWord: 'with synchronized lighting:',
+    reserveNowWord: 'with synchronized lighting',
     reserveDuoText: 'Helmet + Vest',
     exclusive: 'EXCLUSIVE',
     duoSpecial: 'DUO SPECIAL',
@@ -253,7 +253,7 @@ const CONTENT = {
     newPricePrefix: 'PAID ONLY',
     discountLinePrefix: 'Instant savings of',
     lowestPriceBadge: '🏆 The lowest price ever offered for this technology',
-    priorityShippingBadge: '🚀 Priority shipping for the first to sign up',
+    priorityShippingBadge: 'Priority shipping for the first to sign up',
     clickToReserve: 'Click to reserve and be part of the success.',
     kickstarterButton: 'IGLOW on Kickstarter',
     kickstarterCaption: 'Your IGLOW Duo',
@@ -306,7 +306,7 @@ const CONTENT = {
     watchNowSub: 'Mira ahora',
     watchSub: 'El chaleco inteligente con intermitentes + luces de freno',
     reserveAction: 'DESCUBRE EL PRIMER DUO',
-    reserveNowWord: 'con iluminación sincronizada:',
+    reserveNowWord: 'con iluminación sincronizada',
     reserveDuoText: 'Casco + Chaleco',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
@@ -316,7 +316,7 @@ const CONTENT = {
     newPricePrefix: 'PAGADO SOLO',
     discountLinePrefix: 'Ahorro inmediato de',
     lowestPriceBadge: '🏆 El precio más bajo jamás ofrecido para esta tecnología',
-    priorityShippingBadge: '🚀 Envío prioritario para los primeros inscritos',
+    priorityShippingBadge: 'Envío prioritario para los primeros inscritos',
     clickToReserve: 'Haz clic para reservar y ser parte del éxito.',
     kickstarterButton: 'IGLOW en Kickstarter',
     kickstarterCaption: 'Tu Duo IGLOW',
@@ -369,7 +369,7 @@ const CONTENT = {
     watchNowSub: 'Kijk nu',
     watchSub: 'Het Smart Vest met richtingaanwijzers + remlichten',
     reserveAction: 'ONTDEK DE EERSTE DUO',
-    reserveNowWord: 'met gesynchroniseerde verlichting:',
+    reserveNowWord: 'met gesynchroniseerde verlichting',
     reserveDuoText: 'Helm + Vest',
     exclusive: 'EXCLUSIEF',
     duoSpecial: 'DUO SPECIAL',
@@ -379,7 +379,7 @@ const CONTENT = {
     newPricePrefix: 'SLECHTS BETAALD',
     discountLinePrefix: 'Directe besparing van',
     lowestPriceBadge: '🏆 De laagste prijs ooit voor deze technologie',
-    priorityShippingBadge: '🚀 Voorrang bij verzending voor de eerste aanmeldingen',
+    priorityShippingBadge: 'Voorrang bij verzending voor de eerste aanmeldingen',
     clickToReserve: 'Klik om te reserveren en deel uit te maken van het succes.',
     kickstarterButton: 'IGLOW op Kickstarter',
     kickstarterCaption: 'Uw IGLOW Duo',
@@ -432,7 +432,7 @@ const CONTENT = {
     watchNowSub: 'Assista agora',
     watchSub: 'O Colete Inteligente com Setas + Luzes de Freio',
     reserveAction: 'DESCUBRA O PRIMEIRO DUO',
-    reserveNowWord: 'com iluminação sincronizada:',
+    reserveNowWord: 'com iluminação sincronizada',
     reserveDuoText: 'Capacete + Colete',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
@@ -442,7 +442,7 @@ const CONTENT = {
     newPricePrefix: 'PAGO APENAS',
     discountLinePrefix: 'Economia imediata de',
     lowestPriceBadge: '🏆 O preço mais baixo já oferecido para esta tecnologia',
-    priorityShippingBadge: '🚀 Envio prioritário para os primeiros inscritos',
+    priorityShippingBadge: 'Envio prioritário para os primeiros inscritos',
     clickToReserve: 'Clique para reservar e fazer parte do sucesso.',
     kickstarterButton: 'IGLOW no Kickstarter',
     kickstarterCaption: 'Seu Duo IGLOW',
@@ -495,7 +495,7 @@ const CONTENT = {
     watchNowSub: 'अभी देखें',
     watchSub: 'टर्न सिग्नल + ब्रेक लाइट के साथ स्मार्ट वेस्ट',
     reserveAction: 'सबसे पहला डुओ खोजें',
-    reserveNowWord: 'सिंक्रनाइज़्ड लाइटिंग के साथ:',
+    reserveNowWord: 'सिंक्रनाइज़्ड लाइटिंग के साथ',
     reserveDuoText: 'हेलमेट + जैकेट',
     exclusive: 'एक्सक्लूसिव',
     duoSpecial: 'डुओ स्पेशल',
@@ -505,7 +505,7 @@ const CONTENT = {
     newPricePrefix: 'सिर्फ भुगतान',
     discountLinePrefix: 'तत्काल बचत',
     lowestPriceBadge: '🏆 इस तकनीक के लिए अब तक की सबसे कम कीमत',
-    priorityShippingBadge: '🚀 पहले पंजीकरण करने वालों के लिए प्राथमिकता शिपिंग',
+    priorityShippingBadge: 'पहले पंजीकरण करने वालों के लिए प्राथमिकता शिपिंग',
     clickToReserve: 'आरक्षित करने और सफलता का हिस्सा बनने के लिए क्लिक करें।',
     kickstarterButton: 'Kickstarter पर IGLOW',
     kickstarterCaption: 'आपका IGLOW डुओ',
@@ -558,7 +558,7 @@ const CONTENT = {
     watchNowSub: 'شاهد الآن',
     watchSub: 'السترة الذكية مع إشارات الانعطاف ومصابيح الفرامل',
     reserveAction: 'اكتشف أول ثنائي',
-    reserveNowWord: 'بإضاءة متزامنة:',
+    reserveNowWord: 'بإضاءة متزامنة',
     reserveDuoText: 'خوذة + سترة',
     exclusive: 'حصري',
     duoSpecial: 'عرض الثنائي الخاص',
@@ -568,7 +568,7 @@ const CONTENT = {
     newPricePrefix: 'مدفوع فقط',
     discountLinePrefix: 'توفير فوري قدره',
     lowestPriceBadge: '🏆 أدنى سعر تم تقديمه لهذه التقنية على الإطلاق',
-    priorityShippingBadge: '🚀 شحن ذو أولوية لأول المسجلين',
+    priorityShippingBadge: 'شحن ذو أولوية لأول المسجلين',
     clickToReserve: 'انقر للحجز وكن جزءاً من النجاح.',
     kickstarterButton: 'IGLOW على Kickstarter',
     kickstarterCaption: 'ثنائي IGLOW الخاص بك',
@@ -621,7 +621,7 @@ const CONTENT = {
     watchNowSub: 'Смотреть сейчас',
     watchSub: 'Умный жилет с поворотниками и стоп-сигналами',
     reserveAction: 'ОТКРОЙТЕ ДЛЯ СЕБЯ ПЕРВЫЙ ДУО',
-    reserveNowWord: 'с синхронизированной подсветкой:',
+    reserveNowWord: 'с синхронизированной подсветкой',
     reserveDuoText: 'Шлем + жилет',
     exclusive: 'ЭКСКЛЮЗИВ',
     duoSpecial: 'СПЕЦИАЛЬНЫЙ ДУО',
@@ -631,7 +631,7 @@ const CONTENT = {
     newPricePrefix: 'ОПЛАЧЕНО ВСЕГО',
     discountLinePrefix: 'Мгновенная экономия',
     lowestPriceBadge: '🏆 Самая низкая цена, когда-либо предложенная за эту технологию',
-    priorityShippingBadge: '🚀 Приоритетная доставка для первых зарегистрированных',
+    priorityShippingBadge: 'Приоритетная доставка для первых зарегистрированных',
     clickToReserve: 'Нажмите, чтобы забронировать и стать частью успеха.',
     kickstarterButton: 'IGLOW на Kickstarter',
     kickstarterCaption: 'Ваш дуо-комплект IGLOW',
@@ -1237,10 +1237,7 @@ function CountdownSection({ t }) {
           <Typography variant='body1' sx={{ color: 'white', fontWeight: 'bold' }}>
             {t.reserveAction}
           </Typography>
-          <Typography variant='body1' sx={{ color: RED, fontWeight: 'bold' }}>
-            {t.reserveNowWord}
-          </Typography>
-          <Typography variant='body1' sx={{ mb: 1 }}>
+          <Typography variant='body1'>
             <Typography component='span' sx={{ color: 'white' }}>
               {t.reserveDuoText}
             </Typography>{' '}
@@ -1250,6 +1247,9 @@ function CountdownSection({ t }) {
             >
               IGLOW
             </Typography>
+          </Typography>
+          <Typography variant='body1' sx={{ color: RED, fontWeight: 'bold', mb: 1 }}>
+            {t.reserveNowWord}
           </Typography>
           <Typography
             sx={{ color: RED, fontWeight: 'bold', fontSize: '1.1rem', mt: 2 }}
@@ -1326,6 +1326,12 @@ function CountdownSection({ t }) {
             variant='body2'
             sx={{ color: 'white', opacity: 0.85 }}
           >
+            <Typography
+              component='span'
+              sx={{ color: '#00FF00', fontWeight: 900 }}
+            >
+              ✓
+            </Typography>{' '}
             {t.priorityShippingBadge}
           </Typography>
         </Box>
