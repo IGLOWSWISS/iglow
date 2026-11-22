@@ -48,7 +48,7 @@ const CONTENT = {
   fr: {
     heroPrefix: 'Offrez ou offrez-vous',
     heroHighlight: 'le Duo Parfait',
-    heroSuffix: 'gilet + casque IGLOW',
+    heroSuffix: 'casque + gilet IGLOW',
     heroButton: 'Réserver mon duo',
     watchNowMain: 'VISIBLE COMME UNE VOITURE',
     watchNowSub: 'Regardez maintenant',
@@ -73,7 +73,7 @@ const CONTENT = {
     whatIsHtml:
       'Le Duo Casque et Gilet <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Une visibilité à 360°</span><br/>Grâce à des <span style="color:#E30613">clignotants</span> et <span style="color:#E30613">feux de freinage</span><br/>Comme une voiture, contrôlés par une <span style="color:#E30613">télécommande sur le guidon</span>.',
     safetyOvertitle: 'sécurité',
-    safetyTitle: 'Gilet et Casque Connectés Haute Visibilité',
+    safetyTitle: 'Casque et Gilet Connectés Haute Visibilité',
     safetyText:
       "Doté d'indicateurs LED de pointe, le gilet offre une meilleure visibilité, particulièrement dans des conditions de faible luminosité. Son design épuré et ergonomique garantit à la fois confort et facilité d'utilisation, même avec un sac à dos. Le casque complète votre sécurité avec les mêmes fonctions de signalisation, en plus d'une lumière frontale très puissante.",
     flexOvertitle: 'Flexibilité',
@@ -109,7 +109,7 @@ const CONTENT = {
   de: {
     heroPrefix: 'Verschenken Sie oder gönnen Sie sich',
     heroHighlight: 'das perfekte Duo',
-    heroSuffix: 'Weste + Helm IGLOW',
+    heroSuffix: 'Helm + Weste IGLOW',
     heroButton: 'Mein Duo reservieren',
     watchNowMain: 'SICHTBAR WIE EIN AUTO',
     watchNowSub: 'Jetzt ansehen',
@@ -134,7 +134,7 @@ const CONTENT = {
     whatIsHtml:
       'Das Duo Helm & Weste <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360°-Sichtbarkeit</span><br/>Mit <span style="color:#E30613">Blinkern</span> und <span style="color:#E30613">Bremslichtern</span><br/>Wie ein Auto, gesteuert durch eine <span style="color:#E30613">Fernbedienung am Lenker</span>.',
     safetyOvertitle: 'Sicherheit',
-    safetyTitle: 'Hochsichtbare Smart Weste & Helm',
+    safetyTitle: 'Hochsichtbarer Smart Helm & Weste',
     safetyText:
       'Mit modernsten LED-Anzeigen bietet die Weste eine verbesserte Sichtbarkeit, besonders bei schlechten Lichtverhältnissen. Ihr schlankes und ergonomisches Design garantiert sowohl Komfort als auch Benutzerfreundlichkeit, selbst wenn Sie einen Rucksack tragen. Der Helm ergänzt Ihre Sicherheit mit denselben Signalfunktionen und zusätzlich einem sehr starken Frontlicht.',
     flexOvertitle: 'Flexibilität',
@@ -170,7 +170,7 @@ const CONTENT = {
   it: {
     heroPrefix: 'Regala o regalati',
     heroHighlight: 'il Duo Perfetto',
-    heroSuffix: 'gilet + casco IGLOW',
+    heroSuffix: 'casco + gilet IGLOW',
     heroButton: 'Prenotare il mio duo',
     watchNowMain: "VISIBILE COME UN'AUTO",
     watchNowSub: 'Guarda ora',
@@ -195,7 +195,7 @@ const CONTENT = {
     whatIsHtml:
       'Il Duo Casco e Gilet <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Una visibilità a 360°</span><br/>Grazie a <span style="color:#E30613">frecce</span> e <span style="color:#E30613">luci di stop</span><br/>Come un\'auto, controllato da un <span style="color:#E30613">telecomando sul manubrio</span>.',
     safetyOvertitle: 'sicurezza',
-    safetyTitle: 'Gilet e Casco Smart ad Alta Visibilità',
+    safetyTitle: 'Casco e Gilet Smart ad Alta Visibilità',
     safetyText:
       "Dotato di indicatori LED all'avanguardia, il gilet offre una visibilità migliorata, particolarmente in condizioni di scarsa luminosità. Il suo design snello ed ergonomico garantisce comfort e facilità d'uso, anche indossando uno zaino. Il casco completa la tua sicurezza con le stesse funzioni di segnalazione, con in più una luce frontale molto potente.",
     flexOvertitle: 'Flessibilità',
@@ -231,7 +231,7 @@ const CONTENT = {
   en: {
     heroPrefix: 'Gift it or treat yourself to',
     heroHighlight: 'the Perfect Duo',
-    heroSuffix: 'vest + helmet IGLOW',
+    heroSuffix: 'helmet + vest IGLOW',
     heroButton: 'Reserve my duo',
     watchNowMain: 'VISIBLE LIKE A CAR',
     watchNowSub: 'Watch now',
@@ -256,7 +256,7 @@ const CONTENT = {
     whatIsHtml:
       'The Duo Helmet & Vest <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° visibility</span><br/>Thanks to <span style="color:#E30613">turn signals</span> and <span style="color:#E30613">brake lights</span><br/>Like a car, controlled by a <span style="color:#E30613">handlebar remote</span>.',
     safetyOvertitle: 'safety',
-    safetyTitle: 'High Visibility Smart Vest & Helmet',
+    safetyTitle: 'High Visibility Smart Helmet & Vest',
     safetyText:
       'Featuring state-of-the-art LED indicators, the vest offers improved visibility, particularly in low-light conditions. Its streamlined and ergonomic design guarantees both comfort and user-friendliness, even when you carry a backpack. The helmet completes your safety with the same signaling functions, plus a very powerful front light.',
     flexOvertitle: 'Flexibility',
@@ -292,7 +292,7 @@ const CONTENT = {
   es: {
     heroPrefix: 'Regala o regálate',
     heroHighlight: 'el Duo Perfecto',
-    heroSuffix: 'chaleco + casco IGLOW',
+    heroSuffix: 'casco + chaleco IGLOW',
     heroButton: 'Reservar mi duo',
     watchNowMain: 'VISIBLE COMO UN COCHE',
     watchNowSub: 'Mira ahora',
@@ -317,7 +317,7 @@ const CONTENT = {
     whatIsHtml:
       'El Duo Casco y Chaleco <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Visibilidad de 360°</span><br/>Gracias a <span style="color:#E30613">intermitentes</span> y <span style="color:#E30613">luces de freno</span><br/>Como un coche, controlado por un <span style="color:#E30613">mando en el manillar</span>.',
     safetyOvertitle: 'seguridad',
-    safetyTitle: 'Chaleco y Casco Inteligentes de Alta Visibilidad',
+    safetyTitle: 'Casco y Chaleco Inteligentes de Alta Visibilidad',
     safetyText:
       'Con indicadores LED de última generación, el chaleco ofrece una mejor visibilidad, especialmente en condiciones de poca luz. Su diseño aerodinámico y ergonómico garantiza comodidad y facilidad de uso, incluso llevando una mochila. El casco completa tu seguridad con las mismas funciones de señalización, además de una luz frontal muy potente.',
     flexOvertitle: 'Flexibilidad',
@@ -353,7 +353,7 @@ const CONTENT = {
   nl: {
     heroPrefix: 'Geef cadeau of trakteer uzelf op',
     heroHighlight: 'de Perfecte Duo',
-    heroSuffix: 'vest + helm IGLOW',
+    heroSuffix: 'helm + vest IGLOW',
     heroButton: 'Mijn duo reserveren',
     watchNowMain: 'ZICHTBAAR ALS EEN AUTO',
     watchNowSub: 'Kijk nu',
@@ -378,7 +378,7 @@ const CONTENT = {
     whatIsHtml:
       'De Duo Helm & Vest <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° zichtbaarheid</span><br/>Dankzij <span style="color:#E30613">richtingaanwijzers</span> en <span style="color:#E30613">remlichten</span><br/>Zoals een auto, bestuurd door een <span style="color:#E30613">afstandsbediening aan het stuur</span>.',
     safetyOvertitle: 'veiligheid',
-    safetyTitle: 'Smart Vest & Helm met Hoge Zichtbaarheid',
+    safetyTitle: 'Smart Helm & Vest met Hoge Zichtbaarheid',
     safetyText:
       'Met geavanceerde LED-indicatoren biedt het vest verbeterde zichtbaarheid, vooral bij weinig licht. Het gestroomlijnde en ergonomische ontwerp garandeert zowel comfort als gebruiksgemak, zelfs met een rugzak. De helm vervolledigt uw veiligheid met dezelfde signaalfuncties, met daarbij een zeer krachtig voorlicht.',
     flexOvertitle: 'Flexibiliteit',
@@ -414,7 +414,7 @@ const CONTENT = {
   pt: {
     heroPrefix: 'Presenteie ou presenteie-se com',
     heroHighlight: 'o Duo Perfeito',
-    heroSuffix: 'colete + capacete IGLOW',
+    heroSuffix: 'capacete + colete IGLOW',
     heroButton: 'Reservar o meu duo',
     watchNowMain: 'VISÍVEL COMO UM CARRO',
     watchNowSub: 'Assista agora',
@@ -439,7 +439,7 @@ const CONTENT = {
     whatIsHtml:
       'O Duo Capacete e Colete <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Visibilidade de 360°</span><br/>Graças a <span style="color:#E30613">setas</span> e <span style="color:#E30613">luzes de freio</span><br/>Como um carro, controlado por um <span style="color:#E30613">controle no guidão</span>.',
     safetyOvertitle: 'segurança',
-    safetyTitle: 'Colete e Capacete Inteligentes de Alta Visibilidade',
+    safetyTitle: 'Capacete e Colete Inteligentes de Alta Visibilidade',
     safetyText:
       'Com indicadores LED de última geração, o colete oferece visibilidade aprimorada, especialmente em condições de pouca luz. Seu design aerodinâmico e ergonômico garante conforto e facilidade de uso, mesmo com uma mochila. O capacete completa a sua segurança com as mesmas funções de sinalização, além de uma luz frontal muito potente.',
     flexOvertitle: 'Flexibilidade',
@@ -475,7 +475,7 @@ const CONTENT = {
   hi: {
     heroPrefix: 'उपहार दें या खुद को दें',
     heroHighlight: 'परफेक्ट डुओ',
-    heroSuffix: 'वेस्ट + हेलमेट IGLOW',
+    heroSuffix: 'हेलमेट + वेस्ट IGLOW',
     heroButton: 'मेरा डुओ आरक्षित करें',
     watchNowMain: 'कार की तरह दिखें',
     watchNowSub: 'अभी देखें',
@@ -500,7 +500,7 @@ const CONTENT = {
     whatIsHtml:
       'डुओ हेलमेट और वेस्ट <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° दृश्यता</span><br/><span style="color:#E30613">टर्न सिग्नल</span> और <span style="color:#E30613">ब्रेक लाइट</span> की बदौलत<br/>कार की तरह, एक <span style="color:#E30613">हैंडलबार रिमोट</span> द्वारा नियंत्रित।',
     safetyOvertitle: 'सुरक्षा',
-    safetyTitle: 'हाई विज़िबिलिटी स्मार्ट वेस्ट और हेलमेट',
+    safetyTitle: 'हाई विज़िबिलिटी स्मार्ट हेलमेट और वेस्ट',
     safetyText:
       'अत्याधुनिक LED संकेतकों के साथ, यह जैकेट बेहतर दृश्यता प्रदान करती है, विशेष रूप से कम रोशनी की स्थिति में। इसका सुव्यवस्थित और एर्गोनोमिक डिज़ाइन आराम और उपयोग में आसानी दोनों की गारंटी देता है, यहां तक कि बैकपैक के साथ भी। हेलमेट समान सिग्नलिंग फ़ंक्शन के साथ आपकी सुरक्षा को पूरा करता है, साथ ही एक बहुत शक्तिशाली फ्रंट लाइट भी देता है।',
     flexOvertitle: 'फ्लेक्सिबिलिटी',
@@ -536,7 +536,7 @@ const CONTENT = {
   ar: {
     heroPrefix: 'أهدِ أو أهدِ نفسك',
     heroHighlight: 'الثنائي المثالي',
-    heroSuffix: 'سترة + خوذة IGLOW',
+    heroSuffix: 'خوذة + سترة IGLOW',
     heroButton: 'احجز ثنائيي',
     watchNowMain: 'مرئي مثل السيارة',
     watchNowSub: 'شاهد الآن',
@@ -561,7 +561,7 @@ const CONTENT = {
     whatIsHtml:
       'دو خوذة وسترة <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">رؤية 360°</span><br/>بفضل <span style="color:#E30613">إشارات الانعطاف</span> و<span style="color:#E30613">مصابيح الفرامل</span><br/>مثل السيارة، يتم التحكم فيها بواسطة <span style="color:#E30613">جهاز تحكم على المقود</span>.',
     safetyOvertitle: 'السلامة',
-    safetyTitle: 'سترة وخوذة ذكية عالية الوضوح',
+    safetyTitle: 'خوذة وسترة ذكية عالية الوضوح',
     safetyText:
       'بفضل مؤشرات LED المتطورة، توفر السترة رؤية محسّنة، خاصة في ظروف الإضاءة المنخفضة. يضمن تصميمها الانسيابي والمريح الراحة وسهولة الاستخدام، حتى عند ارتداء حقيبة ظهر. تُكمل الخوذة أمانك بنفس وظائف الإشارة، مع إضافة ضوء أمامي قوي جدًا.',
     flexOvertitle: 'المرونة',
@@ -597,7 +597,7 @@ const CONTENT = {
   ru: {
     heroPrefix: 'Подарите или побалуйте себя',
     heroHighlight: 'идеальным дуо',
-    heroSuffix: 'жилет + шлем IGLOW',
+    heroSuffix: 'шлем + жилет IGLOW',
     heroButton: 'Зарезервировать мой дуо-комплект',
     watchNowMain: 'ЗАМЕТНЫ, КАК АВТОМОБИЛЬ',
     watchNowSub: 'Смотреть сейчас',
@@ -622,7 +622,7 @@ const CONTENT = {
     whatIsHtml:
       'Дуо Шлем и Жилет <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° видимость</span><br/>Благодаря <span style="color:#E30613">поворотникам</span> и <span style="color:#E30613">стоп-сигналам</span><br/>Как у автомобиля, управляемыми <span style="color:#E30613">пультом на руле</span>.',
     safetyOvertitle: 'безопасность',
-    safetyTitle: 'Умный жилет и шлем повышенной видимости',
+    safetyTitle: 'Умный шлем и жилет повышенной видимости',
     safetyText:
       'Благодаря современным светодиодным индикаторам жилет обеспечивает улучшенную видимость, особенно в условиях низкой освещённости. Его обтекаемый и эргономичный дизайн гарантирует комфорт и удобство использования, даже с рюкзаком. Шлем дополняет вашу безопасность теми же функциями сигнализации, а также очень мощной передней фарой.',
     flexOvertitle: 'Гибкость',
