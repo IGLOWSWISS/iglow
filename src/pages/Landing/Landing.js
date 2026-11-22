@@ -808,11 +808,19 @@ function HeroSection({ t }) {
             maxWidth='770px'
           >
             <Typography variant='h1'>
-              {t.heroPrefix}{' '}
+              {t.heroPrefix}
+              <br />
               <Typography component='span' variant='h1' color='primary'>
                 {t.heroHighlight}
               </Typography>
-              {t.heroSuffix ? ` ${t.heroSuffix}` : ''}
+              {t.heroSuffix ? (
+                <>
+                  <br />
+                  {t.heroSuffix}
+                </>
+              ) : (
+                ''
+              )}
             </Typography>
             <EmptySpace under='h1' />
           </Box>
