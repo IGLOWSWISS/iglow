@@ -49,7 +49,7 @@ const CONTENT = {
     heroPrefix: 'Offrez ou offrez-vous',
     heroHighlight: 'le Duo Parfait',
     heroSuffix: 'gilet + casque IGLOW',
-    heroButton: 'Payer et réserver mon duo',
+    heroButton: 'Réserver mon duo',
     watchNowMain: 'REGARDEZ MAINTENANT',
     watchNowSub: 'Pour être visible comme une voiture',
     watchSub: 'Le gilet connecté avec clignotants et feux de freinage',
@@ -67,8 +67,8 @@ const CONTENT = {
     kickstarterButton: 'IGLOW sur Kickstarter',
     kickstarterCaption: 'Votre Duo IGLOW',
     kickstarterCaptionSub: 'Casque + Gilet',
-    secureSpot: 'Réservez votre place',
-    secureSpotSub: "dès aujourd'hui !",
+    secureSpot: 'Conçu et fabriqué',
+    secureSpotSub: 'en Suisse 🇨🇭',
     whatIsOvertitle: "QU'EST-CE QUE IGLOW ?",
     whatIsHtml:
       'Le Duo Casque et Gilet <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Une visibilité à 360°</span><br/>Grâce à des <span style="color:#E30613">clignotants</span> et <span style="color:#E30613">feux de freinage</span><br/>Comme une voiture, contrôlés par une <span style="color:#E30613">télécommande sur le guidon</span>.',
@@ -110,7 +110,7 @@ const CONTENT = {
     heroPrefix: 'Verschenken Sie oder gönnen Sie sich',
     heroHighlight: 'das perfekte Duo',
     heroSuffix: 'Weste + Helm IGLOW',
-    heroButton: 'Mein Duo bezahlen und reservieren',
+    heroButton: 'Mein Duo reservieren',
     watchNowMain: 'JETZT ANSEHEN',
     watchNowSub: 'Um sichtbar zu sein wie ein Auto',
     watchSub: 'Die Smart Weste mit Blinkern + Bremslichtern',
@@ -128,8 +128,8 @@ const CONTENT = {
     kickstarterButton: 'IGLOW auf Kickstarter',
     kickstarterCaption: 'Ihr IGLOW Duo',
     kickstarterCaptionSub: 'Helm + Weste',
-    secureSpot: 'Sichern Sie sich Ihren Platz',
-    secureSpotSub: 'noch heute!',
+    secureSpot: 'Entwickelt und hergestellt',
+    secureSpotSub: 'in der Schweiz 🇨🇭',
     whatIsOvertitle: 'WAS IST IGLOW ?',
     whatIsHtml:
       'Das Duo Helm & Weste <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360°-Sichtbarkeit</span><br/>Mit <span style="color:#E30613">Blinkern</span> und <span style="color:#E30613">Bremslichtern</span><br/>Wie ein Auto, gesteuert durch eine <span style="color:#E30613">Fernbedienung am Lenker</span>.',
@@ -171,7 +171,7 @@ const CONTENT = {
     heroPrefix: 'Regala o regalati',
     heroHighlight: 'il Duo Perfetto',
     heroSuffix: 'gilet + casco IGLOW',
-    heroButton: 'Pagare e prenotare il mio duo',
+    heroButton: 'Prenotare il mio duo',
     watchNowMain: 'GUARDA ORA',
     watchNowSub: "Per essere visibile come un'auto",
     watchSub: 'Il gilet smart con frecce + luci di stop',
@@ -189,8 +189,8 @@ const CONTENT = {
     kickstarterButton: 'IGLOW su Kickstarter',
     kickstarterCaption: 'Il tuo Duo IGLOW',
     kickstarterCaptionSub: 'Casco + Gilet',
-    secureSpot: 'Assicurati il tuo posto',
-    secureSpotSub: 'subito!',
+    secureSpot: 'Progettato e prodotto',
+    secureSpotSub: 'in Svizzera 🇨🇭',
     whatIsOvertitle: "COS'È IGLOW ?",
     whatIsHtml:
       'Il Duo Casco e Gilet <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Una visibilità a 360°</span><br/>Grazie a <span style="color:#E30613">frecce</span> e <span style="color:#E30613">luci di stop</span><br/>Come un\'auto, controllato da un <span style="color:#E30613">telecomando sul manubrio</span>.',
@@ -232,7 +232,7 @@ const CONTENT = {
     heroPrefix: 'Gift it or treat yourself to',
     heroHighlight: 'the Perfect Duo',
     heroSuffix: 'vest + helmet IGLOW',
-    heroButton: 'Pay and reserve my duo',
+    heroButton: 'Reserve my duo',
     watchNowMain: 'Watch NOW',
     watchNowSub: 'To be visible like a car',
     watchSub: 'The Smart Vest with Turn signals + Brake lights',
@@ -250,8 +250,8 @@ const CONTENT = {
     kickstarterButton: 'IGLOW on Kickstarter',
     kickstarterCaption: 'Your IGLOW Duo',
     kickstarterCaptionSub: 'Helmet + Vest',
-    secureSpot: 'Secure your spot',
-    secureSpotSub: 'today!',
+    secureSpot: 'Designed and made',
+    secureSpotSub: 'in Switzerland 🇨🇭',
     whatIsOvertitle: 'WHAT IS IGLOW ?',
     whatIsHtml:
       'The Duo Helmet & Vest <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° visibility</span><br/>Thanks to <span style="color:#E30613">turn signals</span> and <span style="color:#E30613">brake lights</span><br/>Like a car, controlled by a <span style="color:#E30613">handlebar remote</span>.',
@@ -293,7 +293,7 @@ const CONTENT = {
     heroPrefix: 'Regala o regálate',
     heroHighlight: 'el Duo Perfecto',
     heroSuffix: 'chaleco + casco IGLOW',
-    heroButton: 'Pagar y reservar mi duo',
+    heroButton: 'Reservar mi duo',
     watchNowMain: 'MIRA AHORA',
     watchNowSub: 'Para ser visible como un coche',
     watchSub: 'El chaleco inteligente con intermitentes + luces de freno',
@@ -311,8 +311,8 @@ const CONTENT = {
     kickstarterButton: 'IGLOW en Kickstarter',
     kickstarterCaption: 'Tu Duo IGLOW',
     kickstarterCaptionSub: 'Casco + Chaleco',
-    secureSpot: '¡Asegura tu lugar',
-    secureSpotSub: 'hoy!',
+    secureSpot: 'Diseñado y fabricado',
+    secureSpotSub: 'en Suiza 🇨🇭',
     whatIsOvertitle: '¿QUÉ ES IGLOW ?',
     whatIsHtml:
       'El Duo Casco y Chaleco <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Visibilidad de 360°</span><br/>Gracias a <span style="color:#E30613">intermitentes</span> y <span style="color:#E30613">luces de freno</span><br/>Como un coche, controlado por un <span style="color:#E30613">mando en el manillar</span>.',
@@ -354,7 +354,7 @@ const CONTENT = {
     heroPrefix: 'Geef cadeau of trakteer uzelf op',
     heroHighlight: 'de Perfecte Duo',
     heroSuffix: 'vest + helm IGLOW',
-    heroButton: 'Mijn duo betalen en reserveren',
+    heroButton: 'Mijn duo reserveren',
     watchNowMain: 'KIJK NU',
     watchNowSub: 'Om zichtbaar te zijn als een auto',
     watchSub: 'Het Smart Vest met richtingaanwijzers + remlichten',
@@ -372,8 +372,8 @@ const CONTENT = {
     kickstarterButton: 'IGLOW op Kickstarter',
     kickstarterCaption: 'Uw IGLOW Duo',
     kickstarterCaptionSub: 'Helm + Vest',
-    secureSpot: 'Verzeker u van uw plek',
-    secureSpotSub: 'vandaag nog!',
+    secureSpot: 'Ontworpen en gemaakt',
+    secureSpotSub: 'in Zwitserland 🇨🇭',
     whatIsOvertitle: 'WAT IS IGLOW ?',
     whatIsHtml:
       'De Duo Helm & Vest <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° zichtbaarheid</span><br/>Dankzij <span style="color:#E30613">richtingaanwijzers</span> en <span style="color:#E30613">remlichten</span><br/>Zoals een auto, bestuurd door een <span style="color:#E30613">afstandsbediening aan het stuur</span>.',
@@ -415,7 +415,7 @@ const CONTENT = {
     heroPrefix: 'Presenteie ou presenteie-se com',
     heroHighlight: 'o Duo Perfeito',
     heroSuffix: 'colete + capacete IGLOW',
-    heroButton: 'Pagar e reservar o meu duo',
+    heroButton: 'Reservar o meu duo',
     watchNowMain: 'ASSISTA AGORA',
     watchNowSub: 'Para ser visível como um carro',
     watchSub: 'O Colete Inteligente com Setas + Luzes de Freio',
@@ -433,8 +433,8 @@ const CONTENT = {
     kickstarterButton: 'IGLOW no Kickstarter',
     kickstarterCaption: 'Seu Duo IGLOW',
     kickstarterCaptionSub: 'Capacete + Colete',
-    secureSpot: 'Garanta o seu lugar',
-    secureSpotSub: 'já!',
+    secureSpot: 'Concebido e fabricado',
+    secureSpotSub: 'na Suíça 🇨🇭',
     whatIsOvertitle: 'O QUE É O IGLOW ?',
     whatIsHtml:
       'O Duo Capacete e Colete <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">Visibilidade de 360°</span><br/>Graças a <span style="color:#E30613">setas</span> e <span style="color:#E30613">luzes de freio</span><br/>Como um carro, controlado por um <span style="color:#E30613">controle no guidão</span>.',
@@ -476,7 +476,7 @@ const CONTENT = {
     heroPrefix: 'उपहार दें या खुद को दें',
     heroHighlight: 'परफेक्ट डुओ',
     heroSuffix: 'वेस्ट + हेलमेट IGLOW',
-    heroButton: 'मेरा डुओ भुगतान करें और आरक्षित करें',
+    heroButton: 'मेरा डुओ आरक्षित करें',
     watchNowMain: 'अभी देखें',
     watchNowSub: 'कार की तरह दिखाई देने के लिए',
     watchSub: 'टर्न सिग्नल + ब्रेक लाइट के साथ स्मार्ट वेस्ट',
@@ -494,8 +494,8 @@ const CONTENT = {
     kickstarterButton: 'Kickstarter पर IGLOW',
     kickstarterCaption: 'आपका IGLOW डुओ',
     kickstarterCaptionSub: 'हेलमेट + वेस्ट',
-    secureSpot: 'अपनी जगह सुरक्षित करें',
-    secureSpotSub: 'आज ही!',
+    secureSpot: 'डिज़ाइन और निर्मित',
+    secureSpotSub: 'स्विट्जरलैंड में 🇨🇭',
     whatIsOvertitle: 'IGLOW क्या है ?',
     whatIsHtml:
       'डुओ हेलमेट और वेस्ट <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° दृश्यता</span><br/><span style="color:#E30613">टर्न सिग्नल</span> और <span style="color:#E30613">ब्रेक लाइट</span> की बदौलत<br/>कार की तरह, एक <span style="color:#E30613">हैंडलबार रिमोट</span> द्वारा नियंत्रित।',
@@ -537,7 +537,7 @@ const CONTENT = {
     heroPrefix: 'أهدِ أو أهدِ نفسك',
     heroHighlight: 'الثنائي المثالي',
     heroSuffix: 'سترة + خوذة IGLOW',
-    heroButton: 'ادفع واحجز ثنائيي',
+    heroButton: 'احجز ثنائيي',
     watchNowMain: 'شاهد الآن',
     watchNowSub: 'لتكون مرئياً مثل السيارة',
     watchSub: 'السترة الذكية مع إشارات الانعطاف ومصابيح الفرامل',
@@ -555,8 +555,8 @@ const CONTENT = {
     kickstarterButton: 'IGLOW على Kickstarter',
     kickstarterCaption: 'ثنائي IGLOW الخاص بك',
     kickstarterCaptionSub: 'خوذة + سترة',
-    secureSpot: 'احجز مكانك',
-    secureSpotSub: 'اليوم!',
+    secureSpot: 'مصمم ومصنوع',
+    secureSpotSub: 'في سويسرا 🇨🇭',
     whatIsOvertitle: 'ما هو IGLOW ؟',
     whatIsHtml:
       'دو خوذة وسترة <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">رؤية 360°</span><br/>بفضل <span style="color:#E30613">إشارات الانعطاف</span> و<span style="color:#E30613">مصابيح الفرامل</span><br/>مثل السيارة، يتم التحكم فيها بواسطة <span style="color:#E30613">جهاز تحكم على المقود</span>.',
@@ -598,7 +598,7 @@ const CONTENT = {
     heroPrefix: 'Подарите или побалуйте себя',
     heroHighlight: 'идеальным дуо',
     heroSuffix: 'жилет + шлем IGLOW',
-    heroButton: 'Оплатить и зарезервировать мой дуо-комплект',
+    heroButton: 'Зарезервировать мой дуо-комплект',
     watchNowMain: 'СМОТРЕТЬ СЕЙЧАС',
     watchNowSub: 'Быть заметным, как автомобиль',
     watchSub: 'Умный жилет с поворотниками и стоп-сигналами',
@@ -616,8 +616,8 @@ const CONTENT = {
     kickstarterButton: 'IGLOW на Kickstarter',
     kickstarterCaption: 'Ваш дуо-комплект IGLOW',
     kickstarterCaptionSub: 'Шлем + Жилет',
-    secureSpot: 'Забронируйте своё место',
-    secureSpotSub: 'уже сегодня!',
+    secureSpot: 'Разработано и произведено',
+    secureSpotSub: 'в Швейцарии 🇨🇭',
     whatIsOvertitle: 'ЧТО ТАКОЕ IGLOW ?',
     whatIsHtml:
       'Дуо Шлем и Жилет <span style="color:#E30613">IGLOW</span><br/><span style="color:#E30613">360° видимость</span><br/>Благодаря <span style="color:#E30613">поворотникам</span> и <span style="color:#E30613">стоп-сигналам</span><br/>Как у автомобиля, управляемыми <span style="color:#E30613">пультом на руле</span>.',
@@ -830,13 +830,27 @@ function HeroSection({ t }) {
               backgroundColor: '#FF2200',
               textAlign: 'center',
               transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+              animation: 'iglowPulse 1.6s ease-in-out infinite',
+              '@keyframes iglowPulse': {
+                '0%, 100%': {
+                  transform: 'scale(1)',
+                  boxShadow: '0 0 0 rgba(255,34,0,0)',
+                },
+                '50%': {
+                  transform: 'scale(1.06)',
+                  boxShadow:
+                    '0 0 10px rgba(255,255,255,0.7), 0 0 24px rgba(255,60,0,0.8)',
+                },
+              },
               '&:hover': {
                 backgroundColor: '#FF2200',
+                animation: 'none',
                 transform: 'scale(1.08) translateY(-3px)',
                 boxShadow:
                   '0 0 6px rgba(255,255,255,0.9), 0 0 16px rgba(255,80,0,1), 0 0 34px rgba(255,20,0,0.95), 0 0 65px rgba(255,0,0,0.8), 0 0 105px rgba(255,20,0,0.55)',
               },
               '&:active': {
+                animation: 'none',
                 transform: 'scale(0.96) translateY(3px)',
                 boxShadow: 'none',
               },
@@ -1169,30 +1183,6 @@ function CountdownSection({ t }) {
 
         <Countdown />
 
-        <Button
-          variant='contained'
-          color='primary'
-          href='/reserve'
-          size='large'
-          sx={{
-            marginY: 3,
-            backgroundColor: '#FF2200',
-            textAlign: 'center',
-            transition: 'transform 0.15s ease, box-shadow 0.15s ease',
-            '&:hover': {
-              backgroundColor: '#FF2200',
-              transform: 'scale(1.08) translateY(-3px)',
-              boxShadow:
-                '0 0 6px rgba(255,255,255,0.9), 0 0 16px rgba(255,80,0,1), 0 0 34px rgba(255,20,0,0.95), 0 0 65px rgba(255,0,0,0.8), 0 0 105px rgba(255,20,0,0.55)',
-            },
-            '&:active': {
-              transform: 'scale(0.96) translateY(3px)',
-              boxShadow: 'none',
-            },
-          }}
-        >
-          {t.heroButton}
-        </Button>
         <Box
           sx={{
             textAlign: 'center',
@@ -1286,6 +1276,45 @@ function CountdownSection({ t }) {
             CHF 100.-
           </Typography>
         </Box>
+
+        <Button
+          variant='contained'
+          color='primary'
+          href='/reserve'
+          size='large'
+          sx={{
+            marginY: 3,
+            backgroundColor: '#FF2200',
+            textAlign: 'center',
+            transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+            animation: 'iglowPulse 1.6s ease-in-out infinite',
+            '@keyframes iglowPulse': {
+              '0%, 100%': {
+                transform: 'scale(1)',
+                boxShadow: '0 0 0 rgba(255,34,0,0)',
+              },
+              '50%': {
+                transform: 'scale(1.06)',
+                boxShadow:
+                  '0 0 10px rgba(255,255,255,0.7), 0 0 24px rgba(255,60,0,0.8)',
+              },
+            },
+            '&:hover': {
+              backgroundColor: '#FF2200',
+              animation: 'none',
+              transform: 'scale(1.08) translateY(-3px)',
+              boxShadow:
+                '0 0 6px rgba(255,255,255,0.9), 0 0 16px rgba(255,80,0,1), 0 0 34px rgba(255,20,0,0.95), 0 0 65px rgba(255,0,0,0.8), 0 0 105px rgba(255,20,0,0.55)',
+            },
+            '&:active': {
+              animation: 'none',
+              transform: 'scale(0.96) translateY(3px)',
+              boxShadow: 'none',
+            },
+          }}
+        >
+          {t.heroButton}
+        </Button>
 
         <Typography
           variant='body1'
