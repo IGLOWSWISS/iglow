@@ -105,9 +105,15 @@ const Reserve = () => {
       .then((data) => {
         if (data && data.authenticated) {
           setAccount(data.customer);
+        } else {
+          setAuthError('');
+          setShowAccountModal(true);
         }
       })
-      .catch(() => {});
+      .catch(() => {
+        setAuthError('');
+        setShowAccountModal(true);
+      });
   }, []);
 
   const handleAuthFieldChange = (field) => (e) => {

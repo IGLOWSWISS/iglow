@@ -56,6 +56,7 @@ const CONTENT = {
     reserveAction: 'Découvrez le premier duo',
     reserveNowWord: 'avec éclairage synchronisé :',
     reserveDuoText: 'Casque + Gilet',
+    launchDateCaption: 'Ouverture des ventes le 27 novembre 2026 sur iglow.swiss & Kickstarter',
     exclusive: 'EXCLUSIF',
     duoSpecial: 'OFFRE DUO SPÉCIALE',
     insteadOfLabel: 'au lieu de',
@@ -63,6 +64,8 @@ const CONTENT = {
       "Offre spéciale Black Friday & lancement Kickstarter : le Duo Casque + Gilet IGLOW",
     newPricePrefix: 'PAYÉ SEULEMENT',
     discountLinePrefix: 'Économie immédiate de',
+    lowestPriceBadge: '🏆 Le prix le plus bas jamais proposé pour cette technologie',
+    priorityShippingBadge: '🚀 Livraison prioritaire pour les premiers inscrits',
     clickToReserve: 'Cliquez pour réserver et faire partie du succès.',
     kickstarterButton: 'IGLOW sur Kickstarter',
     kickstarterCaption: 'Votre Duo IGLOW',
@@ -117,6 +120,7 @@ const CONTENT = {
     reserveAction: 'Entdecken Sie das erste Duo',
     reserveNowWord: 'mit synchronisierter Beleuchtung:',
     reserveDuoText: 'Helm + Weste',
+    launchDateCaption: 'Verkaufsstart am 27. November 2026 auf iglow.swiss & Kickstarter',
     exclusive: 'EXKLUSIV',
     duoSpecial: 'DUO SPEZIAL',
     insteadOfLabel: 'statt',
@@ -124,6 +128,8 @@ const CONTENT = {
       'Black Friday & Kickstarter-Launch-Spezial: das IGLOW Helm + Weste Duo',
     newPricePrefix: 'NUR BEZAHLT',
     discountLinePrefix: 'Sofortige Ersparnis von',
+    lowestPriceBadge: '🏆 Der niedrigste Preis, der je für diese Technologie angeboten wurde',
+    priorityShippingBadge: '🚀 Bevorzugter Versand für die ersten Anmeldungen',
     clickToReserve: 'Klicken Sie, um zu reservieren und Teil des Erfolgs zu sein.',
     kickstarterButton: 'IGLOW auf Kickstarter',
     kickstarterCaption: 'Ihr IGLOW Duo',
@@ -178,6 +184,7 @@ const CONTENT = {
     reserveAction: 'Scopri il primo duo',
     reserveNowWord: 'con illuminazione sincronizzata:',
     reserveDuoText: 'Casco + Gilet',
+    launchDateCaption: 'Apertura delle vendite il 27 novembre 2026 su iglow.swiss & Kickstarter',
     exclusive: 'ESCLUSIVO',
     duoSpecial: 'OFFERTA DUO SPECIALE',
     insteadOfLabel: 'invece di',
@@ -185,6 +192,8 @@ const CONTENT = {
       'Offerta speciale Black Friday e lancio Kickstarter: il Duo Casco + Gilet IGLOW',
     newPricePrefix: 'PAGATO SOLO',
     discountLinePrefix: 'Risparmio immediato di',
+    lowestPriceBadge: '🏆 Il prezzo più basso mai proposto per questa tecnologia',
+    priorityShippingBadge: '🚀 Spedizione prioritaria per i primi iscritti',
     clickToReserve: 'Clicca per prenotare e far parte del successo.',
     kickstarterButton: 'IGLOW su Kickstarter',
     kickstarterCaption: 'Il tuo Duo IGLOW',
@@ -239,6 +248,7 @@ const CONTENT = {
     reserveAction: 'Discover the first duo',
     reserveNowWord: 'with synchronized lighting:',
     reserveDuoText: 'Helmet + Vest',
+    launchDateCaption: 'Sales open November 27, 2026 on iglow.swiss & Kickstarter',
     exclusive: 'EXCLUSIVE',
     duoSpecial: 'DUO SPECIAL',
     insteadOfLabel: 'instead of',
@@ -246,6 +256,8 @@ const CONTENT = {
       'Black Friday & Kickstarter launch special: the IGLOW Helmet + Vest Duo',
     newPricePrefix: 'PAID ONLY',
     discountLinePrefix: 'Instant savings of',
+    lowestPriceBadge: '🏆 The lowest price ever offered for this technology',
+    priorityShippingBadge: '🚀 Priority shipping for the first to sign up',
     clickToReserve: 'Click to reserve and be part of the success.',
     kickstarterButton: 'IGLOW on Kickstarter',
     kickstarterCaption: 'Your IGLOW Duo',
@@ -300,6 +312,7 @@ const CONTENT = {
     reserveAction: 'Descubre el primer duo',
     reserveNowWord: 'con iluminación sincronizada:',
     reserveDuoText: 'Casco + Chaleco',
+    launchDateCaption: 'Apertura de ventas el 27 de noviembre de 2026 en iglow.swiss y Kickstarter',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
     insteadOfLabel: 'en lugar de',
@@ -307,6 +320,8 @@ const CONTENT = {
       'Especial de lanzamiento de Black Friday y Kickstarter: el Duo Casco + Chaleco IGLOW',
     newPricePrefix: 'PAGADO SOLO',
     discountLinePrefix: 'Ahorro inmediato de',
+    lowestPriceBadge: '🏆 El precio más bajo jamás ofrecido para esta tecnología',
+    priorityShippingBadge: '🚀 Envío prioritario para los primeros inscritos',
     clickToReserve: 'Haz clic para reservar y ser parte del éxito.',
     kickstarterButton: 'IGLOW en Kickstarter',
     kickstarterCaption: 'Tu Duo IGLOW',
@@ -361,6 +376,7 @@ const CONTENT = {
     reserveAction: 'Ontdek de eerste duo',
     reserveNowWord: 'met gesynchroniseerde verlichting:',
     reserveDuoText: 'Helm + Vest',
+    launchDateCaption: 'Verkoop start op 27 november 2026 op iglow.swiss & Kickstarter',
     exclusive: 'EXCLUSIEF',
     duoSpecial: 'DUO SPECIAL',
     insteadOfLabel: 'in plaats van',
@@ -368,6 +384,8 @@ const CONTENT = {
       'Black Friday & Kickstarter-lancering special: de IGLOW Helm + Vest Duo',
     newPricePrefix: 'SLECHTS BETAALD',
     discountLinePrefix: 'Directe besparing van',
+    lowestPriceBadge: '🏆 De laagste prijs ooit voor deze technologie',
+    priorityShippingBadge: '🚀 Voorrang bij verzending voor de eerste aanmeldingen',
     clickToReserve: 'Klik om te reserveren en deel uit te maken van het succes.',
     kickstarterButton: 'IGLOW op Kickstarter',
     kickstarterCaption: 'Uw IGLOW Duo',
@@ -422,6 +440,7 @@ const CONTENT = {
     reserveAction: 'Descubra o primeiro duo',
     reserveNowWord: 'com iluminação sincronizada:',
     reserveDuoText: 'Capacete + Colete',
+    launchDateCaption: 'Abertura das vendas em 27 de novembro de 2026 em iglow.swiss & Kickstarter',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
     insteadOfLabel: 'em vez de',
@@ -429,6 +448,8 @@ const CONTENT = {
       'Especial de lançamento Black Friday & Kickstarter: o Duo Capacete + Colete IGLOW',
     newPricePrefix: 'PAGO APENAS',
     discountLinePrefix: 'Economia imediata de',
+    lowestPriceBadge: '🏆 O preço mais baixo já oferecido para esta tecnologia',
+    priorityShippingBadge: '🚀 Envio prioritário para os primeiros inscritos',
     clickToReserve: 'Clique para reservar e fazer parte do sucesso.',
     kickstarterButton: 'IGLOW no Kickstarter',
     kickstarterCaption: 'Seu Duo IGLOW',
@@ -483,6 +504,7 @@ const CONTENT = {
     reserveAction: 'सबसे पहला डुओ खोजें',
     reserveNowWord: 'सिंक्रनाइज़्ड लाइटिंग के साथ:',
     reserveDuoText: 'हेलमेट + जैकेट',
+    launchDateCaption: 'बिक्री 27 नवंबर 2026 को iglow.swiss और Kickstarter पर शुरू होगी',
     exclusive: 'एक्सक्लूसिव',
     duoSpecial: 'डुओ स्पेशल',
     insteadOfLabel: 'के बजाय',
@@ -490,6 +512,8 @@ const CONTENT = {
       'ब्लैक फ्राइडे और किकस्टार्टर लॉन्च स्पेशल: IGLOW हेलमेट + जैकेट डुओ',
     newPricePrefix: 'सिर्फ भुगतान',
     discountLinePrefix: 'तत्काल बचत',
+    lowestPriceBadge: '🏆 इस तकनीक के लिए अब तक की सबसे कम कीमत',
+    priorityShippingBadge: '🚀 पहले पंजीकरण करने वालों के लिए प्राथमिकता शिपिंग',
     clickToReserve: 'आरक्षित करने और सफलता का हिस्सा बनने के लिए क्लिक करें।',
     kickstarterButton: 'Kickstarter पर IGLOW',
     kickstarterCaption: 'आपका IGLOW डुओ',
@@ -544,6 +568,7 @@ const CONTENT = {
     reserveAction: 'اكتشف أول ثنائي',
     reserveNowWord: 'بإضاءة متزامنة:',
     reserveDuoText: 'خوذة + سترة',
+    launchDateCaption: 'افتتاح المبيعات في 27 نوفمبر 2026 على iglow.swiss وKickstarter',
     exclusive: 'حصري',
     duoSpecial: 'عرض الثنائي الخاص',
     insteadOfLabel: 'بدلاً من',
@@ -551,6 +576,8 @@ const CONTENT = {
       'عرض إطلاق بلاك فرايدي وكيك ستارتر الخاص: ثنائي الخوذة والسترة IGLOW',
     newPricePrefix: 'مدفوع فقط',
     discountLinePrefix: 'توفير فوري قدره',
+    lowestPriceBadge: '🏆 أدنى سعر تم تقديمه لهذه التقنية على الإطلاق',
+    priorityShippingBadge: '🚀 شحن ذو أولوية لأول المسجلين',
     clickToReserve: 'انقر للحجز وكن جزءاً من النجاح.',
     kickstarterButton: 'IGLOW على Kickstarter',
     kickstarterCaption: 'ثنائي IGLOW الخاص بك',
@@ -605,6 +632,7 @@ const CONTENT = {
     reserveAction: 'Откройте для себя первый дуо',
     reserveNowWord: 'с синхронизированной подсветкой:',
     reserveDuoText: 'Шлем + жилет',
+    launchDateCaption: 'Старт продаж 27 ноября 2026 года на iglow.swiss и Kickstarter',
     exclusive: 'ЭКСКЛЮЗИВ',
     duoSpecial: 'СПЕЦИАЛЬНЫЙ ДУО',
     insteadOfLabel: 'вместо',
@@ -612,6 +640,8 @@ const CONTENT = {
       'Специальное предложение Black Friday и запуска Kickstarter: дуо-комплект шлем + жилет IGLOW',
     newPricePrefix: 'ОПЛАЧЕНО ВСЕГО',
     discountLinePrefix: 'Мгновенная экономия',
+    lowestPriceBadge: '🏆 Самая низкая цена, когда-либо предложенная за эту технологию',
+    priorityShippingBadge: '🚀 Приоритетная доставка для первых зарегистрированных',
     clickToReserve: 'Нажмите, чтобы забронировать и стать частью успеха.',
     kickstarterButton: 'IGLOW на Kickstarter',
     kickstarterCaption: 'Ваш дуо-комплект IGLOW',
@@ -1203,6 +1233,13 @@ function CountdownSection({ t }) {
 
         <Countdown />
 
+        <Typography
+          variant='body2'
+          sx={{ color: 'white', opacity: 0.8, mb: 3, textAlign: 'center' }}
+        >
+          {t.launchDateCaption}
+        </Typography>
+
         <Box
           sx={{
             textAlign: 'center',
@@ -1294,6 +1331,19 @@ function CountdownSection({ t }) {
             {t.discountLinePrefix}
             <br />
             CHF 100.-
+          </Typography>
+
+          <Typography
+            variant='body2'
+            sx={{ color: 'white', opacity: 0.85, mt: 3 }}
+          >
+            {t.lowestPriceBadge}
+          </Typography>
+          <Typography
+            variant='body2'
+            sx={{ color: 'white', opacity: 0.85 }}
+          >
+            {t.priorityShippingBadge}
           </Typography>
         </Box>
 
