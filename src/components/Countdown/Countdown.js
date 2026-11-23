@@ -9,8 +9,12 @@ import CountdownLogic from './CountdownLogic';
 import NoisyContainer from '../NoisyContainer/NoisyContainer.js';
 
 function Countdown() {
-  const { days, hours, minutes, seconds, campaignRunning } = CountdownLogic();
+  const { days, hours, minutes, seconds, campaignEnded } = CountdownLogic();
   const { STATE_GREY } = Palette();
+
+  if (campaignEnded) {
+    return null;
+  }
 
   const timerDescriptionProps = {
     variant: 'body2',

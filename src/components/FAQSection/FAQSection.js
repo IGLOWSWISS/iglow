@@ -10,9 +10,9 @@ import { PiPlusCircleBold, PiMinusCircleBold } from 'react-icons/pi';
 import FAQSectionLogic from './FAQSectionLogic';
 import Palette from '../../theme/palette';
 
-function FAQSection() {
+function FAQSection({ lang }) {
   const { questions, openAccordionId, handleAccordionChange } =
-    FAQSectionLogic();
+    FAQSectionLogic(lang);
   const { NIGHT, STATE_GREY, RED } = Palette();
 
   return (

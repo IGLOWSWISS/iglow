@@ -69,6 +69,7 @@ function Navbar({ admin, coverPage, topOffset = 0, joinUsLabel = 'Join Us' }) {
           background: 'transparent',
           position: 'absolute',
           top: topOffset,
+          pointerEvents: 'none',
         }}
       >
         <Container
@@ -89,6 +90,7 @@ function Navbar({ admin, coverPage, topOffset = 0, joinUsLabel = 'Join Us' }) {
             gap='16px'
             component={HashLink}
             to='/'
+            sx={{ pointerEvents: 'auto' }}
           >
             <Box
               component='img'
@@ -136,7 +138,12 @@ function Navbar({ admin, coverPage, topOffset = 0, joinUsLabel = 'Join Us' }) {
             />
           </Typography> */}
 
-          <Button variant='contained' component={HashLink} to='/#join'>
+          <Button
+            variant='contained'
+            component={HashLink}
+            to='/#join'
+            sx={{ pointerEvents: 'auto' }}
+          >
             {joinUsLabel}
           </Button>
           {/* {!empty &&

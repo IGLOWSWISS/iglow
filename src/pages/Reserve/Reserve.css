@@ -210,6 +210,16 @@
   color: #000;
 }
 
+.flag-zh {
+  background: #de2910;
+  color: #ffde00;
+}
+
+.flag-ko {
+  background: #ffffff;
+  color: #000;
+}
+
 /* Hero Section */
 .hero {
   background: #000;

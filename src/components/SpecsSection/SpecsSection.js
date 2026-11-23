@@ -10,8 +10,8 @@ import { PiPlusCircleBold, PiMinusCircleBold } from 'react-icons/pi';
 import SpecsSectionLogic from './SpecsSectionLogic';
 import Palette from '../../theme/palette';
 
-function SpecsSection() {
-  const { specs, openAccordionId, handleAccordionChange } = SpecsSectionLogic();
+function SpecsSection({ lang }) {
+  const { specs, openAccordionId, handleAccordionChange } = SpecsSectionLogic(lang);
   const { NIGHT, STATE_GREY, RED } = Palette();
 
   return (

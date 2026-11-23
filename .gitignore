@@ -27,4 +27,4 @@ yarn-error.log*
 /src/assets/videos
 
 # DB credentials, deployed manually, never committed
-/public/api/config.php
+/public/api/config.php/scratchpad

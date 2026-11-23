@@ -7,7 +7,7 @@ const Result = () => {
 
   useEffect(() => {
     const supportedLangs = [
-      'fr', 'de', 'it', 'en', 'es', 'nl', 'pt', 'hi', 'ar', 'ru',
+      'fr', 'de', 'it', 'en', 'es', 'nl', 'pt', 'hi', 'ar', 'ru', 'zh', 'ko',
     ];
 
     // Get language from URL or browser
@@ -273,6 +273,50 @@ const Result = () => {
       ],
       backHome: 'Вернуться на Главную',
       contactUs: 'Связаться с Нами',
+      showIcon: true,
+    },
+    zh: {
+      title: '恭喜！',
+      message:
+        '您的 <span style="color:#E30613; font-weight:bold;">IGLOW 智能单车背心</span> 预订已成功确认！欢迎加入智能出行之旅。',
+      confirmedTitle: '预订已确认',
+      confirmationMessage:
+        '感谢您！您的购买已成功登记，预订已确认。确认邮件已发送至您的邮箱。',
+      confirmedItems: [
+        '恭喜！您刚刚节省了<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
+      ],
+      nextStepsTitle: '👀 后续步骤',
+      nextStepsItems: [
+        '请留意邮箱获取最新动态',
+        'Kickstarter 独家首发权限',
+        '优先发货',
+        '专属客户支持',
+        '向亲朋好友分享 iGlow.swiss 众筹项目',
+      ],
+      backHome: '返回首页',
+      contactUs: '联系我们',
+      showIcon: true,
+    },
+    ko: {
+      title: '축하합니다!',
+      message:
+        '<span style="color:#E30613; font-weight:bold;">IGLOW 스마트 자전거 조끼</span> 예약이 성공적으로 확정되었습니다! 스마트 모빌리티 여정에 오신 것을 환영합니다.',
+      confirmedTitle: '예약 확정',
+      confirmationMessage:
+        '감사합니다! 결제가 성공적으로 등록되었으며 사전 예약이 확정되었습니다. 확인 이메일이 발송되었습니다.',
+      confirmedItems: [
+        '축하합니다! 방금 절약하셨습니다<br/><span style="display:block; text-align:center; margin-top:10px;"><span style="color:#28a745; font-weight:bold; font-size:1.8em;">CHF 100.-</span></span>',
+      ],
+      nextStepsTitle: '👀 다음 단계',
+      nextStepsItems: [
+        '업데이트를 위해 이메일을 확인해 주세요',
+        'Kickstarter 런칭 독점 액세스',
+        '우선 배송',
+        '전담 고객 지원',
+        '친구와 가족에게 iGlow.swiss 크라우드펀딩을 알려주세요',
+      ],
+      backHome: '홈으로 돌아가기',
+      contactUs: '문의하기',
       showIcon: true,
     },
   };

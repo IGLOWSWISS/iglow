@@ -110,7 +110,7 @@ guarantee the accuracy, completeness, or currency of the information provided.<o
 line-height:normal'><span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif;
 mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
 none;mso-ansi-language:EN-US;mso-fareast-language:FR'>As a result, iGlow Swiss
-SA disclaims any responsibility for errors, omissions, or results obtained from
+disclaims any responsibility for errors, omissions, or results obtained from
 the use of this information. The user is solely responsible for the use of the
 information available on the website.<o:p></o:p></span></p>
 

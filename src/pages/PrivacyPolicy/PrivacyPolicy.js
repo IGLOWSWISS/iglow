@@ -76,6 +76,7 @@ function PrivacyPolicy() {
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><strong><span style="font-family:Aptos;">11. Contact Us</span></strong></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</span></p>
 <p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><strong><span style="font-family:Aptos;">iGlow Team</span></strong></p>
+<p style="margin-top:14pt; margin-bottom:14pt; text-align:justify; line-height:normal; font-size:10pt;"><span style="font-family:Aptos;">Email: hello@iglow.swiss</span></p>
 <p style="bottom: 10px; right: 10px; position: absolute;"></p>`,
           }}
         />

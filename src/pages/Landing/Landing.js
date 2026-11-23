@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Palette from '../../theme/palette';
 import { detectCurrency } from '../../utils/geoCurrency';
 
-import { CONTACT_EMAIL } from '../../config/AppConfig';
+import { CONTACT_EMAIL, END_CAMPAIGN_DATE } from '../../config/AppConfig';
 import jacketHero from '../../assets/videos/ilgow-loop.mp4';
 import trailer16x9 from '../../assets/videos/trailer/16x9.mp4';
 import topspot1x1 from '../../assets/videos/topspot/1x1.mp4';
@@ -17,7 +17,8 @@ import duoHelmetVest from '../../assets/images/iglow-duo-helmet-vest.jpg';
 import helmet3Views from '../../assets/images/iglow-helmet-3-views.jpg';
 import helmetCutout from '../../assets/images/iglow-helmet-cutout.png';
 
-import { Box, Container, Typography, Button } from '@mui/material';
+import { Box, Container, Typography, Button, Modal } from '@mui/material';
+import { PiX } from 'react-icons/pi';
 
 import Navbar from '../../components/Navbar/Navbar';
 import EmptySpace from '../../components/EmptySpace/EmptySpace';
@@ -43,6 +44,8 @@ const LANGUAGES = [
   { code: 'hi', name: 'HI', flag: '🇮🇳' },
   { code: 'ar', name: 'AR', flag: '🇸🇦' },
   { code: 'ru', name: 'RU', flag: '🇷🇺' },
+  { code: 'zh', name: 'ZH', flag: '🇨🇳' },
+  { code: 'ko', name: 'KO', flag: '🇰🇷' },
 ];
 
 const CONTENT = {
@@ -60,6 +63,9 @@ const CONTENT = {
     reserveDuoText: 'Casque + Gilet',
     exclusive: 'EXCLUSIF',
     duoSpecial: 'OFFRE DUO SPÉCIALE',
+    launchWord1: 'PRIX',
+    launchWord2: 'LANCEMENT',
+    launchSpecialLabel: 'OFFRE SPÉCIALE FÊTES',
     insteadOfLabel: 'au lieu de',
     duoSpecialDesc:
       "Offre spéciale Black Friday & lancement Kickstarter : le Duo Casque + Gilet IGLOW",
@@ -100,6 +106,15 @@ const CONTENT = {
     aboutOvertitle: 'À propos de nous',
     aboutTitlePrefix: "Découvrez l'équipe",
     aboutHighlight: 'derrière IGLOW®',
+    teamRoles: {
+      founder: 'Fondateur',
+      sewingQueen: 'Reine de la couture',
+      leadDeveloper: 'Développeur principal',
+      electronicEngineer: 'Ingénieur électronique',
+      leadBrandDesigner: 'Designer de marque principal',
+      videographer: 'Vidéaste',
+      digitalMediaSpecialist: 'Spécialiste médias numériques',
+    },
     faqOvertitle: 'F. A. Q.',
     faqTitlePrefix: 'Laissez-nous',
     faqHighlight: 'vous éclairer !',
@@ -124,6 +139,9 @@ const CONTENT = {
     reserveDuoText: 'Helm + Weste',
     exclusive: 'EXKLUSIV',
     duoSpecial: 'DUO SPEZIAL',
+    launchWord1: 'START',
+    launchWord2: 'PREIS',
+    launchSpecialLabel: 'FESTTAGS-SONDERANGEBOT',
     insteadOfLabel: 'statt',
     duoSpecialDesc:
       'Black Friday & Kickstarter-Launch-Spezial: das IGLOW Helm + Weste Duo',
@@ -164,6 +182,15 @@ const CONTENT = {
     aboutOvertitle: 'Über uns',
     aboutTitlePrefix: 'Entdecken Sie das Team',
     aboutHighlight: 'hinter IGLOW®',
+    teamRoles: {
+      founder: 'Gründer',
+      sewingQueen: 'Näh-Königin',
+      leadDeveloper: 'Lead-Entwickler',
+      electronicEngineer: 'Elektroingenieur',
+      leadBrandDesigner: 'Leitender Markendesigner',
+      videographer: 'Videograf',
+      digitalMediaSpecialist: 'Spezialist für digitale Medien',
+    },
     faqOvertitle: 'F. A. Q.',
     faqTitlePrefix: 'Lassen Sie uns',
     faqHighlight: 'Sie aufklären!',
@@ -188,6 +215,9 @@ const CONTENT = {
     reserveDuoText: 'Casco + Gilet',
     exclusive: 'ESCLUSIVO',
     duoSpecial: 'OFFERTA DUO SPECIALE',
+    launchWord1: 'PREZZO',
+    launchWord2: 'DI LANCIO',
+    launchSpecialLabel: 'OFFERTA SPECIALE FESTIVA',
     insteadOfLabel: 'invece di',
     duoSpecialDesc:
       'Offerta speciale Black Friday e lancio Kickstarter: il Duo Casco + Gilet IGLOW',
@@ -228,6 +258,15 @@ const CONTENT = {
     aboutOvertitle: 'Chi siamo',
     aboutTitlePrefix: 'Scopri il team',
     aboutHighlight: 'dietro IGLOW®',
+    teamRoles: {
+      founder: 'Fondatore',
+      sewingQueen: 'Regina della cucitura',
+      leadDeveloper: 'Sviluppatore principale',
+      electronicEngineer: 'Ingegnere elettronico',
+      leadBrandDesigner: 'Designer di marca principale',
+      videographer: 'Videomaker',
+      digitalMediaSpecialist: 'Specialista media digitali',
+    },
     faqOvertitle: 'F. A. Q.',
     faqTitlePrefix: 'Lascia che',
     faqHighlight: 'ti illuminiamo!',
@@ -252,6 +291,9 @@ const CONTENT = {
     reserveDuoText: 'Helmet + Vest',
     exclusive: 'EXCLUSIVE',
     duoSpecial: 'DUO SPECIAL',
+    launchWord1: 'LAUNCH',
+    launchWord2: 'PRICE',
+    launchSpecialLabel: 'HOLIDAY SPECIAL OFFER',
     insteadOfLabel: 'instead of',
     duoSpecialDesc:
       'Black Friday & Kickstarter launch special: the IGLOW Helmet + Vest Duo',
@@ -292,6 +334,15 @@ const CONTENT = {
     aboutOvertitle: 'About us',
     aboutTitlePrefix: 'Discover the team',
     aboutHighlight: 'behind IGLOW®',
+    teamRoles: {
+      founder: 'Founder',
+      sewingQueen: 'Sewing queen',
+      leadDeveloper: 'Lead Developer',
+      electronicEngineer: 'Electronic Engineer',
+      leadBrandDesigner: 'Lead Brand Designer',
+      videographer: 'Videographer',
+      digitalMediaSpecialist: 'Digital Media Specialist',
+    },
     faqOvertitle: 'F. A. Q.',
     faqTitlePrefix: 'Let us',
     faqHighlight: 'enlighten you!',
@@ -316,6 +367,9 @@ const CONTENT = {
     reserveDuoText: 'Casco + Chaleco',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
+    launchWord1: 'PRECIO',
+    launchWord2: 'DE LANZAMIENTO',
+    launchSpecialLabel: 'OFERTA ESPECIAL DE FIESTAS',
     insteadOfLabel: 'en lugar de',
     duoSpecialDesc:
       'Especial de lanzamiento de Black Friday y Kickstarter: el Duo Casco + Chaleco IGLOW',
@@ -356,6 +410,15 @@ const CONTENT = {
     aboutOvertitle: 'Sobre nosotros',
     aboutTitlePrefix: 'Descubre el equipo',
     aboutHighlight: 'detrás de IGLOW®',
+    teamRoles: {
+      founder: 'Fundador',
+      sewingQueen: 'Reina de la costura',
+      leadDeveloper: 'Desarrollador principal',
+      electronicEngineer: 'Ingeniero electrónico',
+      leadBrandDesigner: 'Diseñador de marca principal',
+      videographer: 'Videógrafo',
+      digitalMediaSpecialist: 'Especialista en medios digitales',
+    },
     faqOvertitle: 'F. A. Q.',
     faqTitlePrefix: 'Déjanos',
     faqHighlight: '¡aclararte todo!',
@@ -380,6 +443,9 @@ const CONTENT = {
     reserveDuoText: 'Helm + Vest',
     exclusive: 'EXCLUSIEF',
     duoSpecial: 'DUO SPECIAL',
+    launchWord1: 'LANCEER',
+    launchWord2: 'PRIJS',
+    launchSpecialLabel: 'FEESTDAGEN SPECIAL',
     insteadOfLabel: 'in plaats van',
     duoSpecialDesc:
       'Black Friday & Kickstarter-lancering special: de IGLOW Helm + Vest Duo',
@@ -420,6 +486,15 @@ const CONTENT = {
     aboutOvertitle: 'Over ons',
     aboutTitlePrefix: 'Ontdek het team',
     aboutHighlight: 'achter IGLOW®',
+    teamRoles: {
+      founder: 'Oprichter',
+      sewingQueen: 'Naaikoningin',
+      leadDeveloper: 'Hoofdontwikkelaar',
+      electronicEngineer: 'Elektronica-ingenieur',
+      leadBrandDesigner: 'Hoofd merkontwerper',
+      videographer: 'Videograaf',
+      digitalMediaSpecialist: 'Specialist digitale media',
+    },
     faqOvertitle: 'F. A. Q.',
     faqTitlePrefix: 'Laat ons',
     faqHighlight: 'u inlichten!',
@@ -444,6 +519,9 @@ const CONTENT = {
     reserveDuoText: 'Capacete + Colete',
     exclusive: 'EXCLUSIVO',
     duoSpecial: 'DUO ESPECIAL',
+    launchWord1: 'PREÇO',
+    launchWord2: 'DE LANÇAMENTO',
+    launchSpecialLabel: 'OFERTA ESPECIAL DE FESTAS',
     insteadOfLabel: 'em vez de',
     duoSpecialDesc:
       'Especial de lançamento Black Friday & Kickstarter: o Duo Capacete + Colete IGLOW',
@@ -484,6 +562,15 @@ const CONTENT = {
     aboutOvertitle: 'Sobre nós',
     aboutTitlePrefix: 'Conheça a equipe',
     aboutHighlight: 'por trás da IGLOW®',
+    teamRoles: {
+      founder: 'Fundador',
+      sewingQueen: 'Rainha da costura',
+      leadDeveloper: 'Desenvolvedor principal',
+      electronicEngineer: 'Engenheiro eletrônico',
+      leadBrandDesigner: 'Designer de marca principal',
+      videographer: 'Videomaker',
+      digitalMediaSpecialist: 'Especialista em mídia digital',
+    },
     faqOvertitle: 'F. A. Q.',
     faqTitlePrefix: 'Deixe-nos',
     faqHighlight: 'esclarecer tudo!',
@@ -508,6 +595,9 @@ const CONTENT = {
     reserveDuoText: 'हेलमेट + जैकेट',
     exclusive: 'एक्सक्लूसिव',
     duoSpecial: 'डुओ स्पेशल',
+    launchWord1: 'लॉन्च',
+    launchWord2: 'कीमत',
+    launchSpecialLabel: 'त्योहारी विशेष ऑफर',
     insteadOfLabel: 'के बजाय',
     duoSpecialDesc:
       'ब्लैक फ्राइडे और किकस्टार्टर लॉन्च स्पेशल: IGLOW हेलमेट + जैकेट डुओ',
@@ -548,6 +638,15 @@ const CONTENT = {
     aboutOvertitle: 'हमारे बारे में',
     aboutTitlePrefix: 'टीम से मिलें',
     aboutHighlight: 'IGLOW® के पीछे',
+    teamRoles: {
+      founder: 'संस्थापक',
+      sewingQueen: 'सिलाई की रानी',
+      leadDeveloper: 'लीड डेवलपर',
+      electronicEngineer: 'इलेक्ट्रॉनिक इंजीनियर',
+      leadBrandDesigner: 'लीड ब्रांड डिज़ाइनर',
+      videographer: 'वीडियोग्राफर',
+      digitalMediaSpecialist: 'डिजिटल मीडिया विशेषज्ञ',
+    },
     faqOvertitle: 'सामान्य प्रश्न',
     faqTitlePrefix: 'हमें आपको',
     faqHighlight: 'जानकारी देने दें!',
@@ -572,6 +671,9 @@ const CONTENT = {
     reserveDuoText: 'خوذة + سترة',
     exclusive: 'حصري',
     duoSpecial: 'عرض الثنائي الخاص',
+    launchWord1: 'سعر',
+    launchWord2: 'الإطلاق',
+    launchSpecialLabel: 'عرض خاص للأعياد',
     insteadOfLabel: 'بدلاً من',
     duoSpecialDesc:
       'عرض إطلاق بلاك فرايدي وكيك ستارتر الخاص: ثنائي الخوذة والسترة IGLOW',
@@ -612,6 +714,15 @@ const CONTENT = {
     aboutOvertitle: 'من نحن',
     aboutTitlePrefix: 'تعرف على الفريق',
     aboutHighlight: 'وراء IGLOW®',
+    teamRoles: {
+      founder: 'المؤسس',
+      sewingQueen: 'ملكة الخياطة',
+      leadDeveloper: 'مطور رئيسي',
+      electronicEngineer: 'مهندس إلكتروني',
+      leadBrandDesigner: 'مصمم العلامة التجارية الرئيسي',
+      videographer: 'مصور فيديو',
+      digitalMediaSpecialist: 'أخصائي الوسائط الرقمية',
+    },
     faqOvertitle: 'الأسئلة الشائعة',
     faqTitlePrefix: 'دعنا',
     faqHighlight: 'نوضح لك!',
@@ -636,6 +747,9 @@ const CONTENT = {
     reserveDuoText: 'Шлем + жилет',
     exclusive: 'ЭКСКЛЮЗИВ',
     duoSpecial: 'СПЕЦИАЛЬНЫЙ ДУО',
+    launchWord1: 'ЦЕНА',
+    launchWord2: 'ЗАПУСКА',
+    launchSpecialLabel: 'ПРАЗДНИЧНОЕ СПЕЦПРЕДЛОЖЕНИЕ',
     insteadOfLabel: 'вместо',
     duoSpecialDesc:
       'Специальное предложение Black Friday и запуска Kickstarter: дуо-комплект шлем + жилет IGLOW',
@@ -676,6 +790,15 @@ const CONTENT = {
     aboutOvertitle: 'О нас',
     aboutTitlePrefix: 'Познакомьтесь с командой',
     aboutHighlight: 'за IGLOW®',
+    teamRoles: {
+      founder: 'Основатель',
+      sewingQueen: 'Королева шитья',
+      leadDeveloper: 'Ведущий разработчик',
+      electronicEngineer: 'Инженер-электронщик',
+      leadBrandDesigner: 'Ведущий бренд-дизайнер',
+      videographer: 'Видеооператор',
+      digitalMediaSpecialist: 'Специалист по цифровым медиа',
+    },
     faqOvertitle: 'Часто задаваемые вопросы',
     faqTitlePrefix: 'Позвольте нам',
     faqHighlight: 'всё объяснить!',
@@ -685,6 +808,158 @@ const CONTENT = {
     contactParagraph:
       'Есть вопрос или интерес к партнёрству? Мы будем рады услышать вас! Свяжитесь с нашей командой, заполнив форму ниже, и мы ответим вам как можно скорее!',
     switzerlandWord: 'Швейцария',
+  },
+  zh: {
+    joinUs: '加入我们',
+    heroPrefix: '送给自己或心爱的人',
+    heroHighlight: '完美双件套',
+    heroSuffix: 'IGLOW 头盔 + 背心',
+    heroButton: '预订我的双件套',
+    watchNowMain: '如汽车般醒目可见',
+    watchNowSub: '立即观看',
+    watchSub: '配备转向灯和刹车灯的智能背心',
+    reserveAction: '发现首款双件套',
+    reserveNowWord: '同步灯光系统',
+    reserveDuoText: '头盔 + 背心',
+    exclusive: '独家',
+    duoSpecial: '特别双件套',
+    launchWord1: '发布',
+    launchWord2: '价',
+    launchSpecialLabel: '节日特别优惠',
+    insteadOfLabel: '原价',
+    duoSpecialDesc:
+      '黑色星期五与 Kickstarter 发布特别优惠：IGLOW 头盔 + 背心双件套',
+    newPricePrefix: '仅售',
+    discountLinePrefix: '立即节省',
+    lowestPriceBadge: '该技术史上最低价',
+    priorityShippingBadge: '首批预订者优先发货',
+    clickToReserve: '点击预订，加入这场成功。',
+    kickstarterButton: 'IGLOW 登陆 Kickstarter',
+    kickstarterCaption: '您的 IGLOW 双件套',
+    kickstarterCaptionSub: '头盔 + 背心',
+    secureSpot: '瑞士设计',
+    secureSpotSub: '🇨🇭',
+    whatIsOvertitle: 'IGLOW 是什么？',
+    whatIsHtml:
+      'IGLOW <span style="color:#E30613">头盔与背心</span>双件套<br/><span style="color:#E30613">360° 可见度</span><br/>配备<span style="color:#E30613">转向灯</span>与<span style="color:#E30613">刹车灯</span><br/>如同汽车一般，由<span style="color:#E30613">车把遥控器</span>控制。',
+    safetyOvertitle: '安全',
+    safetyTitle: '高能见度智能头盔与背心',
+    safetyText:
+      '配备先进的 LED 指示灯，背心可提供更好的能见度，尤其是在光线不足的条件下。其简洁的人体工学设计确保了舒适性和易用性，即使背着背包也不例外。头盔具备相同的信号功能，并配有强大的前照灯，进一步提升您的安全性。',
+    flexOvertitle: '灵活性',
+    flexTitle: '智能遥控器',
+    flexText:
+      '使用 iGlow 遥控器，双眼专注路面的同时轻松掌控您的安全——触手可及、毫不费力的能见度。',
+    appOvertitle: '应用程序',
+    appTitle: 'GlowSafe：专属应用',
+    appText:
+      'GlowSafe 是 IGLOW 头盔与背心双件套的配套应用，可实现灯光同步。启用后，它还能计算您的行程与平均速度，激活刹车信号，从而提醒周围的驾驶员。',
+    appAvailability: '2027年2月起上市',
+    specsOvertitle: '写给技术爱好者',
+    specsTitlePrefix: '了解',
+    specsHighlight: '技术规格',
+    swissOvertitle: '瑞士制造',
+    swissHighlight: '瑞士品质',
+    swissTitle: '与无与伦比的安全性。',
+    swissParagraph:
+      'Smart Vest 凝聚了超过3年的瑞士研发成果。我们致力于为客户提供卓越品质，并严格遵守安全标准。所有电子元件和智能技术面料均由瑞士企业全程研发，进一步彰显我们对瑞士工艺与创新的坚持。',
+    aboutOvertitle: '关于我们',
+    aboutTitlePrefix: '认识 IGLOW® 背后的',
+    aboutHighlight: '团队',
+    teamRoles: {
+      founder: '创始人',
+      sewingQueen: '缝纫女王',
+      leadDeveloper: '首席开发工程师',
+      electronicEngineer: '电子工程师',
+      leadBrandDesigner: '首席品牌设计师',
+      videographer: '摄像师',
+      digitalMediaSpecialist: '数字媒体专员',
+    },
+    faqOvertitle: '常见问题',
+    faqTitlePrefix: '让我们为您',
+    faqHighlight: '答疑解惑！',
+    contactOvertitle: '联系我们',
+    contactTitlePrefix: '需要帮助？',
+    contactHighlight: '我们随时为您服务！',
+    contactParagraph:
+      '有疑问或合作意向？我们非常乐意倾听！请填写下方表单联系我们的团队，我们会尽快回复您！',
+    switzerlandWord: '瑞士',
+  },
+  ko: {
+    joinUs: '참여하기',
+    heroPrefix: '당신 또는 사랑하는 사람을 위한 선물',
+    heroHighlight: '완벽한 듀오',
+    heroSuffix: 'IGLOW 헬멧 + 조끼',
+    heroButton: '내 듀오 예약하기',
+    watchNowMain: '자동차처럼 눈에 띄는 가시성',
+    watchNowSub: '지금 보기',
+    watchSub: '방향지시등과 제동등이 탑재된 스마트 조끼',
+    reserveAction: '첫 번째 듀오를 만나보세요',
+    reserveNowWord: '동기화된 조명 시스템과 함께',
+    reserveDuoText: '헬멧 + 조끼',
+    exclusive: '단독 혜택',
+    duoSpecial: '스페셜 듀오',
+    launchWord1: '런칭',
+    launchWord2: '프라이스',
+    launchSpecialLabel: '홀리데이 스페셜 오퍼',
+    insteadOfLabel: '정가',
+    duoSpecialDesc:
+      '블랙 프라이데이 & 킥스타터 런칭 스페셜: IGLOW 헬멧 + 조끼 듀오',
+    newPricePrefix: '단',
+    discountLinePrefix: '즉시 할인',
+    lowestPriceBadge: '이 기술 역대 최저가',
+    priorityShippingBadge: '얼리버드 예약자 우선 배송',
+    clickToReserve: '지금 예약하고 함께하세요.',
+    kickstarterButton: '킥스타터에서 만나는 IGLOW',
+    kickstarterCaption: '당신의 IGLOW 듀오',
+    kickstarterCaptionSub: '헬멧 + 조끼',
+    secureSpot: '스위스 디자인',
+    secureSpotSub: '🇨🇭',
+    whatIsOvertitle: 'IGLOW란?',
+    whatIsHtml:
+      'IGLOW <span style="color:#E30613">헬멧 + 조끼</span> 듀오<br/><span style="color:#E30613">360° 가시성</span><br/><span style="color:#E30613">방향지시등</span>과 <span style="color:#E30613">제동등</span>으로<br/>자동차처럼, <span style="color:#E30613">핸들바 리모컨</span>으로 제어.',
+    safetyOvertitle: '안전',
+    safetyTitle: '고가시성 스마트 헬멧 & 조끼',
+    safetyText:
+      '최첨단 LED 인디케이터를 탑재한 조끼는 특히 저조도 환경에서 뛰어난 가시성을 제공합니다. 세련되고 인체공학적인 디자인은 백팩을 메고도 편안함과 사용 편의성을 보장합니다. 헬멧은 동일한 신호 기능과 강력한 전방 라이트로 당신의 안전을 완성합니다.',
+    flexOvertitle: '유연성',
+    flexTitle: '스마트 리모컨',
+    flexText:
+      'iGlow 리모컨으로 시선은 도로에, 안전은 손끝에서 간편하게 제어하세요.',
+    appOvertitle: '애플리케이션',
+    appTitle: 'GlowSafe: 전용 앱',
+    appText:
+      'IGLOW 헬멧 + 조끼 듀오의 전용 앱인 GlowSafe는 조명 동기화를 지원합니다. 활성화하면 이동 거리와 평균 속도를 계산하고 제동 신호를 작동시켜 주변 운전자에게 알립니다.',
+    appAvailability: '2027년 2월 출시 예정',
+    specsOvertitle: '기술 애호가를 위한',
+    specsTitlePrefix: '살펴보기',
+    specsHighlight: '기술 사양',
+    swissOvertitle: '스위스 설계',
+    swissHighlight: '스위스 품질',
+    swissTitle: '그리고 타의 추종을 불허하는 안전성.',
+    swissParagraph:
+      'Smart Vest는 3년 이상의 스위스 연구 및 엔지니어링의 결실입니다. 우리는 고객에게 타의 추종을 불허하는 품질과 안전 기준 준수를 제공하기 위해 최선을 다합니다. 모든 전자 부품과 스마트 기술 원단은 전적으로 스위스 기업에 의해 개발되어, 스위스의 노하우와 혁신에 대한 우리의 약속을 더욱 공고히 합니다.',
+    aboutOvertitle: '회사 소개',
+    aboutTitlePrefix: 'IGLOW®를 만든',
+    aboutHighlight: '팀을 소개합니다',
+    teamRoles: {
+      founder: '창업자',
+      sewingQueen: '소잉 퀸',
+      leadDeveloper: '리드 개발자',
+      electronicEngineer: '전자 엔지니어',
+      leadBrandDesigner: '리드 브랜드 디자이너',
+      videographer: '영상 감독',
+      digitalMediaSpecialist: '디지털 미디어 전문가',
+    },
+    faqOvertitle: '자주 묻는 질문',
+    faqTitlePrefix: '궁금증을',
+    faqHighlight: '풀어드릴게요!',
+    contactOvertitle: '문의',
+    contactTitlePrefix: '도움이 필요하신가요?',
+    contactHighlight: '저희가 도와드립니다!',
+    contactParagraph:
+      '궁금한 점이나 파트너십에 관심이 있으신가요? 언제든 환영합니다! 아래 양식을 작성해 저희 팀에 문의해 주시면 최대한 빨리 답변드리겠습니다!',
+    switzerlandWord: '스위스',
   },
 };
 
@@ -735,10 +1010,10 @@ function Landing() {
       <LanguageSwitcher currentLang={currentLang} onChange={setCurrentLang} />
       <Navbar topOffset='64px' joinUsLabel={t.joinUs} />
       <HeroSection t={t} />
-      <WhatIsSection t={t} />
+      <WhatIsSection t={t} lang={currentLang} />
       <SocialSection t={t} />
-      <ContactSection t={t} />
-      <Footer />
+      <ContactSection t={t} lang={currentLang} />
+      <Footer lang={currentLang} />
     </Box>
   );
 }
@@ -965,7 +1240,7 @@ function AppAvailability({ t }) {
   );
 }
 
-function WhatIsSection({ t }) {
+function WhatIsSection({ t, lang }) {
   const { NIGHT, STATE_GREY, RED } = Palette();
   return (
     <Box backgroundColor='white' color={NIGHT} overflow='hidden'>
@@ -1024,7 +1299,7 @@ function WhatIsSection({ t }) {
           highlight={t.specsHighlight}
         />
         <EmptySpace under='h2' />
-        <SpecsSection />
+        <SpecsSection lang={lang} />
         <EmptySpace />
         <SectionTitle
           overtitle={t.swissOvertitle}
@@ -1064,17 +1339,17 @@ function SocialSection({ t }) {
             justifyContent: 'center',
           }}
         >
-          <IdCard src='fabrice.png' name='Fabrice' role='Founder' />
-          <IdCard src='alena.png' name='Alena' role='Sewing queen' />
-          <IdCard src='mateo.png' name='Mateo' role='Lead Developer' />
-          <IdCard src='lucas.png' name='Lucas' role='Electronic Engineer' />
-          <IdCard src='maxime.png' name='Maxime' role='Lead Brand Designer' />
+          <IdCard src='fabrice.png' name='Fabrice' role={t.teamRoles.founder} />
+          <IdCard src='alena.png' name='Alena' role={t.teamRoles.sewingQueen} />
+          <IdCard src='mateo.png' name='Mateo' role={t.teamRoles.leadDeveloper} />
+          <IdCard src='lucas.png' name='Lucas' role={t.teamRoles.electronicEngineer} />
+          <IdCard src='maxime.png' name='Maxime' role={t.teamRoles.leadBrandDesigner} />
           <IdCard
             src='jean-baptiste.png'
             name='Jean-Baptiste'
-            role='Videographer'
+            role={t.teamRoles.videographer}
           />
-          <IdCard src='sam.png' name='Sam' role='Digital Media Specialist' />
+          <IdCard src='sam.png' name='Sam' role={t.teamRoles.digitalMediaSpecialist} />
         </Box>
         <EmptySpace />
       </Container>
@@ -1082,7 +1357,7 @@ function SocialSection({ t }) {
   );
 }
 
-function ContactSection({ t }) {
+function ContactSection({ t, lang }) {
   const { NIGHT, STATE_GREY } = Palette();
 
   return (
@@ -1095,7 +1370,7 @@ function ContactSection({ t }) {
           highlight={t.faqHighlight}
         />
         <EmptySpace under='h2' />
-        <FAQSection />
+        <FAQSection lang={lang} />
         <EmptySpace />
         <SectionTitle
           overtitle={t.contactOvertitle}
@@ -1147,7 +1422,7 @@ function ContactSection({ t }) {
               </Typography>
             </Box>
           </Box>
-          <FormContact />
+          <FormContact lang={lang} />
         </Box>
       </Container>
       <EmptySpace />
@@ -1165,6 +1440,8 @@ const PRICE_BY_CURRENCY = {
 function CountdownSection({ t }) {
   const { RED } = Palette();
   const [currency, setCurrency] = useState('CHF');
+  const [helmetZoomed, setHelmetZoomed] = useState(false);
+  const launchPricePhase = Date.now() >= END_CAMPAIGN_DATE.getTime();
 
   useEffect(() => {
     detectCurrency().then(setCurrency);
@@ -1289,7 +1566,7 @@ function CountdownSection({ t }) {
               lineHeight: 1,
             }}
           >
-            BLACK
+            {launchPricePhase ? t.launchWord1 : 'BLACK'}
           </Typography>
           <Typography
             sx={{
@@ -1300,11 +1577,11 @@ function CountdownSection({ t }) {
               mb: 2,
             }}
           >
-            FRIDAY
+            {launchPricePhase ? t.launchWord2 : 'FRIDAY'}
           </Typography>
 
           <Typography sx={{ color: RED, fontWeight: 'bold', mb: 2 }}>
-            {t.duoSpecial}
+            {launchPricePhase ? t.launchSpecialLabel : t.duoSpecial}
           </Typography>
 
           <Typography
@@ -1469,14 +1746,63 @@ function CountdownSection({ t }) {
           component='img'
           src={helmet3Views}
           alt='iGlow Smart Helmet - 3 views'
+          onClick={() => setHelmetZoomed(true)}
           sx={{
             display: 'block',
             width: '100%',
             maxWidth: '500px',
             borderRadius: '15px',
             mb: 4,
+            cursor: 'zoom-in',
           }}
         />
+
+        <Modal open={helmetZoomed} onClose={() => setHelmetZoomed(false)}>
+          <Box
+            onClick={() => setHelmetZoomed(false)}
+            sx={{
+              position: 'fixed',
+              inset: 0,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              p: 2,
+            }}
+          >
+            <Box
+              component='img'
+              src={helmet3Views}
+              alt='iGlow Smart Helmet - 3 views'
+              onClick={(e) => e.stopPropagation()}
+              sx={{
+                maxWidth: '95vw',
+                maxHeight: '90vh',
+                width: 'auto',
+                borderRadius: '15px',
+                cursor: 'zoom-out',
+              }}
+            />
+            <Box
+              onClick={() => setHelmetZoomed(false)}
+              sx={{
+                position: 'fixed',
+                top: { xs: 16, sm: 24 },
+                right: { xs: 16, sm: 24 },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: 44,
+                height: 44,
+                borderRadius: '50%',
+                backgroundColor: 'rgba(0,0,0,0.6)',
+                color: 'white',
+                cursor: 'pointer',
+              }}
+            >
+              <PiX size={22} />
+            </Box>
+          </Box>
+        </Modal>
 
         <video
           src={jacketHero}

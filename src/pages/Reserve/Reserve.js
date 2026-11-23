@@ -50,12 +50,17 @@ const Reserve = () => {
   const [authError, setAuthError] = useState('');
   const [authLoading, setAuthLoading] = useState(false);
 
+  const proceedToCheckout = () => {
+    detectPriceId().then((priceId) => redirectToStripe(priceId));
+  };
+
   useEffect(() => {
     fetch('/api/me.php')
       .then((res) => res.json())
       .then((data) => {
         if (data && data.authenticated) {
           setAccount(data.customer);
+          proceedToCheckout();
         } else {
           setAuthError('');
           setShowAccountModal(true);
@@ -65,24 +70,12 @@ const Reserve = () => {
         setAuthError('');
         setShowAccountModal(true);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleAuthFieldChange = (field) => (e) => {
     const value = field === 'consent' ? e.target.checked : e.target.value;
     setAuthForm((prev) => ({ ...prev, [field]: value }));
-  };
-
-  const proceedToCheckout = () => {
-    detectPriceId().then((priceId) => redirectToStripe(priceId));
-  };
-
-  const handleReserveClick = () => {
-    if (account) {
-      proceedToCheckout();
-    } else {
-      setAuthError('');
-      setShowAccountModal(true);
-    }
   };
 
   const handleAuthSubmit = async (e) => {
@@ -146,566 +139,6 @@ const Reserve = () => {
     }
   };
 
-  // Language content object
-  const content = {
-    fr: {
-      tagline: "RÉSERVEZ DÈS AUJOURD'HUI VOTRE",
-      title: 'Duo Casque et Gilet',
-      highlight: 'IGLOW',
-      beSeen: 'pour être vu !',
-      payOnlyPrefix: 'Un prix 🎁 de',
-      payOnlySuffix: 'le DUO',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'SEULEMENT 99.-',
-          flag: '🇨🇭',
-          text: 'Réserver',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'SEULEMENT 99.-',
-          flag: '🇪🇺',
-          text: 'Réserver',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'SEULEMENT 99.-',
-          flag: '🌍',
-          text: 'Réserver',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: 'au lieu de',
-      insteadOfSuffix: '',
-      youSave: 'Vous économisez CHF 100.-',
-      launchDate: 'LE 27 NOVEMBRE 2026',
-      launchTextPrefix: 'Ouverture des ventes',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: '',
-      socialProof: 'cyclistes ont déjà réservé leur gilet IGLOW',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'Votre Duo CASQUE + GILET IGLOW<br/>pour seulement <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>au lieu de CHF 199.-<br/>soit un énorme rabais de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
-        },
-        {
-          title: '-50% de réduction',
-          description:
-            'Prix le plus bas jamais proposé pour ce niveau de technologie',
-        },
-        {
-          title: 'Livraison Prioritaire',
-          description: 'Soyez parmi les premiers à recevoir votre gilet IGLOW',
-        },
-      ],
-    },
-    de: {
-      tagline: 'RESERVIEREN SIE JETZT IHRE',
-      title: 'Helm- und Westen-Duo',
-      highlight: 'IGLOW',
-      beSeen: 'um gesehen zu werden!',
-      payOnlyPrefix: 'Ein 🎁 Preis von',
-      payOnlySuffix: 'für das DUO',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'NUR 99.-',
-          flag: '🇨🇭',
-          text: 'Reservieren',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'NUR 99.-',
-          flag: '🇪🇺',
-          text: 'Reservieren',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'NUR 99.-',
-          flag: '🌍',
-          text: 'Reservieren',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: 'statt',
-      insteadOfSuffix: '',
-      youSave: 'Sie sparen CHF 100.-',
-      launchDate: '27. NOVEMBER 2026',
-      launchTextPrefix: '',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: 'Verkaufsstart',
-      socialProof: 'Radfahrer haben bereits ihre IGLOW-Jacke reserviert',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'Ihr Duo HELM + WESTE IGLOW<br/>für nur <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>statt CHF 199.-<br/>ein riesiger Rabatt von<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
-        },
-        {
-          title: '-50% Rabatt',
-          description: 'Niedrigster Preis für diese Technologiestufe',
-        },
-        {
-          title: 'Prioritätslieferung',
-          description:
-            'Gehören Sie zu den Ersten, die Ihre IGLOW-Jacke erhalten',
-        },
-      ],
-    },
-    it: {
-      tagline: 'PRENOTA FIN DA OGGI IL TUO',
-      title: 'Duo Casco e Gilet',
-      highlight: 'IGLOW',
-      beSeen: 'per essere visti!',
-      payOnlyPrefix: 'Un prezzo 🎁 di',
-      payOnlySuffix: 'per il DUO',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'SOLO 99.-',
-          flag: '🇨🇭',
-          text: 'Prenota',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'SOLO 99.-',
-          flag: '🇪🇺',
-          text: 'Prenota',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'SOLO 99.-',
-          flag: '🌍',
-          text: 'Prenota',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: 'invece di',
-      insteadOfSuffix: '',
-      youSave: 'Risparmi CHF 100.-',
-      launchDate: '27 NOVEMBRE 2026',
-      launchTextPrefix: 'Apertura delle vendite',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: '',
-      socialProof: 'ciclisti hanno già prenotato il loro gilet IGLOW',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'Il tuo Duo CASCO + GILET IGLOW<br/>per soli <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>invece di CHF 199.-<br/>ovvero un enorme sconto di<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
-        },
-        {
-          title: '-50% di sconto',
-          description:
-            'Il prezzo più basso mai proposto per questo livello di tecnologia',
-        },
-        {
-          title: 'Consegna Prioritaria',
-          description: 'Sii tra i primi a ricevere il tuo gilet IGLOW',
-        },
-      ],
-    },
-    en: {
-      tagline: 'RESERVE YOUR',
-      title: 'Helmet and Vest Duo',
-      highlight: 'IGLOW',
-      beSeen: 'to be seen!',
-      payOnlyPrefix: 'A 🎁 price of',
-      payOnlySuffix: 'for the DUO',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'ONLY 99.-',
-          flag: '🇨🇭',
-          text: 'Reserve',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'ONLY 99.-',
-          flag: '🇪🇺',
-          text: 'Reserve',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'ONLY 99.-',
-          flag: '🌍',
-          text: 'Reserve',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: 'instead of',
-      insteadOfSuffix: '',
-      youSave: 'You save CHF 100.-',
-      launchDate: 'NOVEMBER 27, 2026',
-      launchTextPrefix: '',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: 'Sales Opening',
-      socialProof: 'cyclists have already reserved their IGLOW vest',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'Your Duo HELMET + VEST IGLOW<br/>for only <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>instead of CHF 199.-<br/>a huge discount of<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
-        },
-        {
-          title: '+50% OFF',
-          description: 'Lowest price ever offered for this level of technology',
-        },
-        {
-          title: 'Priority Delivery',
-          description: 'Be among the first to receive your IGLOW vest',
-        },
-      ],
-    },
-    es: {
-      tagline: 'RESERVE HOY SU',
-      title: 'Dúo Casco y Chaleco',
-      highlight: 'IGLOW',
-      beSeen: '¡para ser visto!',
-      payOnlyPrefix: 'Un precio 🎁 de',
-      payOnlySuffix: 'para el DUO',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'SOLO 99.-',
-          flag: '🇨🇭',
-          text: 'Reservar',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'SOLO 99.-',
-          flag: '🇪🇺',
-          text: 'Reservar',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'SOLO 99.-',
-          flag: '🌍',
-          text: 'Reservar',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: 'en lugar de',
-      insteadOfSuffix: '',
-      youSave: 'Ahorras CHF 100.-',
-      launchDate: '27 DE NOVIEMBRE DE 2026',
-      launchTextPrefix: '',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: 'Apertura de ventas',
-      socialProof: 'ciclistas ya han reservado su chaqueta IGLOW',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'Tu Duo CASCO + CHALECO IGLOW<br/>por solo <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>en lugar de CHF 199.-<br/>un enorme descuento de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
-        },
-        {
-          title: '-50% de descuento',
-          description: 'Precio más bajo ofrecido para este nivel de tecnología',
-        },
-        {
-          title: 'Entrega Prioritaria',
-          description: 'Sea de los primeros en recibir su chaqueta IGLOW',
-        },
-      ],
-    },
-    nl: {
-      tagline: 'RESERVEER NU UW',
-      title: 'Helm- en Vestduo',
-      highlight: 'IGLOW',
-      beSeen: 'om gezien te worden!',
-      payOnlyPrefix: 'Een 🎁 prijs van',
-      payOnlySuffix: 'voor de DUO',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'SLECHTS 99.-',
-          flag: '🇨🇭',
-          text: 'Reserveren',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'SLECHTS 99.-',
-          flag: '🇪🇺',
-          text: 'Reserveren',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'SLECHTS 99.-',
-          flag: '🌍',
-          text: 'Reserveren',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: 'in plaats van',
-      insteadOfSuffix: '',
-      youSave: 'U bespaart CHF 100.-',
-      launchDate: '27 NOVEMBER 2026',
-      launchTextPrefix: '',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: 'Verkoop opening',
-      socialProof: 'fietsers hebben al hun IGLOW-jas gereserveerd',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'Uw Duo HELM + VEST IGLOW<br/>voor slechts <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>in plaats van CHF 199.-<br/>een enorme korting van<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
-        },
-        {
-          title: '-50% korting',
-          description:
-            'Laagste prijs ooit aangeboden voor dit technologieniveau',
-        },
-        {
-          title: 'Prioriteitslevering',
-          description: 'Wees een van de eersten die uw IGLOW-jas ontvangt',
-        },
-      ],
-    },
-    pt: {
-      tagline: 'RESERVE HOJE SUA',
-      title: 'Duo Capacete e Colete',
-      highlight: 'IGLOW',
-      beSeen: 'para ser visto!',
-      payOnlyPrefix: 'Um preço 🎁 de',
-      payOnlySuffix: 'para o DUO',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'APENAS 99.-',
-          flag: '🇨🇭',
-          text: 'Reservar',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'APENAS 99.-',
-          flag: '🇪🇺',
-          text: 'Reservar',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'APENAS 99.-',
-          flag: '🌍',
-          text: 'Reservar',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: 'em vez de',
-      insteadOfSuffix: '',
-      youSave: 'Você economiza CHF 100.-',
-      launchDate: '27 DE NOVEMBRO DE 2026',
-      launchTextPrefix: '',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: 'Abertura de vendas',
-      socialProof: 'ciclistas já reservaram sua jaqueta IGLOW',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'Seu Duo CAPACETE + COLETE IGLOW<br/>por apenas <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>em vez de CHF 199.-<br/>um enorme desconto de<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
-        },
-        {
-          title: '-50% de desconto',
-          description:
-            'Preço mais baixo já oferecido para este nível de tecnologia',
-        },
-        {
-          title: 'Entrega Prioritária',
-          description: 'Esteja entre os primeiros a receber sua jaqueta IGLOW',
-        },
-      ],
-    },
-    hi: {
-      tagline: 'आज ही अपना रिजर्व करें',
-      title: 'हेलमेट और जैकेट डुओ',
-      highlight: 'IGLOW',
-      beSeen: 'दिखने के लिए!',
-      payOnlyPrefix: 'DUO के लिए',
-      payOnlySuffix: 'का 🎁 जैसा दाम',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'केवल 99.-',
-          flag: '🇨🇭',
-          text: 'रिजर्व करें',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'केवल 99.-',
-          flag: '🇪🇺',
-          text: 'रिजर्व करें',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'केवल 99.-',
-          flag: '🌍',
-          text: 'रिजर्व करें',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: '',
-      insteadOfSuffix: 'के बजाय',
-      youSave: 'आप CHF 100.- बचाते हैं',
-      launchDate: '27 नवंबर 2026',
-      launchTextPrefix: '',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: 'बिक्री शुरुआत',
-      socialProof: 'साइकिल चालकों ने पहले ही अपनी IGLOW जैकेट आरक्षित कर ली है',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'आपका डुओ हेलमेट + जैकेट IGLOW<br/>सिर्फ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> में<br/>CHF 199.- के बजाय<br/>यानी<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span> की जबरदस्त छूट',
-        },
-        {
-          title: '-50% छूट',
-          description: 'इस प्रौद्योगिकी स्तर के लिए सबसे कम कीमत',
-        },
-        {
-          title: 'प्राथमिकता डिलीवरी',
-          description:
-            'अपनी IGLOW जैकेट प्राप्त करने वाले पहले लोगों में शामिल हों',
-        },
-      ],
-    },
-    ar: {
-      tagline: 'احجز اليوم',
-      title: 'ثنائي الخوذة والسترة',
-      highlight: 'IGLOW',
-      beSeen: 'لتكون مرئياً!',
-      payOnlyPrefix: 'سعر 🎁 بـ',
-      payOnlySuffix: 'للـ DUO',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'فقط 99.-',
-          flag: '🇨🇭',
-          text: 'احجز',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'فقط 99.-',
-          flag: '🇪🇺',
-          text: 'احجز',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'فقط 99.-',
-          flag: '🌍',
-          text: 'احجز',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: 'بدلاً من',
-      insteadOfSuffix: '',
-      youSave: 'توفر CHF 100.-',
-      launchDate: '27 نوفمبر 2026',
-      launchTextPrefix: '',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: 'افتتاح المبيعات',
-      socialProof: 'راكبي الدراجات قد حجزوا بالفعل سترة IGLOW الخاصة بهم',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'ثنائيك خوذة + سترة IGLOW<br/>بـ <span style="color:#E30613; font-weight:900;">CHF 99.-</span> فقط<br/>بدلاً من CHF 199.-<br/>أي خصم ضخم قدره<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
-        },
-        {
-          title: '-50% خصم',
-          description: 'أقل سعر يتم تقديمه لهذا المستوى من التكنولوجيا',
-        },
-        {
-          title: 'تسليم مفضل',
-          description: 'كن من أوائل من يتلقون سترة IGLOW الخاصة بك',
-        },
-      ],
-    },
-    ru: {
-      tagline: 'ЗАБРОНИРУЙТЕ СЕГОДНЯ',
-      title: 'Дуо шлем и жилет',
-      highlight: 'IGLOW',
-      beSeen: 'чтобы быть заметным!',
-      payOnlyPrefix: '🎁 цена',
-      payOnlySuffix: 'за DUO',
-      reserveButtons: [
-        {
-          currency: 'CHF',
-          price: 'ТОЛЬКО 99.-',
-          flag: '🇨🇭',
-          text: 'Забронировать',
-          priceId: 'price_1SGkg7ClH97ISv2ltpMYi4DE',
-        },
-        {
-          currency: 'EUR',
-          price: 'ТОЛЬКО 99.-',
-          flag: '🇪🇺',
-          text: 'Забронировать',
-          priceId: 'price_1SGkt9ClH97ISv2l2BPtn3ke',
-        },
-        {
-          currency: 'USD',
-          price: 'ТОЛЬКО 99.-',
-          flag: '🌍',
-          text: 'Забронировать',
-          priceId: 'price_1SGkweClH97ISv2lbwx0YlrE',
-        },
-      ],
-      swissBadge: 'SWISS MADE SMART VEST',
-      insteadOfPrefix: 'вместо',
-      insteadOfSuffix: '',
-      youSave: 'Вы экономите CHF 100.-',
-      launchDate: '27 НОЯБРЯ 2026',
-      launchTextPrefix: '',
-      blackWord: 'Black',
-      fridayWord: 'Friday',
-      launchTextSuffix: 'Начало продаж',
-      socialProof: 'велосипедистов уже забронировали свою куртку IGLOW',
-      benefits: [
-        {
-          title: 'BLACK FRIDAY',
-          description: 'Ваш Дуо ШЛЕМ + ЖИЛЕТ IGLOW<br/>всего за <span style="color:#E30613; font-weight:900;">CHF 99.-</span><br/>вместо CHF 199.-<br/>то есть огромная скидка<br/><span style="color:#28a745; font-weight:900; font-size:1.3em;">CHF 100.-</span>',
-        },
-        {
-          title: '-50% скидка',
-          description: 'Самая низкая цена для этого уровня технологии',
-        },
-        {
-          title: 'Приоритетная доставка',
-          description: 'Будьте среди первых, кто получит свою куртку IGLOW',
-        },
-      ],
-    },
-  };
-
   const languages = [
     { code: 'fr', name: 'FR', flagClass: 'flag-fr' },
     { code: 'de', name: 'DE', flagClass: 'flag-de' },
@@ -717,6 +150,8 @@ const Reserve = () => {
     { code: 'hi', name: 'HI', flagClass: 'flag-hi' },
     { code: 'ar', name: 'AR', flagClass: 'flag-ar' },
     { code: 'ru', name: 'RU', flagClass: 'flag-ru' },
+    { code: 'zh', name: 'ZH', flagClass: 'flag-zh' },
+    { code: 'ko', name: 'KO', flagClass: 'flag-ko' },
   ];
 
   const authContent = {
@@ -740,6 +175,8 @@ const Reserve = () => {
       passwordConfirm: 'Confirmer le mot de passe',
       consent: "J'accepte la",
       consentLink: 'politique de confidentialité',
+      consentTerms: 'ainsi que les',
+      termsLink: 'conditions générales de vente',
       submitRegister: 'Créer mon compte et continuer',
       submitLogin: 'Se connecter et continuer',
       close: 'Fermer',
@@ -752,7 +189,7 @@ const Reserve = () => {
       errorPasswordTooShort:
         'Le mot de passe doit contenir au moins 8 caractères.',
       errorConsentRequired:
-        "Merci d'accepter la politique de confidentialité.",
+        "Merci d'accepter nos conditions pour continuer.",
       errorGeneric: 'Une erreur est survenue, merci de réessayer.',
     },
     de: {
@@ -775,6 +212,8 @@ const Reserve = () => {
       passwordConfirm: 'Passwort bestätigen',
       consent: 'Ich akzeptiere die',
       consentLink: 'Datenschutzrichtlinie',
+      consentTerms: 'sowie die',
+      termsLink: 'Allgemeinen Geschäftsbedingungen',
       submitRegister: 'Konto erstellen und fortfahren',
       submitLogin: 'Anmelden und fortfahren',
       close: 'Schliessen',
@@ -786,7 +225,7 @@ const Reserve = () => {
       errorPasswordMismatch: 'Die Passwörter stimmen nicht überein.',
       errorPasswordTooShort:
         'Das Passwort muss mindestens 8 Zeichen lang sein.',
-      errorConsentRequired: 'Bitte akzeptieren Sie die Datenschutzrichtlinie.',
+      errorConsentRequired: 'Bitte akzeptieren Sie unsere Bedingungen.',
       errorGeneric: 'Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut.',
     },
     it: {
@@ -809,6 +248,8 @@ const Reserve = () => {
       passwordConfirm: 'Conferma password',
       consent: 'Accetto la',
       consentLink: 'informativa sulla privacy',
+      consentTerms: 'nonché le',
+      termsLink: 'condizioni generali di vendita',
       submitRegister: 'Crea il mio account e continua',
       submitLogin: 'Accedi e continua',
       close: 'Chiudi',
@@ -818,7 +259,7 @@ const Reserve = () => {
       errorEmailMismatch: 'Le email non corrispondono.',
       errorPasswordMismatch: 'Le password non corrispondono.',
       errorPasswordTooShort: 'La password deve contenere almeno 8 caratteri.',
-      errorConsentRequired: "Si prega di accettare l'informativa sulla privacy.",
+      errorConsentRequired: 'Si prega di accettare le nostre condizioni.',
       errorGeneric: 'Si è verificato un errore, riprova.',
     },
     en: {
@@ -841,6 +282,8 @@ const Reserve = () => {
       passwordConfirm: 'Confirm password',
       consent: 'I accept the',
       consentLink: 'privacy policy',
+      consentTerms: 'as well as the',
+      termsLink: 'terms of sale',
       submitRegister: 'Create my account and continue',
       submitLogin: 'Log in and continue',
       close: 'Close',
@@ -850,7 +293,7 @@ const Reserve = () => {
       errorEmailMismatch: 'Email addresses do not match.',
       errorPasswordMismatch: 'Passwords do not match.',
       errorPasswordTooShort: 'Password must be at least 8 characters.',
-      errorConsentRequired: 'Please accept the privacy policy.',
+      errorConsentRequired: 'Please accept our terms to continue.',
       errorGeneric: 'Something went wrong, please try again.',
     },
     es: {
@@ -873,6 +316,8 @@ const Reserve = () => {
       passwordConfirm: 'Confirmar contraseña',
       consent: 'Acepto la',
       consentLink: 'política de privacidad',
+      consentTerms: 'así como las',
+      termsLink: 'condiciones generales de venta',
       submitRegister: 'Crear mi cuenta y continuar',
       submitLogin: 'Iniciar sesión y continuar',
       close: 'Cerrar',
@@ -882,7 +327,7 @@ const Reserve = () => {
       errorEmailMismatch: 'Los emails no coinciden.',
       errorPasswordMismatch: 'Las contraseñas no coinciden.',
       errorPasswordTooShort: 'La contraseña debe tener al menos 8 caracteres.',
-      errorConsentRequired: 'Por favor acepta la política de privacidad.',
+      errorConsentRequired: 'Por favor acepta nuestras condiciones.',
       errorGeneric: 'Ocurrió un error, inténtalo de nuevo.',
     },
     nl: {
@@ -905,6 +350,8 @@ const Reserve = () => {
       passwordConfirm: 'Bevestig wachtwoord',
       consent: 'Ik accepteer het',
       consentLink: 'privacybeleid',
+      consentTerms: 'en de',
+      termsLink: 'algemene verkoopvoorwaarden',
       submitRegister: 'Account aanmaken en doorgaan',
       submitLogin: 'Inloggen en doorgaan',
       close: 'Sluiten',
@@ -915,7 +362,7 @@ const Reserve = () => {
       errorEmailMismatch: 'E-mailadressen komen niet overeen.',
       errorPasswordMismatch: 'Wachtwoorden komen niet overeen.',
       errorPasswordTooShort: 'Wachtwoord moet minstens 8 tekens bevatten.',
-      errorConsentRequired: 'Accepteer het privacybeleid.',
+      errorConsentRequired: 'Accepteer onze voorwaarden om door te gaan.',
       errorGeneric: 'Er is iets misgegaan, probeer het opnieuw.',
     },
     pt: {
@@ -938,6 +385,8 @@ const Reserve = () => {
       passwordConfirm: 'Confirmar senha',
       consent: 'Aceito a',
       consentLink: 'política de privacidade',
+      consentTerms: 'bem como os',
+      termsLink: 'termos e condições de venda',
       submitRegister: 'Criar minha conta e continuar',
       submitLogin: 'Entrar e continuar',
       close: 'Fechar',
@@ -947,7 +396,7 @@ const Reserve = () => {
       errorEmailMismatch: 'Os emails não coincidem.',
       errorPasswordMismatch: 'As senhas não coincidem.',
       errorPasswordTooShort: 'A senha deve ter pelo menos 8 caracteres.',
-      errorConsentRequired: 'Por favor aceite a política de privacidade.',
+      errorConsentRequired: 'Por favor aceite nossos termos.',
       errorGeneric: 'Ocorreu um erro, tente novamente.',
     },
     hi: {
@@ -970,6 +419,8 @@ const Reserve = () => {
       passwordConfirm: 'पासवर्ड की पुष्टि करें',
       consent: 'मैं स्वीकार करता/करती हूं',
       consentLink: 'गोपनीयता नीति',
+      consentTerms: 'साथ ही',
+      termsLink: 'बिक्री की शर्तें',
       submitRegister: 'खाता बनाएं और जारी रखें',
       submitLogin: 'लॉग इन करें और जारी रखें',
       close: 'बंद करें',
@@ -980,7 +431,7 @@ const Reserve = () => {
       errorEmailMismatch: 'ईमेल मेल नहीं खाते।',
       errorPasswordMismatch: 'पासवर्ड मेल नहीं खाते।',
       errorPasswordTooShort: 'पासवर्ड कम से कम 8 अक्षरों का होना चाहिए।',
-      errorConsentRequired: 'कृपया गोपनीयता नीति स्वीकार करें।',
+      errorConsentRequired: 'कृपया हमारी शर्तें स्वीकार करें।',
       errorGeneric: 'कुछ गलत हो गया, कृपया पुनः प्रयास करें।',
     },
     ar: {
@@ -1003,6 +454,8 @@ const Reserve = () => {
       passwordConfirm: 'تأكيد كلمة المرور',
       consent: 'أوافق على',
       consentLink: 'سياسة الخصوصية',
+      consentTerms: 'وكذلك',
+      termsLink: 'شروط البيع',
       submitRegister: 'إنشاء حسابي والمتابعة',
       submitLogin: 'تسجيل الدخول والمتابعة',
       close: 'إغلاق',
@@ -1013,7 +466,7 @@ const Reserve = () => {
       errorEmailMismatch: 'عناوين البريد الإلكتروني غير متطابقة.',
       errorPasswordMismatch: 'كلمتا المرور غير متطابقتين.',
       errorPasswordTooShort: 'يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.',
-      errorConsentRequired: 'يرجى قبول سياسة الخصوصية.',
+      errorConsentRequired: 'يرجى قبول شروطنا.',
       errorGeneric: 'حدث خطأ ما، يرجى المحاولة مرة أخرى.',
     },
     ru: {
@@ -1036,6 +489,8 @@ const Reserve = () => {
       passwordConfirm: 'Подтвердите пароль',
       consent: 'Я принимаю',
       consentLink: 'политику конфиденциальности',
+      consentTerms: 'а также',
+      termsLink: 'условия продажи',
       submitRegister: 'Создать аккаунт и продолжить',
       submitLogin: 'Войти и продолжить',
       close: 'Закрыть',
@@ -1046,8 +501,76 @@ const Reserve = () => {
       errorEmailMismatch: 'Email не совпадают.',
       errorPasswordMismatch: 'Пароли не совпадают.',
       errorPasswordTooShort: 'Пароль должен содержать не менее 8 символов.',
-      errorConsentRequired: 'Пожалуйста, примите политику конфиденциальности.',
+      errorConsentRequired: 'Пожалуйста, примите наши условия.',
       errorGeneric: 'Произошла ошибка, попробуйте снова.',
+    },
+    zh: {
+      createAccount: '配送信息',
+      orLogin: '已经有账户了？',
+      loginLink: '登录',
+      createLink: '创建账户',
+      loginTitle: '登录',
+      firstName: '名字',
+      lastName: '姓氏',
+      email: '邮箱',
+      emailConfirm: '确认邮箱',
+      phone: '电话',
+      address: '地址',
+      addressLine2: '地址补充（可选）',
+      postalCode: '邮政编码',
+      city: '城市',
+      country: '国家',
+      password: '密码',
+      passwordConfirm: '确认密码',
+      consent: '我同意',
+      consentLink: '隐私政策',
+      consentTerms: '以及',
+      termsLink: '销售条款',
+      submitRegister: '创建账户并继续',
+      submitLogin: '登录并继续',
+      close: '关闭',
+      errorEmailTaken: '该邮箱已被注册。',
+      errorInvalidCredentials: '邮箱或密码错误。',
+      errorAccountLocked: '尝试次数过多，请稍后再试。',
+      errorEmailMismatch: '两次输入的邮箱不一致。',
+      errorPasswordMismatch: '两次输入的密码不一致。',
+      errorPasswordTooShort: '密码至少需要8个字符。',
+      errorConsentRequired: '请同意我们的条款。',
+      errorGeneric: '发生错误，请重试。',
+    },
+    ko: {
+      createAccount: '배송 정보',
+      orLogin: '이미 계정이 있으신가요?',
+      loginLink: '로그인',
+      createLink: '계정 만들기',
+      loginTitle: '로그인',
+      firstName: '이름',
+      lastName: '성',
+      email: '이메일',
+      emailConfirm: '이메일 확인',
+      phone: '전화번호',
+      address: '주소',
+      addressLine2: '상세 주소 (선택 사항)',
+      postalCode: '우편번호',
+      city: '도시',
+      country: '국가',
+      password: '비밀번호',
+      passwordConfirm: '비밀번호 확인',
+      consent: '동의합니다',
+      consentLink: '개인정보 처리방침',
+      consentTerms: '그리고',
+      termsLink: '판매 약관',
+      submitRegister: '계정 만들고 계속하기',
+      submitLogin: '로그인하고 계속하기',
+      close: '닫기',
+      errorEmailTaken: '이미 사용 중인 이메일입니다.',
+      errorInvalidCredentials: '이메일 또는 비밀번호가 올바르지 않습니다.',
+      errorAccountLocked: '시도 횟수가 너무 많습니다. 잠시 후 다시 시도해 주세요.',
+      errorEmailMismatch: '이메일이 일치하지 않습니다.',
+      errorPasswordMismatch: '비밀번호가 일치하지 않습니다.',
+      errorPasswordTooShort: '비밀번호는 최소 8자 이상이어야 합니다.',
+      errorConsentRequired: '약관에 동의해 주세요.',
+      errorGeneric: '오류가 발생했습니다. 다시 시도해 주세요.',
     },
   };
 
@@ -1076,10 +599,18 @@ const Reserve = () => {
       return;
     }
 
+    // A clipper's code, picked up invisibly on /go/<code> and carried
+    // over here, tags the sale for attribution without touching price
+    // or showing anything to the customer.
+    const clipperCode = sessionStorage.getItem('iglow_clipper_code');
+    const refParam = clipperCode
+      ? `&client_reference_id=${encodeURIComponent(clipperCode)}`
+      : '';
+
     // Redirect to Stripe Checkout with success and cancel URLs
     window.location.href = `${checkoutUrl}?success_url=${encodeURIComponent(
       successUrl
-    )}&cancel_url=${encodeURIComponent(cancelUrl)}`;
+    )}&cancel_url=${encodeURIComponent(cancelUrl)}${refParam}`;
   };
 
   const handleSetLang = (lang) => {
@@ -1101,16 +632,6 @@ const Reserve = () => {
     );
   };
 
-  const renderIglowIcon = () => {
-    const dotCount = 8;
-    const dots = [];
-    for (let i = 0; i < dotCount; i++) {
-      dots.push(<span key={i} className='mini-dot'></span>);
-    }
-    return <div className='iglow-icon'>{dots}</div>;
-  };
-
-  const currentContent = content[currentLang] || content.fr;
 
   return (
     <div className='reserve-page'>
@@ -1151,26 +672,6 @@ const Reserve = () => {
               }}
             />
           </div>
-          <p className='tagline' style={{ fontSize: '36px' }}>
-            {currentContent.tagline}
-          </p>
-          <h1>
-            {currentContent.title}{' '}
-            <span className='highlight'>{currentContent.highlight}</span>{' '}
-            {currentContent.beSeen}
-          </h1>
-          <p
-            style={{
-              color: '#fff',
-              fontSize: '28px',
-              fontWeight: 'bold',
-              margin: '0 0 20px',
-            }}
-          >
-            {currentContent.payOnlyPrefix}{' '}
-            <span style={{ color: '#E30613' }}>CHF 99.-</span>{' '}
-            {currentContent.payOnlySuffix}
-          </p>
           <img
             src={duoHelmetVest}
             alt='iGlow Smart Helmet and Vest Duo'
@@ -1183,62 +684,6 @@ const Reserve = () => {
               borderRadius: '15px',
             }}
           />
-          <div
-            className='reserve-buttons-container'
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              gap: '15px',
-              margin: '40px 0',
-            }}
-          >
-            {(() => {
-              const button = currentContent.reserveButtons[0];
-              const [priceWord, priceNumber] = button.price.split(' ');
-              return (
-                <button
-                  onClick={handleReserveClick}
-                  className='btn btn-primary'
-                >
-                  <span className='flag-emoji' style={{ fontSize: '1.5em' }}>
-                    {button.flag}
-                  </span>
-                  <span style={{ fontWeight: '900', fontSize: '1.3em' }}>
-                    {button.text}
-                  </span>
-                  <br />
-                  <span style={{ fontWeight: '700' }}>{priceWord}</span>{' '}
-                  <span style={{ fontWeight: '900', fontSize: '1.8em' }}>
-                    {priceNumber}
-                  </span>{' '}
-                  <span style={{ fontWeight: '900', fontSize: '1.2em' }}>
-                    {button.currency}
-                  </span>
-                </button>
-              );
-            })()}
-            <span style={{ color: '#fff', fontSize: '1.3em' }}>
-              {currentContent.insteadOfPrefix}{' '}
-              <span className='price-struck' style={{ fontSize: '1.2em' }}>
-                CHF 199.-
-              </span>{' '}
-              {currentContent.insteadOfSuffix}
-            </span>
-            <span
-              style={{
-                color: '#28a745',
-                fontWeight: '900',
-                fontSize: '2em',
-              }}
-            >
-              {currentContent.youSave}
-            </span>
-          </div>
-          <div className='swiss-badge'>
-            <div className='swiss-flag'></div>
-            <span>{currentContent.swissBadge}</span>
-          </div>
         </div>
       </section>
 
@@ -1257,91 +702,6 @@ const Reserve = () => {
           })}
         </div>
       </section>
-
-      {/* Countdown Section */}
-      <section className='countdown'>
-        <div className='container'>
-          <h2>
-            {currentContent.launchTextPrefix && (
-              <>
-                {currentContent.launchTextPrefix}
-                <br />
-              </>
-            )}
-            <span style={{ color: '#000', fontSize: '1.7em' }}>
-              {currentContent.blackWord}
-            </span>{' '}
-            <span style={{ color: '#fff', fontSize: '1.7em' }}>
-              {currentContent.fridayWord}
-            </span>
-            {currentContent.launchTextSuffix && (
-              <>
-                <br />
-                {currentContent.launchTextSuffix}
-              </>
-            )}
-            <br />
-            <span className='date-frame'>{currentContent.launchDate}</span>
-            <br />
-            <a
-              href='https://iglow.swiss'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='platform iglow-black'
-              style={{ display: 'inline-block', textDecoration: 'none' }}
-            >
-              IGLOW.SWISS
-            </a>
-            {' & '}
-            <a
-              href='https://www.kickstarter.com/projects/iglowswiss/iglow-the-smart-bike-jacket-be-seen-be-safe'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='platform kickstarter-green'
-              style={{ display: 'inline-block', textDecoration: 'none' }}
-            >
-              KICKSTARTER.COM
-            </a>
-          </h2>
-        </div>
-      </section>
-
-      {/* Reserve Section */}
-      <section className='reserve-section'>
-        <div className='container'>
-          <div className='benefits'>
-            {currentContent.benefits.map((benefit, index) => (
-              <div key={index} className='benefit'>
-                <div className='benefit-icon'>{renderIglowIcon()}</div>
-                <h3 style={index === 1 ? { color: '#E30613' } : undefined}>
-                  {benefit.title}
-                </h3>
-                {index === 0 ? (
-                  <p
-                    style={{ fontSize: '1.6rem', color: '#0a0a0a' }}
-                    dangerouslySetInnerHTML={{ __html: benefit.description }}
-                  ></p>
-                ) : (
-                  <p
-                    dangerouslySetInnerHTML={{ __html: benefit.description }}
-                  ></p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer>
-        <div className='container'>
-          <p>&copy; 2026 iGlow. All rights reserved.</p>
-          <p>
-            <a href='/legal-notices'>Legal Notices</a> |
-            <a href='/privacy-policy'>Privacy Policy</a>
-          </p>
-        </div>
-      </footer>
 
       {showAccountModal &&
         (() => {
@@ -1485,6 +845,10 @@ const Reserve = () => {
                           {t.consent}{' '}
                           <a href='/privacy-policy' target='_blank' rel='noopener noreferrer'>
                             {t.consentLink}
+                          </a>{' '}
+                          {t.consentTerms}{' '}
+                          <a href='/terms-of-sale' target='_blank' rel='noopener noreferrer'>
+                            {t.termsLink}
                           </a>
                         </span>
                       </label>
