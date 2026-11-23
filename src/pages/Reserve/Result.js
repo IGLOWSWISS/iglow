@@ -88,7 +88,7 @@ const Result = () => {
       ],
       referralTitle: 'Votre lien personnel',
       referralText:
-        "Partagez-le avec vos amis. Dès qu'un ami achète grâce à vous, vous recevez un avoir.",
+        "Partagez-le avec vos amis. Dès qu'un ami achète grâce à vous, vous recevez 10% en avoir (jusqu'à CHF 100.- par an).",
       copyLink: 'Copier le lien',
       linkCopied: 'Lien copié !',
       backHome: "Retour à l'Accueil",
@@ -115,7 +115,7 @@ const Result = () => {
       ],
       referralTitle: 'Ihr persönlicher Link',
       referralText:
-        'Teilen Sie ihn mit Freunden. Sobald ein Freund dank Ihnen kauft, erhalten Sie ein Guthaben.',
+        'Teilen Sie ihn mit Freunden. Sobald ein Freund dank Ihnen kauft, erhalten Sie 10% Guthaben (bis zu CHF 100.- pro Jahr).',
       copyLink: 'Link kopieren',
       linkCopied: 'Link kopiert!',
       backHome: 'Zurück zur Startseite',
@@ -142,7 +142,7 @@ const Result = () => {
       ],
       referralTitle: 'Il tuo link personale',
       referralText:
-        'Condividilo con i tuoi amici. Non appena un amico acquista grazie a te, ricevi un buono.',
+        "Condividilo con i tuoi amici. Non appena un amico acquista grazie a te, ricevi il 10% in buono (fino a CHF 100.- all'anno).",
       copyLink: 'Copia link',
       linkCopied: 'Link copiato!',
       backHome: 'Torna alla Home',
@@ -169,7 +169,7 @@ const Result = () => {
       ],
       referralTitle: 'Your personal link',
       referralText:
-        'Share it with your friends. As soon as a friend buys through it, you get store credit.',
+        'Share it with your friends. As soon as a friend buys through it, you get 10% in store credit (up to CHF 100 per year).',
       copyLink: 'Copy link',
       linkCopied: 'Link copied!',
       backHome: 'Back to Home',
@@ -196,7 +196,7 @@ const Result = () => {
       ],
       referralTitle: 'Tu enlace personal',
       referralText:
-        'Compártelo con tus amigos. En cuanto un amigo compre gracias a ti, recibes un crédito.',
+        'Compártelo con tus amigos. En cuanto un amigo compre gracias a ti, recibes un 10% en crédito (hasta CHF 100.- al año).',
       copyLink: 'Copiar enlace',
       linkCopied: '¡Enlace copiado!',
       backHome: 'Volver al Inicio',
@@ -223,7 +223,7 @@ const Result = () => {
       ],
       referralTitle: 'Uw persoonlijke link',
       referralText:
-        'Deel hem met vrienden. Zodra een vriend dankzij u koopt, ontvangt u tegoed.',
+        'Deel hem met vrienden. Zodra een vriend dankzij u koopt, ontvangt u 10% tegoed (tot CHF 100.- per jaar).',
       copyLink: 'Link kopiëren',
       linkCopied: 'Link gekopieerd!',
       backHome: 'Terug naar Home',
@@ -250,7 +250,7 @@ const Result = () => {
       ],
       referralTitle: 'Seu link pessoal',
       referralText:
-        'Compartilhe com seus amigos. Assim que um amigo comprar graças a você, você recebe um crédito.',
+        'Compartilhe com seus amigos. Assim que um amigo comprar graças a você, você recebe 10% em crédito (até CHF 100.- por ano).',
       copyLink: 'Copiar link',
       linkCopied: 'Link copiado!',
       backHome: 'Voltar ao Início',
@@ -277,7 +277,7 @@ const Result = () => {
       ],
       referralTitle: 'आपका निजी लिंक',
       referralText:
-        'इसे अपने दोस्तों के साथ साझा करें। जैसे ही कोई दोस्त आपकी वजह से खरीदारी करता है, आपको क्रेडिट मिलता है।',
+        'इसे अपने दोस्तों के साथ साझा करें। जैसे ही कोई दोस्त आपकी वजह से खरीदारी करता है, आपको 10% क्रेडिट मिलता है (प्रति वर्ष अधिकतम CHF 100.-)।',
       copyLink: 'लिंक कॉपी करें',
       linkCopied: 'लिंक कॉपी हो गया!',
       backHome: 'होम पर वापस जाएं',
@@ -304,7 +304,7 @@ const Result = () => {
       ],
       referralTitle: 'رابطك الشخصي',
       referralText:
-        'شاركه مع أصدقائك. بمجرد أن يشتري صديق بفضلك، تحصل على رصيد.',
+        'شاركه مع أصدقائك. بمجرد أن يشتري صديق بفضلك، تحصل على رصيد بنسبة 10% (بحد أقصى CHF 100.- سنويًا).',
       copyLink: 'نسخ الرابط',
       linkCopied: 'تم نسخ الرابط!',
       backHome: 'العودة للرئيسية',
@@ -331,7 +331,7 @@ const Result = () => {
       ],
       referralTitle: 'Ваша персональная ссылка',
       referralText:
-        'Поделитесь ею с друзьями. Как только друг купит благодаря вам, вы получите кредит.',
+        'Поделитесь ею с друзьями. Как только друг купит благодаря вам, вы получите 10% в виде кредита (максимум CHF 100.- в год).',
       copyLink: 'Скопировать ссылку',
       linkCopied: 'Ссылка скопирована!',
       backHome: 'Вернуться на Главную',
@@ -357,7 +357,7 @@ const Result = () => {
         '向亲朋好友分享 iGlow.swiss 众筹项目',
       ],
       referralTitle: '您的专属链接',
-      referralText: '与朋友分享。只要有朋友通过此链接购买，您就会获得购物金。',
+      referralText: '与朋友分享。只要有朋友通过此链接购买，您就会获得10%的购物金（每年最多CHF 100.-）。',
       copyLink: '复制链接',
       linkCopied: '链接已复制！',
       backHome: '返回首页',
@@ -383,7 +383,7 @@ const Result = () => {
         '친구와 가족에게 iGlow.swiss 크라우드펀딩을 알려주세요',
       ],
       referralTitle: '나만의 링크',
-      referralText: '친구들과 공유하세요. 친구가 이 링크를 통해 구매하면 적립금을 받습니다.',
+      referralText: '친구들과 공유하세요. 친구가 이 링크를 통해 구매하면 10% 적립금을 받습니다 (연간 최대 CHF 100.-).',
       copyLink: '링크 복사',
       linkCopied: '링크가 복사되었습니다!',
       backHome: '홈으로 돌아가기',
