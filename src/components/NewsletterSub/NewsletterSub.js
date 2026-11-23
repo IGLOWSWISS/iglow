@@ -182,7 +182,7 @@ function NewsletterSub({ lang = 'fr' }) {
                             <h1>Get Ready to Discover the IGLOW Smart Vest!</h1>
                             <p>Dear Future Backers,</p>
                             <p>Thank you for signing up to be notified about the launch of the world’s first reflective smart vest with integrated brake lights and turn signals! 🎉</p>
-                            <p>We’re thrilled to let you know that our Kickstarter campaign launches on November 27, 2026! As a future backer, you’ll be among the first to know when sales go live and have the chance to reserve your IGLOW Smart Vest at an exclusive price. 🚀</p>
+                            <p>We’re thrilled to let you know that our Kickstarter campaign launches on December 15, 2026! As a future backer, you’ll be among the first to know when sales go live and have the chance to reserve your IGLOW Smart Vest at an exclusive price. 🚀</p>
 
                             <h2>What can you expect?</h2>
                             <ul>
