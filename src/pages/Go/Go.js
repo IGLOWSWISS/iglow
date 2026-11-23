@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
 // Entry point for a clipper's personal link (iglow.swiss/go/<code>).
