@@ -75,7 +75,7 @@ function iglow_current_customer(): ?array
 
     $pdo = iglow_db();
     $stmt = $pdo->prepare(
-        'SELECT c.id, c.email, c.first_name, c.last_name, c.phone, c.address, c.address_line2, c.postal_code, c.city, c.country
+        'SELECT c.id, c.email, c.first_name, c.last_name, c.phone, c.address, c.address_line2, c.postal_code, c.city, c.country, c.referral_code
          FROM sessions s
          JOIN customers c ON c.id = s.customer_id
          WHERE s.token = :token AND s.expires_at > NOW()'
@@ -98,5 +98,26 @@ function iglow_public_customer(array $customer): array
         'postalCode' => $customer['postal_code'],
         'city' => $customer['city'],
         'country' => $customer['country'],
+        'referralCode' => $customer['referral_code'] ?? null,
     ];
+}
+
+// Customer referral codes are visually distinct from clipper codes (which
+// follow the CL<dept><initials><digits> format) so Fabrice can tell them
+// apart at a glance when reviewing client_reference_id in Stripe.
+function iglow_generate_referral_code(PDO $pdo): string
+{
+    $alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // no 0/O/1/I to avoid confusion
+    for ($attempt = 0; $attempt < 10; $attempt++) {
+        $code = 'IG-';
+        for ($i = 0; $i < 6; $i++) {
+            $code .= $alphabet[random_int(0, strlen($alphabet) - 1)];
+        }
+        $stmt = $pdo->prepare('SELECT id FROM customers WHERE referral_code = :code');
+        $stmt->execute(['code' => $code]);
+        if (!$stmt->fetch()) {
+            return $code;
+        }
+    }
+    throw new RuntimeException('Could not generate a unique referral code');
 }

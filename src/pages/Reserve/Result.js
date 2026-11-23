@@ -4,6 +4,19 @@ import './Result.css';
 
 const Result = () => {
   const [currentLang, setCurrentLang] = useState('fr');
+  const [referralCode, setReferralCode] = useState(null);
+  const [linkCopied, setLinkCopied] = useState(false);
+
+  useEffect(() => {
+    fetch('/api/me.php')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.authenticated && data.customer && data.customer.referralCode) {
+          setReferralCode(data.customer.referralCode);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const supportedLangs = [
@@ -73,6 +86,11 @@ const Result = () => {
         'Support client dédié',
         'Parrainez vos amis et proches pour venir découvrir le crowdfunding iGlow.swiss',
       ],
+      referralTitle: 'Votre lien personnel',
+      referralText:
+        "Partagez-le avec vos amis. Dès qu'un ami achète grâce à vous, vous recevez un avoir.",
+      copyLink: 'Copier le lien',
+      linkCopied: 'Lien copié !',
       backHome: "Retour à l'Accueil",
       contactUs: 'Nous Contacter',
       showIcon: false,
@@ -95,6 +113,11 @@ const Result = () => {
         'Dedizierter Kundensupport',
         'Empfehlen Sie Ihren Freunden und Ihrer Familie das iGlow.swiss-Crowdfunding',
       ],
+      referralTitle: 'Ihr persönlicher Link',
+      referralText:
+        'Teilen Sie ihn mit Freunden. Sobald ein Freund dank Ihnen kauft, erhalten Sie ein Guthaben.',
+      copyLink: 'Link kopieren',
+      linkCopied: 'Link kopiert!',
       backHome: 'Zurück zur Startseite',
       contactUs: 'Kontaktieren Sie uns',
       showIcon: true,
@@ -117,6 +140,11 @@ const Result = () => {
         'Assistenza clienti dedicata',
         'Invita amici e parenti a scoprire il crowdfunding di iGlow.swiss',
       ],
+      referralTitle: 'Il tuo link personale',
+      referralText:
+        'Condividilo con i tuoi amici. Non appena un amico acquista grazie a te, ricevi un buono.',
+      copyLink: 'Copia link',
+      linkCopied: 'Link copiato!',
       backHome: 'Torna alla Home',
       contactUs: 'Contattaci',
       showIcon: true,
@@ -139,6 +167,11 @@ const Result = () => {
         'Dedicated customer support',
         'Refer your friends and family to discover the iGlow.swiss crowdfunding',
       ],
+      referralTitle: 'Your personal link',
+      referralText:
+        'Share it with your friends. As soon as a friend buys through it, you get store credit.',
+      copyLink: 'Copy link',
+      linkCopied: 'Link copied!',
       backHome: 'Back to Home',
       contactUs: 'Contact Us',
       showIcon: true,
@@ -161,6 +194,11 @@ const Result = () => {
         'Soporte al cliente dedicado',
         'Recomiende a sus amigos y familiares el crowdfunding de iGlow.swiss',
       ],
+      referralTitle: 'Tu enlace personal',
+      referralText:
+        'Compártelo con tus amigos. En cuanto un amigo compre gracias a ti, recibes un crédito.',
+      copyLink: 'Copiar enlace',
+      linkCopied: '¡Enlace copiado!',
       backHome: 'Volver al Inicio',
       contactUs: 'Contáctanos',
       showIcon: true,
@@ -183,6 +221,11 @@ const Result = () => {
         'Toegewijde klantenondersteuning',
         'Beveel uw vrienden en familie de iGlow.swiss-crowdfunding aan',
       ],
+      referralTitle: 'Uw persoonlijke link',
+      referralText:
+        'Deel hem met vrienden. Zodra een vriend dankzij u koopt, ontvangt u tegoed.',
+      copyLink: 'Link kopiëren',
+      linkCopied: 'Link gekopieerd!',
       backHome: 'Terug naar Home',
       contactUs: 'Contacteer Ons',
       showIcon: true,
@@ -205,6 +248,11 @@ const Result = () => {
         'Suporte ao cliente dedicado',
         'Indique seus amigos e familiares para descobrir o crowdfunding da iGlow.swiss',
       ],
+      referralTitle: 'Seu link pessoal',
+      referralText:
+        'Compartilhe com seus amigos. Assim que um amigo comprar graças a você, você recebe um crédito.',
+      copyLink: 'Copiar link',
+      linkCopied: 'Link copiado!',
       backHome: 'Voltar ao Início',
       contactUs: 'Entre em Contato',
       showIcon: true,
@@ -227,6 +275,11 @@ const Result = () => {
         'समर्पित ग्राहक सहायता',
         'अपने दोस्तों और परिवार को iGlow.swiss क्राउडफंडिंग के बारे में बताएं',
       ],
+      referralTitle: 'आपका निजी लिंक',
+      referralText:
+        'इसे अपने दोस्तों के साथ साझा करें। जैसे ही कोई दोस्त आपकी वजह से खरीदारी करता है, आपको क्रेडिट मिलता है।',
+      copyLink: 'लिंक कॉपी करें',
+      linkCopied: 'लिंक कॉपी हो गया!',
       backHome: 'होम पर वापस जाएं',
       contactUs: 'हमसे संपर्क करें',
       showIcon: true,
@@ -249,6 +302,11 @@ const Result = () => {
         'دعم عملاء مخصص',
         'أخبر أصدقاءك وعائلتك عن حملة التمويل الجماعي iGlow.swiss',
       ],
+      referralTitle: 'رابطك الشخصي',
+      referralText:
+        'شاركه مع أصدقائك. بمجرد أن يشتري صديق بفضلك، تحصل على رصيد.',
+      copyLink: 'نسخ الرابط',
+      linkCopied: 'تم نسخ الرابط!',
       backHome: 'العودة للرئيسية',
       contactUs: 'اتصل بنا',
       showIcon: true,
@@ -271,6 +329,11 @@ const Result = () => {
         'Выделенная поддержка клиентов',
         'Расскажите друзьям и близким о краудфандинге iGlow.swiss',
       ],
+      referralTitle: 'Ваша персональная ссылка',
+      referralText:
+        'Поделитесь ею с друзьями. Как только друг купит благодаря вам, вы получите кредит.',
+      copyLink: 'Скопировать ссылку',
+      linkCopied: 'Ссылка скопирована!',
       backHome: 'Вернуться на Главную',
       contactUs: 'Связаться с Нами',
       showIcon: true,
@@ -293,6 +356,10 @@ const Result = () => {
         '专属客户支持',
         '向亲朋好友分享 iGlow.swiss 众筹项目',
       ],
+      referralTitle: '您的专属链接',
+      referralText: '与朋友分享。只要有朋友通过此链接购买，您就会获得购物金。',
+      copyLink: '复制链接',
+      linkCopied: '链接已复制！',
       backHome: '返回首页',
       contactUs: '联系我们',
       showIcon: true,
@@ -315,6 +382,10 @@ const Result = () => {
         '전담 고객 지원',
         '친구와 가족에게 iGlow.swiss 크라우드펀딩을 알려주세요',
       ],
+      referralTitle: '나만의 링크',
+      referralText: '친구들과 공유하세요. 친구가 이 링크를 통해 구매하면 적립금을 받습니다.',
+      copyLink: '링크 복사',
+      linkCopied: '링크가 복사되었습니다!',
       backHome: '홈으로 돌아가기',
       contactUs: '문의하기',
       showIcon: true,
@@ -322,6 +393,19 @@ const Result = () => {
   };
 
   const currentContent = content[currentLang] || content.fr;
+  const referralLink = referralCode
+    ? `${window.location.origin}/go/${referralCode}`
+    : '';
+
+  const handleCopyLink = () => {
+    navigator.clipboard
+      .writeText(referralLink)
+      .then(() => {
+        setLinkCopied(true);
+        setTimeout(() => setLinkCopied(false), 2000);
+      })
+      .catch(() => {});
+  };
 
   return (
     <div className='result-page'>
@@ -376,6 +460,46 @@ const Result = () => {
               ))}
             </ul>
           </div>
+
+          {referralCode && (
+            <div className='result-details info-details'>
+              <h3 style={{ textAlign: 'center', color: '#28a745' }}>
+                {currentContent.referralTitle}
+              </h3>
+              <p style={{ textAlign: 'center', fontSize: '1.05em', marginBottom: '15px' }}>
+                {currentContent.referralText}
+              </p>
+              <div
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '10px',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <code
+                  style={{
+                    background: '#f0f0f0',
+                    padding: '10px 16px',
+                    borderRadius: '8px',
+                    fontSize: '1em',
+                    wordBreak: 'break-all',
+                  }}
+                >
+                  {referralLink}
+                </code>
+                <button
+                  type='button'
+                  onClick={handleCopyLink}
+                  className='result-btn result-btn-primary'
+                  style={{ border: 'none', cursor: 'pointer' }}
+                >
+                  {linkCopied ? currentContent.linkCopied : currentContent.copyLink}
+                </button>
+              </div>
+            </div>
+          )}
 
           <div className='result-observatory'>🔭</div>
 

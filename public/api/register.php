@@ -43,10 +43,11 @@ if ($existing->fetch()) {
 }
 
 $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+$referralCode = iglow_generate_referral_code($pdo);
 
 $insert = $pdo->prepare(
-    'INSERT INTO customers (email, password_hash, first_name, last_name, address, address_line2, postal_code, city, country, phone)
-     VALUES (:email, :password_hash, :first_name, :last_name, :address, :address_line2, :postal_code, :city, :country, :phone)'
+    'INSERT INTO customers (email, password_hash, first_name, last_name, address, address_line2, postal_code, city, country, phone, referral_code)
+     VALUES (:email, :password_hash, :first_name, :last_name, :address, :address_line2, :postal_code, :city, :country, :phone, :referral_code)'
 );
 try {
     $insert->execute([
@@ -60,6 +61,7 @@ try {
         'city' => $city,
         'country' => $country,
         'phone' => $phone,
+        'referral_code' => $referralCode,
     ]);
 } catch (PDOException $e) {
     // Unique constraint race: another request registered this email first.
@@ -81,5 +83,6 @@ iglow_respond(201, [
         'postalCode' => $postalCode,
         'city' => $city,
         'country' => $country,
+        'referralCode' => $referralCode,
     ],
 ]);
